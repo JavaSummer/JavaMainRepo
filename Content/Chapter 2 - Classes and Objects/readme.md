@@ -4,7 +4,7 @@
 Understand the concept of class, object and object-oriented programming.
 
 ## Duration
-We recommand you to finish the reading list and the given assignments in 1 weeks (start_date - end_date).
+We recommand you to finish the reading list and the given assignments in 1 week (start_date - end_date).
 
 ## Reading list
 1. [Classes, Objects, Arrays](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/05-Classes_Objects_Arrays.pdf) (Books + Material/OOP Lab/05-Classes_Objects_Arrays.pdf)
