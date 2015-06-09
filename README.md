@@ -24,7 +24,7 @@
     * 3 - [Commit Push and Pull Request](https://www.youtube.com/watch?v=nPq0yClIDhM&index=3&list=PLxDrAnoepRN2OXJ4boGqPF0LIADjWGqe7)
    
 - #### Java & Eclipse must-haves
-    * [N/A](www.google.com)
+    * [Installing Java JDK + Eclipse IDE](https://www.youtube.com/watch?v=CPGKMDvCUN4)
     * [N/A](www.google.com)
 
 - #### Forum
