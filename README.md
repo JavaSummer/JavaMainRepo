@@ -25,7 +25,7 @@
    
 - #### Java & Eclipse must-haves
     * [Installing Java JDK + Eclipse IDE](https://www.youtube.com/watch?v=CPGKMDvCUN4)
-    * [N/A](www.google.com)
+    * [Eclipse + Checkstyle Plug-in](https://www.youtube.com/watch?v=xPYOwSmmRrQ)
 
 - #### Forum
     * visit [this page](http://summerjava.boards.net/) and create an account on this forum.
