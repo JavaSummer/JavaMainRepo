@@ -17,3 +17,9 @@ We recommand you to finish the reading list and the given exercies in 2 weeks (s
 
 ## Play around with...
 1. [Some cute Java exercises for practising syntax](http://codingbat.com/java)
+
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%201%20-%20Basics/Assignments)
+1. [Sum of multiples](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%201%20-%20Sum%20of%20multiples.docx)
+2. [Fibonacci even sum](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%202%20-%20Fibonacci%20even%20sum.docx)
+3. [Largest palindrome](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%203%20-%20Largest%20palindrome.docx)
+4. [Prime spiral](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%204%20(optional)%20-%20Prime%20spiral.docx)
