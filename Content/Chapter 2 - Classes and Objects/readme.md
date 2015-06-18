@@ -19,3 +19,6 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 1. [Classes, Objects, Arrays](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/05-Classes_Objects_Arrays.pdf) (Books + Material/OOP Lab/05-Classes_Objects_Arrays.pdf)
 2. [Head First Java - Chapters 2,3,4,5  (pdf pages 51-145)](http://it-ebooks.info/book/3214/) 
 3. [Java for Dummies - Part III + Chapter 10 (pages 137-247)](http://it-ebooks.info/book/777/)
+
+## Play around with...
+1. [Exercises on Classes and Instances](https://www3.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html) (first 14 exercises - *highly recommended*!!)
