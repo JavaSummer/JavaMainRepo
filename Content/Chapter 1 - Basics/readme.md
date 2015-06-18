@@ -17,6 +17,7 @@ We recommand you to finish the reading list and the given exercies in 2 weeks (s
 
 ## Play around with...
 1. [Some cute Java exercises for practising syntax](http://codingbat.com/java)
+2. [More cute Java exercises](http://www.ntu.edu.sg/home/ehchua/programming/java/J2a_BasicsExercises.html#zz-2.)
 
 ## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%201%20-%20Basics/Assignments)
 1. [Sum of multiples](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%201%20-%20Sum%20of%20multiples.docx)
