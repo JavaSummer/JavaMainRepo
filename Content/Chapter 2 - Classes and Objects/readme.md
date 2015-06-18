@@ -9,7 +9,7 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=XqTg2buXS5o&index=14&list=PLFE2CE09D83EE3E28) (videos 14-17, 36-48)
 2. [UML + basic class design](https://www.youtube.com/watch?v=N3ObVJrfXPs)
-3. [Acess modifiers](https://www.youtube.com/watch?v=QpSj0P3fNtA) ( *MUST WATCH* )
+3. [Acess modifiers](https://www.youtube.com/watch?v=QpSj0P3fNtA) ( `must watch!` )
 4. [Abstract classes explained nicely](https://www.youtube.com/watch?v=LOQG79rjmQw)
 5. [Packages](https://www.youtube.com/watch?v=BT5Nk2aIRJg) (Cave of Programming tutorials are overall great, watch whichever you want)
 6. You may ask for any specific topic on the forum or Google/YouTube it yourself.
@@ -21,4 +21,4 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 3. [Java for Dummies - Part III + Chapter 10 (pages 137-247)](http://it-ebooks.info/book/777/)
 
 ## Play around with...
-1. [Exercises on Classes and Instances](https://www3.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html) (first 14 exercises - *highly recommended*!!)
+1. [Exercises on Classes and Instances](https://www3.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html) (first 14 exercises - `highly recommended`)
