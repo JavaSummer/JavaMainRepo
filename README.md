@@ -41,10 +41,10 @@ Chapter 1: Java syntax basics
 ```
 * Period: `06/07 - 19/07`
 * [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%201%20-%20Basics/Assignments)
-	- [Sum of multiples](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%201%20-%20Sum%20of%20multiples.docx)
-	- [Fibonacci even sum](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%202%20-%20Fibonacci%20even%20sum.docx)
-	- [Largest palindrome](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%203%20-%20Largest%20palindrome.docx)
-	- [Prime spiral](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%204%20(optional)%20-%20Prime%20spiral.docx) (optional)
+	- [Sum of multiples](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%201%20-%20Sum%20of%20multiples.pdf)
+	- [Fibonacci even sum](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%202%20-%20Fibonacci%20even%20sum.pdf)
+	- [Largest palindrome](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%203%20-%20Largest%20palindrome.pdf)
+	- [Prime spiral](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%201%20-%20Basics/Assignments/Assignment%204%20(optional)%20-%20Prime%20spiral.pdf) (optional)
     
 ```
 Chapter 2: Classes and Objects
