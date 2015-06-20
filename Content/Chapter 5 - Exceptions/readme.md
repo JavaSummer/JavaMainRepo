@@ -1,4 +1,4 @@
-# Chapter 4 - Exceptions
+# Chapter 5 - Exceptions
 
 ## Objective
 Understand what Exceptions are and how to deal with them.
