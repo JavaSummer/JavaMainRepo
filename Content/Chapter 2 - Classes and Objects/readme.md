@@ -13,7 +13,7 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 4. [Acess modifiers](https://www.youtube.com/watch?v=QpSj0P3fNtA) ( `must watch!` )
 5. [Abstract classes explained nicely](https://www.youtube.com/watch?v=LOQG79rjmQw)
 6. [Packages](https://www.youtube.com/watch?v=BT5Nk2aIRJg) (Cave of Programming tutorials are overall great, watch whichever you want)
-7. [Derek Banas Java tutorials] (https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19) (videos 7-13)
+7. [Derek Banas Java tutorials](https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19) (videos 7-13)
 8. You may ask for any specific topic on the forum or Google/YouTube it yourself.
 
 ## Reading list
