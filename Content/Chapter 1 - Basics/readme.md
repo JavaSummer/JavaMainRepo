@@ -8,6 +8,7 @@ We recommend you to finish the reading list and the given exercies in 2 weeks (s
 
 ## Video list
 1. [The New Boston tutorials] (https://www.youtube.com/watch?v=gtQJXzi3Yns&index=5&list=PLFE2CE09D83EE3E28) (videos 5-13, 18-35)
+2. [Slidenerd tutorials] (https://www.youtube.com/watch?v=SSmB_HA0edc&list=PLonJJ3BVjZW6_q8gh7XoLUIhRIyBcYJLP&index=1) (videos 1-6)
 
 ## Reading list
 1. [Primitive Types, Simple IO](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/02-PrimitiveTypes_SimpleIO.pdf) (Books + Material/OOP Lab/02-PrimitiveTypes_SimpleIO.pdf)
