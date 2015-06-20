@@ -8,10 +8,11 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=XqTg2buXS5o&index=14&list=PLFE2CE09D83EE3E28) (videos 14-17, 36-48)
-2. [UML + basic class design](https://www.youtube.com/watch?v=N3ObVJrfXPs)
-3. [Acess modifiers](https://www.youtube.com/watch?v=QpSj0P3fNtA) ( `must watch!` )
-4. [Abstract classes explained nicely](https://www.youtube.com/watch?v=LOQG79rjmQw)
-5. [Packages](https://www.youtube.com/watch?v=BT5Nk2aIRJg) (Cave of Programming tutorials are overall great, watch whichever you want)
+2. [Slidenerd tutorials](https://www.youtube.com/watch?v=WQcOE9KnY_s&index=14&list=PLonJJ3BVjZW6_q8gh7XoLUIhRIyBcYJLP) (videos 14-45)
+3. [UML + basic class design](https://www.youtube.com/watch?v=N3ObVJrfXPs)
+4. [Acess modifiers](https://www.youtube.com/watch?v=QpSj0P3fNtA) ( `must watch!` )
+5. [Abstract classes explained nicely](https://www.youtube.com/watch?v=LOQG79rjmQw)
+6. [Packages](https://www.youtube.com/watch?v=BT5Nk2aIRJg) (Cave of Programming tutorials are overall great, watch whichever you want)
 6. You may ask for any specific topic on the forum or Google/YouTube it yourself.
 
 ## Reading list
