@@ -9,7 +9,7 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=jJjg4JweJZU&list=PLFE2CE09D83EE3E28&index=50)(videos 50-54, 62-77, 83-87)
 2. [Winston Lievsay GUI tutorials](https://www.youtube.com/watch?v=mjOicuXEvwg&list=PLA11B442106673455) (all of them)
-
+3. [Cave of Programming tutorials](https://www.youtube.com/watch?v=jUEOWVjnIR8&list=PL3D7046DF2257751F) (all of them)
 
 ## Reading list
 1. [Mouse](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/09-Mouse.pdf) (a bit difficult at first, don't start with this)
