@@ -4,7 +4,7 @@
 Understand the concept of class, object and object-oriented programming.
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (start_date - end_date).
+We recommend you to finish the reading list and the given assignments in 1 week (`20/07 - 26/07`).
 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=XqTg2buXS5o&index=14&list=PLFE2CE09D83EE3E28) (videos 14-17, 36-48)
@@ -13,7 +13,8 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 4. [Acess modifiers](https://www.youtube.com/watch?v=QpSj0P3fNtA) ( `must watch!` )
 5. [Abstract classes explained nicely](https://www.youtube.com/watch?v=LOQG79rjmQw)
 6. [Packages](https://www.youtube.com/watch?v=BT5Nk2aIRJg) (Cave of Programming tutorials are overall great, watch whichever you want)
-6. You may ask for any specific topic on the forum or Google/YouTube it yourself.
+7. [Derek Banas Java tutorials] (https://www.youtube.com/playlist?list=PLE7E8B7F4856C9B19) (videos 7-13)
+8. You may ask for any specific topic on the forum or Google/YouTube it yourself.
 
 ## Reading list
 1. [A simple class example (ch. 3.3) + exercises from this lab](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/04-FlowControl_SimpleClasses.pdf)
