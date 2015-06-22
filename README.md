@@ -68,3 +68,6 @@
 </pre>
 
 ##
+
+### 'Admins'
+[Alex](https://github.com/Alex-Cosma) & [George](https://github.com/georgebejan)
