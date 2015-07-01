@@ -25,5 +25,6 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 ## Play around with...
 1. [Exercises on Classes and Instances](https://www3.ntu.edu.sg/home/ehchua/programming/java/J3f_OOPExercises.html) (first 14 exercises - `highly recommended`)
 
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%202%20-%20Classes%20and%20Objects/Assignments)
 - 2.1 - [Polynomials](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%202%20-%20Classes%20and%20Objects/Assignments/Assignment%202.1%20-%20Polynomials.pdf)
 - 2.2 - [Matrix operations library](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%202%20-%20Classes%20and%20Objects/Assignments/Assignment%202.2%20-%20Matrix%20operations%20library.pdf)
