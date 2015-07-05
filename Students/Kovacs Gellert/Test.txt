@@ -1,0 +1,2 @@
+I've never used git before.
+It will be fun anyway.
