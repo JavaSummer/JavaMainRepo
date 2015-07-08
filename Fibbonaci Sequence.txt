@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.Scanner;
+import java.math.*;
+
+public class FibbonaciSeq {
+	public static void main(String[] args)
+	{
+		int a = 1;//first number
+		int b = 1;//second number
+		int c = 2;// third number
+		long sum=2;
+		while(true)
+		{
+			a = b;
+			b = c;
+			c = a+b;
+			if (c % 2 == 0) sum+=c;
+			System.out.println("The sum is :" +sum);
+			if (c > 4000000) break;
+			System.out.println("A is equal to "+ a + " B is equal to "+ b+ " C is equal to " +c);
+		}
+		
+	}
+
+}
