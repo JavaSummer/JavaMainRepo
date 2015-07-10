@@ -11,13 +11,13 @@ public final class PrimeSpiral2 {
 	 */
 	public static void main(final String args[]) {
 		double ratio = 100;
-		int n = 21401;
+		int n = 2;
 		/**
 		 * maximum n that can be run is 21403 after that Exception in thread
 		 * "main" java.lang.OutOfMemoryError: Java heap space at
-		 * Pack1.PrimeSpiral2.main(PrimeSpiral2.java:15)  
+		 * Pack1.PrimeSpiral2.main(PrimeSpiral2.java:15)
 		 * error is displayed
-		 * probabbly around 25001 or so 
+		 * probabbly around 25001 or so
 		 */
 		while (ratio > 10) {
 			int i = n;
@@ -100,8 +100,10 @@ public final class PrimeSpiral2 {
 
 			ratio = (double) (primeNumbersOnDiagonals * 100) / (double) numbersOnDiagonals;
 			System.out.println("The ratio is : " + ratio);
-			n += 2;
+			n += 1;
 		}
+		n-=1;
+		System.out.println();
 		System.out.println("The ratio is : " + ratio);
 		System.out.println("With maximum lenght: " + n);
 	}
