@@ -1,0 +1,53 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class Palindrome {
+	
+/**	
+  * @author Timbus
+	Check whether or not a number is Palindrome
+	Better to work with strings rather than 
+	Invariably generating the palindrome of a nr with classic method
+	For 4-nr exactly the same thing only 9999->1000 ....
+*/
+	private static boolean Is_Palindrome(int number)
+	{
+		String str = "" +number;
+		String revStr=new StringBuffer(str).reverse().toString();
+		if ((str).equals(revStr)){ 
+			return true;
+		}
+		return false;
+	}
+
+	public static void main (String [] args){
+		int a = 999;
+		int b = 999;
+		int aux1 = a;
+		int aux2 = b;
+		int rez;
+		int max = 0;
+		int nr1=0, nr2 = 0;
+		while(aux2!=100)
+		{
+			rez = aux1 * aux2;
+			if (Is_Palindrome(rez)==true)
+			{
+				if (rez > max){ 
+						max = rez;
+						nr1 = aux1;
+						nr2 = aux2;
+					}
+			}
+			aux1--;
+			if (aux1 == 100)
+			{
+				aux1 = 999;
+				aux2--;
+			}
+		}
+		System.out.println("The maximum palindrome is: " + max );
+		System.out.println("Obtained by multiplying " + nr1 + " by " +nr2);
+	}
+
+}
