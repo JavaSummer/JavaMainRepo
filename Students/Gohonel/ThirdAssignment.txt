@@ -1,0 +1,58 @@
+package Assignements;
+
+public class ThirdAssignment {
+	
+	public static int test (int t)
+	{
+		int i, k;
+		int array[] = new int[6];
+		
+		for ( i = 0; i < 6; i++)
+		{
+			array[i] = t % 10;
+			t = t/10;
+		}
+		
+		if ( array[5] == 0)
+		{
+			k = 5;
+		}else{
+			k = 6;
+		}
+			
+		for ( i = 0; i < k; i++)
+		{
+			if ( array[i] != array [(k-1) - i] )
+			{
+				return 0;
+			}
+		}
+		
+		return 1;
+	}
+	
+	public static void main(String[] args) 
+	{
+		int i, j = 0, max = 0, maxi = 0, maxj = 0, prod;
+	
+		
+		for ( i = 100; i < 1000; i++)
+		{
+			for ( j = 100; j < 1000; j++)
+			{
+				prod = i * j;
+				if ( test(prod) == 1 && prod > max)
+				{
+					max = prod;
+					maxi = i;
+					maxj = j;
+				}
+				
+			}
+		}
+		System.out.print("Largest Palindrome is: "+max);
+		System.out.print(", made by the numbers " + maxi + " and " + maxj);
+		
+	}
+
+}
