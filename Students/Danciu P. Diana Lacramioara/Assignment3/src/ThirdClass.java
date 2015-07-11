@@ -39,8 +39,8 @@ public class ThirdClass {
 		in2.close();
 	}
 
-	public static boolean isPalindrome(long num) {
-		String a = String.valueOf(num);
+	public static boolean isPalindrome(long number) {
+		String a = String.valueOf(number);
 		String b = new StringBuffer(a).reverse().toString();
 		if (a.equals(b))
 			return true;
