@@ -3,14 +3,14 @@ import java.util.Scanner;
 
 public class ThirdClass {
 	private static long startTime = System.currentTimeMillis();
-	
+
 	public static void main(String[] args) {
 
 		Scanner in1 = new Scanner(System.in);
-		int limit1 = in1.nextInt(); //lowest limit
+		int limit1 = in1.nextInt(); // lowest limit
 		Scanner in2 = new Scanner(System.in);
-		int limit2 = in2.nextInt();  //highest limit
-		
+		int limit2 = in2.nextInt(); // highest limit
+
 		long product = 0;
 		long max = 0;
 		for (int i = limit2; i > limit1; i--) {
@@ -25,23 +25,23 @@ public class ThirdClass {
 				}
 			}
 		}
-		
+
 		DecimalFormat df = new DecimalFormat();
-	    df.setMinimumFractionDigits(3);
-	    df.setMaximumFractionDigits(6);
-	    
+		df.setMinimumFractionDigits(3);
+		df.setMaximumFractionDigits(6);
+
 		System.out.println(max);
-		
+
 		long endTime = System.currentTimeMillis();
-        System.out.println("It took " + df.format((float)(endTime - startTime) / 1000) + " seconds"); //check execution time
-        
+		System.out.println("It took " + df.format((float) (endTime - startTime) / 1000) + " seconds"); // check execution time
+
 		in1.close();
 		in2.close();
 	}
 
 	public static boolean isPalindrome(long num) {
-		String a = num + "";
-		String b = new StringBuffer(num + "").reverse().toString();
+		String a = String.valueOf(num);
+		String b = new StringBuffer(a).reverse().toString();
 		if (a.equals(b))
 			return true;
 		return false;
