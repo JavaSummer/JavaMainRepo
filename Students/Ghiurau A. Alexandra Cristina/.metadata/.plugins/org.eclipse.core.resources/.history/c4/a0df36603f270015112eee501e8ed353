@@ -1,0 +1,29 @@
+/**
+ * 
+ * @author Alexa
+ *
+ */
+import java.util.Scanner;
+public class Palindrome {
+	
+	public static void main(String[] args) {
+		int randomNumber = (int)(Math.random() * 50);
+		if(randomNumber < 25){
+			System.out.println("the r n is < than 25");
+		} else {
+			System.out.println("the r n is "+ randomNumber);
+		}
+		Scanner userInput =  new Scanner(System.in);
+		String pressAtoContinue = "A";
+		
+		int h = 1;
+		while(pressAtoContinue.equalsIgnoreCase("a")){
+			System.out.println(h);
+			System.out.println("Press A to continue");
+			pressAtoContinue = userInput.nextLine();
+			h++;
+			
+		}
+	}
+
+}

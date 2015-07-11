@@ -1,0 +1,51 @@
+/**
+ * 
+ * @author Alexa
+ *
+ */
+import java.util.Scanner;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		int n = 432156;
+		int length = (int) (Math.log10(n) + 1);
+		System.out.println(length);
+		System.out.println(n%10 + "\t" + (n/100000));
+		n /= 10;
+		System.out.println(n%10 + "\t" + (n/1000)%10);
+		n /= 10;
+		System.out.println(n%10 + "\t" + (n/10)%10);
+		int d = 11211;
+		int f = 123321;
+		checkIfPalindrome(n);
+		checkIfPalindrome(f);
+		checkIfPalindrome(d);
+
+	}
+
+	public static boolean checkIfPalindrome(int n) {
+
+		int length = (int) (Math.log10(n) + 1);
+		if (length == 5) {
+			if ((n / 10000 == n % 10)) {
+				n /= 10;
+				if (n % 10 == (n / 100) % 10) {
+					return true;
+				}
+			}
+		}
+		if (length == 6) {
+			if ((n / 100000 == n % 10)) {
+				n /= 10;
+				if (n % 10 == (n / 1000) % 10) {
+					n /= 10;
+					if (n % 10 == (n / 10) % 10)
+						return true;
+				}
+			}
+		}
+
+		return false;
+	}
+}
