@@ -8,15 +8,14 @@ public class Fibonacci {
 			return n;
 		return FR(n - 1) + FR(n - 2);
 	}
-	////////////////////////////////////////////////////////////////////////////////////////
+
+	// //////////////////////////////////////////////////////////////////////////////////////
 	/*
 	 * I need this function to for the matrix representation of Fibonacci. The
-	 * mathematic representation is 
-	 * 			  n
-	 * ( [1] [1] ) = ( [Fibo(n+1)] [Fibo (n) ] )
+	 * mathematic representation is n ( [1] [1] ) = ( [Fibo(n+1)] [Fibo (n) ] )
 	 * ( [1] [0] ) = ( [ Fibo(n) ] [Fibo(n-1)] )
 	 */
-	////////////////////////////////////////////////////////////////////////////////////////
+	// //////////////////////////////////////////////////////////////////////////////////////
 	static void matrix_multiplication(long m1[][], long m2[][]) {
 		long a1 = (m1[0][0] * m2[0][0]) + (m1[0][1] * m2[1][0]);
 		long a2 = (m1[0][0] * m2[0][1]) + (m1[0][1] * m2[1][1]);
@@ -28,7 +27,8 @@ public class Fibonacci {
 		m1[1][0] = a3;
 		m1[1][1] = a4;
 	}
-	////////////////////////////////////////////////////////////////////////////////////////
+
+	// //////////////////////////////////////////////////////////////////////////////////////
 	static long fiboLog(long n) {
 		long nr[][] = { { 1, 0 }, { 0, 1 } };
 		long fibo[][] = { { 1, 1 }, { 1, 0 } };
@@ -43,25 +43,29 @@ public class Fibonacci {
 		}
 		return nr[1][0];
 	}
-	////////////////////////////////////////////////////////////////////////////////////////
-	static void recursive(long n){
-	System.out.println("Recursive ------------");
-	int i,j;
-	long sumFR=0;
+
+	// //////////////////////////////////////////////////////////////////////////////////////
+	static void recursive(long n) {
+		System.out.println("Recursive ------------");
+		int i, j;
+		long sumFR = 0;
 		for (j = 1; j <= n + 1 && FR(j) < 4000000; j++) {
 			System.out.print(FR(j) + " ");
 			if (FR(j) % 2 == 0)
 				sumFR += FR(j);
 		}
 		System.out.println();
-		System.out.println("The sum of the even numbers of Fibonacci series is:"+ sumFR);
+		System.out
+				.println("The sum of the even numbers of Fibonacci series is:"
+						+ sumFR);
 	}
-	////////////////////////////////////////////////////////////////////////////////////////
-	static void iterative(long n){
+
+	// //////////////////////////////////////////////////////////////////////////////////////
+	static void iterative(long n) {
 		long f0 = 1;
 		long f1 = 2;
 		long f2 = 0;
-		long sum= 2;
+		long sum = 2;
 		int i;
 		System.out.println("Iterative ------------");
 		System.out.print(f0 + " ");
@@ -75,9 +79,12 @@ public class Fibonacci {
 			System.out.print(" " + f2);
 		}
 		System.out.println();
-		System.out.println("The sum of the even numbers of Fibonacci series is "+ sum);
+		System.out
+				.println("The sum of the even numbers of Fibonacci series is "
+						+ sum);
 	}
-	////////////////////////////////////////////////////////////////////////////////////////
+
+	// //////////////////////////////////////////////////////////////////////////////////////
 	public static void main(String arg[]) {
 		// ///////// Twist 0 /////////////
 		long n, j, i, sum = 2, sumFR = 0;
@@ -102,6 +109,8 @@ public class Fibonacci {
 			System.out.print(fiboLog(i) + " ");
 		}
 		System.out.println();
-		System.out.println("The sum of the even numbers of Fibonacci series si "+ sumLog);
+		System.out
+				.println("The sum of the even numbers of Fibonacci series si "
+						+ sumLog);
 	}
 }

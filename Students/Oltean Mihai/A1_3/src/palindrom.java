@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 public class palindrom {
 
-	/*static boolean pal(long n) {
+	static boolean pal(long n) {
 		String st;
 		st = String.valueOf(n);
 		String rev = new StringBuffer(st).reverse().toString();
@@ -13,10 +13,10 @@ public class palindrom {
 		else
 			return false;
 	}
-	*/
+
 	// /This one is not a very efficient method...It takes twice the time to
 	// solve the problem for 4 digits numbers than "palnew"
-	
+
 	// / The palindrome function
 	static boolean palnew(long n) {
 		String st;
@@ -98,11 +98,14 @@ public class palindrom {
 		long duration = (endTime - startTime);
 		System.out.println("Time " + duration / 1000000 + " ms");
 	}
-	/* The best method was transforming the number to a string.It's way more efficient
-	 * and is more simple than reconstructing a number as reverse.
-	 * As result:
-	 * 
-	 * The biggest palindrome  is 906609 determinated by the numbers 993 and 913
-	 * The biggest palindrome  is 99000099 determinated by the numbers 9999 and 9901
-	 * Time 2877 ms (the time may vary) */
+	/*
+	 * The best method was transforming the number to a string.It's way more
+	 * efficient and is more simple than reconstructing a number as reverse. As
+	 * result: The biggest palindrome is not always the first palindrom found Eg
+	 * : 3 digits
+	 * "The biggest palindrome  is 580085 determinated by the numbers 995 and 583"
+	 * - X The biggest palindrome is 906609 determinated by the numbers 993 and
+	 * 913 The biggest palindrome is 99000099 determinated by the numbers 9999
+	 * and 9901 Time 2877 ms (the time may vary)
+	 */
 }
