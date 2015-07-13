@@ -1,0 +1,32 @@
+package Assignements;
+
+import java.util.Scanner;
+
+public class FirstAssignment {
+	public static void main(String[] args)
+	{
+		System.out.print("Enter up to where we go: ");
+		Scanner scan = new Scanner(System.in);
+		int i, j, sum = 0, a = 0, b = 0, c = 0, s = 0, n = 0;
+		
+		i = scan.nextInt();
+		
+		n = i / 3;
+		
+		a = ( 3 * n * ( n + 1 ))/2; 
+		
+		n = i / 5;
+		
+		b = ( 5 * n * ( n + 1 ))/2; 
+		
+		n = i / 15;
+		
+		c = ( 15 * n * ( n + 1 ))/2; 
+		
+		s = a + b - c;
+		
+		
+		System.out.print("You number is: ");
+		System.out.println(s);
+	}
+}
