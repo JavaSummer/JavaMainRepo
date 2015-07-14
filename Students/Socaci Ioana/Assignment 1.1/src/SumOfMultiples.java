@@ -1,13 +1,14 @@
 
 public class SumOfMultiples {
 	public static void main(String[] args) {
-		int sum = 0;
-		for (int number = 3; number < 1000; number++) {
-			if ((number % 3 == 0) || (number % 5 == 0)) {
-				sum += number;
-			}
-
-		}
+		int multipleOfThree = 333, multipleOfFive = 199, multipleOfFifteen = 66;
+		int sum;
+		sum = 3 * calculateSum(multipleOfThree) + 5 * calculateSum(multipleOfFive)
+				- 15 * calculateSum(multipleOfFifteen);
 		System.out.println("The required sum is: " + sum);
+	}
+
+	public static int calculateSum(int n) {
+		return (n * (n + 1)) / 2;
 	}
 }
