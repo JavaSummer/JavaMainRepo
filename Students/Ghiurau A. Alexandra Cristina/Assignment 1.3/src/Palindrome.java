@@ -16,46 +16,34 @@ public class Palindrome {
 					if (product > max) {
 						max = product;
 						System.out.println(product + " is palindrome");
-						System.out.println( counter1 + " * " + counter2 + " = " + product);
+						System.out.println(counter1 + " * " + counter2 + " = " + product);
 
 					}
 				}
 			}
 		}
+
 		System.out.println("The largest of them all is " + max);
 
 	}
 
+	public static int reverseNumber(int number) {
+		int reversedNo = 0;
+		do {
+			reversedNo = number % 10 + reversedNo * 10;
+			number = number / 10;
+		} while (number > 0);
+		return reversedNo;
+	}
+
 	public static boolean checkIfPalindrome(int n) {
 
-		int length = (int) (Math.log10(n) + 1);
-		int a = 10000;
-		int b = 100;
-		final int TEN = 10;
-		if (length == 5) {
-			if ((n / a == n % TEN)) {
-				n /= TEN;
-				if (n % TEN == (n / b) % TEN) {
-					return true;
-				}
-			}
+		if (n == reverseNumber(n)) {
+			return true;
+		} else {
+			return false;
 		}
-		if (length == 6) {
-			a*=10;
-			b*=10;
-			if ((n / a == n % TEN)) {
-				n /= TEN;
-				if (n % TEN == (n / b) % TEN) {
-					n /= TEN;
-					if (n % TEN == (n / TEN) % TEN)
-						return true;
-				}
-			}
-		}
-
-		return false;
 
 	}
-}	
-	
+}
 
