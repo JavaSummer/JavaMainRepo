@@ -7,20 +7,24 @@
 public class PrimeSpiral {
 	public static void main(String[] args) {
 		
-		double ratio = 1;
+		double ratio = 100;
 		
 		//in this case num is the corner 
-		int num = 9;
+		//int num = 1;
 		int noOfPrimes = 0;
-		int sideLength = 2;
-		while (ratio >= 0.10) {
+		int sideLength = 1;
+		int num = 1;
+		while (ratio > 10) {
 			sideLength += 2;
-			for (int j = 1; j < 4; j++) {
-				if (checkIfPrime(num)) {
+			num += 4;
+			for (int j = 1; j < 4; j++)// or for i = 0; i< 3 
+				{
+				if (checkIfPrime(sideLength * sideLength -j * (sideLength -1))) {
+					//System.out.println("test1: " + (sideLength * sideLength -j *  (sideLength -1)));
 					noOfPrimes++;
 				}
-				num += sideLength;
-				ratio = (double) (noOfPrimes) / (double) (2* sideLength + 1);
+				ratio = ((double) (noOfPrimes) / num) *100;
+				//System.out.println("ratio : "+ ratio);
 			}
 		}
 		System.out.println("ratio: " + ratio + " at side length: " + sideLength);
@@ -62,4 +66,25 @@ public class PrimeSpiral {
 		}
 		return true;
 	}
+	/*public static int PrimeSpiralDiagonals(int percent)
+    {
+        double primePercent = 100;
+        int primeCount = 3;
+        int sideLength = 2;
+        int cornerNumber = 9;
+
+        while (primePercent >= percent)
+        {
+            sideLength += 2;
+            for (int i = 1; i < 4; i++)
+            {
+                cornerNumber += sideLength;
+                if (checkIfPrime(cornerNumber))
+                    primeCount++;
+            }
+            cornerNumber += sideLength;
+            primePercent = (double)primeCount / (2 * sideLength + 1) * 100;
+        }
+        return sideLength + 1;
+    }*/
 }
