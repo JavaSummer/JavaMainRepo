@@ -1,6 +1,6 @@
 package assign3;
 
-public class assign3
+public class Assign3
 
 {
 	public static int checkP(int n) {
