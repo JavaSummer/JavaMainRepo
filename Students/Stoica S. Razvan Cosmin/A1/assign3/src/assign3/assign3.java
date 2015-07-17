@@ -1,6 +1,6 @@
 package assign3;
 
-public class assign3
+public class Assign3
 
 {
 	public static int checkP(int n) {
@@ -15,7 +15,7 @@ public class assign3
 			return 0;
 	}
 
-	public static void Palindrom() {
+	public static void palindrom() {
 		int x, y, max = 0, i, j;
 		x = y = 0;
 		for (i = 999; i > 100; i--)
@@ -30,7 +30,7 @@ public class assign3
 	}
 
 	public static void main(String[] args) {
-		Palindrom();
+		palindrom();
 	}
 }
 
