@@ -2,7 +2,7 @@ package asign;
 
 import java.util.Scanner;
 
-public class asign2 {
+public class Asign2 {
 
 	public static void main(String[] args) {
 		Scanner cin = new Scanner(System.in);
