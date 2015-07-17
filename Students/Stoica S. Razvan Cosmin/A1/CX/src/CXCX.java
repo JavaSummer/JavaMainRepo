@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CXCX {
+public class Cxcx {
 	public static int sumOfMultiples(int n, int x) {
 		int sum = 0, var;
 		var = n / x;
