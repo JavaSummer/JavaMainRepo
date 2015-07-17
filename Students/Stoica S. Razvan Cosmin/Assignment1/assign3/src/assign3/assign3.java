@@ -15,7 +15,7 @@ public class Assign3
 			return 0;
 	}
 
-	public static void Palindrom() {
+	public static void palindrom() {
 		int x, y, max = 0, i, j;
 		x = y = 0;
 		for (i = 999; i > 100; i--)
@@ -30,7 +30,7 @@ public class Assign3
 	}
 
 	public static void main(String[] args) {
-		Palindrom();
+		palindrom();
 	}
 }
 
