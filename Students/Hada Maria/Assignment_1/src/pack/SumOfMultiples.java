@@ -31,19 +31,28 @@ public class SumOfMultiples {
 		final int secondNumber = 5;
 		final int thirdNumber = 15;
 		int mult3 = 0, mult5 = 0, mult15 = 0;
+		int n = 0;
 
-		for (int i = 1; i < inputNumber; i++) {
-
-			if (i % firstNumber == 0) {
-				mult3 += i;
-			}
-			if (i % secondNumber == 0) {
-				mult5 += i;
-			}
-			if (i % thirdNumber == 0) {
-				mult15 += i;
-			}
+		if (inputNumber % firstNumber == 0) {
+			n = inputNumber / firstNumber - 1;
+		} else {
+			n = inputNumber / firstNumber;
 		}
+		mult3 = firstNumber * (n * (n + 1)) / 2;
+
+		if (inputNumber % secondNumber == 0) {
+			n = inputNumber / secondNumber - 1;
+		} else {
+			n = inputNumber / secondNumber;
+		}
+		mult5 = secondNumber * (n * (n + 1)) / 2;
+
+		if (inputNumber % thirdNumber == 0) {
+			n = inputNumber / thirdNumber - 1;
+		} else {
+			n = inputNumber / thirdNumber;
+		}
+		mult15 = thirdNumber * (n * (n + 1)) / 2;
 
 		sumOfMultiples = mult3 + mult5 - mult15;
 		System.out.print("The sum of multiples is " + sumOfMultiples);
