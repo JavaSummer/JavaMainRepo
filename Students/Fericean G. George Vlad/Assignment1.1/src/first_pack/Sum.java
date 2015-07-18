@@ -8,21 +8,13 @@ public class Sum {
 		double sum1 = 0, sum2 = 0, x, nr;
 		x = scan.nextDouble();
 		if (x == 1) {
-			for (int i = 1; i < 1000; i++) {
-				if (i % 3 == 0 || i % 5 == 0) {
-					sum1 = sum1 + i;
-				}
-			}
+			sum1 = 3 * ((1000 / 3) * (1000 / 3 + 1)) / 2 + 5 * ((1000 / 5 - 1) * (1000 / 5)) / 2 - 15 * ((1000 / 15) * (1000 / 15 + 1)) / 2;
 			System.out.println("the sum is");
 			System.out.println(sum1);
 		} else // twist1
 		{
 			nr = scan.nextDouble();
-			for (int i = 1; i < nr; i++) {
-				if (i % 3 == 0 || i % 5 == 0) {
-					sum2 = sum2 + i;
-				}
-			}
+			sum2 = 3 * ((nr / 3) * (nr / 3 + 1)) / 2 + 5 * ((nr / 5 - 1) * (nr / 5)) / 2 - 15 * ((nr / 15) * (nr / 15 + 1)) / 2;
 			System.out.println("the sum is");
 			System.out.println(sum2);
 		}
