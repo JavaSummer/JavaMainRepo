@@ -1,0 +1,43 @@
+// 3) Largest Palindrome
+
+public class LargestPalindrome {
+	public static void main(String args[]) {
+
+		largestPalindrome(999, 100);
+		largestPalindrome(9999,1000);
+
+	}
+
+	public static void largestPalindrome(int supLimit, int infLimit) {
+
+		int i, j;
+		int maxPalindrome=0, maxI=0, maxJ=0;
+
+		for (i = supLimit; i > infLimit; i--) {
+			for (j = supLimit; j > infLimit; j--) {
+					if(isPalindrome(i*j) && (i*j)> maxPalindrome){
+						maxPalindrome= i*j;
+						maxI=i;
+						maxJ=j;
+					}
+			}
+		}
+		System.out.println("The maxim palindrome is " + maxPalindrome + " = " + maxI + " * " + maxJ);
+	}
+	
+	public static boolean isPalindrome(int number){
+		int reversedClone = 0;
+		int originalNumber = number;
+		
+		while(number!= 0){
+			reversedClone = reversedClone*10 + number % 10;
+			number /= 10;
+		}
+		if (originalNumber == reversedClone){
+			return true;
+		}
+		else{
+			return false;
+		}
+		}
+	}
