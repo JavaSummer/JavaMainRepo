@@ -5,9 +5,8 @@ public class sumultiple {
 	}
 
 	public static int sum(int a) {
-	int i,sum=0;
-	for (i=3; i<a; i++)
-		if (i % 3 == 0 || i % 5 == 0) sum+=i;
-	return sum;
+		int sum;
+		sum = 3 * ((a / 3) * (a / 3 + 1)) / 2 + 5 * ((a / 5 - 1) * (a / 5)) / 2 - 15 * ((a / 15) * (a / 15 + 1)) / 2;
+		return sum;
 	}
 }
