@@ -1,8 +1,0 @@
-
-public class palindrome {
-public static void main(String[] args) {
-	int a=999, b=999;
-	System.out.println(a*b);
-	System.out.println(Integer.MAX_VALUE);
-}
-}
