@@ -1,0 +1,22 @@
+
+public class sumultipleTwist2 {
+
+	public static void main(String[] args) {
+		int a = 1000,  i, sum = 0;
+		while (a<1000000) {
+			for (i = 3; i < a; i++)
+				if (i % 3 == 0 || i % 5 == 0)
+					try {
+						Math.addExact(sum,i);
+					} 
+					catch (ArithmeticException e) {
+						System.out.println("Int overflow for " + a);
+				
+					}
+			a++;
+		}
+
+	}
+
+	
+}

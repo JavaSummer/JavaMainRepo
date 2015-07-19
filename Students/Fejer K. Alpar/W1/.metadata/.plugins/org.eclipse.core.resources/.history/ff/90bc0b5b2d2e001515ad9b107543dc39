@@ -1,0 +1,7 @@
+
+public class fibonacci {
+public static void main(String[] args) {
+	int f1,f2,f3;
+	System.out.println(Integer.MAX_VALUE);
+}
+}
