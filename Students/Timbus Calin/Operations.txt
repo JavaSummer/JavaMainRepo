@@ -1,0 +1,131 @@
+package myPackage;
+import java.util.*;
+
+public class Operations {
+	private int greater;
+	protected void ADD(int[] a,int[] b,int m, int n){
+		if (m>=n){
+			greater = m;
+		}
+			else
+			greater = n;
+		int i = 0;
+		int j = 0;
+		System.out.println("The addition of the polynomials is: ");
+		while ((i<m) && (j<n))
+		{
+			int result = a[i] + b[j];
+			if (result>=0)
+			{
+				System.out.print("+"+result+"*"+"x^"+ greater-- + " ");
+			}
+			else
+			{
+				System.out.print(result+"*"+"x^"+ greater-- + " ");
+			}
+			i+=1;
+			j+=1;
+		}
+		while (i<m){
+			if (a[i]>=0){
+			System.out.print("+"+a[i]+"*"+"x^"+greater--+ " ");
+			}
+			else
+			{
+				System.out.print(a[i]+"*"+"x^"+greater--+ " ");
+			}
+			i+=1;
+		}
+			
+		
+		while (j<n){
+			if (b[j]>=0){
+			System.out.print("+"+b[j]+"*"+"x^"+greater--+ " ");
+			}
+			else
+			{
+				System.out.print(b[j]+"*"+"x^"+greater--+ " ");
+			}
+			j+=1;
+		}		
+	}
+
+	protected void SUBTRACT(int[] a,int[] b,int m, int n){
+	
+		if (m>=n){
+			greater = m;
+		}
+			else
+			greater = n;
+		int i = 0;
+		int j = 0;
+		System.out.println("The subtraction of the polynomials is: ");
+		while ((i<m) && (j<n))
+		{
+			int result = a[i] - b[j];
+			if (result>=0)
+			{
+				System.out.print("+"+result+"*"+"x^"+ greater-- + " ");
+			}
+			else
+			{
+				System.out.print(result+"*"+"x^"+ greater-- + " ");
+			}
+			i+=1;
+			j+=1;
+		}
+		while (i<m){
+			if (a[i]>=0){
+			System.out.print("+"+a[i]+"*"+"x^"+greater--+ " ");
+			}
+			else
+			{
+				System.out.print(a[i]+"*"+"x^"+greater--+ " ");
+			}
+			i+=1;
+		}
+			
+		
+		while (j<n){
+			if (b[j]>=0){
+			System.out.print("+"+b[j]+"*"+"x^"+greater--+ " ");
+			}
+			else
+			{
+				System.out.print(b[j]+"*"+"x^"+greater--+ " ");
+			}
+			j+=1;
+		}		
+	}
+
+	protected void MULTIPLY(int[] a,int[] b,int m, int n){
+		int[] c;
+		if (m>=n){
+			greater = m;
+		}
+			else
+			greater = n;
+		c = new int[greater];
+		int result;
+		for(int i=0;i<m;i++)
+		{
+			for (int j=0;j<n;j++){
+				result = 1;
+				result = a[i] * b[j];
+				c[i+j] += result;
+				}
+		}
+		System.out.println("The result of multiplication is : ");
+		int z = greater;
+		for(int k=0;k<z;k++)
+		{
+			System.out.print(c[k]+"*"+"x^"+greater--+ " ");
+		}
+			
+		
+	}
+	}
+	
+	
+
+
