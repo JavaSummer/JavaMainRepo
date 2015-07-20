@@ -22,42 +22,37 @@ public class SpiralPrime
 		int nrLine = 1; 
 		int nrCol = 1;
 		int nrPrime = 0;  
-		int currnetNumber = 1;  
+		int currnetNumber = 1; 
+		double ratio=100;
 		
 		
-		while (nrPrime == 0 || (double)(nrPrime+1) / (nrLine + nrCol) >= 0.1)
+		while(nrPrime==0 || ratio > 0.1)
 		{ 
 
 			currnetNumber+=nrCol; 
 			nrCol++;
-			
+		        if (  prime(currnetNumber) && currnetNumber!=2 ) nrPrime++;
 		
-			
-	//we are interested only in the elements in the corner of the matrix
-    //we add elements to the corner of the matrix and we only check if they are prime if the matrix is a square matrix
-			
+	
 			currnetNumber+=nrLine; 
 			nrLine++;
 			if (  prime(currnetNumber)) nrPrime++;
-	
-			
-			if (nrPrime != 0 && (double)(nrPrime+1) / (nrLine + nrCol) < 0.1) break;
-			
-   //We added a row and a column, so the mtrix has an even number of rows and columns
-   //1 is no longer the center of the matrix so this means the main diagonal has changed
+ 
 			
 			currnetNumber+=nrCol; 
 			nrCol++;
+			if (  prime(currnetNumber)) nrPrime++;
 			
 	
 			currnetNumber += nrLine; 
 			nrLine++;
 			if (  prime(currnetNumber)) nrPrime++;
 			
-	 
+			
+	                ratio=(double) nrPrime / (nrCol+nrLine-1); 
 		  	
 		}
-		System.out.println(nrCol+" "+(double)(nrPrime+1) / (nrLine + nrCol));
+		System.out.println(nrCol+" "+ratio);
 		
 	}
 
