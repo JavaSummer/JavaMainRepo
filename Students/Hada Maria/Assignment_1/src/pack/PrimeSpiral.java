@@ -21,34 +21,20 @@ public class PrimeSpiral {
 	public static int[][] buildSpiralMatrix(final int n) {
 
 		int[][] spiralMatrix = new int[n][n];
-		int[] firstRow = new int[n];
-		int[] secondRow = new int[n];
-		int[] thirdRow = new int[n];
-		int[] fourthRow = new int[n];
+		int sideLength = n;
+		int m = n;
+		int i = 0;
 
-		// the lower part of the principal diagonal
-		for (int i = 0; i <= (n + 1) / 2 - 1; i++) {
-			firstRow[i] = (int) (Math.pow(1 + 2 * i, 2));
-			spiralMatrix[0][i] = firstRow[i];
-		}
+		do {
+			spiralMatrix[m - 1][m - 1] = sideLength * sideLength;
+			spiralMatrix[m - 1][i] = spiralMatrix[m - 1][m - 1] - sideLength + 1;
+			spiralMatrix[i][i] = spiralMatrix[m - 1][i] - sideLength + 1;
+			spiralMatrix[i][m - 1] = spiralMatrix[i][i] - sideLength + 1;
+			i++;
+			m = m - 1;
+			sideLength = sideLength - 2;
+		} while (sideLength >= 1);
 
-		// the lower part of the secondary diagonal
-		for (int i = 0; i <= (n + 1) / 2 - 1; i++) {
-			secondRow[i] = firstRow[i] - 2 * i;
-			spiralMatrix[1][i] = secondRow[i];
-		}
-
-		// the upper part of the principal diagonal
-		for (int i = 0; i <= (n + 1) / 2 - 1; i++) {
-			thirdRow[i] = firstRow[i] - 4 * i;
-			spiralMatrix[2][i] = thirdRow[i];
-		}
-
-		// the upper part of the secondary diagonal
-		for (int i = 0; i <= (n + 1) / 2 - 1; i++) {
-			fourthRow[i] = firstRow[i] - 6 * i;
-			spiralMatrix[3][i] = fourthRow[i];
-		}
 		return spiralMatrix;
 	}
 
@@ -85,15 +71,14 @@ public class PrimeSpiral {
 
 		double ratio = 0;
 		int ratioPrime = 0;
-		int diagonalNumbers = 1;
+		int diagonalNumbers = 2 * n - 1;
 		int primeNumbers = 0;
 		final int cent = 100;
 
-		for (int row = 0; row <= 3; row++) {
-			for (int col = 0; col <= (n + 1) / 2 - 1; col++) {
-				if (spiralM[row][col] != 0) {
+		for (int row = 0; row < n; row++) {
+			for (int col = 0; col < n; col++) {
+				if ((row == col) || (row + col == n - 1)) {
 					if (spiralM[row][col] != 1) {
-						diagonalNumbers++;
 						if (checkIfPrime(spiralM[row][col]) == 1) {
 							primeNumbers++;
 						}
@@ -101,7 +86,6 @@ public class PrimeSpiral {
 				}
 			}
 		}
-
 		ratio = ((double) (primeNumbers) / (double) (diagonalNumbers)) * cent;
 		ratioPrime = (int) (ratio);
 		return ratioPrime;
@@ -122,6 +106,12 @@ public class PrimeSpiral {
 
 		spiralMatrix = buildSpiralMatrix(sideLength);
 		ratio = primeRatio(spiralMatrix, sideLength);
+		/*for (int i = 0; i < sideLength; i++) {
+			for (int j = 0; j < sideLength; j++) {
+				System.out.print(spiralMatrix[i][j] + "\t");
+			}
+			System.out.println();
+		}*/
 		System.out.print("The side length is " + sideLength + " ");
 		System.out.println(ratio + "%");
 
