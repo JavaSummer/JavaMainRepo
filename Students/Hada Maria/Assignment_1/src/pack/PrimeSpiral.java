@@ -37,19 +37,19 @@ public class PrimeSpiral {
 		k = k + 2;
 		do {
 			botRightCorner = sideLength * sideLength;
-			if (checkIfPrime(botRightCorner) == 1) {
+			if (isPrime(botRightCorner)) {
 				primeNumbers++;
 			}
 			botLeftCorner = botRightCorner - k;
-			if (checkIfPrime(botLeftCorner) == 1) {
+			if (isPrime(botLeftCorner)) {
 				primeNumbers++;
 			}
 			topLeftCorner = botLeftCorner - k;
-			if (checkIfPrime(topLeftCorner) == 1) {
+			if (isPrime(topLeftCorner)) {
 				primeNumbers++;
 			}
 			topRightCorner = topLeftCorner - k;
-			if (checkIfPrime(topRightCorner) == 1) {
+			if (isPrime(topRightCorner)) {
 				primeNumbers++;
 			}
 			k = k + 2;
@@ -69,22 +69,15 @@ public class PrimeSpiral {
 	 *            -> to be checked
 	 * @return -> 1 if prime, 0 otherwise
 	 */
-	public static int checkIfPrime(int number) {
+	public static boolean isPrime(int number) {
 
 		int prime = 1;
-		if (number % 2 == 0) {
-			prime = 0;
-		}
-		for (int i = 3; i * i <= number; i += 2) {
+		for (int i = 2; i * i <= number; i += 1) {
 			if (number % i == 0) {
 				prime = 0;
 			}
 		}
-		if (prime == 1) {
-			return 1;
-		} else {
-			return 0;
-		}
+		return (prime == 1);
 	}
 
 	/**
