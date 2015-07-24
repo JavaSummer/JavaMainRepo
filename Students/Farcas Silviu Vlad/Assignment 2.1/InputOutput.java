@@ -35,32 +35,32 @@ public class InputOutput {
 				while (input.hasNextLine()) {
 					coeff = input.nextLine();
 					if (coeff.equals("ADD")) {
-						output.println(f.add(coeffM, coeffN));
+						output.println(f.add(poliM, poliN).getPoly());
 					}
 					if (coeff.equals("SUBTRACT")) {
-						output.println(f.subtract(coeffM, coeffN));
+						output.println(f.subtract(poliM, poliN).getPoly());
 					}
 					if (coeff.contains("MUL_SCAL")) {
 						coeffArray = coeff.split(" ");
-						output.println(f.mulScal(Integer.parseInt(coeffArray[1]), coeffM));
-						output.println(f.mulScal(Integer.parseInt(coeffArray[1]), coeffN));
+						output.println(f.mulScal(Integer.parseInt(coeffArray[1]), poliM).getPoly());
+						output.println(f.mulScal(Integer.parseInt(coeffArray[1]), poliN).getPoly());
 					}
 					if (coeff.equals("MULTIPLY")) {
-						output.println(f.multiply(coeffM, coeffN));
+						output.println(f.multiply(poliM, poliN).getPoly());
 					}
 					if (coeff.contains("EVAL")) {
 						coeffArray = coeff.split(" ");
-						output.println(f.eval(Integer.parseInt(coeffArray[1]), coeffM));
-						output.println(f.eval(Integer.parseInt(coeffArray[1]), coeffN));
+						output.println(f.eval(Integer.parseInt(coeffArray[1]), poliM));
+						output.println(f.eval(Integer.parseInt(coeffArray[1]), poliN));
 					}
 					if (coeff.equals("ROOT")) {
-						double r = f.root(coeffM);
-						if (r == 0 && f.eval(0, coeffM) != 0)
+						double r = f.root(poliM);
+						if (r == 0 && f.eval(0, poliM) != 0)
 							output.println("Has not real root");
 						else
 							output.println(r);
-						r = f.root(coeffN);
-						if (r == 0 && f.eval(0, coeffN) != 0)
+						r = f.root(poliN);
+						if (r == 0 && f.eval(0, poliN) != 0)
 							output.println("Has not real root");
 						else
 							output.println(r);

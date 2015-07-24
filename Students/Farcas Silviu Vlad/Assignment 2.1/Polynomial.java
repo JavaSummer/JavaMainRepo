@@ -1,13 +1,17 @@
-
 public class Polynomial {
 	private String poly;
+	public int[] coefficients; 
+	public int degree;
 	public int[] construct(int... coeff) {
 		int i;
-		for (i = 0; i < coeff.length; i++) {
-			if (i == 0 && coeff.length > 1) {
-				poly = coeff[i] + "x^" + (coeff.length - 1);
-			} else if (i == coeff.length - 1) {
-				if (coeff.length == 1) {
+		degree = coeff.length;
+		coefficients = new int[degree];
+		for (i = 0; i < degree; i++) {
+			coefficients[i]=coeff[i];
+			if (i == 0 && degree > 1) {
+				poly = coeff[i] + "x^" + (degree - 1);
+			} else if (i == degree - 1) {
+				if (degree == 1) {
 					if (coeff[i] >= 0) {
 						poly = coeff[i] + "";
 					} else {
@@ -21,9 +25,9 @@ public class Polynomial {
 					}
 				}
 			} else if (coeff[i] > 0) {
-				poly = poly + "+" + coeff[i] + "x^" + (coeff.length - i - 1);
+				poly = poly + "+" + coeff[i] + "x^" + (degree - i - 1);
 			} else if (coeff[i] < 0) {
-				poly = poly + coeff[i] + "x^" + (coeff.length-i-1);
+				poly = poly + coeff[i] + "x^" + (degree-i-1);
 			}
 		}
 		return coeff;

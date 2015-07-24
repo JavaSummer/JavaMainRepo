@@ -2,96 +2,96 @@ import java.lang.Math;
 
 public class Functions {
 
-	public String add(int[] coeffM, int[] coeffN) {
+	public Polynomial add(Polynomial poliM, Polynomial poliN) {
 		Polynomial poliAdd = new Polynomial();
 		int coeffLength;
-		if (coeffM.length < coeffN.length) {
-			coeffLength = coeffN.length;
+		if (poliM.degree < poliN.degree) {
+			coeffLength = poliN.degree;
 		} else {
-			coeffLength = coeffM.length;
+			coeffLength = poliM.degree;
 		}
 		int[] coeff = new int[coeffLength];
 		int i;
 		for (i = 0; i < coeffLength; i++) {
-			if (i > coeffM.length - 1) {
-				coeff[coeffLength - 1 - i] = coeffN[coeffLength - 1 - i];
-			} else if (i > coeffN.length - 1) {
-				coeff[coeffLength - 1 - i] = coeffM[coeffLength - 1 - i];
+			if (i > poliM.degree - 1) {
+				coeff[coeffLength - 1 - i] = poliN.coefficients[coeffLength - 1 - i];
+			} else if (i > poliN.degree - 1) {
+				coeff[coeffLength - 1 - i] = poliM.coefficients[coeffLength - 1 - i];
 			} else {
-				coeff[coeffLength - 1 - i] = coeffN[coeffN.length - 1 - i] + coeffM[coeffM.length - 1 - i];
+				coeff[coeffLength - 1 - i] = poliN.coefficients[poliN.degree - 1 - i] + poliM.coefficients[poliM.degree - 1 - i];
 			}
 		}
 		poliAdd.construct(coeff);
-		return poliAdd.getPoly();
+		return poliAdd;
 	}
 
-	public String subtract(int[] coeffM, int[] coeffN) {
+	public Polynomial subtract(Polynomial poliM, Polynomial poliN) {
 		Polynomial poliSub = new Polynomial();
 		int coeffLength;
-		if (coeffM.length < coeffN.length) {
-			coeffLength = coeffN.length;
+		if (poliM.degree < poliN.degree) {
+			coeffLength = poliN.degree;
 		} else {
-			coeffLength = coeffM.length;
+			coeffLength = poliM.degree;
 		}
 		int[] coeff = new int[coeffLength];
 		int i;
 		for (i = 0; i < coeffLength; i++) {
-			if (i > coeffM.length - 1) {
-				coeff[coeffLength - 1 - i] = -coeffN[coeffLength - 1 - i];
-			} else if (i > coeffN.length - 1) {
-				coeff[coeffLength - 1 - i] = coeffM[coeffLength - 1 - i];
+			if (i > poliM.degree - 1) {
+				coeff[coeffLength - 1 - i] = -poliN.coefficients[coeffLength - 1 - i];
+			} else if (i > poliN.degree - 1) {
+				coeff[coeffLength - 1 - i] = poliM.coefficients[coeffLength - 1 - i];
 			} else {
-				coeff[coeffLength - 1 - i] = coeffM[coeffM.length - 1 - i] - coeffN[coeffN.length - 1 - i];
+				coeff[coeffLength - 1 - i] = poliM.coefficients[poliM.degree - 1 - i] - poliN.coefficients[poliN.degree - 1 - i];
 			}
 		}
 		poliSub.construct(coeff);
-		return poliSub.getPoly();
+		return poliSub;
 	}
 
-	public String mulScal(int n, int[] coeff) {
+	public Polynomial mulScal(int n, Polynomial poli) {
 		Polynomial poliMulScal = new Polynomial();
-		int[] coeffMul = new int[coeff.length];
+		int[] coeffMul = new int[poli.degree];
 		int i;
-		for (i = 0; i < coeff.length; i++) {
-			coeffMul[i] = coeff[i] * n;
+		for (i = 0; i < poli.degree; i++) {
+			coeffMul[i] = poli.coefficients[i] * n;
 		}
 		poliMulScal.construct(coeffMul);
-		return poliMulScal.getPoly();
+		return poliMulScal;
 	}
 
-	public String multiply(int[] coeffM, int[] coeffN) {
+	public Polynomial multiply(Polynomial poliM, Polynomial poliN) {
 		Polynomial poliMul = new Polynomial();
 		int i, j;
-		int[] coeff = new int[coeffM.length + coeffN.length - 1];
+		int[] coeff = new int[poliM.degree + poliN.degree - 1];
 		for (i = 0; i < coeff.length; i++) {
 			coeff[i] = 0;
 			for (j = i; j >= 0; j--) {
-				if (j < coeffM.length && (i - j) < coeffN.length) {
-					coeff[i] = coeff[i] + coeffM[j] * coeffN[i - j];
+				if (j < poliM.degree && (i - j) < poliN.degree) {
+					coeff[i] = coeff[i] + poliM.coefficients[j] * poliN.coefficients[i - j];
 				}
 			}
 		}
 		poliMul.construct(coeff);
-		return poliMul.getPoly();
+		return poliMul;
 	}
 
-	public double eval(double n, int[] coeff) {
+	public double eval(double n, Polynomial poli) {
 		int i;
 		double nn = 0;
-		for (i = 0; i < coeff.length; i++) {
-			nn = nn + coeff[i] * Math.pow(n, coeff.length - 1 - i);
+		for (i = 0; i < poli.degree; i++) {
+			nn = nn + poli.coefficients[i] * Math.pow(n, poli.degree - 1 - i);
 		}
 		return nn;
 	}
 
-	public double root(int[] coeff) {
+	public double root(Polynomial poli) {
 		double a = 1, b = -1, c, fa, fb, fc, tol = 0.001;
-		fa = eval(a, coeff);
-		fb = eval(-a, coeff);
+		fa = eval(a, poli);
+		fb = eval(-a, poli);
 		while (fa * fb > 0 && a < 1_000_000) {
 			a++;
-			fa = eval(a, coeff);
-			fb = eval(-a, coeff);
+			fa = eval(a, poli);
+			fb = eval(-a, poli);
 		}
 		if (fa == 0)
 			return a;
@@ -102,7 +102,7 @@ public class Functions {
 		}
 		b = -a;
 		c = 0.5 * (a + b);
-		fc = eval(c, coeff);
+		fc = eval(c, poli);
 		while (fc != 0 && Math.abs((b - a) * 0.5) > tol) {
 			if (fc * fa > 0) {
 				a = c;
@@ -110,11 +110,10 @@ public class Functions {
 				b = c;
 			}
 			c = 0.5 * (a + b);
-			fc = eval(c, coeff);
-			fa = eval(a, coeff);
+			fc = eval(c, poli);
+			fa = eval(a, poli);
 		}
 		return c;
 	}
-	
 
 }
