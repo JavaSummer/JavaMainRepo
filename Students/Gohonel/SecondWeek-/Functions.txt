@@ -1,0 +1,60 @@
+package Assignements;
+
+import java.util.Arrays;
+
+public class Functions {
+
+	public String Add(int[] pol1, int[] pol2, int m, int n) {
+		int[] pol = new int [100];
+		n = (n > m) ? n : m;
+		for (int i = 0; i < n; i++) {
+			pol[i] = pol1[i] + pol2[i];
+		}
+		String p = "";
+		p = Arrays.toString(pol);
+		return p;
+	}
+
+	public String Subtract(int[] pol1, int[] pol2, int m, int n) {
+		int[] pol = new int[100];
+		n = (n > m) ? n : m;
+		for (int i = 0; i < n; i++) {
+			pol[i] = pol1[i] - pol2[i];
+		}
+		String p = "";
+		p = Arrays.toString(pol);
+		return p;
+	}
+
+	public String Multiply(int[] pol1, int[] pol2, int m, int n) {
+		int[] pol = new int[100];
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < n; j++) {
+				pol[i + j] = (pol1[i] * pol2[j]) + pol[i + j];
+			}
+		}
+		String p = "";
+		p = Arrays.toString(pol);
+		return p;
+	}
+
+	public String MultScal(int[] pol1, int m, int scalar) {
+		int[] pol = new int[100];
+		for (int i = 0; i < m; i++) {
+			pol[i] = scalar * pol1[i];
+		}
+		String p = "";
+		p = Arrays.toString(pol);
+		return p;
+	}
+
+	public String Eval(int[] pol1, int m, int value) {
+		int sum = 0;
+		for (int i = 0; i < m; i++) {
+			sum = (int) (sum + (pol1[i] * (Math.pow(value, i))));
+		}
+		String p = "";
+		p = Integer.toString(sum);
+		return p;
+	}
+}
