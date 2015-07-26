@@ -1,0 +1,95 @@
+package Assignements;
+
+import java.util.Scanner;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+import java.util.Arrays;
+
+public class Polynomial {
+
+	public static int nAll = 0;
+	public static int mAll = 0;
+
+	public static int[] sepInt(String[] all, int row) {
+		int[] pol = new int[100];
+		String temp = all[row];
+		int i = 0;
+		Scanner s = new Scanner(temp);
+
+		int n = temp.length() - temp.replaceAll(" ", "").length() + 1;
+
+		while (i < n) {
+			pol[i] = s.nextInt();
+			i++;
+		}
+		nAll = n;
+		return pol;
+	}
+
+	public static int[] inverse(int[] pol, int m) {
+		int[] ipol = new int[100];
+		for (int i = 0; i <= m; i++) {
+			ipol[i] = pol[m - i];
+		}
+		return ipol;
+	}
+
+	public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException {
+		int i;
+		int[] polynom1 = new int[100];
+		int[] polynom2 = new int[100];
+
+		
+		Functions F = new Functions();
+		InOut IO = new InOut();
+
+		String[] textFile = IO.read();
+		String[] sendOut = new String[100];
+		String tempString = null;
+
+		polynom1 = sepInt(textFile, 0);
+		mAll = nAll;
+		polynom2 = sepInt(textFile, 1);
+
+		polynom1 = inverse(polynom1, mAll);
+		for (i = 0; i < mAll; i++)
+			polynom1[i] = polynom1[i + 1];
+
+		polynom2 = inverse(polynom2, nAll);
+		for (i = 0; i < mAll; i++)
+			polynom2[i] = polynom2[i + 1];
+
+		i = 3;
+
+		while (textFile[i] != null) {
+			if (textFile[i].startsWith("A")) {
+
+				tempString = F.Add(polynom1, polynom2, mAll, nAll);
+
+			} else if (textFile[i].startsWith("S")) {
+
+				tempString = F.Subtract(polynom1, polynom2, mAll, nAll);
+
+			} else if (textFile[i].startsWith("M") && textFile[i].matches(".*\\d+.*") == false) {
+
+				tempString = F.Multiply(polynom1, polynom2, mAll, nAll);
+
+			} else if (textFile[i].startsWith("M") && textFile[i].matches(".*\\d+.*") == true) {
+
+				tempString = new String(F.MultScal(polynom1, mAll, Integer.parseInt(textFile[i].replaceAll("[\\D]", "")))
+						+"  "+ F.MultScal(polynom2, nAll, Integer.parseInt(textFile[i].replaceAll("[\\D]", ""))));
+
+			} else if (textFile[i].startsWith("E")) {
+
+				tempString = new String(F.Eval(polynom1, mAll, Integer.parseInt(textFile[i].replaceAll("[\\D]", "")))
+						+"  "+ F.Eval(polynom2, nAll, Integer.parseInt(textFile[i].replaceAll("[\\D]", ""))));
+
+			}
+			sendOut[i-3] = new String(tempString);
+			i++;
+		}
+		IO.write(sendOut, i-3, textFile);
+		
+		}
+	}
+
