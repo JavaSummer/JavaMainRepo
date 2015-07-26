@@ -1,0 +1,49 @@
+package Assignements;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.UnsupportedEncodingException;
+
+public class InOut {
+
+	public String[] read() {
+		BufferedReader br = null;
+		String[] all = new String[100];
+		int i = 0;
+		try {
+			br = new BufferedReader(new FileReader("C:/Users/Goron/workspace/SecondChapter/Poly.txt"));
+
+			while (i < 100) {
+				all[i] = br.readLine();
+				i++;
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (br != null)
+					br.close();
+			} catch (IOException ex) {
+				ex.printStackTrace();
+			}
+		}
+		return all;
+	}
+
+	public void write(String[] out, int k, String[] text) throws FileNotFoundException, UnsupportedEncodingException {
+		int i = 0;
+		
+		PrintWriter writer = new PrintWriter("Results.txt", "UTF-8");
+
+		
+
+		for (i = 0; i < k; i++) {
+			writer.println(out[i]);
+			writer.println();
+		}
+		writer.close();
+	}
+}
