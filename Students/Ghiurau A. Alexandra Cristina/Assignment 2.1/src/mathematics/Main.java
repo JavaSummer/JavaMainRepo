@@ -20,39 +20,44 @@ public class Main {
 		ReadFile rf = new ReadFile();
 		rf.init();
 
+		String fileName = "C:/Users/Alexa/Desktop/JavaSummerCourse/MyRepo/JavaMainRepo/Students/Ghiurau A. Alexandra Cristina/Assignment 2.1/outputPol.txt";
+		WriteFile data = new WriteFile(fileName, true);
+
 		for (int i = 0; i < rf.getTokens().size(); i++) {
 			System.out.println(rf.getTokens().get(i));
 			switch (rf.getTokens().get(i)) {
 			case "ADD":
-				System.out.println("The 1st polynomial is: " + rf.getPolinom().get(0));
-				System.out.println("The 2nd polynomial is: " + rf.getPolinom().get(1));
-				System.out.println("The sum of the two polynomials is: "
+				data.WriteToFile("The 1st polynomial is: " + rf.getPolinom().get(0));
+				data.WriteToFile("The 2nd polynomial is: " + rf.getPolinom().get(1));
+				data.WriteToFile("The sum of the two polynomials is: "
 						+ Functions.addition(rf.getPolinom().get(0), rf.getPolinom().get(1)));
 				break;
 			case "SUBTRACT":
-				System.out.println("The diff of the two polynomials is: "
+				data.WriteToFile("The diff of the two polynomials is: "
 						+ Functions.subtraction(rf.getPolinom().get(0), rf.getPolinom().get(1)));
 				break;
 			case "MULTIPLY":
+				data.WriteToFile("The multiplication of the two polynomials is: "
+						+ Functions.multiply(rf.getPolinom().get(0), rf.getPolinom().get(1)));
 				System.out.println("The multiplication of the two polynomials is: "
 						+ Functions.multiply(rf.getPolinom().get(0), rf.getPolinom().get(1)));
 				break;
 			case "MUL_SCAL":
 				i++;
-				System.out.println("The 1st polynomial multiplied with the scalar " + rf.getTokens().get(i) + " is: "
+				data.WriteToFile("The 1st polynomial multiplied with the scalar " + rf.getTokens().get(i) + " is: "
 						+ Functions.multipyByScalar(rf.getPolinom().get(0), Integer.parseInt(rf.getTokens().get(i))));
-				System.out.println("The 2nd polynomial multiplied with the scalar " + rf.getTokens().get(i) + " is: "
+				data.WriteToFile("The 2nd polynomial multiplied with the scalar " + rf.getTokens().get(i) + " is: "
 						+ Functions.multipyByScalar(rf.getPolinom().get(1), Integer.parseInt(rf.getTokens().get(i))));
 				break;
 			case "EVAL":
 				i++;
-				System.out.println("The 1st polynomial evalueted to " + rf.getTokens().get(i) + " is: "
+				data.WriteToFile("The 1st polynomial evalueted to " + rf.getTokens().get(i) + " is: "
 						+ Functions.evaluate(rf.getPolinom().get(0), Double.parseDouble(rf.getTokens().get(i))));
-				System.out.println("The 2nd polynomial evalueted to " + rf.getTokens().get(i) + " is: "
+				data.WriteToFile("The 2nd polynomial evalueted to " + rf.getTokens().get(i) + " is: "
 						+ Functions.evaluate(rf.getPolinom().get(1), Double.parseDouble(rf.getTokens().get(i))));
 				break;
 			default:
-				System.out.println("Switch-case done");
+				data.WriteToFile("Switch-case done");
 				break;
 			}
 		}

@@ -58,12 +58,23 @@ public class Functions {
 
 	public static Polynomial multiply(Polynomial a, Polynomial b) {
 		Polynomial c = new Polynomial();
-		/*for (int i = 0; i <= a.getDegree(); i++) {
+		/*
+		 * if (a.getDegree() > b.getDegree()){ for(int i= 0; i <=
+		 * b.getDegree()+100; i++){ c.addCoefficient(i+i,
+		 * a.returnCoefAtDegree(i)* b.returnCoefAtDegree(i)); } for (int i =
+		 * b.getDegree() + 1; i <= a.getDegree(); i++) { c.addCoefficient(i+i,
+		 * a.returnCoefAtDegree(i)* b.returnCoefAtDegree(i)); } }
+		 */
+		for (int i = 0; i <= a.getDegree(); i++) {
 			for (int j = 0; j <= b.getDegree(); j++) {
-				//c.setDegree((a.getDegree() + b.getDegree()));
-				c.addCoefficient(i+j, a.returnCoefAtDegree(i) * b.returnCoefAtDegree(i));
+				// int x = i+j;
+				// System.out.println("i+j = "+x);
+				// System.out.println(a.returnCoefAtDegree(i));
+				// System.out.println(b.returnCoefAtDegree(j));
+				c.addCoefficient(i + j, a.returnCoefAtDegree(i) * b.returnCoefAtDegree(j));
 			}
-		}*/
+
+		}
 		return c;
 	}
 

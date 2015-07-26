@@ -9,7 +9,7 @@ public class Polynomial {
 	private ArrayList<Integer> coef;
 
 	/**
-	 * constructor - method that builds the polynomial if the constructor
+	 * constructor - method that builds the polynomial; if the constructor
 	 * doesn't receive valid input -> throw exception
 	 * 
 	 * @param -
@@ -21,12 +21,8 @@ public class Polynomial {
 		this.coef = new ArrayList<>();
 		String[] strings = line.split(" ");
 
-		//System.out.println("Test the constructor: ");
-
-		for (int i =0; i<strings.length; i++) {
+		for (int i = 0; i < strings.length; i++) {
 			this.coef.add(Integer.parseInt(strings[i]));
-			System.out.println("coef[i]: " + this.coef.get(i) + " has length: " + strings.length + " coef.size(): "
-					+ this.coef.size());
 		}
 		Collections.reverse(this.coef);
 	}
@@ -46,8 +42,7 @@ public class Polynomial {
 	 * @return the degree of a polynomial
 	 */
 	public int getDegree() {
-		
-		return coef.size()-1;
+		return coef.size() - 1;
 	}
 
 	/**
