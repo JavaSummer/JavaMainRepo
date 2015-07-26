@@ -1,0 +1,17 @@
+4X^0+ 8X^1+ 48X^2+ 0X^3+ 0X^4+ 
+The sum of the polynomials is : 
+5X^0+ 6X^1+ 21X^2+ 25X^3+ 4X^4+ 
+The difference of the polynomials is : 
+-3X^0+ -2X^1+ 3X^2+ -25X^3+ -4X^4+ 
+The product of the polynomials is : 
+4X^0+ 12X^1+ 65X^2+ 91X^3+ 162X^4+ 308X^5+ 48X^6+ 0X^7+ 0X^8+ 0X^9+ 
+The result of scalar multiplication by 4 is : 
+4X^0+ 8X^1+ 48X^2+ 0X^3+ 0X^4+ 
+The sum of the polynomials is : 
+5X^0+ 6X^1+ 21X^2+ 25X^3+ 4X^4+ 
+The difference of the polynomials is : 
+-3X^0+ -2X^1+ 3X^2+ -25X^3+ -4X^4+ 
+The product of the polynomials is : 
+4X^0+ 12X^1+ 65X^2+ 91X^3+ 162X^4+ 308X^5+ 48X^6+ 0X^7+ 0X^8+ 0X^9+ 
+The result of scalar multiplication by 4 is : 
+4X^0+ 8X^1+ 48X^2+ 0X^3+ 0X^4+ 
