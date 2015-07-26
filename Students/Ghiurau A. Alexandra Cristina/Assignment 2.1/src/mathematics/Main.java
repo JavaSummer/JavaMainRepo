@@ -27,6 +27,7 @@ public class Main {
 			System.out.println(rf.getTokens().get(i));
 			switch (rf.getTokens().get(i)) {
 			case "ADD":
+				
 				data.WriteToFile("The 1st polynomial is: " + rf.getPolinom().get(0));
 				data.WriteToFile("The 2nd polynomial is: " + rf.getPolinom().get(1));
 				data.WriteToFile("The sum of the two polynomials is: "
@@ -38,8 +39,6 @@ public class Main {
 				break;
 			case "MULTIPLY":
 				data.WriteToFile("The multiplication of the two polynomials is: "
-						+ Functions.multiply(rf.getPolinom().get(0), rf.getPolinom().get(1)));
-				System.out.println("The multiplication of the two polynomials is: "
 						+ Functions.multiply(rf.getPolinom().get(0), rf.getPolinom().get(1)));
 				break;
 			case "MUL_SCAL":

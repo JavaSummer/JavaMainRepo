@@ -12,11 +12,20 @@ public class ReadFile {
 	private List<Polynomial> polinom;
 	private List<String> tokens1;
 
-	
-	public void init() {
+	/**
+	 * method that 'initializes' the polinom and tokens1 lists (by "taking" them
+	 * from the input file) which store the two polynomials, respectively the
+	 * rest of the lines (the name of the operations to be performed)
+	 * 
+	 * @throws IOException
+	 */
+	public void init() throws IOException {
+
 		String fileName = "pol.txt";
+
 		polinom = new ArrayList<>();
 		tokens1 = new ArrayList<>();
+
 		try {
 			FileReader inputFile = new FileReader(fileName);
 			BufferedReader bufferreader = new BufferedReader(inputFile);
@@ -25,51 +34,28 @@ public class ReadFile {
 
 			int i = 0;
 			while (((line = bufferreader.readLine()) != null) && i < 2) {
-				try{
-					System.out.println(line);
+				try {
 					i++;
-					
 					polinom.add(new Polynomial(line));
 
-				} catch(Exception e){
+				} catch (Exception e) {
 					System.err.println("Something went wrong!" + e.getMessage());
 				}
-				
 			}
 
 			System.out.println();
 			while (((line = bufferreader.readLine()) != null)) {
-				try	{
-				String s = line;
-				String delims = "[ ]+";
-				String[] tokens = s.split(delims);
-				for (int x = 0; x < tokens.length; x++) {
-					/*
-					if (tokens[x].equals("ADD")) {
-						System.out.println("ADDITION");
+				try {
+					String s = line;
+					String delims = "[ ]+";
+					String[] tokens = s.split(delims);
+					for (int x = 0; x < tokens.length; x++) {
+						tokens1.add(tokens[x]);
 					}
-					if (tokens[x].equals("SUBTRACT")) {
-						System.out.println("SUBTRACTION");
-					}
-					if (tokens[x].equals("MULTIPLY")) {
-						System.out.println("MULTIPLICATION");
-					}
-					if (tokens[x].equals("MUL_SCAL")) {
-						System.out.println("MULTIPLY WITH: " + tokens[x + 1]);
-					}
-					if (tokens[x].equals("EVAL")) {
-						System.out.println("EVAL WITH: " + tokens[x + 1]);
-					}*/
-					tokens1.add(tokens[x]);
-				}
-				} catch(Exception e) {
+				} catch (Exception e) {
 					System.err.println("Something went wrong here!" + e.getMessage());
 				}
-					
-				
 			}
-			System.out.println("end of test2");
-
 			bufferreader.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
