@@ -1,0 +1,11 @@
+suma e  = 5x^8  -4x^7 + 2x^6 + 0x^5  -2x^4 + 7x^3  -2x^2 + 3x^1  -16   
+scaderea  e  = 5x^8  -4x^7 + 2x^6 + 0x^5  -2x^4  -1x^3 + 2x^2 + 3x^1  -18   
+inmutirea este   = 20x^11  -26x^10 + 16x^9 + 1x^8  -12x^7 + 18x^6  -6x^5 + 10x^4  -71x^3 + 34x^2 + 3x^1  -17   
+ply2 inmultic cu 4 e   = 16x^3  -8x^2 + 0x + 4   
+ply1 inmultic cu 4 e   = 20x^8  -16x^7 + 8x^6 + 0x^5  -8x^4 + 12x^3 + 0x^2 + 12x^1  -68   
+ply2 evaluat cu 5 e   = 15
+ply1 evaluat cu 5 e   = -50
+ply2 evaluat cu 2 e   = 6
+ply1 evaluat cu 2 e   = -20
+ply2 evaluat cu 9 e   = 27
+ply1 evaluat cu 9 e   = -90
