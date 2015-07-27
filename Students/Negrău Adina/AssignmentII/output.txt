@@ -1,0 +1,12 @@
+The result of addition is: 5x^8 - 4x^7 + 2x^6 - 2x^4 + 7x^3 - 2x^2 + 3x - 16
+The result of delete is: 5x^8 - 4x^7 + 2x^6 - 2x^4 - 1x^3 + 2x^2 + 3x - 18
+The result of multiplication is: 20x^11 - 26x^10 + 16x^9 + 1x^8 - 12x^7 + 18x^6 - 6x^5 + 10x^4 - 71x^3 + 34x^2 + 3x - 17
+The result of multiplication with 4 is: 
+20x^8 - 16x^7 + 8x^6 - 8x^4 + 12x^3 + 12x - 68
+16x^3 - 8x^2 + 4
+The result of evaluation on 2 is: 
+2x^8 - 2x^7 + 1x^6 - 1x^4 + 1x^3 + 1x - 8
+2x^3 - 1x^2
+The result of multiplication with 10 is: 
+50x^8 - 40x^7 + 20x^6 - 20x^4 + 30x^3 + 30x - 170
+40x^3 - 20x^2 + 10
