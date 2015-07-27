@@ -7,18 +7,17 @@ public class Polynomial implements Cloneable{
 	
 	private ArrayList<Integer> poly ; 
 	
-	public Polynomial() {
+	public Polynomial(){
 		this.poly = new ArrayList<Integer>();
 	}
-
-	public ArrayList<Integer> createPoly (String polinom){
+	public Polynomial(String polinom){
+		this.poly = new ArrayList<Integer>();
 		String[] parts = polinom.split(" ");
 		for ( String poli : parts){
 			Integer p = Integer.parseInt(poli);
 			poly.add(p);
 		}
 		Collections.reverse(poly);
-		return this.poly;
 	}
 	
 	public int getDegree ( ){
