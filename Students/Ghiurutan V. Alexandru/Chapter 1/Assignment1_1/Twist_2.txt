@@ -1,0 +1,2 @@
+The maximum value of int in Java is:2,147,483,647.An overflow occurs when we make the upper limit "n" equal with 95936.
+The maximum number that can be represented in long format is:9,223,372,036,854,775,807.
