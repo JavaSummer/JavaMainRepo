@@ -1,0 +1,33 @@
+		The first polynomial is : 
+   5x^8  -4x^7 + 2x^6 + 0x^5  -2x^4 + 3x^3 + 0x^2 + 3x^1  -17   
+
+		The second polynomial is : 
+   4x^3  -2x^2 + 0x + 1   
+
+  	 The sum is = 
+   5x^8  -4x^7 + 2x^6 + 0x^5  -2x^4 + 7x^3  -2x^2 + 3x^1  -16   
+
+   	The subtraction is  = 
+    5x^8  -4x^7 + 2x^6 + 0x^5  -2x^4  -1x^3 + 2x^2 + 3x^1  -18   
+
+  	 The multiplication is  =  
+   20x^11  -26x^10 + 16x^9 + 1x^8  -12x^7 + 18x^6  -6x^5 + 10x^4  -71x^3 + 34x^2 + 3x^1  -17   
+
+   	The 1st polynomial multiplied with the scalar: 4 is   = 
+   20x^8  -16x^7 + 8x^6 + 0x^5  -8x^4 + 12x^3 + 0x^2 + 12x^1  -68   
+
+    	The 2nd polynomial multiplied with the scalar: 4 is   = 
+   16x^3  -8x^2 + 0x + 4   
+
+   	The 1st polynomial evaluated with 5 is   =    1670998
+
+    	The 2nd polynomial evaluated with 5 is   =    451
+
+   	The 1st polynomial evaluated with 2 is   =    877
+
+    	The 2nd polynomial evaluated with 2 is   =    25
+
+   	The 1st polynomial evaluated with 9 is   =    197153686
+
+    	The 2nd polynomial evaluated with 9 is   =    2755
+
