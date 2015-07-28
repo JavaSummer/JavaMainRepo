@@ -27,7 +27,7 @@ public class Main {
 			System.out.println(rf.getTokens().get(i));
 			switch (rf.getTokens().get(i)) {
 			case "ADD":
-				
+
 				data.WriteToFile("The 1st polynomial is: " + rf.getPolinom().get(0));
 				data.WriteToFile("The 2nd polynomial is: " + rf.getPolinom().get(1));
 				data.WriteToFile("The sum of the two polynomials is: "
@@ -54,6 +54,12 @@ public class Main {
 						+ Functions.evaluate(rf.getPolinom().get(0), Double.parseDouble(rf.getTokens().get(i))));
 				data.WriteToFile("The 2nd polynomial evalueted to " + rf.getTokens().get(i) + " is: "
 						+ Functions.evaluate(rf.getPolinom().get(1), Double.parseDouble(rf.getTokens().get(i))));
+				break;
+			case "DIVISION":
+				System.out.println(("The 1st polynomial is: " + rf.getPolinom().get(0)));
+				System.out.println("The 2nd polynomial is: " + rf.getPolinom().get(1));
+				System.out.println("This divison between the 2 polynomials:"
+						+ Functions.divison(rf.getPolinom().get(0), rf.getPolinom().get(1)));
 				break;
 			default:
 				data.WriteToFile("Switch-case done");

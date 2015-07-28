@@ -103,5 +103,6 @@ public class Polynomial {
 					p = p + " " + this.coef.get(i) + " ";
 		return p;
 	}
+	
 
 }
