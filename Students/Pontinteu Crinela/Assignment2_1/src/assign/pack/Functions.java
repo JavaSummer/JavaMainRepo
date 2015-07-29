@@ -4,52 +4,37 @@ import java.util.Arrays;
 
 public class Functions {
 	
-	public int computeDegree(Polynomial a) {
-		int d = -1;
-		for (int i = 0; i < a.coeff.length; i++)
-			if (a.coeff[i] != 0)
-				d = i;
-		return d;
-	}
-   public void setPoly (int deg){
-	   
-	   
-   }
 	public Polynomial ADD(Polynomial a, Polynomial b) {
 		Polynomial c = new Polynomial();
-		int auxCoeff [] = new int[20];
+	    c.coeff = new int [Math.max(a.deg, b.deg)+1];
 		for (int i = 0; i <= a.deg; i++)
-			auxCoeff[i] = a.coeff[i];
+			c.coeff [i] = a.coeff[i];
 		for (int i = 0; i <= b.deg; i++)
-			auxCoeff[i] += b.coeff[i]; 
-		c.setCoeff(auxCoeff);
-		c.setDegree(computeDegree(c));
+			c.coeff [i] += b.coeff[i]; 
+		c.setDegree();
 		return c;
 	}
 
 	public Polynomial SUBTRACT(Polynomial a, Polynomial b) {
 		Polynomial c = new Polynomial();
-		int auxCoeff [] = new int[20];
-
+	    c.coeff = new int [Math.max(a.deg, b.deg)+1];
 		for (int i = 0; i <= a.deg; i++)
-			auxCoeff[i] = a.coeff[i];
+			c.coeff[i] = a.coeff[i];
 		for (int i = 0; i <= b.deg; i++)
-			auxCoeff[i] -= b.coeff[i];
-		c.setCoeff(auxCoeff);
-		c.setDegree(computeDegree(c));
+			c.coeff[i] -= b.coeff[i];
+		c.setDegree();
 		return c;
 	}
 
 	public Polynomial MULTIPLY(Polynomial a, Polynomial b) {
 		Polynomial c = new Polynomial();
-		int auxCoeff [] = new int[40];
-		Arrays.fill(auxCoeff, 0);
+		 c.coeff = new int [a.deg+b.deg+1];
+		Arrays.fill(c.coeff, 0);
 
 		for (int i = 0; i <= a.deg; i++)
             for (int j = 0; j <= b.deg; j++)
-                auxCoeff[i+j] += (a.coeff[i] * b.coeff[j]);
-		c.setCoeff(auxCoeff);
-		c.setDegree(computeDegree(c));
+            	c.coeff[i+j] += (a.coeff[i] * b.coeff[j]);
+		c.setDegree();
 		return c;
 	}
 
@@ -62,17 +47,16 @@ public class Functions {
 
 	public Polynomial MUL_SCAL(Polynomial a, int n) {
 		Polynomial c = new Polynomial();
-		int auxCoeff [] = new int[20];
+		 c.coeff = new int [a.deg + 1];
 		if (n == 0) {
 			System.out.println("You have multiplied the polynomial with 0 ");
 			System.out.println("So the result is the null polynomial");
-			c.setDegree(0);
-			c.setCoeff(null);
+			Arrays.fill(c.coeff, 0);
+			c.setDegree();	
 		} else {
 			for (int i = 0; i <= a.deg; i++)
-				auxCoeff[i] = a.coeff[i] * n;
-			c.setCoeff(auxCoeff);
-			c.setDegree(a.deg);
+				 c.coeff[i] = a.coeff[i] * n;
+			c.setDegree();
 		}
 		return c;
 	}
