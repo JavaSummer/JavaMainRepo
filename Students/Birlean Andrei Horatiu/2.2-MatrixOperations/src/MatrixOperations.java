@@ -37,28 +37,28 @@ public class MatrixOperations
 		  }
 	  }
 	  
-	  
+	  MatrixOperations op = new MatrixOperations();
 	  //ADD
 	  System.out.println("The sum of the two matrices is : ");
-	  MatrixOperations.printMatrix(MatrixOperations.add(matrixOne, matrixTwo));
+	  op.printMatrix(op.add(matrixOne, matrixTwo));
 	  
 	  //SUBTRACT
 	  System.out.println("The difference of the two matrices is : ");
-	  MatrixOperations.printMatrix(MatrixOperations.subtract(matrixOne, matrixTwo));
+	  op.printMatrix(op.subtract(matrixOne, matrixTwo));
 	  
 	  //MULTIPLY
 	  System.out.println("The product of the matrices is : ");
-	  MatrixOperations.printMatrix(MatrixOperations.multiply(matrixOne, matrixTwo));
+	  op.printMatrix(op.multiply(matrixOne, matrixTwo));
 	  
 	  //MULTIPLY WITH SCALAR
 	  BigDecimal scal;
 	  System.out.println("Input the scalar : ");
 	  scal = BigDecimal.valueOf(input.nextDouble());
 	  System.out.println("The matrix obtained after scalar multiplications is : ");
-	  MatrixOperations.printMatrix(MatrixOperations.multiplyScalar(matrixOne, scal));
+	  op.printMatrix(op.multiplyScalar(matrixOne, scal));
 	  
 	  //ARE EQUAL
-	  if(MatrixOperations.areEqual(matrixOne, matrixTwo) == true)
+	  if(op.areEqual(matrixOne, matrixTwo) == true)
 	  {
 		  System.out.println("The matrices are equal");
 	  }
@@ -68,7 +68,7 @@ public class MatrixOperations
 	  }
 	  
 	  //IS ZERO MATRIX
-	  if(MatrixOperations.isZeroMatrix(matrixOne) == true)
+	  if(op.isZeroMatrix(matrixOne) == true)
 	  {
 		  System.out.println("Matrix one is zero matrix");
 	  }
@@ -78,7 +78,7 @@ public class MatrixOperations
 	  }
 	  
 	  //IS IDENTITY MATRIX
-	  if(MatrixOperations.isIdentityMatrix(matrixOne) == true)
+	  if(op.isIdentityMatrix(matrixOne) == true)
 	  {
 		  System.out.println("Matrix one is identity matrix");
 	  }
@@ -88,7 +88,7 @@ public class MatrixOperations
 	  }
 	  
 	  //FILL DEGREE
-	  System.out.println("The fill degree of the first matrix is : " + MatrixOperations.fillDegree(matrixOne));
+	  System.out.println("The fill degree of the first matrix is : " + op.fillDegree(matrixOne));
 	  
 	  //DETERMINANT
 	  if(matrixOne.length != matrixOne[0].length)
@@ -97,13 +97,13 @@ public class MatrixOperations
 	  }
 	  else
 	  {
-	  System.out.println("The determinant of the first matrix is : " + MatrixOperations.det(matrixOne));
+	  System.out.println("The determinant of the first matrix is : " + op.det(matrixOne));
 	  }
 	  
 	  input.close();
 }// END main
   
-  private static BigDecimal[][] add(BigDecimal[][] m,BigDecimal[][] n)
+  private  BigDecimal[][] add(BigDecimal[][] m,BigDecimal[][] n)
   {
 	   
 	 if ((m.length != n.length) || (m[0].length != n[0].length))
@@ -125,7 +125,7 @@ public class MatrixOperations
 	 }
   }//END add
   
-  private static BigDecimal[][] subtract(BigDecimal[][] m,BigDecimal[][] n)
+  private  BigDecimal[][] subtract(BigDecimal[][] m,BigDecimal[][] n)
   {
 	  if ((m.length != n.length) || (m[0].length != n[0].length))
 		 {
@@ -146,7 +146,7 @@ public class MatrixOperations
 		 }
   } //END subtract
   
-  private static BigDecimal[][] multiply(BigDecimal[][] m,BigDecimal[][] n)
+  private  BigDecimal[][] multiply(BigDecimal[][] m,BigDecimal[][] n)
   {
 	  if(m[0].length != n.length)
 	  {
@@ -176,7 +176,7 @@ public class MatrixOperations
 	  }
   }//END multiply
   
-  private static BigDecimal[][] multiplyScalar(BigDecimal[][] m,BigDecimal scalar)
+  private  BigDecimal[][] multiplyScalar(BigDecimal[][] m,BigDecimal scalar)
   {   
 	  BigDecimal result[][] = new BigDecimal[m.length][m[0].length];
 	  for(int i = 0;i<m.length;i++)
@@ -191,7 +191,7 @@ public class MatrixOperations
   
   
   
-  private static boolean areEqual(BigDecimal[][] m,BigDecimal[][] n)
+  private  boolean areEqual(BigDecimal[][] m,BigDecimal[][] n)
   {
 	  boolean ok = true;
 	  if((m.length != n.length) || (m[0].length != n[0].length))
@@ -220,7 +220,7 @@ public class MatrixOperations
 	  return ok;
   }//END areEqual
   
-  private static boolean isZeroMatrix(BigDecimal[][] m)
+  private  boolean isZeroMatrix(BigDecimal[][] m)
   {
 	  boolean ok = true;
 	  for (int i = 0;i < m.length;i++)
@@ -241,7 +241,7 @@ public class MatrixOperations
 	  return ok;
   }//END isZeroMatrix
   
-  private static boolean isIdentityMatrix(BigDecimal[][] m)
+  private  boolean isIdentityMatrix(BigDecimal[][] m)
   {
 	  boolean ok = true;
 	  
@@ -275,7 +275,7 @@ public class MatrixOperations
 	  return ok;
   }// END isIdentityMatrix
   
-  private static BigDecimal fillDegree(BigDecimal[][] m)
+  private  BigDecimal fillDegree(BigDecimal[][] m)
   {
 	  
 	  int nrOfNonZeroes = 0;
@@ -300,7 +300,7 @@ public class MatrixOperations
      
   }//END fillDegree;
   
-  private static BigDecimal det(BigDecimal[][] m) {
+  private  BigDecimal det(BigDecimal[][] m) {
       int n = m.length;
       if (n == 1) {
           return m[0][0];
@@ -317,7 +317,7 @@ public class MatrixOperations
   }
 
   
-  private static BigDecimal[][] minor(final BigDecimal[][] m, final int i, final int j) {
+  private  BigDecimal[][] minor(final BigDecimal[][] m, final int i, final int j) {
       int n = m.length;
       BigDecimal[][] minor = new BigDecimal[n-1][n-1];
       // index for minor matrix position:
@@ -337,7 +337,7 @@ public class MatrixOperations
       return minor;
   }//END det
   
-  private static void printMatrix(BigDecimal [][] m)
+  private  void printMatrix(BigDecimal [][] m)
   {  
 	  if (m != null)
 	  {		  
