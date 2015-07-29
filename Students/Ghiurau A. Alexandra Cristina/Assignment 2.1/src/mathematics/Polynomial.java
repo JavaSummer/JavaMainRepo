@@ -6,8 +6,10 @@ import java.util.Collections;
 
 public class Polynomial {
 
-	private ArrayList<Integer> coef;
+	private ArrayList<Double> coef;
 
+	
+	
 	/**
 	 * constructor - method that builds the polynomial; if the constructor
 	 * doesn't receive valid input -> throw exception
@@ -22,7 +24,7 @@ public class Polynomial {
 		String[] strings = line.split(" ");
 
 		for (int i = 0; i < strings.length; i++) {
-			this.coef.add(Integer.parseInt(strings[i]));
+			this.coef.add(Double.parseDouble(strings[i]));
 		}
 		Collections.reverse(this.coef);
 	}
@@ -49,7 +51,7 @@ public class Polynomial {
 	 * 
 	 * @return the coefficient of a degree
 	 */
-	public int returnCoefAtDegree(int degree) {
+	public Double returnCoefAtDegree(int degree) {
 		return coef.get(degree);
 	}
 
@@ -57,7 +59,7 @@ public class Polynomial {
 	 * 
 	 * @return the coefficient vector of the polynomial
 	 */
-	public ArrayList<Integer> getCoef() {
+	public ArrayList<Double> getCoef() {
 		return coef;
 	}
 
@@ -65,7 +67,7 @@ public class Polynomial {
 	 * 
 	 * @param coef
 	 */
-	public void setCoef(ArrayList<Integer> coef) {
+	public void setCoef(ArrayList<Double> coef) {
 		this.coef = coef;
 	}
 
@@ -74,7 +76,7 @@ public class Polynomial {
 	 * @param degree
 	 * @param value
 	 */
-	public void addCoefficient(int degree, int value) {
+	public void addCoefficient(int degree, Double value) {
 		coef.add(degree, value);
 	}
 
