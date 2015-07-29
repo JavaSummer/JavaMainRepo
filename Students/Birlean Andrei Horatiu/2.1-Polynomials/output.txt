@@ -1,17 +1,9 @@
-4X^0+ 8X^1+ 48X^2+ 0X^3+ 0X^4+ 
 The sum of the polynomials is : 
-5X^0+ 6X^1+ 21X^2+ 25X^3+ 4X^4+ 
+6*X^0 + 9*X^1 + 12*X^2 + 14*X^3 + 16*X^4 + 22*X^5 + 16*X^6 + 55*X^8
 The difference of the polynomials is : 
--3X^0+ -2X^1+ 3X^2+ -25X^3+ -4X^4+ 
+-4*X^0 + -5*X^1 + -4*X^2 + -4*X^3 + -4*X^4 + 22*X^5 + 16*X^6 + 55*X^8
 The product of the polynomials is : 
-4X^0+ 12X^1+ 65X^2+ 91X^3+ 162X^4+ 308X^5+ 48X^6+ 0X^7+ 0X^8+ 0X^9+ 
+5*X^0 + 17*X^1 + 42*X^2 + 78*X^3 + 125*X^4 + 160*X^5 + 193*X^6 + 279*X^7 + 344*X^8 + 432*X^9 + 371*X^10 + 330*X^11 + 0*X^13
+The result of eval 4 is : 1929
 The result of scalar multiplication by 4 is : 
-4X^0+ 8X^1+ 48X^2+ 0X^3+ 0X^4+ 
-The sum of the polynomials is : 
-5X^0+ 6X^1+ 21X^2+ 25X^3+ 4X^4+ 
-The difference of the polynomials is : 
--3X^0+ -2X^1+ 3X^2+ -25X^3+ -4X^4+ 
-The product of the polynomials is : 
-4X^0+ 12X^1+ 65X^2+ 91X^3+ 162X^4+ 308X^5+ 48X^6+ 0X^7+ 0X^8+ 0X^9+ 
-The result of scalar multiplication by 4 is : 
-4X^0+ 8X^1+ 48X^2+ 0X^3+ 0X^4+ 
+4*X^0 + 8*X^1 + 16*X^2 + 20*X^3 + 24*X^5

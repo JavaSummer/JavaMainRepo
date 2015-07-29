@@ -1,169 +1,129 @@
-import java.util.ArrayList;
+import java.util.*;
+import java.math.*;
 
-public class Functions
+public class Functions 
 {
-  public static int[] add(ArrayList<Integer> m,ArrayList<Integer> n)
+  public Polynomial add(Polynomial p1,Polynomial p2)
   {
-	  int maxLength;
-	  int k = 0;
-	  if(m.size() > n.size())
+	  Polynomial result = new Polynomial();
+	  if(p1.degree >= p2.degree)
 	  {
-		  maxLength = m.size();
-	  }
-	  else
-	  {
-		  maxLength = n.size();
-	  }
-	  
-	  int result[] = new int[maxLength];
-	  
-	  if(m.size() > n.size())
-	  {
-		  for(int i = 0;i<n.size();i++)
+		  result.degree = p1.degree;
+		  result.coefficients = new int[result.degree];
+		  for (int i = 0;i < p2.degree;i++)
 		  {
-			  result[k] = m.get(k) + n.get(k);
-			  k++;
-		  }
-		  for(int j = k;j<m.size();j++)
-		  {
-			  result[j] = m.get(j);
-		  }
-	  }
-	  else
-	  {
-		  for(int i = 0;i<m.size();i++)
-		  {
-			  result[k] = m.get(k) + n.get(k);
-			  k++;
+			  result.coefficients[i] = p1.coefficients[i] + p2.coefficients[i];
 		  }
 		  
-		  for(int j = k;j<n.size(); j++)
+		  for(int i = p2.degree;i <= p1.degree ; i++)
 		  {
-			  result[j] = n.get(j);
+			  result.coefficients[i] = p1.coefficients[i];
 		  }
 	  }
-	  System.out.println("The sum of the two polynomials is : ");
-	  for (int i = 0;i<maxLength-1;i++)
+	  else 
 	  {
-		  System.out.print(result[i] + "X^" + i + "  " + "+ ");
+		  result.degree = p2.degree;
+		  result.coefficients = new int[result.degree];
+		  for (int i = 0;i < p1.degree;i++)
+		  {
+			  result.coefficients[i] = p1.coefficients[i] + p2.coefficients[i];
+		  }
+		  
+		  for(int i = p1.degree;i < p2.degree ; i++)
+		  {
+			  result.coefficients[i] = p2.coefficients[i];
+		  }
 	  }
-	  System.out.print(result[maxLength - 1] + "X^" + (maxLength - 1));
-	  System.out.println();
 	  
 	  return result;
 	  
-	  
-  }//END add
+  }// END add method
   
-  public static int[] subtract(ArrayList<Integer> m,ArrayList<Integer> n)
-  {
-	  int maxLength;
-	  int k = 0;
-	  if(m.size() > n.size())
-	  {
-		  maxLength = m.size();
-	  }
-	  else
-	  {
-		  maxLength = n.size();
-	  }
-	  
-	  int result[] = new int[maxLength];
-	  
-	  if(m.size() > n.size())
-	  {
-		  for(int i = 0;i<n.size();i++)
-		  {
-			  result[k] = m.get(k) - n.get(k);
-			  k++;
-		  }
-		  for(int j = k;j<m.size();j++)
-		  {
-			  result[j] = m.get(j);
-		  }
-	  }
-	  else
-	  {
-		  for(int i = 0;i<m.size();i++)
-		  {
-			  result[k] = m.get(k) - n.get(k);
-			  k++;
-		  }
-		  
-		  for(int j = k;j<n.size(); j++)
-		  {
-			  result[j] = n.get(j);
-		  }
-	  }
-	  System.out.println("The difference of the two polynomials is : ");
-	  for (int i = 0;i<maxLength-1;i++)
-	  {
-		  System.out.print(result[i] + "X^" + i + "  " + "+ ");
-	  }
-	  System.out.print(result[maxLength - 1] + "X^" + (maxLength - 1));
-	  System.out.println();
-	  
-	  return result; 
-  }//END subtract
   
-  public static int[] multiply(ArrayList<Integer> m,ArrayList<Integer> n)
+  public Polynomial subtract(Polynomial p1,Polynomial p2)
   {
-	  int result[] = new int[m.size() + n.size()];
-	  for (int i = 0;i < m.size() + n.size();i++)
-	  {
-		  result[i] = 0;
-	  }
-	  for (int i = 0;i<m.size();i++)
-	  {
-		  for (int j = 0;j<n.size();j++)
-		  {
-			  result[i + j]=result[i + j] + m.get(i)*n.get(j);
-		  }
-	  }
-	 System.out.println("The product of the polynomials is : ");
-	 for (int i = 0;i<m.size() - 1 + n.size()-1;i++)
-	  {
-		  System.out.print(result[i] + "X^" + i + "  " + "+ ");
-	  }
-	  System.out.print(result[m.size() + n.size() - 2] + "X^" + (m.size() + n.size() - 2));
-	  System.out.println();
-	  return result;
+	  Polynomial result = new Polynomial();
 	 
-  }//END multiply
-  
-  public static int[] multScal(ArrayList<Integer> m ,int scalar)
-  {
-	  int result[] = new int[m.size()];
-	  for (int i = 0;i < m.size();i++)
+	  if(p1.degree > p2.degree)
 	  {
-		  result[i] = scalar * m.get(i);
+		  result.degree = p1.degree;
+		  result.coefficients = new int[result.degree];
+		  
+		  for (int i = 0;i <= p2.degree;i++)
+		  {
+			  result.coefficients[i] = p1.coefficients[i] - p2.coefficients[i];
+		  }
+		  
+		  for(int i = p2.degree;i <= p1.degree ; i++)
+		  {
+			  result.coefficients[i] = p1.coefficients[i];
+		  }
 	  }
-	  
-	  System.out.println("The polynomial obtained after multiplication is : ");
-	  System.out.println();
-	  
-	  for (int i = 0;i < m.size() - 1;i++)
+	  else
 	  {
-		  System.out.print(result[i] + "X^" + i + " + ");
+		  result.degree = p2.degree;
+		  result.coefficients = new int[result.degree];
+		  
+		  for (int i = 0;i < p1.degree;i++)
+		  {
+			  result.coefficients[i] = p1.coefficients[i] - p2.coefficients[i];
+		  }
+		  
+		  for(int i = p1.degree;i < p2.degree ; i++)
+		  {
+			  result.coefficients[i] = p2.coefficients[i];
+		  }
 	  }
-	  
-	  System.out.print(result[m.size() - 1] + "X^" + (m.size() - 1));
 	  
 	  return result;
-  }//End multScal
+  }//END subtract method
   
-  public static int evalN(ArrayList<Integer> m,int n)
-  {   
-	  int result = 0;
-	  for (int i = 0;i<m.size();i++)
+  
+  public Polynomial multiply(Polynomial p1,Polynomial p2)
+  {
+	 Polynomial result = new Polynomial();
+	 
+	 result.degree = p1.degree + p2.degree;
+	 result.coefficients = new int[result.degree];
+	 for (int i = 0;i < result.degree;i++)
+	 {
+		 result.coefficients[i] = 0;
+	 }
+	 
+	 for (int i = 0;i < p1.degree;i++)
+	 {
+		 for (int j = 0;j < p2.degree;j++)
+		 {
+			 result.coefficients[i + j] = result.coefficients[i + j] + p1.coefficients[i]*p2.coefficients[j];
+		 }
+	 }
+	 
+	 return result;
+  }//END multiply
+ 
+  
+  public Polynomial multScal(Polynomial poly,int scal)
+  {
+	  Polynomial result = new Polynomial();
+	  result.degree = poly.degree;
+	  result.coefficients = new int[result.degree];
+	  for (int i = 0;i < poly.degree;i++)
 	  {
-		  result = result + m.get(i) *(int)Math.pow(n, i);
+		  result.coefficients[i] = scal*poly.coefficients[i];
 	  }
+	  return result;
+  }//END multScal
+ 
+  
+  public int evalN(Polynomial poly, int n)
+  {
+	  int result = 0;
 	  
-	  System.out.println("The result of evalN is : " + result);
-	  
+	  for (int i = 0;i < poly.degree;i++)
+	  {
+	    result = result + poly.coefficients[i]*(int)(Math.pow(n, i));  
+	  }
 	  return result;
   }//END evalN
   
-  
-}//END class  
+}//END Functions class
