@@ -55,12 +55,12 @@ public class Main {
 				data.WriteToFile("The 2nd polynomial evalueted to " + rf.getTokens().get(i) + " is: "
 						+ Functions.evaluate(rf.getPolinom().get(1), Double.parseDouble(rf.getTokens().get(i))));
 				break;
-			/*case "DIVISION":
+			case "DIVISION":
 				System.out.println(("The 1st polynomial is: " + rf.getPolinom().get(0)));
 				System.out.println("The 2nd polynomial is: " + rf.getPolinom().get(1));
 				System.out.println("This divison between the 2 polynomials:"
 						+ Functions.divison(rf.getPolinom().get(0), rf.getPolinom().get(1)));
-				break;*/
+				break;
 			default:
 				data.WriteToFile("Switch-case done");
 				break;

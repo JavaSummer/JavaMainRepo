@@ -63,9 +63,8 @@ public class Functions {
 	public static Polynomial multiply(Polynomial a, Polynomial b) {
 		Polynomial c = new Polynomial();
 
-		// a sort of 'initialization'; in order to not have an index out of
-		// bound exception
-		for (int i = 0; i <= 100; i++) {
+		// a sort of 'initialization'
+		for (int i = 0; i <= a.getDegree()+b.getDegree(); i++) {
 			c.getCoef().add(0D);
 		}
 
@@ -96,7 +95,7 @@ public class Functions {
 	 * 
 	 * 
 	 */
-	/*public static Polynomial[] divison(Polynomial a, Polynomial b) {
+	public static Polynomial[] divison(Polynomial a, Polynomial b) {
 
 		Polynomial[] rez = new Polynomial[2];
 
@@ -148,7 +147,7 @@ public class Functions {
 		rez[1] = remainder;
 		return rez;
 
-	}*/
+	}
 
 	public static Polynomial multipyByScalar(Polynomial a, int x) {
 		Polynomial c = new Polynomial();

@@ -8,7 +8,7 @@ public class FibonacciRecursive {
 	public static void main(String[] args) {
 		int sum = 0;
 		int f0 = 0;
-		for(int counter= 0; counter < 32; counter ++){
+		for(int counter= 0; counter < 23; counter ++){
 			if(f0%2 == 0){
 				sum += f0;
 			}
