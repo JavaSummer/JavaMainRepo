@@ -58,7 +58,7 @@ public class MainClass {
 
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < m; j++) {
-				matrix[i][j] = new BigDecimal(10);
+				matrix[i][j] = new BigDecimal(Integer.valueOf(i+j));
 			}
 		}
 		return matrix;
