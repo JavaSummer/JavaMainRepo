@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class MatrixOperations {
 
@@ -7,7 +8,7 @@ public class MatrixOperations {
 	/**
 	 * Exists only to defeat instantiation.
 	 */
-	protected MatrixOperations() {
+	private MatrixOperations() {
 	}
 
 	/**
@@ -16,13 +17,8 @@ public class MatrixOperations {
 	 * @return - that reference from the static getInstance() method
 	 */
 	public static MatrixOperations getInstance() {
-		// Correct but possibly expensive multithreaded version
 		if (instance == null) {
-			synchronized (MatrixOperations.class) {
-				if (instance == null) {
-					instance = new MatrixOperations();
-				}
-			}
+			instance = new MatrixOperations();
 		}
 		return instance;
 	}
@@ -36,7 +32,7 @@ public class MatrixOperations {
 	 *            - second matrix of type BigDecimal
 	 * @return the addition between the two matrices
 	 */
-	public static BigDecimal[][] add(BigDecimal[][] a, BigDecimal[][] b) {
+	public BigDecimal[][] add(BigDecimal[][] a, BigDecimal[][] b) {
 		int maxLength = Math.max(a.length, b.length);
 		BigDecimal[][] result = new BigDecimal[maxLength][maxLength];
 		for (int i = 0; i < a.length; i++) {
@@ -144,6 +140,47 @@ public class MatrixOperations {
 		return result;
 	}
 
+	public BigDecimal[][] copyMatrix(BigDecimal[][] a) {
+		BigDecimal[][] result = new BigDecimal[a.length][a.length];
+		for (int i = 0; i < a.length; i++) {
+			for (int j = 0; j < a.length; j++) {
+				result[i][j] = a[i][j];
+			}
+		}
+		return result;
+	}
+
+	public BigDecimal[][] changeColumn(BigDecimal[][] a, BigDecimal[] vector, int column) {
+		BigDecimal[][] result = copyMatrix(a);
+		for (int i = 0; i < a.length; i++) {
+			result[i][column] = vector[i];
+		}
+		return result;
+	}
+
+	public BigDecimal[] solveEquations(BigDecimal[][] a, BigDecimal[] vector) {
+		BigDecimal[] solution = new BigDecimal[a.length];
+
+		BigDecimal det = computeDeterminant(a);
+		BigDecimal det2;
+		if (det.compareTo(BigDecimal.ZERO) != 0) {
+			for (int j = 0; j < a.length; j++) {
+				det2 = computeDeterminant(changeColumn(a, vector, j));
+				// if I don't use some sort of approximation for decimal I can
+				// get an Arithmetic Exception.
+				// BigDecimal is complaining that it could an infinity decimal
+				// places, and it still
+				// wouldn't be able to give you an exact representation of the
+				// number
+				// However, if I supply a RoundingMode and a precision, then
+				// it will be able to convert (e.g. 1.333333333-to-infinity to
+				// something like 1.33)
+				solution[j] = det2.divide(det, 2, RoundingMode.HALF_EVEN);
+			}
+		}
+		return solution;
+	}
+
 	/**
 	 * 
 	 * @param a
@@ -223,7 +260,8 @@ public class MatrixOperations {
 
 	/**
 	 * 
-	 * @param a - matrix of type BigDecimal
+	 * @param a
+	 *            - matrix of type BigDecimal
 	 */
 	public void displayMatrix(BigDecimal[][] a) {
 
