@@ -1,10 +1,11 @@
 import java.math.BigDecimal;
+import java.math.BigInteger;
 
 public class MainClass {
 	public static void main(String[] args) {
 
-		BigDecimal[][] matrix = createMatrix(3, 3);
-		BigDecimal[][] matrix2 = createMatrix(3, 3);
+		BigDecimal[][] matrix = createMatrix(3);
+		BigDecimal[][] matrix2 = createMatrix(3);
 
 		MatrixOperations operations = MatrixOperations.getInstance();
 
@@ -21,7 +22,7 @@ public class MainClass {
 
 		System.out.println("The multiplication of 1st matrix by a scalar is: ");
 		operations.displayMatrix(operations.multiplyScalar(matrix, new BigDecimal(5)));
-		
+
 		System.out.println("The determinant of the matrix is");
 		System.out.println(operations.computeDeterminant(matrix));
 
@@ -36,39 +37,30 @@ public class MainClass {
 
 		System.out.println("How many elements of the matrix are filled (nonzero elements)");
 		System.out.println(operations.fillDegree(matrix));
-		
-		//in order to compute the solutions of the system, the right-hand side must be set
+
+		// in order to compute the solutions of the system, the right-hand side
+		// must be set
 		BigDecimal[] rightSide = new BigDecimal[3];
 		rightSide[0] = new BigDecimal(10);
 		rightSide[1] = new BigDecimal(20);
 		rightSide[2] = new BigDecimal(10);
-		
-		 
+
 		BigDecimal[] solutions = operations.solveEquations(matrix, rightSide);
-		for(int i=0; i< solutions.length;i++){
-			System.out.println(solutions[i] +"\t");
+		for (int i = 0; i < solutions.length; i++) {
+			System.out.println(solutions[i] + "\t");
 		}
 
 	}
 
-	public static BigDecimal[][] createMatrix(int m, int n) {
-		BigDecimal[][] matrix = new BigDecimal[m][n];
-
-		/*
-		 * for(int i = 0; i< m; i++){ for(int j = 0; j< n; j++){ matrix[i][j] =
-		 * new BigDecimal(10); } }
-		 */
-		matrix[0][0] = new BigDecimal(10);
-		matrix[0][1] = new BigDecimal(20);
-		matrix[0][2] = new BigDecimal(10);
-		matrix[1][0] = new BigDecimal(10);
-		matrix[1][1] = new BigDecimal(20);
-		matrix[1][2] = new BigDecimal(3);
-		matrix[2][0] = new BigDecimal(20);
-		matrix[2][1] = new BigDecimal(10);
-		matrix[2][2] = new BigDecimal(20);
+	public static BigDecimal[][] createMatrix(int m) {
 		
+		BigDecimal[][] matrix = new BigDecimal[m][m];
 
+		for (int i = 0; i < m; i++) {
+			for (int j = 0; j < m; j++) {
+				matrix[i][j] = new BigDecimal(10);
+			}
+		}
 		return matrix;
 	}
 }
