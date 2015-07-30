@@ -94,9 +94,9 @@ public class BisectionAprox {
 		
 		double mid = (lowBound + highBound) / 2;
 		
-		double lowBoundImage = Polynomial.evaluateDouble(this.pol, lowBound);
-		double midImage = Polynomial.evaluateDouble(this.pol, mid);
-		double highBoundImage = Polynomial.evaluateDouble(this.pol, highBound);
+		double lowBoundImage = Functions.evaluateDouble(this.pol, lowBound);
+		double midImage = Functions.evaluateDouble(this.pol, mid);
+		double highBoundImage = Functions.evaluateDouble(this.pol, highBound);
 		
 		if (iteration == this.maxRecursions) {
 			if (Math.signum(lowBoundImage) * Math.signum(midImage) 
@@ -146,8 +146,8 @@ public class BisectionAprox {
 		while (iterations < this.maxIterations) {
 			double mid = (low + high) / 2;
 			
-			double lowImage = Polynomial.evaluateDouble(this.pol, low);
-			double midImage = Polynomial.evaluateDouble(this.pol, mid);
+			double lowImage = Functions.evaluateDouble(this.pol, low);
+			double midImage = Functions.evaluateDouble(this.pol, mid);
 			
 			//Exit condition
 			if ((midImage <= this.imageTolerance) 

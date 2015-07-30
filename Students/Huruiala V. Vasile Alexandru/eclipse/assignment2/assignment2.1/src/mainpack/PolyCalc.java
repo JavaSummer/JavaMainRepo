@@ -82,28 +82,28 @@ public class PolyCalc {
 			result = "";
 			break;
 		case ADD:
-			result = Polynomial.add(this.poly1, this.poly2).mathematicalForm();
+			result = Functions.add(this.poly1, this.poly2).mathematicalForm();
 			break;
 		case SUBTRACT:
-			result = Polynomial.subtract(this.poly1, 
+			result = Functions.subtract(this.poly1, 
 					this.poly2).mathematicalForm();
 			break;
 		case MULTIPLY:
-			result = Polynomial.multiply(this.poly1,
+			result = Functions.multiply(this.poly1,
 					this.poly2).mathematicalForm();
 			break;
 		case MUL_SCAL:
-			result = Polynomial.multiplyByScalar(this.poly1, 
+			result = Functions.multiplyByScalar(this.poly1, 
 					searched[1]).mathematicalForm()
-			+ "|" + Polynomial.multiplyByScalar(this.poly2, 
+			+ "|" + Functions.multiplyByScalar(this.poly2, 
 					searched[1]).mathematicalForm();
 			break;
 		case EVAL:
-			result = Polynomial.evaluate(this.poly1, searched[1])
-			+ "|" + Polynomial.evaluate(this.poly2, searched[1]);
+			result = Functions.evaluate(this.poly1, searched[1])
+			+ "|" + Functions.evaluate(this.poly2, searched[1]);
 			break;
 		case DIVIDE:
-			Polynomial[] temp = Polynomial.divide(this.poly1, this.poly2);
+			Polynomial[] temp = Functions.divide(this.poly1, this.poly2);
 			result = temp[0].mathematicalForm() + "|" 
 			+ temp[1].mathematicalForm();
 			break;
