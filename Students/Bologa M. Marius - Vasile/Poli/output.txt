@@ -1,0 +1,39 @@
+First polynomial:
+5x^8 - 4x^7 + 2x^6 - 2x^4 + 3x^3 + 3x - 17
+
+Second polynomial:
+4x^3 - 2x^2 + 1
+
+The sum of the 2 polynomials is:
+5x^8 - 4x^7 + 2x^6 - 2x^4 + 7x^3 - 2x^2 + 3x - 16
+
+The difference of the 2 polynomials is:
+5x^8 - 4x^7 + 2x^6 - 2x^4 - 1x^3 + 2x^2 + 3x - 18
+
+The product of the 2 polynomials is:
+20x^11 - 26x^10 + 16x^9 + 1x^8 - 12x^7 + 18x^6 - 6x^5 + 10x^4 - 71x^3 + 34x^2 + 3x - 17
+
+The first polynomial multiplied with 4
+20x^8 - 16x^7 + 8x^6 - 8x^4 + 12x^3 + 12x - 68
+
+The second polynomial multiplied with 4
+16x^3 - 8x^2 + 4
+
+The first polynomial evaluated at 5
+1670998
+
+The second polynomial evaluated at 5
+451
+
+The first polynomial evaluated at 2
+877
+
+The second polynomial evaluated at 2
+25
+
+The first polynomial evaluated at 9
+197153686
+
+The second polynomial evaluated at 9
+2755
+
