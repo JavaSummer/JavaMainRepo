@@ -22,23 +22,23 @@ public class Main {
 		System.out.println();
 
 		BigDecimal c[][];
-
+		MatrixOperations singleMatrixOperationsObject = MatrixOperations.getInstance();
 		System.out.println("a+b: ");
-		c = MatrixOperations.add(a, b);
+		c = singleMatrixOperationsObject.add(a, b);
 		if (c != null) {
 			printMatrix(c);
 		}
 		System.out.println();
 
 		System.out.println("a-b: ");
-		c = MatrixOperations.subtract(a, b);
+		c = singleMatrixOperationsObject.subtract(a, b);
 		if (c != null) {
 			printMatrix(c);
 		}
 		System.out.println();
 
 		System.out.println("a*b: ");
-		c = MatrixOperations.multiply(a, b);
+		c = singleMatrixOperationsObject.multiply(a, b);
 		if (c != null) {
 			printMatrix(c);
 		}
@@ -48,33 +48,34 @@ public class Main {
 		BigDecimal d = new BigDecimal("0");
 		d = diskScanner.nextBigDecimal();
 		System.out.println("a*" + d + ":");
-		c = MatrixOperations.multiplyScalar(a, d);
+		c = singleMatrixOperationsObject.multiplyScalar(a, d);
 		printMatrix(c);
 		System.out.println();
 
 		System.out.println("The determinant of a: ");
-		d = MatrixOperations.determinant(a);
+		d = singleMatrixOperationsObject.determinant(a);
 		String str = d.toPlainString();
 		System.out.println(str);
 		System.out.println();
 
 		System.out.print("The matrices a and b ");
-		System.out.println(MatrixOperations.areEqual(a, b) ? "ARE equal" : "ARE NOT equal");
+		System.out.println(singleMatrixOperationsObject.areEqual(a, b) ? "ARE equal" : "ARE NOT equal");
 		System.out.println();
 
 		System.out.print("The matrix a ");
-		System.out.println(MatrixOperations.isZeroMatrix(a) ? "IS the zero matrix" : "IS NOT the zero matrix");
+		System.out.println(
+				singleMatrixOperationsObject.isZeroMatrix(a) ? "IS the zero matrix" : "IS NOT the zero matrix");
 		System.out.println();
-		
+
 		System.out.print("The matrix a ");
-		System.out.println(MatrixOperations.isIdentityMatrix(a) ? "IS the identity matrix" : "IS NOT the identity matrix");
+		System.out.println(singleMatrixOperationsObject.isIdentityMatrix(a) ? "IS the identity matrix"
+				: "IS NOT the identity matrix");
 		System.out.println();
-		
+
 		System.out.print("The fill degree of the matrix a is:");
-		d = MatrixOperations.fillDegree(a);
+		d = singleMatrixOperationsObject.fillDegree(a);
 		str = d.toPlainString();
 		System.out.println(str);
-
 	}
 
 	public static BigDecimal[][] createMatrix(Scanner diskScanner) {

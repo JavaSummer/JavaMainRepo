@@ -3,8 +3,16 @@ package assig.matrix;
 import java.math.BigDecimal;
 
 public class MatrixOperations {
-	public MatrixOperations() {
+	// create an object of this class:
+	private static MatrixOperations instance = new MatrixOperations();
 
+	// make the constructor private so that this class cannot be instantiated
+	private MatrixOperations() {
+	}
+
+	// Get the only object available
+	public static MatrixOperations getInstance() {
+		return instance;
 	}
 
 	public static BigDecimal[][] add(BigDecimal[][] a, BigDecimal[][] b) {
@@ -82,55 +90,53 @@ public class MatrixOperations {
 			}
 		return c;
 	}
-	
+
 	public static boolean areEqual(BigDecimal[][] a, BigDecimal[][] b) {
 		if ((a.length == b.length) && (a[0].length == b[0].length)) {
-			for (int i=0; i<a.length; i++)
-				for (int j=0; j<a[0].length; j++)
+			for (int i = 0; i < a.length; i++)
+				for (int j = 0; j < a[0].length; j++)
 					if (!a[i][j].equals(b[i][j]))
 						return false;
 			return true;
-		}
-		else
+		} else
 			return false;
 	}
-	
+
 	public static boolean isZeroMatrix(BigDecimal[][] a) {
-		BigDecimal zero = new BigDecimal ("0");
-			for (int i=0; i<a.length; i++)
-				for (int j=0; j<a[0].length; j++)
-					if (a[i][j].compareTo(zero) != 0)
-						return false;
-			return true;
+		BigDecimal zero = new BigDecimal("0");
+		for (int i = 0; i < a.length; i++)
+			for (int j = 0; j < a[0].length; j++)
+				if (a[i][j].compareTo(zero) != 0)
+					return false;
+		return true;
 	}
-	
+
 	public static boolean isIdentityMatrix(BigDecimal[][] a) {
-		BigDecimal zero = new BigDecimal ("0");
-		BigDecimal one= new BigDecimal ("1");
-			for (int i=0; i<a.length; i++)
-				for (int j=0; j<a[0].length; j++)
-					if (i == j){
-						if (a[i][j].compareTo(one) != 0)
-							return false;
-					}else
-					if (a[i][j].compareTo(zero) != 0)
+		BigDecimal zero = new BigDecimal("0");
+		BigDecimal one = new BigDecimal("1");
+		for (int i = 0; i < a.length; i++)
+			for (int j = 0; j < a[0].length; j++)
+				if (i == j) {
+					if (a[i][j].compareTo(one) != 0)
 						return false;
-			return true;
+				} else if (a[i][j].compareTo(zero) != 0)
+					return false;
+		return true;
 	}
-	
+
 	public static BigDecimal fillDegree(BigDecimal[][] a) {
-		BigDecimal zero = new BigDecimal ("0");
+		BigDecimal zero = new BigDecimal("0");
 		int count = 0;
-		for (int i=0; i<a.length; i++)
-			for (int j=0; j<a[0].length; j++)
+		for (int i = 0; i < a.length; i++)
+			for (int j = 0; j < a[0].length; j++)
 				if (a[i][j].compareTo(zero) == 0)
 					count++;
-		BigDecimal totalNr = new BigDecimal ((a.length-1)*(a[0].length-1));
-		BigDecimal zeroNr = new BigDecimal (count);
+		BigDecimal totalNr = new BigDecimal((a.length - 1) * (a[0].length - 1));
+		BigDecimal zeroNr = new BigDecimal(count);
 		if (count == 0) {
-			BigDecimal one= new BigDecimal ("1");
+			BigDecimal one = new BigDecimal("1");
 			return one;
-		}		
+		}
 		return zeroNr.divide(totalNr);
 	}
 
@@ -174,6 +180,6 @@ public class MatrixOperations {
 			}
 		}
 		return (sum); // returns determinant value. once stack is finished,
-						// returns final determinant.
+            // returns final determinant.
 	}
 }
