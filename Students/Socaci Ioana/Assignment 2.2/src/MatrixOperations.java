@@ -2,6 +2,7 @@ import java.math.BigDecimal;
 
 class MatrixOperations {
 	public static void main(String[] args) {
+
 		// perform all the operations on six matrices that I will define
 
 		// square matrices
@@ -29,192 +30,33 @@ class MatrixOperations {
 		BigDecimal[][] matrix6 = new BigDecimal[][] { { new BigDecimal("2"), new BigDecimal("3") },
 				{ new BigDecimal("4"), new BigDecimal("5") } };
 
-		System.out.println("Determinant of matrix1: " + " " + determinant(matrix1));
+		System.out.println("Determinant of matrix1: " + " " + Functions.determinant(matrix1));
 		System.out.println("Determinant of matrix3: ");
-		System.out.println(determinant(matrix3));
-		System.out.println("Verify if matrix4 is identity matrix: " + isIdentityMatrix(matrix4));
-		System.out.println("Verify if matrix4 is zero matrix: " + isZeroMatrix(matrix4));
-		System.out.println("Verify if matrix5 is zero matrix: " + isZeroMatrix(matrix5));
-		System.out.println("Verify if matrix6 is equal to matrix1: " + areEqual(matrix1, matrix6));
+		System.out.println(Functions.determinant(matrix3));
+		System.out.println("Verify if matrix4 is identity matrix: " + Functions.isIdentityMatrix(matrix4));
+		System.out.println("Verify if matrix4 is zero matrix: " + Functions.isZeroMatrix(matrix4));
+		System.out.println("Verify if matrix5 is zero matrix: " + Functions.isZeroMatrix(matrix5));
+		System.out.println("Verify if matrix6 is equal to matrix1: " + Functions.areEqual(matrix1, matrix6));
 		System.out.println("Add matrix1 with matrix6: ");
-		printMatrix(add(matrix1, matrix6));
+		Functions.printMatrix(Functions.add(matrix1, matrix6));
 		System.out.println("Subtract matrix1 with matrix2: ");
-		if (subtract(matrix1, matrix2) != null)
-			printMatrix(subtract(matrix1, matrix2));
+		if (Functions.subtract(matrix1, matrix2) != null)
+			Functions.printMatrix(Functions.subtract(matrix1, matrix2));
 		else
 			System.out.println("");
 		System.out.println("Subtract matrix6 with matrix4: ");
-		if (subtract(matrix6, matrix4) != null)
-			printMatrix(subtract(matrix6, matrix4));
+		if (Functions.subtract(matrix6, matrix4) != null)
+			Functions.printMatrix(Functions.subtract(matrix6, matrix4));
 		else
 			System.out.println("");
 		System.out.println("Multiply matrix6 with matrix6: ");
-		if (multiplication(matrix6, matrix6) != null)
-			printMatrix(multiplication(matrix6, matrix6));
+		if (Functions.multiplication(matrix6, matrix6) != null)
+			Functions.printMatrix(Functions.multiplication(matrix6, matrix6));
 		else
 			System.out.println("");
 		System.out.println("Multiplication with 10 of matrix6: ");
-		printMatrix(multiplyWithScalar(matrix6, new BigDecimal("10")));
-		System.out.println("Fill degree of matrix4(Identity matrix): " + fillDegree(matrix4) + "%");
-	}
-
-	public static void printMatrix(BigDecimal[][] matrix) {
-
-		for (int i = 0; i < matrix.length; i++) {
-			for (int j = 0; j < matrix[0].length; j++)
-				System.out.print(matrix[i][j] + " ");
-			System.out.println();
-		}
-	}
-
-	public static BigDecimal[][] add(BigDecimal[][] matrix1, BigDecimal[][] matrix2) {
-		// suppose the two matrices have the same order
-		if (matrix1[0].length == matrix2[0].length && matrix1.length == matrix2.length) {
-			BigDecimal[][] resultMatrix = new BigDecimal[matrix1.length][matrix1.length];
-			for (int i = 0; i < matrix1.length; i++)
-				for (int j = 0; j < matrix1[0].length; j++)
-					resultMatrix[i][j] = matrix1[i][j].add(matrix2[i][j]);
-			return resultMatrix;
-		} else {
-			System.out.println("Addition cannot be done");
-			return null;
-		}
-	}
-
-	public static BigDecimal[][] subtract(BigDecimal[][] matrix1, BigDecimal[][] matrix2) {
-		if (matrix1[0].length == matrix2[0].length && matrix1.length == matrix2.length) {
-			BigDecimal[][] resultMatrix = new BigDecimal[matrix1.length][matrix1.length];
-			for (int i = 0; i < matrix1.length; i++)
-				for (int j = 0; j < matrix1[0].length; j++) {
-					resultMatrix[i][j] = matrix1[i][j].subtract(matrix2[i][j]);
-				}
-
-			return resultMatrix;
-		} else {
-			System.out.println("Subtraction cannot be done");
-			return null;
-		}
-	}
-
-	public static BigDecimal[][] multiplication(BigDecimal[][] matrix1, BigDecimal[][] matrix2) {
-
-		if (matrix1[0].length == matrix2.length) {
-			// the number of columns of first matrix equals the number of rows
-			// of the second one
-			BigDecimal[][] resultMatrix = new BigDecimal[matrix1.length][matrix2[0].length];
-			BigDecimal sum = new BigDecimal("0");
-			for (int i = 0; i < matrix1.length; i++)
-				for (int j = 0; j < matrix1[0].length; j++) {
-					for (int k = 0; k < matrix2.length; k++) {
-						sum = sum.add(matrix1[i][k].multiply(matrix2[k][j]));
-						resultMatrix[i][j] = sum;
-					}
-					sum = BigDecimal.ZERO;
-				}
-			return resultMatrix;
-		} else {
-			System.out.println("Multiplication cannot be done");
-			return null;
-		}
-
-	}
-
-	public static BigDecimal[][] multiplyWithScalar(BigDecimal[][] matrix, BigDecimal scalar) {
-		BigDecimal nullElement = new BigDecimal("0");
-		if (scalar.equals(nullElement) == false) {
-			BigDecimal[][] resultMatrix = new BigDecimal[matrix.length][matrix[0].length];
-			for (int i = 0; i < matrix.length; i++)
-				for (int j = 0; j < matrix[0].length; j++) {
-					resultMatrix[i][j] = matrix[i][j].multiply(scalar);
-				}
-			return resultMatrix;
-		} else {
-			System.out.println("Enter a scalar different from zero");
-			return null;
-		}
-	}
-
-	public static BigDecimal determinant(BigDecimal[][] matrix) {
-		if (matrix.length == matrix[0].length) {
-			BigDecimal det = new BigDecimal("0");
-			if (matrix.length == 1)
-				return matrix[0][0];// matrix has only one element
-			else {
-				for (int i = 0; i < matrix.length; i++) {
-					// expand the determinant by the first column
-					BigDecimal[][] auxilliaryMatrix = new BigDecimal[matrix.length - 1][matrix.length - 1];
-					for (int j = 0; j < matrix.length; j++)
-						for (int k = 1; k < matrix.length; k++) {
-							if (j < i)
-								auxilliaryMatrix[j][k - 1] = matrix[j][k];
-							else if (j > i)
-								auxilliaryMatrix[j - 1][k - 1] = matrix[j][k];
-						}
-					if (i % 2 == 0) {
-						det = det.add(matrix[i][0].multiply(determinant(auxilliaryMatrix)));
-
-					} else {
-						det = det.subtract(matrix[i][0].multiply(determinant(auxilliaryMatrix)));
-
-					}
-				}
-			}
-			return det;
-		} else {
-			System.out.println("The determinant cannot be found");
-			return null;
-		}
-
-	}
-
-	public static Boolean areEqual(BigDecimal[][] matrix1, BigDecimal[][] matrix2) {
-		if (matrix1.length == matrix2.length && matrix1[0].length == matrix2[0].length) {
-			for (int i = 0; i < matrix1.length; i++)
-				for (int j = 0; j < matrix1[0].length; j++)
-					if (matrix1[i][j].equals(matrix2[i][j]) == false)
-						return false;
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	public static Boolean isZeroMatrix(BigDecimal[][] matrix) {
-		BigDecimal nullElement = new BigDecimal("0");
-		for (int i = 0; i < matrix.length; i++)
-			for (int j = 0; j < matrix[0].length; j++)
-				if (matrix[i][j].equals(nullElement) == false)
-					return false;
-		return true;
-	}
-
-	public static Boolean isIdentityMatrix(BigDecimal[][] matrix) {
-		if (matrix.length == matrix[0].length) {
-			BigDecimal oneElement = new BigDecimal("1");
-			BigDecimal nullElement = new BigDecimal("0");
-			for (int i = 0; i < matrix.length; i++)
-				for (int j = 0; j < matrix[0].length; j++)
-					if ((i == j && matrix[i][j].equals(oneElement) == false)
-							|| (i != j && matrix[i][j].equals(nullElement) == false)) {
-						return false;
-					}
-			return true;
-		} else {
-			return false;
-		}
-	}
-
-	public static BigDecimal fillDegree(BigDecimal[][] matrix) {
-		BigDecimal numberOfNonzeroElements = new BigDecimal("0");
-		BigDecimal degreeRequired = new BigDecimal("0");
-		for (int i = 0; i < matrix.length; i++)
-			for (int j = 0; j < matrix[0].length; j++)
-				if (matrix[i][j].equals(new BigDecimal("0")) == true)
-					numberOfNonzeroElements = numberOfNonzeroElements.add(BigDecimal.ONE);
-
-		degreeRequired = numberOfNonzeroElements.divide(new BigDecimal(matrix.length * matrix[0].length))
-				.multiply(new BigDecimal("100"));
-		return degreeRequired;
+		Functions.printMatrix(Functions.multiplyWithScalar(matrix6, new BigDecimal("10")));
+		System.out.println("Fill degree of matrix4(Identity matrix): " + Functions.fillDegree(matrix4) + "%");
 	}
 
 }
