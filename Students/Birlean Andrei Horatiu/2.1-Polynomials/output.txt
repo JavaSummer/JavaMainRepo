@@ -1,0 +1,9 @@
+The sum of the polynomials is : 
+6*X^0 + 9*X^1 + 12*X^2 + 14*X^3 + 16*X^4 + 22*X^5 + 16*X^6 + 55*X^8
+The difference of the polynomials is : 
+-4*X^0 + -5*X^1 + -4*X^2 + -4*X^3 + -4*X^4 + 22*X^5 + 16*X^6 + 55*X^8
+The product of the polynomials is : 
+5*X^0 + 17*X^1 + 42*X^2 + 78*X^3 + 125*X^4 + 160*X^5 + 193*X^6 + 279*X^7 + 344*X^8 + 432*X^9 + 371*X^10 + 330*X^11 + 0*X^13
+The result of eval 4 is : 1929
+The result of scalar multiplication by 4 is : 
+4*X^0 + 8*X^1 + 16*X^2 + 20*X^3 + 24*X^5

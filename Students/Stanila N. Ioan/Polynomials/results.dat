@@ -1,0 +1,28 @@
+The first polynomial:
+5.0x^8 -4.0x^7 +2.0x^6 -2.0x^4 +3.0x^3 +3.0x^1 -17.0
+The second polynomial:
+4.0x^3 -2.0x^2 +1.0
+The sum:
+5.0x^8 -4.0x^7 +2.0x^6 -2.0x^4 +7.0x^3 -2.0x^2 +3.0x^1 -16.0
+The difference:
+5.0x^8 -4.0x^7 +2.0x^6 -2.0x^4 -1.0x^3 +2.0x^2 +3.0x^1 -18.0
+The product:
+20.0x^11 -26.0x^10 +16.0x^9 +1.0x^8 -12.0x^7 +18.0x^6 -6.0x^5 +10.0x^4 -71.0x^3 +34.0x^2 +3.0x^1 -17.0
+The multiplication with 4.0 of the first:
+20.0x^8 -16.0x^7 +8.0x^6 -8.0x^4 +12.0x^3 +12.0x^1 -68.0
+The multiplication with 4.0 of the second:
+16.0x^3 -8.0x^2 +4.0
+The division:
+1.25x^5 -0.375x^4 +0.3125x^3 -0.15625x^2 -0.484375x^1 +0.4296875
+The evaluation of 5.0 with the first one:
+1670998.0
+The evaluation of 5.0 with the second one:
+451.0
+The evaluation of 2.0 with the first one:
+877.0
+The evaluation of 2.0 with the second one:
+25.0
+The evaluation of 9.0 with the first one:
+1.97153686E8
+The evaluation of 9.0 with the second one:
+2755.0
