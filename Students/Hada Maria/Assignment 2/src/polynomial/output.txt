@@ -1,0 +1,38 @@
+First polynomial: 
+5x^8-4x^7+2x^6-2x^4+3x^3+3x^1-17
+Second polynomial: 
+4x^3-2x^2+1
+Addition: 
+5x^8-4x^7+2x^6-2x^4+7x^3-2x^2+3x^1-16
+Subtract: 
+5x^8-4x^7+2x^6-2x^4-1x^3+2x^2+3x^1-18
+Multiply: 
+20x^11-26x^10+16x^9+x^8-12x^7+18x^6-6x^5+10x^4-71x^3+34x^2+3x^1-17
+Root: 
+First polynomial:
+1.21875
+Root: 
+Second polynomial:
+1.9921875
+Multiplication by scalar 4: 
+20x^8-16x^7+8x^6-8x^4+12x^3+12x^1-68
+Multiplication by scalar 4: 
+16x^3-8x^2+4
+Evaluate for 5:
+First polynomial:
+1670998
+Evaluate for 5:
+Second Polynomial: 
+451
+Evaluate for 2:
+First polynomial:
+877
+Evaluate for 2:
+Second Polynomial: 
+25
+Evaluate for 9:
+First polynomial:
+197153686
+Evaluate for 9:
+Second Polynomial: 
+2755
