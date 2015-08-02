@@ -1,9 +1,8 @@
 package polynomial;
 
 public class Functions {
-	private static Polynomial Result;
 
-	public static Polynomial add(Polynomial p1, Polynomial p2) {
+	public Polynomial add(Polynomial p1, Polynomial p2) {
 		int resultLength = Math.max(p1.getDegree(), p2.getDegree());
 		int[] resultCoeffs = new int[resultLength];
 
@@ -18,11 +17,11 @@ public class Functions {
 			}
 		}
 
-		Result = new Polynomial(resultCoeffs, Math.max(p1.getDegree(), p2.getDegree()));
-		return Result;
+		Polynomial result = new Polynomial(resultCoeffs, Math.max(p1.getDegree(), p2.getDegree()));
+		return result;
 	}
 
-	public static Polynomial subtract(Polynomial p1, Polynomial p2) {
+	public Polynomial subtract(Polynomial p1, Polynomial p2) {
 		int resultLength = Math.max(p1.getDegree(), p2.getDegree());
 		int[] resultCoeffs = new int[resultLength];
 
@@ -37,11 +36,11 @@ public class Functions {
 			}
 		}
 
-		Result = new Polynomial(resultCoeffs, Math.max(p1.getDegree(), p2.getDegree()));
-		return Result;
+		Polynomial result = new Polynomial(resultCoeffs, Math.max(p1.getDegree(), p2.getDegree()));
+		return result;
 	}
 
-	public static Polynomial multiply(Polynomial p1, Polynomial p2) {
+	public Polynomial multiply(Polynomial p1, Polynomial p2) {
 		int length = p1.getDegree() + p2.getDegree();
 		int[] resultCoeffs = new int[length - 1];
 
@@ -53,22 +52,22 @@ public class Functions {
 				resultCoeffs[i + j] += p1.getCoeffs()[i] * p2.getCoeffs()[j];
 			}
 		}
-		Result = new Polynomial(resultCoeffs, length);
-		return Result;
+		Polynomial result = new Polynomial(resultCoeffs, length);
+		return result;
 	}
 
-	public static Polynomial mul_scal(Polynomial p, int scalar) {
+	public Polynomial mul_scal(Polynomial p, int scalar) {
 
 		int[] resultCoeffs = new int[p.getDegree()];
 		int[] pCoeffs = p.getCoeffs();
 		for (int i = 0; i < p.getDegree(); i++) {
 			resultCoeffs[i] = pCoeffs[i] * scalar;
 		}
-		Result = new Polynomial(resultCoeffs, p.getDegree());
-		return Result;
+		Polynomial result = new Polynomial(resultCoeffs, p.getDegree());
+		return result;
 	}
 
-	public static long eval(Polynomial p, double scalar) {
+	public long eval(Polynomial p, double scalar) {
 
 		int[] pCoeffs = p.getCoeffs();
 		long result = 0;
@@ -79,7 +78,7 @@ public class Functions {
 	}
 
 	// bisection method
-	public static double root(Polynomial p) {
+	public double root(Polynomial p) {
 		double theRoot = 0;
 		double del = 1e-2;
 		double a = 0, b = 2;
