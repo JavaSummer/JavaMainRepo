@@ -19,3 +19,7 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 ## Play around with...
 1. [Interfaces/abstract classes FAQ](http://javarevisited.blogspot.ro/2013/04/10-abstract-class-and-interface-interview-question-java-answers.html)
 2. [More Interfaces/abstract classes questions](http://interview-questions-java.com/abstract-class-interface.htm)
+
+
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments)
+- 3.1 - [Zoo (part 2)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments/Zoo%20(part%202).pdf)
