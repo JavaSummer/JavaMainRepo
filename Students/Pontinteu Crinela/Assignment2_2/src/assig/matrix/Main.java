@@ -76,6 +76,7 @@ public class Main {
 		d = singleMatrixOperationsObject.fillDegree(a);
 		str = d.toPlainString();
 		System.out.println(str);
+
 	}
 
 	public static BigDecimal[][] createMatrix(Scanner diskScanner) {

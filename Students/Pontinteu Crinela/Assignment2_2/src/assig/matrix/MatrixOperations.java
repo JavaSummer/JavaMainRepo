@@ -15,7 +15,7 @@ public class MatrixOperations {
 		return instance;
 	}
 
-	public static BigDecimal[][] add(BigDecimal[][] a, BigDecimal[][] b) {
+	public BigDecimal[][] add(BigDecimal[][] a, BigDecimal[][] b) {
 		BigDecimal c[][];
 		int rowsA = a.length;
 		int colsA = a[0].length;
@@ -34,7 +34,7 @@ public class MatrixOperations {
 		return c;
 	}
 
-	public static BigDecimal[][] subtract(BigDecimal[][] a, BigDecimal[][] b) {
+	public BigDecimal[][] subtract(BigDecimal[][] a, BigDecimal[][] b) {
 		BigDecimal c[][];
 		int rowsA = a.length;
 		int colsA = a[0].length;
@@ -53,7 +53,7 @@ public class MatrixOperations {
 		return c;
 	}
 
-	public static BigDecimal[][] multiply(BigDecimal[][] a, BigDecimal[][] b) {
+	public BigDecimal[][] multiply(BigDecimal[][] a, BigDecimal[][] b) {
 		BigDecimal c[][];
 		int rowsA = a.length;
 		int colsA = a[0].length;
@@ -79,7 +79,7 @@ public class MatrixOperations {
 		return c;
 	}
 
-	public static BigDecimal[][] multiplyScalar(BigDecimal[][] a, BigDecimal d) {
+	public BigDecimal[][] multiplyScalar(BigDecimal[][] a, BigDecimal d) {
 		BigDecimal c[][];
 		int rowsA = a.length;
 		int colsA = a[0].length;
@@ -91,7 +91,7 @@ public class MatrixOperations {
 		return c;
 	}
 
-	public static boolean areEqual(BigDecimal[][] a, BigDecimal[][] b) {
+	public boolean areEqual(BigDecimal[][] a, BigDecimal[][] b) {
 		if ((a.length == b.length) && (a[0].length == b[0].length)) {
 			for (int i = 0; i < a.length; i++)
 				for (int j = 0; j < a[0].length; j++)
@@ -102,7 +102,7 @@ public class MatrixOperations {
 			return false;
 	}
 
-	public static boolean isZeroMatrix(BigDecimal[][] a) {
+	public boolean isZeroMatrix(BigDecimal[][] a) {
 		BigDecimal zero = new BigDecimal("0");
 		for (int i = 0; i < a.length; i++)
 			for (int j = 0; j < a[0].length; j++)
@@ -111,7 +111,7 @@ public class MatrixOperations {
 		return true;
 	}
 
-	public static boolean isIdentityMatrix(BigDecimal[][] a) {
+	public boolean isIdentityMatrix(BigDecimal[][] a) {
 		BigDecimal zero = new BigDecimal("0");
 		BigDecimal one = new BigDecimal("1");
 		for (int i = 0; i < a.length; i++)
@@ -124,7 +124,7 @@ public class MatrixOperations {
 		return true;
 	}
 
-	public static BigDecimal fillDegree(BigDecimal[][] a) {
+	public BigDecimal fillDegree(BigDecimal[][] a) {
 		BigDecimal zero = new BigDecimal("0");
 		int count = 0;
 		for (int i = 0; i < a.length; i++)
@@ -140,7 +140,7 @@ public class MatrixOperations {
 		return zeroNr.divide(totalNr);
 	}
 
-	public static BigDecimal determinant(BigDecimal[][] a) {
+	public BigDecimal determinant(BigDecimal[][] a) {
 		BigDecimal det = new BigDecimal("0.00");
 		if (a.length == a[0].length)
 			det = determinantRecursive(a);
@@ -151,7 +151,7 @@ public class MatrixOperations {
 		return det;
 	}
 
-	public static BigDecimal determinantRecursive(BigDecimal[][] mat) {
+	public BigDecimal determinantRecursive(BigDecimal[][] mat) {
 		BigDecimal sum = new BigDecimal("0.00");
 		if (mat.length == 1) {
 			return (mat[0][0]);
@@ -180,6 +180,6 @@ public class MatrixOperations {
 			}
 		}
 		return (sum); // returns determinant value. once stack is finished,
-            // returns final determinant.
+						// returns final determinant.
 	}
 }
