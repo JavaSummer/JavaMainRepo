@@ -14,8 +14,8 @@ public class Polynomial {
 		polyDegree = coeff.length - 1;
 	}
 
-	public String getPolynomial() {
-
+	// override the toString() method that any object inherits when is created
+	public String toString() {
 		String sign = "";
 		String pol = "";
 
@@ -41,10 +41,5 @@ public class Polynomial {
 		}
 
 		return pol;
-	}
-
-	// override the toString() method that any object inherits when is created
-	public String toString() {
-		return getPolynomial();
 	}
 }
