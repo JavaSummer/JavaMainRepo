@@ -22,4 +22,4 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 
 
 ## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments)
-- 3.1 - [Zoo (part 2)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments/Zoo%20(part%202).pdf)
+- 4.1 - [Zoo (part 2)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments/Zoo%20(part%202).pdf)
