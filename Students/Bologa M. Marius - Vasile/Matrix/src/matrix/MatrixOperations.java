@@ -11,8 +11,25 @@ public final class MatrixOperations {
 	/**
 	 * 
 	 */
-	private MatrixOperations() {
-	};
+	private static MatrixOperations instance = null;
+
+	/**
+	*
+	*/
+	protected MatrixOperations() {
+		// Exists only to defeat instantiation.
+	}
+
+	/**
+	 * 
+	 * @return Reference from the static getInstance() method.
+	 */
+	public static MatrixOperations getInstance() {
+		if (instance == null) {
+			instance = new MatrixOperations();
+		}
+		return instance;
+	}
 
 	/**
 	 * 
@@ -22,7 +39,7 @@ public final class MatrixOperations {
 	 *            Second BigDecimal[][] Matrix.
 	 * @return Sum.
 	 */
-	public static BigDecimal[][] add(final BigDecimal[][] a, final BigDecimal[][] b) {
+	public BigDecimal[][] add(final BigDecimal[][] a, final BigDecimal[][] b) {
 		if (b.length != a.length || b[0].length != a[0].length) {
 			System.out.println("Error! Wrong dimensions!");
 		} else {
@@ -47,7 +64,7 @@ public final class MatrixOperations {
 	 *            Second BigDecimal[][] Matrix.
 	 * @return Difference.
 	 */
-	public static BigDecimal[][] subtract(final BigDecimal[][] a, final BigDecimal[][] b) {
+public BigDecimal[][] subtract(final BigDecimal[][] a, final BigDecimal[][] b) {
 
 		if (b.length != a.length || b[0].length != a[0].length) {
 			System.out.println("Error! Wrong dimensions!");
@@ -71,7 +88,7 @@ public final class MatrixOperations {
 	 *            Second BigDecimal[][] Matrix.
 	 * @return If are equal or not.
 	 */
-	public static boolean areEqual(final BigDecimal[][] a, final BigDecimal[][] b) {
+	public boolean areEqual(final BigDecimal[][] a, final BigDecimal[][] b) {
 		if ((a.length == b.length) && (a[0].length == b[0].length)) {
 			for (int i = 0; i < a.length; i++) {
 				for (int j = 0; j < a[0].length; j++) {
@@ -94,7 +111,7 @@ public final class MatrixOperations {
 	 *            Second BigDecimal[][] Matrix.
 	 * @return The product of them.
 	 */
-	public static BigDecimal[][] multiply(final BigDecimal[][] a, final BigDecimal[][] b) {
+public BigDecimal[][] multiply(final BigDecimal[][] a, final BigDecimal[][] b) {
 		if (a[0].length != b.length) {
 
 			System.out.println("Error! Wrong dimensions!");
@@ -123,7 +140,7 @@ public final class MatrixOperations {
 	 *            A BigDecimal number.
 	 * @return The product between the scalar and the matrix.
 	 */
-	public static BigDecimal[][] multiplyScalar(final BigDecimal[][] a, final BigDecimal key) {
+public BigDecimal[][] multiplyScalar(final BigDecimal[][] a, final BigDecimal key) {
 		BigDecimal[][] newA = new BigDecimal[a.length][a[0].length];
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[0].length; j++) {
@@ -139,7 +156,7 @@ public final class MatrixOperations {
 	 *            BigDecimal[][] Matrix.
 	 * @return Calculates the determinant of a matrix.
 	 */
-	public static BigDecimal determinant(final BigDecimal[][] a) {
+	public BigDecimal determinant(final BigDecimal[][] a) {
 		BigDecimal sum = new BigDecimal("0.00");
 		BigDecimal aux = new BigDecimal("0.00");
 		BigDecimal s = new BigDecimal("0.00");
@@ -150,24 +167,24 @@ public final class MatrixOperations {
 			System.out.println(" Sorry! It is not a square matrix. So:");
 		} else {
 			for (int i = 0; i < a.length; i++) {
-			BigDecimal[][] smaller = new BigDecimal[a.length - 1][a.length - 1];
-			for (int j = 1; j < a.length; j++) {
-				for (int k = 0; k < a.length; k++) {
-					if (k < i) {
-						smaller[j - 1][k] = a[j][k];
-					} else if (k > i) {
-						smaller[j - 1][k - 1] = a[j][k];
+		BigDecimal[][] smaller = new BigDecimal[a.length - 1][a.length - 1];
+				for (int j = 1; j < a.length; j++) {
+					for (int k = 0; k < a.length; k++) {
+						if (k < i) {
+							smaller[j - 1][k] = a[j][k];
+						} else if (k > i) {
+							smaller[j - 1][k - 1] = a[j][k];
+						}
 					}
 				}
+				if (i % 2 == 0) {
+					s = BigDecimal.valueOf(1);
+				} else {
+					s = BigDecimal.valueOf(-1);
+				}
+				aux = s.multiply(a[0][i]).multiply(determinant(smaller));
+				sum = sum.add(aux);
 			}
-			if (i % 2 == 0) {
-				s = BigDecimal.valueOf(1);
-			} else {
-				s = BigDecimal.valueOf(-1);
-			}
-			aux = s.multiply(a[0][i]).multiply(determinant(smaller));
-			sum = sum.add(aux);
-		}
 		}
 		return (sum);
 	}
@@ -179,7 +196,7 @@ public final class MatrixOperations {
 	 * @return Checks if a matrix contains only 0s.
 	 */
 
-	public static boolean isZeroMatrix(final BigDecimal[][] a) {
+	public boolean isZeroMatrix(final BigDecimal[][] a) {
 		BigDecimal z = new BigDecimal("0.00");
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a[0].length; j++) {
@@ -191,13 +208,14 @@ public final class MatrixOperations {
 		}
 		return true;
 	}
+
 	/**
 	 * 
 	 * @param a
 	 *            BigDecimal[][] Matrix.
 	 * @return Checks if a matrix is an identity matrix
 	 */
-	public static boolean isIdentityMatrix(final BigDecimal[][] a) {
+	public boolean isIdentityMatrix(final BigDecimal[][] a) {
 		BigDecimal z = new BigDecimal("0.00");
 		BigDecimal one = new BigDecimal("1.00");
 		if (a.length != a[0].length) {
@@ -229,7 +247,7 @@ public final class MatrixOperations {
 	 *            BigDecimal[][] Matrix.
 	 * @return Computes the % of the matrix which is filled (elements != 0).
 	 */
-	public static BigDecimal fillDegree(final BigDecimal[][] a) {
+	public BigDecimal fillDegree(final BigDecimal[][] a) {
 		BigDecimal count = new BigDecimal("0.00");
 		BigDecimal result = new BigDecimal("0.00");
 		BigDecimal z = new BigDecimal("0.00");
