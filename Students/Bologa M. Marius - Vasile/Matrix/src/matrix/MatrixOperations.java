@@ -16,7 +16,7 @@ public final class MatrixOperations {
 	/**
 	*
 	*/
-	protected MatrixOperations() {
+	private MatrixOperations() {
 		// Exists only to defeat instantiation.
 	}
 
