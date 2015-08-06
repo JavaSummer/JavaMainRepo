@@ -5,7 +5,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Spider extends Insects {
+public class Spider extends Insect {
 	/**
 	 * 
 	 */

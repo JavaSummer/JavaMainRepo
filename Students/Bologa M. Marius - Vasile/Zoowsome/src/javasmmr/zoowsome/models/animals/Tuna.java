@@ -14,6 +14,7 @@ public class Tuna extends Aquatic {
 	* 
 	*/
 	private int swimDepth = 464;
+	WaterTypeTest water = new WaterTypeTest();
 
 	/**
 	 * 
@@ -22,7 +23,7 @@ public class Tuna extends Aquatic {
 		setAvgSwimDepth(swimDepth);
 		setName(nameF);
 		setNrOfLegs(0);
-		setType(WaterType.saltwater);
+		water.setWater(WaterType.saltwater);
 	}
 
 	/**
@@ -37,6 +38,6 @@ public class Tuna extends Aquatic {
 		setAvgSwimDepth(depth);
 		setName(name);
 		setNrOfLegs(0);
-		setType(WaterType.saltwater);
+		water.setWater(WaterType.saltwater);
 	}
 }

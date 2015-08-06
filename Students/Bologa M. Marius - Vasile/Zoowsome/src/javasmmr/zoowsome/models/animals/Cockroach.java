@@ -1,10 +1,11 @@
 package javasmmr.zoowsome.models.animals;
+
 /**
  * 
  * @author Marius Bologa
  *
  */
-public class Cockroach extends Insects {
+public class Cockroach extends Insect {
 	/**
 	 * 
 	 */
@@ -13,6 +14,7 @@ public class Cockroach extends Insects {
 	 * 
 	 */
 	private String nameC = "American Cockroach";
+
 	/**
 	 * 
 	 */
@@ -20,7 +22,7 @@ public class Cockroach extends Insects {
 		setCanFly(false);
 		setNrOfLegs(legs);
 		setName(nameC);
-		 setDangerous(false);
+		setDangerous(false);
 	}
 
 	/**
@@ -32,8 +34,6 @@ public class Cockroach extends Insects {
 		setCanFly(false);
 		setNrOfLegs(legs);
 		setName(name);
-		 setDangerous(false);
+		setDangerous(false);
 	}
 }
-
-

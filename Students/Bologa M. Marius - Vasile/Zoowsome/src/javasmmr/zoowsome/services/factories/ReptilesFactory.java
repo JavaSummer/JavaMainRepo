@@ -1,10 +1,9 @@
 package javasmmr.zoowsome.services.factories;
 
-import javasmmr.zoowsome.models.animals.Animals;
+import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.models.animals.Boomslang;
 import javasmmr.zoowsome.models.animals.Tuatara;
 import javasmmr.zoowsome.models.animals.Turtle;
-
 
 /**
  * 
@@ -21,7 +20,7 @@ public class ReptilesFactory extends SpeciesFactory {
 	 * @throws Exception
 	 *             Invalid animal exception!
 	 */
-	public final Animals getAnimal(final String type) throws Exception {
+	public final Animal getAnimal(final String type) throws Exception {
 		if (Constants.Animals.Reptiles.Tuatara.equals(type)) {
 			return new Tuatara();
 		} else if (Constants.Animals.Reptiles.Boomslang.equals(type)) {

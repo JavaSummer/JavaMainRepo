@@ -4,7 +4,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Boomslang extends Reptiles {
+public class Boomslang extends Reptile {
 	/**
 	 * 
 	 */

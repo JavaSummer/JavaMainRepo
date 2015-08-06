@@ -5,7 +5,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Monkey extends Mammals {
+public class Monkey extends Mammal {
 	/**
 	 * 
 	 */

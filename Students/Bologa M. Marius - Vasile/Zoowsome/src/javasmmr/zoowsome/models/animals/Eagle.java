@@ -5,7 +5,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Eagle extends Birds {
+public class Eagle extends Bird {
 	/**
 	 * 
 	 */

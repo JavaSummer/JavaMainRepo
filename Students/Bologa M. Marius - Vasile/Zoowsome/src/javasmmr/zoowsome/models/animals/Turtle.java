@@ -5,7 +5,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Turtle extends Reptiles {
+public class Turtle extends Reptile {
 	/**
 	 * 
 	 */
@@ -23,10 +23,12 @@ public class Turtle extends Reptiles {
 		setName(nameT);
 		setNrOfLegs(legs);
 	}
-/**
- * 
- * @param name The name of the turtle.
- */
+
+	/**
+	 * 
+	 * @param name
+	 *            The name of the turtle.
+	 */
 	public Turtle(final String name) {
 		setLaysEggs(true);
 		setName(name);

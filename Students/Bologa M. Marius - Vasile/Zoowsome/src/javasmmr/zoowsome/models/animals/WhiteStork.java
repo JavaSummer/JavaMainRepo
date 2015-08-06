@@ -1,10 +1,11 @@
 package javasmmr.zoowsome.models.animals;
+
 /**
  * 
  * @author Marius Bologa
  *
  */
-public class WhiteStork extends Birds {
+public class WhiteStork extends Bird {
 	/**
 	 * 
 	 */
@@ -17,21 +18,25 @@ public class WhiteStork extends Birds {
 	/**
 	 * 
 	 */
-	private int flightAltitude=1500;
+	private int flightAltitude = 1500;
+
 	/**
 	 * 
 	 */
- public WhiteStork()  {
+	public WhiteStork() {
 		setMigrates(true);
 		setAvgFlightAltitude(flightAltitude);
 		setName(nameW);
 		setNrOfLegs(legs);
 
 	}
+
 	/**
 	 * 
-	 * @param name Name of the white stork.
-	 * @param altitude Average flight altitude.
+	 * @param name
+	 *            Name of the white stork.
+	 * @param altitude
+	 *            Average flight altitude.
 	 */
 	public WhiteStork(final String name, final int altitude) {
 		setMigrates(true);
@@ -40,5 +45,3 @@ public class WhiteStork extends Birds {
 		setNrOfLegs(legs);
 	}
 }
-
-

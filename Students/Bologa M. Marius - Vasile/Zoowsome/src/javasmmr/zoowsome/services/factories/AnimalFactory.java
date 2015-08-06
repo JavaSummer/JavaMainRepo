@@ -7,13 +7,13 @@ package javasmmr.zoowsome.services.factories;
  */
 public class AnimalFactory {
 	public SpeciesFactory getSpeciesFactory(String type) throws Exception {
-		if (Constants.Species.Mammals.equals(type)) {
+		if (Constants.Species.Mammal.equals(type)) {
 			return new MammalFactory();
-		} else if (Constants.Species.Reptiles.equals(type)) {
+		} else if (Constants.Species.Reptile.equals(type)) {
 			return new ReptilesFactory();
-		} else if (Constants.Species.Birds.equals(type)) {
+		} else if (Constants.Species.Bird.equals(type)) {
 			return new BirdsFactory();
-		} else if (Constants.Species.Insects.equals(type)) {
+		} else if (Constants.Species.Insect.equals(type)) {
 			return new InsectsFactory();
 		} else if (Constants.Species.Aquatic.equals(type)) {
 			return new AquaticFactory();

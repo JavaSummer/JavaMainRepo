@@ -15,15 +15,15 @@ public final class Constants {
 		/**
 		 * 
 		 */
-		public static final String Mammals = "Mammals";
+		public static final String Mammal = "Mammal";
 		/**
 		 * 
 		 */
-		public static final String Reptiles = "Reptiles";
+		public static final String Reptile = "Reptile";
 		/**
 		 * 
 		 */
-		public static final String Birds = "Birds";
+		public static final String Bird = "Bird";
 		/**
 		 * 
 		 */
@@ -31,7 +31,7 @@ public final class Constants {
 		/**
 		 * 
 		 */
-		public static final String Insects = "Insects";
+		public static final String Insect = "Insect";
 	}
 
 	/**
@@ -115,7 +115,7 @@ public final class Constants {
 			/**
 			 * 
 			 */
-			public static final String Sharks = "Apex Predator";
+			public static final String Shark = "Apex Predator";
 		}
 
 		/**

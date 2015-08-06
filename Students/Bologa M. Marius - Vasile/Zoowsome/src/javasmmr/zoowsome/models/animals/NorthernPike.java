@@ -14,6 +14,7 @@ public class NorthernPike extends Aquatic {
 	* 
 	*/
 	private int swimDepth = 20;
+	WaterTypeTest water = new WaterTypeTest();
 
 	/**
 	 * 
@@ -22,7 +23,7 @@ public class NorthernPike extends Aquatic {
 		setAvgSwimDepth(swimDepth);
 		setName(nameP);
 		setNrOfLegs(0);
-		setType(WaterType.freshwater);
+		water.setWater(WaterType.freshwater);
 	}
 
 	/**
@@ -37,6 +38,6 @@ public class NorthernPike extends Aquatic {
 		setAvgSwimDepth(depth);
 		setName(name);
 		setNrOfLegs(0);
-		setType(WaterType.freshwater);
+		water.setWater(WaterType.freshwater);
 	}
 }

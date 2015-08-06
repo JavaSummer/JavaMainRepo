@@ -1,11 +1,12 @@
 package javasmmr.zoowsome.models.animals;
+
 /**
  * 
  * @author Marius Bologa
  *
  */
 
-public class Butterfly extends Insects {
+public class Butterfly extends Insect {
 	/**
 	 * 
 	 */
@@ -14,6 +15,7 @@ public class Butterfly extends Insects {
 	 * 
 	 */
 	private String nameB = "Monarch";
+
 	/**
 	 * 
 	 */
@@ -21,7 +23,7 @@ public class Butterfly extends Insects {
 		setCanFly(true);
 		setNrOfLegs(legs);
 		setName(nameB);
-		 setDangerous(false);
+		setDangerous(false);
 	}
 
 	/**
@@ -33,6 +35,6 @@ public class Butterfly extends Insects {
 		setCanFly(true);
 		setNrOfLegs(legs);
 		setName(name);
-		 setDangerous(false);
+		setDangerous(false);
 	}
 }

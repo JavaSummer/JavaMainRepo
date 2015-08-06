@@ -5,7 +5,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Pelican extends Birds {
+public class Pelican extends Bird {
 	/**
 	 * 
 	 */

@@ -5,7 +5,7 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public class Tuatara extends Reptiles {
+public class Tuatara extends Reptile {
 	/**
 	 * 
 	 */
