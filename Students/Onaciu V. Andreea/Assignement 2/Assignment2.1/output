@@ -1,0 +1,18 @@
+The first polynomial is: 
+	5x^8-4x^7+2x^6-2x^4+3x^3+3x-17
+The first polynomial is: 
+	4x^3-2x^2+1
+The result of the addition of these two polynomials is: 
+	5x^8-4x^7+2x^6-2x^4+7x^3-2x^2+3x-16
+The result of the multiplication of these two polynomials is: 
+	20x^11-26x^10+16x^9+x^8-12x^7+18x^6-6x^5+10x^4-71x^3+34x^2+3x-17
+The first polynomial after the multiplication with the scalar 4 is: 
+	20x^8-16x^7+8x^6-8x^4+12x^3+12x-68
+The second polynomial after the multiplication with the scalar 4 is: 
+	16x^3-8x^2+4
+The result of the evaluation of the first polynomial with the scalar 5 is 1670998
+The result of the evaluation of the second polynomial with the scalar 5 is 451
+The result of the evaluation of the first polynomial with the scalar 2 is 877
+The result of the evaluation of the second polynomial with the scalar 2 is 25
+The result of the evaluation of the first polynomial with the scalar 9 is 197153686
+The result of the evaluation of the second polynomial with the scalar 9 is 2755
