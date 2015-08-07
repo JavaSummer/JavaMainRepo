@@ -1,0 +1,14 @@
+
+import java.io.*;
+import java.util.*;
+public class PolynomialsMain {
+
+	public static void main(String[] args) throws FileNotFoundException{
+       InputOutput r=new InputOutput(new Scanner(new File("pol.txt")),new PrintWriter(new File("out.txt")));
+       int a[]=r.readCoefficients();
+       int b[]=r.readCoefficients();
+       System.out.println("The first poly"+a[1]);
+       
+       
+	}
+}

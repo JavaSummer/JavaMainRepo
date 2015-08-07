@@ -1,0 +1,83 @@
+import java.math.*;
+
+public class MatrixOperations {
+	
+  static BigDecimal[][] add(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+      
+      int nrRowsA=matrixA.length;
+      int nrRowsB=matrixB.length;
+      int nrColumnsA=matrixA[0].length;
+      int nrColumnsB=matrixB[0].length;
+      
+      if (nrRowsA!=nrRowsB || nrColumnsA!=nrColumnsB) return null;
+      BigDecimal[][] result=new BigDecimal[nrRowsA][nrColumnsA];
+      
+      for (int i=0; i<nrRowsA; i++)
+    	  for (int j=0;j<nrColumnsA; j++){
+    		  result[i][j]=matrixA[i][j].add(matrixB[i][j]);
+    	  }
+      
+      return result;
+  }
+
+ 
+static BigDecimal[][] substract(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	 int nrRowsA=matrixA.length;
+     int nrRowsB=matrixB.length;
+     int nrColumnsA=matrixA[0].length;
+     int nrColumnsB=matrixB[0].length;
+     
+     if (nrRowsA!=nrRowsB || nrColumnsA!=nrColumnsB) return null;
+     BigDecimal[][] result=new BigDecimal[nrRowsA][nrColumnsA];
+     
+     for (int i=0; i<nrRowsA; i++)
+   	  for (int j=0;j<nrColumnsA; j++){
+   		  result[i][j]=matrixA[i][j].subtract(matrixB[i][j]);
+   	  }
+     
+     return result;
+  }
+
+static BigDecimal[][] multiply(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	int nrRowsA=matrixA.length;
+    int nrRowsB=matrixB.length;
+    int nrColumnsA=matrixA[0].length;
+    int nrColumnsB=matrixB[0].length;
+    if (nrColumnsA!=nrRowsB) return null;
+    BigDecimal[][] result=new BigDecimal[nrRowsA][nrColumnsB];
+    for (int i=0; i<result.length; i++)
+  	  for (int j=0;j<result[0].length; j++)
+  		result[i][j]=new BigDecimal("0");
+    for (int i=0;i<nrRowsA;i++)
+    	for (int k=0;k<nrColumnsB;k++)
+    	for (int j=0;j<nrColumnsA;j++){
+         result[i][k]=result[i][k].add(matrixA[i][j].multiply(matrixB[j][k]));		
+    	}
+	  return result;
+}
+
+static BigDecimal[][] multiplyScalar(BigDecimal[][] matrixA, BigDecimal scalar){
+	BigDecimal[][] result=new BigDecimal[matrixA.length][matrixA[0].length];
+	for (int i=0;i<matrixA.length;i++)
+		for (int j=0;j<matrixA[0].length;j++)
+			result[i][j]=matrixA[i][j].multiply(scalar);
+	return result;  
+}
+}/*
+static BigDecimal[][] determinant(BigDecimal[][] matrixA) {
+	  
+}static boolean areEqual(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	  
+}
+static boolean isZeroMatrix(BigDecimal[][] matrixA){
+	  
+}
+static boolean isIdentityMatrix(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	  
+}
+static BigDecimal[][] fillDegree(BigDecimal[][] matrixA){
+	  
+}
+   
+}
+*/
