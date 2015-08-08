@@ -85,17 +85,18 @@ public class MainController {
 			}
 		}
 
-		int takenCare = 0;
+		boolean flag = true;
 		for (i = 0; i < 15; i++) {
-			if (animal1[i].getTakenCareOf()) {
-				takenCare++;
+			if (!animal1[i].getTakenCareOf()) {
+				flag = false;
+				break;
 			}
 			// System.out.println("Animal: " + animal1[i].getName() + "
 			// -caretaker: " + careT[i].getName() + " -id: "
 			// + careT[i].getId());
 		}
 
-		if (takenCare == 15) {
+		if (flag) {
 			System.out.println("All of the animals have been taken care of.");
 		} else {
 			System.out.println("Not all of the animals have been taken care of.");
