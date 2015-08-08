@@ -7,4 +7,11 @@ public class Turtle extends Reptile {
 		setLaysEggs(true);
 			
 	}
+	
+	public Turtle(String name, int nrLegs, boolean laysEggs){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setLaysEggs(laysEggs);
+	
+	}
 }

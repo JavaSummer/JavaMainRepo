@@ -8,5 +8,13 @@ public class Catfish extends Aquatic{
 		setWaterType(TypesOfWater.freshwater);
 			
 	}
+	
+	public Catfish(String name, int nrLegs, int avgDepth, TypesOfWater waterType){
+		setName(name);
+		setNrOfLegs(nrLegs);
+	    setAvgSwimDepth(avgDepth);
+	    setWaterType(waterType);
+		
+	}
 
 }

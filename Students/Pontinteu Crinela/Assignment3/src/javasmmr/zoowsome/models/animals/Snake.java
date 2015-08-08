@@ -7,5 +7,12 @@ public class Snake extends Reptile {
 		setLaysEggs(true);
 			
 	}
+	
+	public Snake(String name, int nrLegs, boolean laysEggs){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setLaysEggs(laysEggs);
+	
+	}
 
 }

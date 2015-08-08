@@ -8,5 +8,13 @@ public class Butterfly extends Insect {
 		setIsDangerous(false);
 			
 	}
+	
+	public Butterfly(String name, int nrLegs, boolean canFly, boolean isDangerous){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setCanFly (canFly);
+		setIsDangerous(isDangerous);	
+		
+	}
 
 }

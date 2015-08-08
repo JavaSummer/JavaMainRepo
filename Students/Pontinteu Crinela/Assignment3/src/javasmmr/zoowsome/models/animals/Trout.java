@@ -8,6 +8,13 @@ public class Trout extends Aquatic{
 		setWaterType(TypesOfWater.freshwater);
 			
 	}
-
-
+	
+	public Trout(String name, int nrLegs, int avgDepth, TypesOfWater waterType){
+		setName(name);
+		setNrOfLegs(nrLegs);
+	    setAvgSwimDepth(avgDepth);
+	    setWaterType(waterType);
+		
+	}
+	
 }

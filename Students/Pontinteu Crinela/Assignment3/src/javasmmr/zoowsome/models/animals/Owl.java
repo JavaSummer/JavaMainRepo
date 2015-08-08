@@ -9,4 +9,12 @@ public class Owl extends Bird{
 			
 	}
 
+	public Owl(String name, int nrLegs, boolean migrates, int avgAltitude){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setMigrates(migrates);
+	    setAvgFlightAltitude(avgAltitude);
+		
+	}
+
 }

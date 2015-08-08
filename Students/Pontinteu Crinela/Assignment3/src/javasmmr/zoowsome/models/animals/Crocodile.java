@@ -7,4 +7,11 @@ public class Crocodile extends Reptile {
 		setLaysEggs(true);
 			
 	}
+	
+	public Crocodile(String name, int nrLegs, boolean laysEggs){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setLaysEggs(laysEggs);
+	
+	}
 }

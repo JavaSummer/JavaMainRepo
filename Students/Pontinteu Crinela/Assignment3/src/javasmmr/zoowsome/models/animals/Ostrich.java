@@ -8,5 +8,13 @@ public class Ostrich extends Bird {
 		setAvgFlightAltitude(0);
 			
 	}
+	
+	public Ostrich(String name, int nrLegs, boolean migrates, int avgAltitude){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setMigrates(migrates);
+	    setAvgFlightAltitude(avgAltitude);
+		
+	}
 
 }

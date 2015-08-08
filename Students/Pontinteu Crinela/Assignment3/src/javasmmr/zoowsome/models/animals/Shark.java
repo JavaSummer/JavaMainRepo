@@ -8,5 +8,13 @@ public class Shark extends Aquatic {
 		setWaterType(TypesOfWater.saltwater);
 			
 	}
+	
+	public Shark(String name, int nrLegs, int avgDepth, TypesOfWater waterType){
+		setName(name);
+		setNrOfLegs(nrLegs);
+	    setAvgSwimDepth(avgDepth);
+	    setWaterType(waterType);
+		
+	}
 
 }

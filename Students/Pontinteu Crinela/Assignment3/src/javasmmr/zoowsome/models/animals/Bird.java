@@ -1,20 +1,24 @@
 package javasmmr.zoowsome.models.animals;
 
-abstract public class Bird extends Animal{
-	
+abstract public class Bird extends Animal {
+
 	private boolean migrates;
 	private int avgFlightAltitude;
-	
-	public boolean getMigrates(){
+
+	public boolean getMigrates() {
 		return migrates;
 	}
-	public void setMigrates(boolean migrates){
+
+	public void setMigrates(boolean migrates) {
 		this.migrates = migrates;
 	}
-	public int getAvgFlightAltitude(){
+
+	public int getAvgFlightAltitude() {
 		return avgFlightAltitude;
 	}
-	public void setAvgFlightAltitude(int avgFlightAltitude){
+
+	public void setAvgFlightAltitude(int avgFlightAltitude) {
 		this.avgFlightAltitude = avgFlightAltitude;
 	}
+
 }

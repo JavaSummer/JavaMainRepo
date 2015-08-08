@@ -8,5 +8,13 @@ public class Tiger extends Mammal {
 		setPercBodyHair ((float) 95.2 );
 		
 	}
+	
+	public Tiger(String name, int nrLegs, float bodyTemp, float bodyHair){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setNormalBodyTemp(bodyTemp);
+		setPercBodyHair(bodyHair);
+	
+	}
 
 }

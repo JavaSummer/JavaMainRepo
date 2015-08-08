@@ -8,5 +8,13 @@ public class Spider extends Insect {
 		setIsDangerous(true);
 			
 	}
+	
+	public Spider(String name, int nrLegs, boolean canFly, boolean isDangerous){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setCanFly (canFly);
+		setIsDangerous(isDangerous);	
+		
+	}
 
 }

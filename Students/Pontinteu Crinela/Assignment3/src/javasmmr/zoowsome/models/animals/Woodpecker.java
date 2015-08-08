@@ -8,6 +8,14 @@ public class Woodpecker extends Bird {
 		setAvgFlightAltitude(200);
 			
 	}
+	
+	public Woodpecker(String name, int nrLegs, boolean migrates, int avgAltitude){
+		setName(name);
+		setNrOfLegs(nrLegs);
+		setMigrates(migrates);
+	    setAvgFlightAltitude(avgAltitude);
+		
+	}
 
 
 }
