@@ -24,9 +24,16 @@ public class Cow extends Mammal {
 	private float percentage = 98.2f;
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 * 
 	 */
-	public Cow() {
+	public Cow(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setNormalBodyTemp(temperature);
 		setNrOfLegs(legs);
 		setName(nameC);
@@ -39,8 +46,14 @@ public class Cow extends Mammal {
 	 *            The name of the Cow.
 	 * @param perc
 	 *            % of body covered in hair
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-	public Cow(final String name, final float perc) {
+	public Cow(final String name, final float perc, final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setNormalBodyTemp(temperature);
 		setNrOfLegs(legs);
 		setName(name);

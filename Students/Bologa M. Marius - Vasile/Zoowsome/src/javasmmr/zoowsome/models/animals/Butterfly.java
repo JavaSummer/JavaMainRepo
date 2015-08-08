@@ -17,9 +17,17 @@ public class Butterfly extends Insect {
 	private String nameB = "Monarch";
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
+	 *
 	 * 
 	 */
-	public Butterfly() {
+	public Butterfly(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setCanFly(true);
 		setNrOfLegs(legs);
 		setName(nameB);
@@ -30,11 +38,18 @@ public class Butterfly extends Insect {
 	 * 
 	 * @param name
 	 *            The name of the butterfly.
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-	public Butterfly(final String name) {
+	public Butterfly(final String name, final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setCanFly(true);
 		setNrOfLegs(legs);
 		setName(name);
 		setDangerous(false);
 	}
+
 }

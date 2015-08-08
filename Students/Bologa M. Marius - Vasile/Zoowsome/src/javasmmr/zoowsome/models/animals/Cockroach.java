@@ -16,9 +16,16 @@ public class Cockroach extends Insect {
 	private String nameC = "American Cockroach";
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 * 
 	 */
-	public Cockroach() {
+	public Cockroach(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setCanFly(false);
 		setNrOfLegs(legs);
 		setName(nameC);
@@ -29,8 +36,14 @@ public class Cockroach extends Insect {
 	 * 
 	 * @param name
 	 *            The name of the Cockroach .
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-	public Cockroach(final String name) {
+	public Cockroach(final String name, final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setCanFly(false);
 		setNrOfLegs(legs);
 		setName(name);
