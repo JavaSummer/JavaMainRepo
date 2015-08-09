@@ -3,25 +3,14 @@ package javasmmr.zoowsome.models.animals;
 public class Turtle extends Reptile{
 
 	public Turtle(){
-		laysEggs = true;
-		nrOfLegs = 4;
-		name = "Turtle";
+		setLaysEggs(true);
+		setNrOfLegs(4);
+		setName("Turtle");
 	}
 	public Turtle(boolean layEggs, int theNrOfLegs, String theName){
-		nrOfLegs = theNrOfLegs;
-		name = theName;
-		laysEggs = layEggs;
+		setLaysEggs(layEggs);
+		setNrOfLegs(theNrOfLegs);
+		setName(theName);
 	}
-	public int getNrOfLegs(){
-		return nrOfLegs;
-	}
-	public void setNrOfLegs(){
-		nrOfLegs = 4;
-	}
-	public String getName(){
-		return name;
-	}
-	public void setName(){
-		name = "Turtle";
-	}
+	
 }

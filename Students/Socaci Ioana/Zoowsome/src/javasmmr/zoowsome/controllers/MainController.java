@@ -9,9 +9,9 @@ public class MainController {
 		SpeciesFactory speciesFactory1 = abstractFactory.getSpeciesFactory(Constants.Species.Mammals);
 		Animal a1 = speciesFactory1.getAnimal(Constants.Animals.Mammals.Tiger);
 		Aquatic a2 = new Dolphin();
-		System.out.println(a2.avgSwimDepth);
+		System.out.println(a2.getAvgSwimDepth());
 		System.out.printf("We have an animal with %d legs", a1.getNrOfLegs());
-		a1.setName();
+		a1.setName("Tiger");
 		System.out.printf("\nThe animal is a %s", a1.getName());
 		
 		
