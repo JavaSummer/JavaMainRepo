@@ -4,7 +4,7 @@
 Understand what interfaces are and why they are a powerful tool.
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (start_date - end_date).
+We recommend you to finish the reading list and the given assignments in 1 week (3/08 - 9/08).
 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=0xw06loTm1k&index=55&list=PLFE2CE09D83EE3E28) (videos 49, 55-59)
