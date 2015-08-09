@@ -1,0 +1,31 @@
+import java.util.Scanner;
+/**
+ * 
+ * @author Timbus
+ * Directly implemented more efficiently
+ * Using Scanner object proves to be more versatile
+ * in comparison with BufferedReader
+ */
+public  class Multipliers_with_Input {
+ public static void main(String[] args) {
+  Scanner numberFromKeyboard = new Scanner(System.in);
+  System.out.println("Insert number:");
+  int number, sumofMultiplier = 0;
+  number = numberFromKeyboard.nextInt();
+  for (int i = 3; i <= number; i += 3) {
+		sumofMultiplier += i;
+	}
+	for (int i = 5; i <= number; i += 5) {
+		sumofMultiplier += i;
+	}
+	for (int i = 15; i <= number; i += 15) {
+		sumofMultiplier -= i;
+	}
+
+	System.out.println("SumofMultipliers of 3 or 5 smaller than " + number);
+	System.out.println(sumofMultiplier);
+
+}
+
+
+}
