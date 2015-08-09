@@ -4,7 +4,7 @@
 Understand what Exceptions are and how to deal with them.
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (start_date - end_date).
+We recommend you to finish the reading list and the given assignments in 1 week (10/08 - 16/08).
 
 ## Video list
 1. [The New Boston - Exception Handling](https://www.youtube.com/watch?v=K_-3OLkXkzY)
@@ -19,3 +19,7 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 ## Play around with...
 1. [Oracle documentation Q&A](https://docs.oracle.com/javase/tutorial/essential/exceptions/QandE/questions.html)
 2. [More Q&As on exceptions](http://www.indiabix.com/java-programming/exceptions/)
+
+
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments)
+- 4.1 - [Zoo (part 3)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments/Zoo%20(part%202).pdf)
