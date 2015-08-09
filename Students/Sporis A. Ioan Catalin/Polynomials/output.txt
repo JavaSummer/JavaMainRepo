@@ -1,0 +1,71 @@
+5X^8 
+-4X^7 
+2X^6 
+0X^5 
+-2X^4 
+7X^3 
+-2X^2 
+3X^1 
+-16X^0 
+
+
+5X^8 
+-4X^7 
+2X^6 
+0X^5 
+-2X^4 
+-1X^3 
+2X^2 
+3X^1 
+-18X^0 
+
+
+20X^11 
+-26X^10 
+16X^9 
+1X^8 
+-12X^7 
+18X^6 
+-6X^5 
+10X^4 
+-71X^3 
+34X^2 
+3X^1 
+-17X^0 
+
+
+20X^8 
+-16X^7 
+8X^6 
+0X^5 
+-8X^4 
+12X^3 
+0X^2 
+12X^1 
+-68X^0 
+
+
+16X^3 
+-8X^2 
+0X^1 
+4X^0 
+
+
+
+
+First Polynomial -200
+
+Second Polynomial 60
+
+
+
+First Polynomial -80
+
+Second Polynomial 24
+
+
+
+First Polynomial -360
+
+Second Polynomial 108
+
