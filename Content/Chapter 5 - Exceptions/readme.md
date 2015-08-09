@@ -21,5 +21,5 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 2. [More Q&As on exceptions](http://www.indiabix.com/java-programming/exceptions/)
 
 
-## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments)
-- 4.1 - [Zoo (part 3)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%204%20-%20Inheritance%20and%20Interfaces/Assignments/Zoo%20(part%202).pdf)
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%205%20-%20Exceptions/Assignments)
+- 4.1 - [Zoo (part 3)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%205%20-%20Exceptions/Assignments/Zoo%20(part%203).pdf)
