@@ -1,0 +1,22 @@
+import java.io.*;
+public class PolynomialsMain {
+
+	public static void main(String[] args){
+	InputOutput file=new InputOutput();
+		file.openFile();
+		file.readCoefficients();
+		file.readCoefficients();
+		file.readCommands();
+		file.readCommands();
+		System.out.println("ijo");
+		
+		
+		
+		
+		
+    }
+
+       
+       
+	}
+

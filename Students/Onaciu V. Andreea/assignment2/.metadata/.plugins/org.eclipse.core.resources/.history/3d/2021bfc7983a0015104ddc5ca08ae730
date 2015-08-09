@@ -1,0 +1,7 @@
+
+public class Polynomial {
+	public void createPolynomials(int[] coeficients){
+		
+	}
+
+}

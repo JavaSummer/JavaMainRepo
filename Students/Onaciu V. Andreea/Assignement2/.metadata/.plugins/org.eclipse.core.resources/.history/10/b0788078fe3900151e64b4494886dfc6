@@ -1,0 +1,57 @@
+
+import java.util.Scanner;
+import java.io.PrintWriter;
+import java.io.File;
+
+ public class InputOutput{
+	 
+	private Scanner x;
+	public void openFile(){
+		try{
+			x=new Scanner(new File("ser"));
+		}
+		catch(Exception e){
+			System.out.println("Couldn't find this file");
+		}
+	}
+	
+
+	
+	public int[] readCoefficients(){
+	
+		int[] coefficients=new int[]{};
+		int i=0;
+	    String s=x.nextLine();
+		String[] coeffs=s.split(" ");
+		coefficients[0]=1;
+	    System.out.println(coefficients.length+" "+coeffs.length);
+		
+		for(i=0;i<coeffs.length;i++){
+			coefficients[i]=Integer.parseInt(coeffs[i]);
+		}
+		return coefficients;
+		}	
+		
+	
+	
+	
+	public String readCommands(){
+		
+		String command=x.nextLine();
+		return command;
+		
+		}
+    
+	
+	
+	
+	/*public void writeFile(){
+		PrintWriter out=new PrintWriter(outputFile);	
+	}
+	
+	public void closeFile(){
+		outputFile.close();
+	}
+	
+*/
+}

@@ -1,0 +1,79 @@
+ import java.math.*;
+public class Functions {
+	
+ public int[] add(int[] a,int[] b,int n,int m){
+	 int s[]=new int[((n>m)?n:m)];
+	 int length=((n>m)?n:m)-1;
+	 int lengthA=n-1;
+	 int lengthB=m-1; 
+	 while (lengthA>=0 && lengthB>=0){
+		 s[length]=a[lengthA]+b[lengthB];
+		 length--;
+		 lengthA--;
+		 lengthB--;
+	 }
+		 for(int i=0;i<=length;i++){
+			 s[i]=((n>m)?a[i]:b[i]);
+		 }
+		 return s;
+ }
+
+ public int[] substract(int[] a,int[] b,int n,int m){
+	 
+	 System.out.println("The result of the substraction of this 2 polynomials is: ");
+	 int s[]=new int[((n>m)?n:m)];
+	 int length=((n>m)?n:m)-1;
+	 int lengthA=n-1;
+	 int lengthB=m-1; 
+	 while (lengthA>=0 && lengthB>=0){
+		 s[length]=a[lengthA]-b[lengthB];
+		 length--;
+		 lengthA--;
+		 lengthB--;
+	 }
+		 for(int i=0;i<=length;i++){
+			 s[i]=((n>m)?a[i]:-b[i]); 
+		 }
+		 return s;
+ }
+
+ public int[] multiply(int[] a,int[] b,int n,int m){
+	int multiply[]=new int[n+m-1];
+	int lengthA=n-1;
+	int lengthB=m-1;
+	int length=n+m-2;
+	for (int i=0;i<n;i++)
+		for(int j=0;j<m;j++)
+			multiply[length-lengthA+i-lengthB+j]+=a[i]*b[j];
+	return multiply;
+ }
+
+ public void eval(int[] a,int[] b,int n,int m,int scalar){
+     int result=0; 	 
+	 for (int i=n-1;i>=0;i--)
+      		 result+= Math.pow(scalar, i)*a[i];
+	 System.out.println("The result of the evaluation of the first polynomial with the scalar "+scalar+" is "+result+".");
+	 for (int i=n-1;i>=0;i--)
+  		 result+= Math.pow(scalar,i)*b[i];
+	 System.out.println("The result of the evaluation of the second polynomial with the scalar "+scalar+" is "+result+"."); 
+ }
+ 
+ public void mul_scal(int[] a,int[] b,int n,int m,int scalar){
+	 
+	 out.println("The resulting polynomials after multypling with the scalar "+scalar+"are: ");
+	 
+	 for (int i=n-1;i>=0;i--){
+		 a[i]*=scalar;
+		 if (a[i]!=0 && i!=0) out.print(a[i]+"x^"+i);
+		 if (0==i) out.print(a[i]); 
+	 }
+	 out.println("");
+	 for (int i=n-1;i>=0;i--){
+		 a[i]*=scalar;
+		 if (a[i]!=0 && i!=0) out.print(a[i]+"x^"+i);
+		 if (0==i) out.print(a[i]); 
+	 }
+ }
+ 
+}
+*/

@@ -1,0 +1,17 @@
+import java.math.*;
+public class MatrixProblem {
+ public static void main(String[] args){
+	 // Creating a meniu for verifying the methods
+	 BigDecimal[][] matrixA={{new BigDecimal(1),new BigDecimal(2),new BigDecimal(3),new BigDecimal(4)},
+			 {new BigDecimal(5),new BigDecimal(6),new BigDecimal(7),new BigDecimal(8)},
+			 {new BigDecimal(1),new BigDecimal(2),new BigDecimal(3),new BigDecimal(4)},
+			 {new BigDecimal(1),new BigDecimal(2),new BigDecimal(3),new BigDecimal(4)}};
+	 BigDecimal[][] matrixB={{new BigDecimal(1),new BigDecimal(2),new BigDecimal(3),new BigDecimal(4)},
+			 {new BigDecimal(5),new BigDecimal(6),new BigDecimal(7),new BigDecimal(8)},
+			 {new BigDecimal(1),new BigDecimal(2),new BigDecimal(3),new BigDecimal(4)},
+			 {new BigDecimal(1),new BigDecimal(2),new BigDecimal(3),new BigDecimal(4)}}; 
+	 //MatrixOperations op=new MatrixOperations;
+	 //BigDecimal[][] result=op.add(matrixA, matrixB);
+	 System.out.println(matrixA[0].length);
+ }
+}

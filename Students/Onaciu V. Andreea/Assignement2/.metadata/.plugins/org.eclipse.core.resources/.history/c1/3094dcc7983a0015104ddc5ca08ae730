@@ -1,0 +1,28 @@
+
+public class PolynomialsMain {
+
+	public static void main(String[] args){
+	InputOutput file=new InputOutput();
+		file.openFile();
+		int a[]=file.readCoefficients();
+		int b[]=file.readCoefficients();
+	
+		int n=a.length;
+		int m=b.length;
+		System.out.println(n+" "+m);
+		file.readCommands();
+		Functions f=new Functions();
+		f.mul_scal(a, b, n, m, 2);
+		file.readCommands();
+		System.out.println("ijo");
+		
+		
+		
+		
+		
+    }
+
+       
+       
+	}
+

@@ -1,0 +1,33 @@
+/*import java.math.*;
+
+public class MatrixOperations {
+	
+  static BigDecimal[][] add(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+  	  
+  }
+static BigDecimal[][] substract(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+  	  
+  }
+static BigDecimal[][] multiply(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	  
+}
+static BigDecimal[][] multiplyScalar(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	  
+}
+static BigDecimal[][] determinant(BigDecimal[][] matrixA) {
+	  
+}static boolean areEqual(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	  
+}
+static boolean isZeroMatrix(BigDecimal[][] matrixA){
+	  
+}
+static boolean isIdentityMatrix(BigDecimal[][] matrixA, BigDecimal[][] matrixB){
+	  
+}
+static BigDecimal[][] fillDegree(BigDecimal[][] matrixA){
+	  
+}
+   
+}
+*/
