@@ -13,7 +13,6 @@ import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.services.factories.Constants;
 
 public class Caretaker extends Employee {
-
 	private double workingHours;
 
 	public Caretaker(String employeeName, long ID, BigDecimal employeeSalary) {

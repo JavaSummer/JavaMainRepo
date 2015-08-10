@@ -139,6 +139,5 @@ public class MainController {
 		for (i = 0; i < 15; i++) {
 			System.out.println(String.valueOf(employeeList1.get(i).getName()));
 		}
-
 	}
 }

@@ -35,7 +35,6 @@ public class EmployeeRepository {
 	private static final String XML_FILENAME = "Employees.xml";
 
 	public EmployeeRepository() {
-
 	}
 
 	public void save(ArrayList<Employee> employees) throws FileNotFoundException, XMLStreamException {
@@ -64,7 +63,6 @@ public class EmployeeRepository {
 			eventWriter.add(eElement);
 			eventWriter.add(end);
 		}
-
 		eventWriter.add(eventFactory.createEndElement("", "", "content"));
 		eventWriter.add(eventFactory.createEndDocument());
 		eventWriter.close();

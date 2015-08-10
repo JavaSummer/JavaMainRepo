@@ -12,7 +12,6 @@ import org.w3c.dom.Element;
 import javasmmr.zoowsome.models.interfaces.XML_Parsable;
 
 public abstract class Employee implements XML_Parsable {
-
 	private String name;
 	private long id;
 	private BigDecimal salary;
