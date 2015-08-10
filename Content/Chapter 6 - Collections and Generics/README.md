@@ -20,3 +20,4 @@ We recommend you to finish the reading list and the given assignments in 2 weeks
 
 ## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%206%20-%20Collections%20and%20Generics/Assignments)
 - 6.1 - [Zoo (part 4)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%206%20-%20Collections%20and%20Generics/Assignments/Zoo%20(part%204).pdf)
+- 6.2 - [Exercises from Washington univ.](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%206%20-%20Collections%20and%20Generics/Assignments/Washington%20univ.%20exercises.pdf)
