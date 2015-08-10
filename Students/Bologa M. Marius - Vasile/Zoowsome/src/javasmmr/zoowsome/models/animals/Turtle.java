@@ -16,9 +16,16 @@ public class Turtle extends Reptile {
 	private String nameT = " Testudine";
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 * 
 	 */
-	public Turtle() {
+	public Turtle(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setLaysEggs(true);
 		setName(nameT);
 		setNrOfLegs(legs);
@@ -28,8 +35,14 @@ public class Turtle extends Reptile {
 	 * 
 	 * @param name
 	 *            The name of the turtle.
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-	public Turtle(final String name) {
+	public Turtle(final String name, final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setLaysEggs(true);
 		setName(name);
 		setNrOfLegs(legs);

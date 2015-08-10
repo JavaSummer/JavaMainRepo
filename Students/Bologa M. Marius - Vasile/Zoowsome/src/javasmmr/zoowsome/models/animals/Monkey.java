@@ -24,9 +24,16 @@ public class Monkey extends Mammal {
 	private float percentage = 75f;
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 * 
 	 */
-	public Monkey() {
+	public Monkey(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setNormalBodyTemp(temperature);
 		setNrOfLegs(legs);
 		setName(nameM);
@@ -39,8 +46,14 @@ public class Monkey extends Mammal {
 	 *            The name of the monkey.
 	 * @param perc
 	 *            % of body covered in hair.
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-	public Monkey(final String name, final float perc) {
+	public Monkey(final String name, final float perc, final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setNormalBodyTemp(temperature);
 		setNrOfLegs(legs);
 		setName(name);

@@ -21,9 +21,16 @@ public class Eagle extends Bird {
 	private int flightAltitude = 2000;
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 * 
 	 */
-	public Eagle() {
+	public Eagle(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setMigrates(false);
 		setAvgFlightAltitude(flightAltitude);
 		setName(nameE);
@@ -39,8 +46,15 @@ public class Eagle extends Bird {
 	 *            Migrates or not?
 	 * @param altitude
 	 *            Average flight altitude.
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-   public Eagle(final String name, final boolean migrates, final int altitude) {
+	public Eagle(final String name, final boolean migrates, final int altitude, final double maintenanceCost,
+			final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setMigrates(migrates);
 		setAvgFlightAltitude(altitude);
 		setName(name);

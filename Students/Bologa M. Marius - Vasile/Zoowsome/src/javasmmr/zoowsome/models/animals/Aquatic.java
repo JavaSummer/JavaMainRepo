@@ -8,9 +8,19 @@ package javasmmr.zoowsome.models.animals;
 public abstract class Aquatic extends Animal {
 	/**
 	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
+	 * @param maintenanceCost
+	 *            The maintenance cost.
+	 */
+	public Aquatic(double dangerPerc, double maintenanceCost) {
+		super(dangerPerc, maintenanceCost);
+	}
+
+	/**
+	 * 
 	 */
 	private int avgSwimDepth;
-
 
 	/**
 	 * 

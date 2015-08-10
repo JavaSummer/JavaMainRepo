@@ -16,9 +16,16 @@ public class Spider extends Insect {
 	private String nameS = " Regal Jumper";
 
 	/**
+	 *
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 * 
 	 */
-	public Spider() {
+	public Spider(final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setCanFly(false);
 		setNrOfLegs(legs);
 		setName(nameS);
@@ -31,8 +38,14 @@ public class Spider extends Insect {
 	 *            The name of the spider.
 	 * @param bites
 	 *            Is dangerous or not.
+	 * @param maintenanceCost
+	 *            How many hours per week each animal require.
+	 * 
+	 * @param dangerPerc
+	 *            How dangerous an animal is.
 	 */
-	public Spider(final String name, final boolean bites) {
+	public Spider(final String name, final boolean bites, final double maintenanceCost, final double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setCanFly(false);
 		setNrOfLegs(legs);
 		setName(name);
