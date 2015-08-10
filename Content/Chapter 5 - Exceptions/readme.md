@@ -22,4 +22,4 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 
 
 ## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%205%20-%20Exceptions/Assignments)
-- 4.1 - [Zoo (part 3)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%205%20-%20Exceptions/Assignments/Zoo%20(part%203).pdf)
+- 5.1 - [Zoo (part 3)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%205%20-%20Exceptions/Assignments/Zoo%20(part%203).pdf)
