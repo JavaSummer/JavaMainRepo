@@ -14,8 +14,8 @@ public abstract class Animal implements Killer, XML_Parsable {
 
 	private int nrOfLegs;
 	private String name;
-	private final double maintenanceCost;
-	private final double dangerPerc;
+	private double maintenanceCost;
+	private double dangerPerc;
 	private boolean takenCareOf;
 
 	public Animal(double cost, double danger) {
@@ -40,14 +40,18 @@ public abstract class Animal implements Killer, XML_Parsable {
 		return name;
 	}
 
-	// public void setMaintenanceCost(double cost) {
-	// maintenanceCost = cost;
-	// }
+	public void setMaintenanceCost(double cost) {
+		maintenanceCost = cost;
+	}
 
 	public double getMaintenanceCost() {
 		return maintenanceCost;
 	}
 
+	public void setDangerPerc(double danger) {
+		dangerPerc = danger;
+	}
+	
 	public double getDangerPerc() {
 		return dangerPerc + getPredisposition();
 	}
@@ -90,13 +94,5 @@ public abstract class Animal implements Killer, XML_Parsable {
 		setMaintenanceCost(Double.valueOf(element.getElementsByTagName("maintenanceCost").item(0).getTextContent()));
 		setDangerPerc(Double.valueOf(element.getElementsByTagName("dangerPerc").item(0).getTextContent()));
 		setTakenCareOf(Boolean.valueOf(element.getElementsByTagName("takenCareOf").item(0).getTextContent()));
-	}
-
-	private void setMaintenanceCost(Double valueOf) {
-
-	}
-
-	private void setDangerPerc(Double valueOf) {
-
 	}
 }
