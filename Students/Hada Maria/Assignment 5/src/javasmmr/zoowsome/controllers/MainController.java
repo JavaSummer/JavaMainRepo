@@ -5,8 +5,9 @@ import java.util.ArrayList;
 import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.models.employees.*;
 import javasmmr.zoowsome.repositories.AnimalRepository;
+import javasmmr.zoowsome.repositories.EmployeeRepository;
+import javasmmr.zoowsome.services.factories.Constants;
 import javasmmr.zoowsome.services.factories.animal.AnimalFactory;
-import javasmmr.zoowsome.services.factories.animal.Constants;
 import javasmmr.zoowsome.services.factories.animal.SpeciesFactory;
 import javasmmr.zoowsome.services.factories.employee.CaretakerFactory;
 
@@ -102,7 +103,7 @@ public class MainController {
 		System.out.println();
 
 		// Zoo part 3
-
+		// Animals
 		AnimalRepository aRepo = new AnimalRepository();
 		ArrayList<Animal> animalList = new ArrayList<>();
 
@@ -113,12 +114,31 @@ public class MainController {
 			Animal animal2 = sf.getAnimal(animals[iRandomSpecies][iRandomAnimal]);
 			animalList.add(animal2);
 		}
-
 		aRepo.save(animalList);
+
 		ArrayList<Animal> animalList1 = new ArrayList<>();
 		animalList1 = aRepo.load();
 		for (i = 0; i < 15; i++) {
 			System.out.println(String.valueOf(animalList1.get(i).getName()));
 		}
+		System.out.println();
+
+		// Employees
+		EmployeeRepository eRepo = new EmployeeRepository();
+		ArrayList<Employee> employeeList = new ArrayList<>();
+
+		for (i = 0; i < 15; i++) {
+			Caretaker caretaker = caretakerFactory1.getEmployeeFactory(Constants.Employees.Caretaker);
+			caretaker.setWorkingHours((int) (Math.random() * 8));
+			employeeList.add(caretaker);
+		}
+		eRepo.save(employeeList);
+
+		ArrayList<Employee> employeeList1 = new ArrayList<>();
+		employeeList1 = eRepo.load();
+		for (i = 0; i < 15; i++) {
+			System.out.println(String.valueOf(employeeList1.get(i).getName()));
+		}
+
 	}
 }
