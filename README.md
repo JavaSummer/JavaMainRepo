@@ -56,11 +56,11 @@
 </pre>
 
  <pre>
-[Chapter 6: Collections and Generics](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%206%20-%20Collections%20and%20Generics) (`31/08 - 13/09`)
+[Chapter 6: Collections and Generics](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%206%20-%20Collections%20and%20Generics) (`17/08 - 30/08`)
 </pre>
 
  <pre>
-[Chapter 7: GUI (Graphical User Interfaces)](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%207%20-%20GUI) (`17/08 - 30/08`)
+[Chapter 7: GUI (Graphical User Interfaces)](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%207%20-%20GUI) (`31/08 - 13/09`)
 </pre>
 
  <pre>

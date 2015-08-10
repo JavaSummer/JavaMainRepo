@@ -4,7 +4,7 @@
 Understand what Exceptions are and how to deal with them.
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (10/08 - 16/08).
+We recommend you to finish the reading list and the given assignments in 1 week (`10/08 - 16/08`).
 
 ## Video list
 1. [The New Boston - Exception Handling](https://www.youtube.com/watch?v=K_-3OLkXkzY)

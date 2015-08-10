@@ -4,7 +4,7 @@
 Understand the concept of inheritance and polymorphism
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (27.07 - 02.08).
+We recommend you to finish the reading list and the given assignments in 1 week (`27/07 - 02/08`).
 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=0xw06loTm1k&index=55&list=PLFE2CE09D83EE3E28) (videos 49, 55-59)
