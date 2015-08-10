@@ -1,10 +1,10 @@
-# Chapter 7 - Collections and Generics
+# Chapter 6 - Collections and Generics
 
 ## Objective
 Get familiar with the Java Collections Framework and Generics 
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (start_date - end_date).
+We recommend you to finish the reading list and the given assignments in 1 week (17.08 - 23.08).
 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=vW53w7me4AE&list=PL27BCE863B6A864E3) (videos 1-19)

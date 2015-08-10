@@ -1,10 +1,10 @@
-# Chapter 6 - GUI
+# Chapter 7 - GUI
 
 ## Objective
 Learn to work with and construct Graphical User Interfaces 
 
 ## Duration
-We recommend you to finish the reading list and the given assignments in 1 week (start_date - end_date).
+We recommend you to finish the reading list and the given assignments in 1 week (24.08 - 30.08).
 
 ## Video list
 1. [The New Boston tutorials](https://www.youtube.com/watch?v=jJjg4JweJZU&list=PLFE2CE09D83EE3E28&index=50)(videos 50-54, 62-77, 83-87)
