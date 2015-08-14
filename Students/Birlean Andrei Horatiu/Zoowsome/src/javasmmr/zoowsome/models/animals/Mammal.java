@@ -5,6 +5,12 @@ public abstract class Mammal extends Animal
    private float nomalBodyTemp;
    private float percBodyHair;
    
+   public Mammal(double maintenanceCost,double dangerPerc)
+   {
+ 	  super(maintenanceCost,dangerPerc);
+   }
+   
+   
    public float getNomalBodyTemp()
    {
 	   return this.nomalBodyTemp;
