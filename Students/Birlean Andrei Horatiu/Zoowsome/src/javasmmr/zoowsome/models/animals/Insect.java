@@ -5,6 +5,12 @@ public abstract class Insect extends Animal
    private boolean canFly;
    private boolean isDangerous;
    
+   public Insect(double maintenanceCost,double dangerPerc)
+   {
+ 	  super(maintenanceCost,dangerPerc);
+   }
+   
+   
    public void setCanFly(boolean flag)
    {
 	   this.canFly = flag;

@@ -9,15 +9,15 @@ public class BirdFactory extends SpeciesFactory
   {
 	  if(Constants.Animals.Birds.Eagle.equals(type))
 	  {
-		  return new Eagle();
+		  return new Eagle(4.5,0.0);
 	  }
 	  else if(Constants.Animals.Birds.Ostrich.equals(type))
 	  {
-		  return new Ostrich();
+		  return new Ostrich(2.0,0.10);
 	  }
 	  else if(Constants.Animals.Birds.Parrot.equals(type))
 	  {
-		  return new Parrot();
+		  return new Parrot(5.0,0.0);
 	  }
 	  else
 	  {

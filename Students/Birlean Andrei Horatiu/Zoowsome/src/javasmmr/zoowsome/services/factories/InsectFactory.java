@@ -10,15 +10,15 @@ public class InsectFactory extends SpeciesFactory
   {
 	  if(Constants.Animals.Insects.Butterfly.equals(type))
 	  {
-		  return new ButterFly();
+		  return new ButterFly(0.5,0.0);
 	  }
 	  else if(Constants.Animals.Insects.Cockroach.equals(type))
 	  {
-		  return new Cockroach();
+		  return new Cockroach(0.1,0.05);
 	  }
 	  else if(Constants.Animals.Insects.Spider.equals(type))
 	  {
-		  return new Spider();
+		  return new Spider(0.3,0.30);
 	  }
 	  else
 	  {

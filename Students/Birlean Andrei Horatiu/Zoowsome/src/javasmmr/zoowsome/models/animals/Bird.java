@@ -10,6 +10,12 @@ public abstract class Bird extends Animal
 	   return this.migrates;
    }
    
+   public Bird(double maintenanceCost,double dangerPerc)
+   {
+ 	  super(maintenanceCost,dangerPerc);
+   }
+   
+   
    public int getAvgFlightAltitude()
    {
 	   return this.avgFlightAltitude;

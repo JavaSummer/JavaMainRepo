@@ -8,6 +8,11 @@ public abstract class Aquatic extends Animal
   private waterType waterType;
   private int avgSwinDepth;
   
+  public Aquatic(double maintenanceCost,double dangerPerc)
+  {
+	  super(maintenanceCost,dangerPerc);
+  }
+  
   public waterType getWaterType()
   {
 	  return this.waterType;

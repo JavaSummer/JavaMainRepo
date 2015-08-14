@@ -12,15 +12,15 @@ public class AquaticFactory extends SpeciesFactory
   {
 	  if(Constants.Animals.Aquatics.Dolphin.equals(type))
 	  {
-		  return new Dolphin();
+		  return new Dolphin(6.0,0);
 	  }
 	  else if(Animals.Aquatics.Shark.equals(type))
 	  {
-		  return new Shark();
+		  return new Shark(4.0,0.98);
 	  }
 	  else if(Animals.Aquatics.Whale.equals(type))
 	  {
-		  return new Whale();
+		  return new Whale(8.0,0.10);
 	  }
 	  else
 	  {

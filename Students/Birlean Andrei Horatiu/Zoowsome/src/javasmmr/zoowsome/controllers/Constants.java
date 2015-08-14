@@ -45,6 +45,17 @@ public static final class Animals
 	
   }
 
+public static final class Employees
+{
+	public static final String CareTaker = "CARETAKER";
+	public static final class CareTakers
+	{
+		public static final String TCO_SUCCESS = "SUCCESS";
+	    public static final String TCO_KILLED = "KILLED";
+	    public static final String TCO_NO_TIME = "NO_TIME";
+	}
+}
+
 
 
 }
