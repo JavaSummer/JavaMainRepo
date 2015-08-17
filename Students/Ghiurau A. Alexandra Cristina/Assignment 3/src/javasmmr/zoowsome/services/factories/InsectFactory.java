@@ -1,19 +1,19 @@
 package javasmmr.zoowsome.services.factories;
 
-import javasmmr.zoowsome.models.animals.Animals;
+import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.models.animals.*;
 
 public class InsectFactory extends SpeciesFactory {
 
 	@Override
-	public Animals getAnimal(String type) throws Exception {
+	public Animal getAnimal(String type) throws Exception {
 		if (Constants.Animals.Insects.Spider.equals(type)) {
 			return new Spider();
-		}else if (Constants.Animals.Insects.Butterfly.equals(type)){
+		} else if (Constants.Animals.Insects.Butterfly.equals(type)) {
 			return new Butterfly();
-		}else if (Constants.Animals.Insects.LadyBug.equals(type)){
+		} else if (Constants.Animals.Insects.LadyBug.equals(type)) {
 			return new LadyBug();
-		}else {
+		} else {
 			throw new Exception("Invalid animal exception!");
 		}
 	}

@@ -1,8 +1,7 @@
 package javasmmr.zoowsome.models.animals;
 
-public class Animals {
+public class Animal {
 	private int nrOfLegs;
-	private boolean isMammal;
 	String name;
 
 	public int getNrOfLegs() {
@@ -11,14 +10,6 @@ public class Animals {
 
 	public void setNrOfLegs(int nrOfLegs) {
 		this.nrOfLegs = nrOfLegs;
-	}
-
-	public boolean isMammal() {
-		return isMammal;
-	}
-
-	public void setMammal(boolean isMammal) {
-		this.isMammal = isMammal;
 	}
 
 	public String getName() {

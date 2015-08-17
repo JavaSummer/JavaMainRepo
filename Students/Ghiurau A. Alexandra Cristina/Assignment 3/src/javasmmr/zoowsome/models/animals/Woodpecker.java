@@ -1,8 +1,7 @@
 package javasmmr.zoowsome.models.animals;
 
-public class Woodpecker extends Birds {
+public class Woodpecker extends Bird {
 	public Woodpecker(){
-		setMammal(false);
 		setName("Woody");
 		setNrOfLegs(2);
 		setAvgFlightAltitude(100);
@@ -10,7 +9,6 @@ public class Woodpecker extends Birds {
 	}
 	
 	public Woodpecker(String name, int avgFlightAltit, boolean migrates){
-		setMammal(false);
 		setName(name);
 		setNrOfLegs(2);
 		setAvgFlightAltitude(avgFlightAltit);

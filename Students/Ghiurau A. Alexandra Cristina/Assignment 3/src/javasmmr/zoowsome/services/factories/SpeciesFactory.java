@@ -1,7 +1,7 @@
 package javasmmr.zoowsome.services.factories;
 
-import javasmmr.zoowsome.models.animals.Animals;
+import javasmmr.zoowsome.models.animals.Animal;
 
 public abstract class SpeciesFactory {
-	public abstract Animals getAnimal(String type) throws Exception;
+	public abstract Animal getAnimal(String type) throws Exception;
 }

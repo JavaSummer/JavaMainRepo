@@ -1,8 +1,8 @@
 package javasmmr.zoowsome.models.animals;
 
-public abstract class Mammals extends Animals {
+public abstract class Mammal extends Animal {
 	float normalBodyTemp;
-	float percBodyTemp;
+	float percbodyHair;
 
 	public float getNormalBodyTemp() {
 		return normalBodyTemp;
@@ -13,10 +13,10 @@ public abstract class Mammals extends Animals {
 	}
 
 	public float getPercBodyTemp() {
-		return percBodyTemp;
+		return percbodyHair;
 	}
 
 	public void setPercBodyTemp(float percBodyTemp) {
-		this.percBodyTemp = percBodyTemp;
+		this.percbodyHair = percBodyTemp;
 	}
 }

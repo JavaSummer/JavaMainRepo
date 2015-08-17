@@ -1,9 +1,8 @@
 package javasmmr.zoowsome.models.animals;
 
-public class Dove extends Birds {
+public class Dove extends Bird {
 	
 	public Dove(){
-		setMammal(false);
 		setName("Sansa");
 		setNrOfLegs(2);
 		setAvgFlightAltitude(100);
@@ -11,7 +10,6 @@ public class Dove extends Birds {
 	}
 	
 	public Dove(String name, int avgFlightAltit, boolean migrates){
-		setMammal(false);
 		setName(name);
 		setNrOfLegs(2);
 		setAvgFlightAltitude(avgFlightAltit);

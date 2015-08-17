@@ -1,16 +1,15 @@
 package javasmmr.zoowsome.models.animals;
 
-public class Cow extends Mammals{
+public class Cow extends Mammal{
 	
 	/**
 	 * 'default' constructor for setting the attributes to some predefined values
 	 */
 	public Cow() {
-		setMammal(true);
 		setNrOfLegs(4);
 		setNormalBodyTemp(37); // (? not sure how should I write this) normalBodyTemp = 37;
 		setName("Milka");
-		percBodyTemp = 100/100;
+		percbodyHair = 100/100;
 		
 	}
 	/**
@@ -19,7 +18,6 @@ public class Cow extends Mammals{
 	 */
 	
 	public Cow(String name){
-		setMammal(true);
 		setNrOfLegs(4);
 		setNormalBodyTemp(37);
 		setPercBodyTemp(100/100);

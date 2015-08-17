@@ -1,9 +1,8 @@
 package javasmmr.zoowsome.models.animals;
 
-public class Nightingale extends Birds{
+public class Nightingale extends Bird{
 
 	public Nightingale(){
-		setMammal(false);
 		setName("Zazu"); //..from Lion King
 		setNrOfLegs(2);
 		setAvgFlightAltitude(100);
@@ -11,7 +10,6 @@ public class Nightingale extends Birds{
 	}
 	
 	public Nightingale(String name, int avgFlightAltit, boolean migrates){
-		setMammal(false);
 		setName(name);
 		setNrOfLegs(2);
 		setAvgFlightAltitude(avgFlightAltit);
