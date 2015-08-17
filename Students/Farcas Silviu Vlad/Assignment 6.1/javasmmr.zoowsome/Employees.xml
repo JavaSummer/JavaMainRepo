@@ -1,0 +1,82 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<name>Sachiko</name>
+	<id>8903673067122</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>21.248200943642026</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Cyndi</name>
+	<id>3239327296611</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>3.8803246463462315</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Elke</name>
+	<id>5875836903852</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>1.255297419933239</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Holly</name>
+	<id>9108611506772</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>13.4525795786452</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Beatris</name>
+	<id>2453150274903</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>21.051393455133134</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Nelly</name>
+	<id>8548202793768</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>19.092119793221258</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Ethan</name>
+	<id>5341034219874</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>22.919823551199308</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>William</name>
+	<id>8972643148372</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>35.5230679349549</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Derrick</name>
+	<id>1920354358297</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>15.66011953050542</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Amelia</name>
+	<id>7080282560618</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>14.075112915881508</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+</content>
