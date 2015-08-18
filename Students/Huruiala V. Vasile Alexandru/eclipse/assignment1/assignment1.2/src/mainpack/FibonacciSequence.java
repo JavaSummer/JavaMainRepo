@@ -10,7 +10,7 @@ public final class FibonacciSequence {
 	 * The sequence is stored in an array.
 	 * To calculate the next elements withour recalculating them every time.
 	 */
-	private static int fibSeq[] = new int[1000];
+	private static int[] fibSeq = new int[1000];
 	/**
 	 * The number of elements calculated so far.
 	 */
