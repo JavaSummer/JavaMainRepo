@@ -1,12 +1,15 @@
 package javasmmr.zoosome.models.animals;
 
 public abstract class Animal {
+	private static final String DEFAULT_NAME = null;
+	private static final int DEFAULT_NUMBER_OF_LEGS = 0;
+	
 	private String name;
 	private int noOfLegs;
 	
 	protected Animal() {
-		name = null;
-		noOfLegs = 0;
+		this.name = DEFAULT_NAME;
+		this.noOfLegs = DEFAULT_NUMBER_OF_LEGS;
 	}
 	
 	protected Animal(final String animalName, final int numberOfLegs) {

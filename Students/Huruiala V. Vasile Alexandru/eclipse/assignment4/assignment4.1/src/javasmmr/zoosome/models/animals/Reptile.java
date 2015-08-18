@@ -1,11 +1,13 @@
 package javasmmr.zoosome.models.animals;
 
 public abstract class Reptile extends Animal {
-	boolean laysEggs;
+	private static final boolean DEFAULT_LAYS_EGGS = false;
+	
+	private boolean laysEggs;
 	
 	protected Reptile() {
 		super();
-		this.laysEggs = false;
+		this.laysEggs = DEFAULT_LAYS_EGGS;
 	}
 	
 	protected Reptile(final String animalName, final int numberOfLegs, final boolean hasEggs) {

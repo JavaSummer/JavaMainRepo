@@ -2,13 +2,16 @@ package javasmmr.zoosome.models.animals;
 
 //The secret 6th class the pdf doesn't tell you about
 public abstract class Siege extends Animal {
+	private static final int DEFAULT_RANGE = 0;
+	private static final boolean DEFAULT_IS_MOBILE = false;
+	
 	private int range;
 	private boolean isMobile;
 	
 	protected Siege() {
 		super();
-		this.range = 0;
-		this.isMobile = false;
+		this.range = DEFAULT_RANGE;
+		this.isMobile = DEFAULT_IS_MOBILE;
 	}
 	
 	protected Siege(final String animalName, final int numberOfLegs, final int firingRange, final boolean mobile) {

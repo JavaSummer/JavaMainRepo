@@ -1,13 +1,16 @@
 package javasmmr.zoosome.models.animals;
 
 public abstract class Bird extends Animal {
+	private static final boolean DEFAULT_MIGRATES = false;
+	private static final int DEFAULT_AVG_FLIGHT_ALTITUDE = 0;
+	
 	private boolean migrates;
 	private int avgFlightAlitude;
 	
 	protected Bird() {
 		super();
-		migrates = false;
-		avgFlightAlitude = 0;
+		this.migrates = DEFAULT_MIGRATES;
+		this.avgFlightAlitude = DEFAULT_AVG_FLIGHT_ALTITUDE;
 	}
 	
 	protected Bird(final String animalName, final int numberOfLegs, final boolean doesMigrate, final int flightAlt) {

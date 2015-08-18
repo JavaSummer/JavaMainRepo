@@ -15,9 +15,6 @@ public class BigFactory {
 	
 	public BigFactory() {
 		this.animalFactory = new AnimalFactory();
-		if (animalFactory == null) {
-			System.out.println("afnull");
-		}
 		
 		this.factories = new SpeciesFactory[Constants.Species.SPECIES.length];
 		
