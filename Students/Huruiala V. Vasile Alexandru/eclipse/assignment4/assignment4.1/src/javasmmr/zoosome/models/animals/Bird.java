@@ -13,8 +13,8 @@ public abstract class Bird extends Animal {
 		this.avgFlightAlitude = DEFAULT_AVG_FLIGHT_ALTITUDE;
 	}
 	
-	protected Bird(final String animalName, final int numberOfLegs, final boolean doesMigrate, final int flightAlt) {
-		super(animalName, numberOfLegs);
+	protected Bird(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final boolean doesMigrate, final int flightAlt) {
+		super(animalName, numberOfLegs, maintenanceCost, dangerPerc);
 		this.migrates = doesMigrate;
 		this.avgFlightAlitude = flightAlt;
 	}

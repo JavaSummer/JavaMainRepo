@@ -1,4 +1,4 @@
-package javasmmr.zoosome.services.factories;
+package javasmmr.zoosome.services.factories.animals;
 
 import javasmmr.zoosome.models.animals.Animal;
 

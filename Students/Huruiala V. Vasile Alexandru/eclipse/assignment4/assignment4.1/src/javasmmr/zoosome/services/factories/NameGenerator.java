@@ -6,7 +6,7 @@ public final class NameGenerator {
 	private static final double thirdNameChace = 0.1;
 	private static final double titleChance = 0.05;
 	
-	public static String getRandomName() {
+	public static String getUsualName() {
 		String name = draftCommonName();
 		
 		if (roll(secondNameChance)) {
@@ -22,6 +22,12 @@ public final class NameGenerator {
 				name += " " + draftCommonName();
 			}
 		}
+		
+		return name;
+	}
+	
+	public static String getRandomName() {
+		String name = getUsualName();
 		
 		name += " the ";
 		
@@ -65,7 +71,7 @@ public final class NameGenerator {
 				"conqueror", "manhunter", "supernatural", "venomous", "king", 
 				"archmage", "long range", "renown", "alpha", "epic", "elder",
 				"firelord", "funny", "MLG pro", "6k MMR", "mighty", 
-				"dragonborn", "building hating"};
+				"dragonborn", "feared", "ferocious", "(o_O)"};
 		
 		return new String(titles[(int) (Math.random() * titles.length)]);
 	}

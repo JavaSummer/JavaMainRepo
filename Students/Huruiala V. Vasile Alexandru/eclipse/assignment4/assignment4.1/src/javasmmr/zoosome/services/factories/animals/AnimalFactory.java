@@ -1,7 +1,9 @@
-package javasmmr.zoosome.services.factories;
+package javasmmr.zoosome.services.factories.animals;
+
+import javasmmr.zoosome.services.factories.Constants;
 
 public class AnimalFactory {
-	public SpeciesFactory getSpeciesFactory(String type) throws Exception {
+	public SpeciesFactory getSpeciesFactory(final String type) throws Exception {
 		if (Constants.Species.MAMMAL.equals(type)) {
 			return new MammalFactory();
 		} else if (Constants.Species.REPTILE.equals(type)) {

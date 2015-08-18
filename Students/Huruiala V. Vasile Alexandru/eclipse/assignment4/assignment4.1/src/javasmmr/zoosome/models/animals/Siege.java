@@ -14,8 +14,8 @@ public abstract class Siege extends Animal {
 		this.isMobile = DEFAULT_IS_MOBILE;
 	}
 	
-	protected Siege(final String animalName, final int numberOfLegs, final int firingRange, final boolean mobile) {
-		super(animalName, numberOfLegs);
+	protected Siege(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final int firingRange, final boolean mobile) {
+		super(animalName, numberOfLegs, maintenanceCost, dangerPerc);
 		this.range = firingRange;
 		this.isMobile = mobile;
 	}

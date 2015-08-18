@@ -25,6 +25,22 @@ public final class Constants {
 		}
 	}
 	
+	public static final class Jobs {
+		public static final String CARETAKER = "Caretaker";
+		
+		public static final String[] JOBS = {CARETAKER};
+		public static final int getCode(String job) {
+			
+			for (int i = 0; i < JOBS.length; i++) {
+				if (JOBS[i].equals(job)) {
+					return i;
+				}
+			}
+		
+		return -1;
+		}
+	}
+	
 	public static final class Animals {
 		
 		public static final class Mammal {
@@ -83,5 +99,13 @@ public final class Constants {
 		
 		public static final String[][] SPECIES_TYPE = {Mammal.MAMMAL, Reptile.REPTILE, 
 				Bird.BIRD, Aquatic.AQUATIC, Insect.INSECT, Siege.SIEGE};
+	}
+	
+	public static final class Employees {
+		public static final class Caretakers {
+			public static final String TCO_SUCCESS = "SUCCESS";
+			public static final String TCO_KILLED = "KILLED";
+			public static final String TCO_NO_TIME = "NO_TIME";
+		}
 	}
 }

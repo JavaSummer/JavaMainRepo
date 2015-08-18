@@ -13,8 +13,8 @@ public abstract class Insect extends Animal {
 		this.isDangerous = DEFAULT_IS_DANGEROUS;
 	}
 	
-	protected Insect(final String animalName, final int numberOfLegs, final boolean flyer, final boolean dangerous) {
-		super(animalName, numberOfLegs);
+	protected Insect(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final boolean flyer, final boolean dangerous) {
+		super(animalName, numberOfLegs, maintenanceCost, dangerPerc);
 		this.canFly = flyer;
 		this.isDangerous = dangerous;
 	}

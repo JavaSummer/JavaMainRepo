@@ -10,8 +10,8 @@ public abstract class Reptile extends Animal {
 		this.laysEggs = DEFAULT_LAYS_EGGS;
 	}
 	
-	protected Reptile(final String animalName, final int numberOfLegs, final boolean hasEggs) {
-		super(animalName, numberOfLegs);
+	protected Reptile(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final boolean hasEggs) {
+		super(animalName, numberOfLegs, maintenanceCost, dangerPerc);
 		this.laysEggs = hasEggs;
 	}
 	

@@ -13,14 +13,14 @@ public abstract class Aquatic extends Animal {
 		this.waterType = DEFAULT_WATER_TYPE;
 	}
 	
-	protected Aquatic(final String animalName, final int numberOfLegs, final int swimDepth, final WaterType wType) {
-		super(animalName, numberOfLegs);
+	protected Aquatic(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final int swimDepth, final WaterType wType) {
+		super(animalName, numberOfLegs, maintenanceCost, dangerPerc); 
 		this.avgSwimDepth = swimDepth;
 		this.waterType = wType;
 	}
 	
-	protected Aquatic(final String animalName, final int numberOfLegs, final int swimDepth, final int waterCode) {
-		this(animalName, numberOfLegs, swimDepth, WaterType.getWater(waterCode));
+	protected Aquatic(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final int swimDepth, final int waterCode) {
+		this(animalName, numberOfLegs, maintenanceCost, dangerPerc, swimDepth, WaterType.getWater(waterCode));
 	}
 	
 	public int getAvgSwimDepth() {

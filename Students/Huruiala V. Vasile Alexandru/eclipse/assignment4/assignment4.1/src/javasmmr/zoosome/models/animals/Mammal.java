@@ -13,8 +13,8 @@ public abstract class Mammal extends Animal {
 		this.percBodyHair = DEFAULT_PERCENTAGE_BODY_HAIR;
 	}
 	
-	protected Mammal(final String animalName, final int numberOfLegs, final double normalTemp, final double muchHair) {
-		super(animalName, numberOfLegs);
+	protected Mammal(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final double normalTemp, final double muchHair) {
+		super(animalName, numberOfLegs, maintenanceCost, dangerPerc);
 		this.normalBodyTemp = normalTemp;
 		this.percBodyHair = muchHair;
 	}
