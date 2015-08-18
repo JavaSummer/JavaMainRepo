@@ -6,6 +6,7 @@ public class Dolphin extends Aquatic {
 	
 	public Dolphin() {
 		super(3, 0.2);
+		setTakenCareOf(false);
 		setNrOfLegs(0);
 		setName("Dolphin");
 		setAvgSwimDepth(100);

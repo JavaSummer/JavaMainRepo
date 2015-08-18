@@ -47,6 +47,7 @@ abstract public class Aquatic extends Animal {
 	//override the method decodeFromXml
 	
 	public void decodeFromXml(Element element){
+		super.decodeFromXml(element);
 		setAvgSwimDepth(Integer.valueOf(element.getElementsByTagName("avgSwimDepth").item(0).getTextContent()));
 		setWaterType(TypeOfWater.valueOf(element.getElementsByTagName("waterType").item(0).getTextContent()));
 	}

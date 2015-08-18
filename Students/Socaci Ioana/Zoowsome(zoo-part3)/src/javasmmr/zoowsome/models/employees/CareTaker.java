@@ -10,6 +10,7 @@ import org.w3c.dom.Element;
 import static javasmmr.zoowsome.repositories.EmployeeRepository.createNode;
 
 import javasmmr.zoowsome.models.animals.Animal;
+import javasmmr.zoowsome.models.interfaces.CareTaker_I;
 import javasmmr.zoowsome.services.factories.*;
 
 public class CareTaker extends Employee implements CareTaker_I{
@@ -61,6 +62,7 @@ public class CareTaker extends Employee implements CareTaker_I{
 		//override the method decodeFromXml
 		
 		public void decodeFromXml(Element element){
+			super.decodeFromXml(element);
 			setWorkingHours(Double.valueOf(element.getElementsByTagName("workingHours").item(0).getTextContent()));
 		}
 	

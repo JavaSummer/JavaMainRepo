@@ -6,6 +6,7 @@ public class Octopus extends Aquatic {
 	
 	public Octopus() {
 		super(2, 0.8);
+		setTakenCareOf(false);
 		setNrOfLegs(6);
 		setName("Octopus");
 		setAvgSwimDepth(900);

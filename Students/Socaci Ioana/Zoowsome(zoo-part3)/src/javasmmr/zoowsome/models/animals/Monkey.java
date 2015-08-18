@@ -12,6 +12,7 @@ public class Monkey extends Mammal{
 	
 	public Monkey(){
 		super(3, 0.4);
+		setTakenCareOf(false);
 		setNrOfLegs(2);
 		setName("Monkey");
 		setNormalBodyTemp(30F);

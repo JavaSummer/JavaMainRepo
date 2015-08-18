@@ -12,6 +12,7 @@ public class Tiger extends Mammal{
 	
 	public Tiger(){
 		super(5, 1);
+		setTakenCareOf(false);
 		setNrOfLegs(4);
 		setName("Tiger");
 		setNormalBodyTemp(36F);

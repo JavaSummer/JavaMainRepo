@@ -2,6 +2,7 @@ package javasmmr.zoowsome.models.animals;
 
 import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
@@ -48,6 +49,7 @@ abstract public class Insect extends Animal {
 	//override the method decodeFromXml
 	
 	public void decodeFromXml(Element element){
+		super.decodeFromXml(element);
 		setCanFly(Boolean.valueOf(element.getElementsByTagName("canFly").item(0).getTextContent()));
 		setIsDangerous(Boolean.valueOf(element.getElementsByTagName("isDangerous").item(0).getTextContent()));
 	}

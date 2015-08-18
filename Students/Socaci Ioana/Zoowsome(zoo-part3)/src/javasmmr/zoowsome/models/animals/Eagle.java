@@ -6,6 +6,7 @@ public class Eagle extends Bird {
 	
 	public Eagle() {
 		super(3, 0.3);
+		setTakenCareOf(false);
 		setNrOfLegs(2);
 		setName("Eagle");
 		setAvgFlightAltitude(1000);

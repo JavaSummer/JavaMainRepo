@@ -49,6 +49,7 @@ abstract public class Bird extends Animal {
 	//override the method decodeFromXml
 	
 	public void decodeFromXml(Element element){
+		super.decodeFromXml(element);
 		setMigrates(Boolean.valueOf(element.getElementsByTagName("migrates").item(0).getTextContent()));
 		setAvgFlightAltitude(Integer.valueOf(element.getElementsByTagName("avgFlightAltitude").item(0).getTextContent()));
 	}

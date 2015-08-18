@@ -19,6 +19,7 @@ import javax.xml.stream.events.StartDocument;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
 
+import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -78,10 +79,10 @@ public class EmployeeRepository {
 			File fXmlFile = new File(XML_FILENAME);
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-			org.w3c.dom.Document doc = dBuilder.parse(fXmlFile);
-			((org.w3c.dom.Document) doc).getDocumentElement().normalize();
+			Document doc = dBuilder.parse(fXmlFile);
+			doc.getDocumentElement().normalize();
 
-			NodeList nodeList = ((org.w3c.dom.Document) doc).getElementsByTagName(Constants.XML_TAGS.EMPLOYEE);
+			NodeList nodeList = doc.getElementsByTagName(Constants.XML_TAGS.EMPLOYEE);
 
 			for (int i = 0; i < nodeList.getLength(); i++) {
 				Node node = nodeList.item(i);
@@ -94,6 +95,7 @@ public class EmployeeRepository {
 						Employee careTaker = new CareTaker();
 						careTaker.decodeFromXml(element);
 						employees.add(careTaker);
+						break;
 					default:
 						break;
 					}

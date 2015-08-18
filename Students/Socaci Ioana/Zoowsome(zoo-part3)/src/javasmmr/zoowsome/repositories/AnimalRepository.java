@@ -75,15 +75,16 @@ public class AnimalRepository {
 		File fXmlFile = new File(XML_FILENAME);
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-		org.w3c.dom.Document doc = dBuilder.parse(fXmlFile);
-		((org.w3c.dom.Document) doc).getDocumentElement().normalize();
+		Document doc = dBuilder.parse(fXmlFile);
+		doc.getDocumentElement().normalize();
 
-		NodeList nodeList = ((org.w3c.dom.Document) doc).getElementsByTagName(Constants.XML_TAGS.ANIMAL);
+		NodeList nodeList = doc.getElementsByTagName(Constants.XML_TAGS.ANIMAL);
 
 		for (int i = 0; i < nodeList.getLength(); i++) {
 			Node node = nodeList.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
+				
 				String discriminant = element.getElementsByTagName(Constants.XML_TAGS.DISCRIMINANT).item(0)
 						.getTextContent();
 				switch (discriminant) {
@@ -91,62 +92,81 @@ public class AnimalRepository {
 					Animal butterfly = new Butterfly();
 					butterfly.decodeFromXml(element);
 					animals.add(butterfly);
+					break;
 				case Constants.Animals.Insects.Cockroach:
 					Animal cockroach = new Cockroach();
 					cockroach.decodeFromXml(element);
 					animals.add(cockroach);
+					break;
 				case Constants.Animals.Insects.Spider:
 					Animal spider = new Spider();
 					spider.decodeFromXml(element);
 					animals.add(spider);
+					break;
 				case Constants.Animals.Mammals.Cow:
+					
 					Animal cow = new Cow();
 					cow.decodeFromXml(element);
 					animals.add(cow);
+					break;
+					
 				case Constants.Animals.Mammals.Monkey:
 					Animal monkey = new Monkey();
 					monkey.decodeFromXml(element);
 					animals.add(monkey);
+					break;
+					
 				case Constants.Animals.Mammals.Tiger:
 					Animal tiger = new Tiger();
 					tiger.decodeFromXml(element);
 					animals.add(tiger);
+					break;
 				case Constants.Animals.Reptiles.Crocodile:
 					Animal crocodile = new Crocodile();
 					crocodile.decodeFromXml(element);
 					animals.add(crocodile);
+					break;
 				case Constants.Animals.Reptiles.Lizard:
 					Animal lizard= new Lizard();
 					lizard.decodeFromXml(element);
 					animals.add(lizard);
+					break;
 				case Constants.Animals.Reptiles.Turtle:
 					Animal turtle = new Turtle();
 					turtle.decodeFromXml(element);
 					animals.add(turtle);
+					break;
 				case Constants.Animals.Aquatics.Dolphin:
 					Animal dolphin = new Dolphin();
 					dolphin.decodeFromXml(element);
 					animals.add(dolphin);
+					break;
 				case Constants.Animals.Aquatics.Octopus:
+				
 					Animal octopus = new Octopus();
 					octopus.decodeFromXml(element);
 					animals.add(octopus);
+					break;
 				case Constants.Animals.Aquatics.Shark:
 					Animal shark = new Shark();
 					shark.decodeFromXml(element);
 					animals.add(shark);
+					break;
 				case Constants.Animals.Birds.Eagle:
 					Animal eagle = new Eagle();
 					eagle.decodeFromXml(element);
 					animals.add(eagle);
+					break;
 				case Constants.Animals.Birds.Parrot:
 					Animal parrot = new Parrot();
 					parrot.decodeFromXml(element);
 					animals.add(parrot);
+					break;
 				case Constants.Animals.Birds.Pecker:
 					Animal pecker = new Pecker();
 					pecker.decodeFromXml(element);
 					animals.add(pecker);
+					break;
 				default:
 					break;
 				}

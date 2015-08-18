@@ -12,6 +12,7 @@ public class Turtle extends Reptile {
 	
 	public Turtle() {
 		super(2, 0.1);
+		setTakenCareOf(false);
 		setLaysEggs(true);
 		setNrOfLegs(4);
 		setName("Turtle");

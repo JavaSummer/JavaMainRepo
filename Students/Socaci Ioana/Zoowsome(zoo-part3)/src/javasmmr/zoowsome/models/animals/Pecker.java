@@ -6,6 +6,7 @@ public class Pecker extends Bird{
 	
 	public Pecker(){
 		super(1, 0.3);
+		setTakenCareOf(false);
 		setNrOfLegs(2);
 		setName("Pecker");
 		setAvgFlightAltitude(500);

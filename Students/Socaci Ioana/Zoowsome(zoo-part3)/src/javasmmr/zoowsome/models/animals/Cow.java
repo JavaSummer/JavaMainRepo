@@ -12,6 +12,7 @@ public class Cow extends Mammal{
 	
 	public Cow(){
 		super(1, 0.5);
+		setTakenCareOf(false);
 		setNrOfLegs(4);
 		setName("Cow");
 		setNormalBodyTemp(38F);

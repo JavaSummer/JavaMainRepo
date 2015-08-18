@@ -5,6 +5,7 @@ import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
 
+import javasmmr.zoowsome.models.interfaces.Killer;
 import javasmmr.zoowsome.models.interfaces.XML_Parsable;
 import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 
@@ -14,7 +15,7 @@ abstract public class Animal implements Killer, XML_Parsable{
 	
 	private int nrOfLegs;
 	private String name;
-	private boolean takenCareOf = false;
+	private boolean takenCareOf;
 	
 	
 	

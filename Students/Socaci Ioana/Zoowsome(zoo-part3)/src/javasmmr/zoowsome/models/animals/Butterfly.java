@@ -12,6 +12,7 @@ public class Butterfly extends Insect{
 	
 	public Butterfly(){
 		super(4, 0);
+		setTakenCareOf(false);
 		setNrOfLegs(6);
 		setName("Butterfly");
 		setCanFly(true);

@@ -12,6 +12,7 @@ public class Crocodile extends Reptile{
 	
 	public Crocodile(){
 		super(4, 0.8);
+		setTakenCareOf(false);
 		setLaysEggs(true);
 		setNrOfLegs(4);
 		setName("Crocodile");

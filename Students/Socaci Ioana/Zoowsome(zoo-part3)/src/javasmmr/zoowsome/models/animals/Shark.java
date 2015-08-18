@@ -6,6 +6,7 @@ public class Shark extends Aquatic{
 	
 	public Shark(){
 		super(1, 0.9);
+		setTakenCareOf(false);
 		setNrOfLegs(0);
 		setName("Shark");
 		setAvgSwimDepth(1000);

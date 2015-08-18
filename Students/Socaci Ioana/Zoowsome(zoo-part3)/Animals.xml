@@ -30,39 +30,23 @@
 	<DISCRIMINANT>Tiger</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Eagle</name>
-	<maintenanceCost>3.0</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Butterfly</name>
+	<maintenanceCost>4.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>1000</avgFlightAltitude>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Butterfly</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Parrot</name>
+	<nrOfLegs>8</nrOfLegs>
+	<name>Spider</name>
 	<maintenanceCost>3.0</maintenanceCost>
-	<dangerPerc>0.1</dangerPerc>
+	<dangerPerc>0.6</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>100</avgFlightAltitude>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Pecker</name>
-	<maintenanceCost>1.0</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>500</avgFlightAltitude>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Dolphin</name>
-	<maintenanceCost>3.0</maintenanceCost>
-	<dangerPerc>0.2</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>100</avgSwimDepth>
-	<waterType>saltWater</waterType>
+	<canFly>false</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>Spider</DISCRIMINANT>
 </ANIMAL>
 </content>

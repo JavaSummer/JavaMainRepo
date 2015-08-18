@@ -12,6 +12,7 @@ public class Spider extends Insect{
 	
 	public Spider(){
 		super(3, 0.6);
+		setTakenCareOf(false);
 		setNrOfLegs(8);
 		setName("Spider");
 		setCanFly(false);

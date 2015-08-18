@@ -9,24 +9,27 @@ import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
 
+import javasmmr.zoowsome.models.interfaces.CareTaker_I;
 import javasmmr.zoowsome.models.interfaces.XML_Parsable;
 
 abstract public class Employee implements CareTaker_I, XML_Parsable{
 	//instance variables 
 	private String name;
-	private long id = (long)(Math.random() * Math.pow(10, 13));
-	private boolean isDead = false;
+	private long id;
+	private boolean isDead;
 	private BigDecimal salary;
 	
 	//constructors
 	
 	public Employee(){
 		name = "";
+		id = (long)(Math.random() * Math.pow(10, 13));
 		salary = new BigDecimal("0");
 		isDead = false;
 	}
 	public Employee(String theName, BigDecimal theSalary, boolean ifDead){
 		name = theName;
+		id = (long)(Math.random() * Math.pow(10, 13));
 		salary = theSalary;
 		isDead = ifDead;
 	}
@@ -44,7 +47,7 @@ abstract public class Employee implements CareTaker_I, XML_Parsable{
 	public void setId(long theId){
 		id = theId;
 	}
-	public boolean getIsDead(){
+	public boolean isDead(){
 		return isDead;
 	}
 	

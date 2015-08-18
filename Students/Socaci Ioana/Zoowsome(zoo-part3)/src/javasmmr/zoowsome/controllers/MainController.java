@@ -1,7 +1,5 @@
 package javasmmr.zoowsome.controllers;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -19,7 +17,8 @@ import javasmmr.zoowsome.models.employees.*;
 import javasmmr.zoowsome.repositories.AnimalRepository;
 
 public class MainController {
-	public static void main(String[] args) throws XMLStreamException, ParserConfigurationException, SAXException, IOException {
+	public static void main(String[] args)
+			throws XMLStreamException, ParserConfigurationException, SAXException, IOException {
 		/*
 		 * AnimalFactory abstractFactory = new AnimalFactory(); SpeciesFactory
 		 * speciesFactory1 =
@@ -35,6 +34,7 @@ public class MainController {
 		SpeciesFactory speciesFactory2 = abstractFactory.getSpeciesFactory(Constants.Species.Mammals);
 		SpeciesFactory speciesFactory3 = abstractFactory.getSpeciesFactory(Constants.Species.Birds);
 		SpeciesFactory speciesFactory4 = abstractFactory.getSpeciesFactory(Constants.Species.Aquatics);
+		SpeciesFactory speciesFactory5 = abstractFactory.getSpeciesFactory(Constants.Species.Insects);
 
 		Animal[] a = new Animal[9];
 		a[0] = speciesFactory2.getAnimal(Constants.Animals.Mammals.Cow);
@@ -78,7 +78,7 @@ public class MainController {
 		for (int i = 0; i < e.length; i++) {
 			for (int j = 0; j < a.length; j++) {
 
-				if (e[i].getIsDead() == false && a[j].getTakenCareOf() == false) {
+				if (!e[i].isDead() && !a[j].getTakenCareOf()) {
 
 					String result = e[i].takeCareOf(a[j]);
 					System.out.printf("%-10s|%-14f|%s\n", result, ((CareTaker) e[i]).getWorkingHours(), a[j].getName());
@@ -99,30 +99,25 @@ public class MainController {
 			System.out
 					.println(a[i].getName() + " is " + (a[i].getTakenCareOf() ? "taken care of" : "not taken care of"));
 		}
-		
-		//Assignment 5
-		
+
+		// Assignment 5
+
 		AnimalRepository aRepository = new AnimalRepository();
 		ArrayList<Animal> animals = new ArrayList<Animal>();
 		animals.add(a[0]);
 		animals.add(a[1]);
 		animals.add(a[2]);
-		animals.add(a[3]);
-		animals.add(a[4]);
-		animals.add(a[5]);
-		animals.add(a[6]);
+		animals.add(speciesFactory5.getAnimal(Constants.Animals.Insects.Butterfly));
+		animals.add(speciesFactory5.getAnimal(Constants.Animals.Insects.Spider));
 		aRepository.save(animals);
 		ArrayList<Animal> animals1 = new ArrayList<Animal>();
-		animals1 = aRepository.load();//here gives me a "java.lang.NullPointerException"?
-		/*
-		at javasmmr.zoowsome.models.animals.Reptile.decodeFromXml(Reptile.java:42)
-		at javasmmr.zoowsome.repositories.AnimalRepository.load(AnimalRepository.java:116)
-		at javasmmr.zoowsome.controllers.MainController.main(MainController.java:116)
-		 */
-		Animal[] animals2 = new Animal[7];
+		animals1 = aRepository.load();
+		Animal[] animals2 = new Animal[3];
 		animals2[0] = animals1.get(0);
 		animals2[1] = animals1.get(1);
-		animals2[2] = animals1.get(2);
-				
+		animals2[2] = animals1.get(4);
+		System.out.println(((Mammal) animals2[0]).getNormalBodyTemp() + " " + ((Mammal) animals2[1]).getNormalBodyTemp()
+				+ " " + ((Insect)animals2[2]).getCanFly());
+
 	}
 }

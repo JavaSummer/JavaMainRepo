@@ -2,6 +2,7 @@ package javasmmr.zoowsome.models.animals;
 
 import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
@@ -39,6 +40,8 @@ abstract public class Reptile extends Animal{
 	//override the method decodeFromXml
 	
 	public void decodeFromXml(Element element){
+		super.decodeFromXml(element);
 		setLaysEggs(Boolean.valueOf(element.getElementsByTagName("laysEggs").item(0).getTextContent()));
+		
 	}
 }

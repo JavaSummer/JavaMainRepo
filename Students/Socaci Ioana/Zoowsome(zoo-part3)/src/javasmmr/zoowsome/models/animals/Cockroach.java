@@ -12,6 +12,7 @@ public class Cockroach extends Insect{
 	
 	public Cockroach(){
 		super(0.5, 0.5);
+		setTakenCareOf(false);
 		setNrOfLegs(6);
 		setName("Cockroach");
 		setCanFly(false);

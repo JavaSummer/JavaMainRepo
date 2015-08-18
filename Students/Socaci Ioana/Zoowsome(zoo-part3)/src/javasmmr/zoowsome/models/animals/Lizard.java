@@ -12,6 +12,7 @@ public class Lizard extends Reptile {
 	
 	public Lizard() {
 		super(3, 0.6);
+		setTakenCareOf(false);
 		setLaysEggs(true);
 		setNrOfLegs(4);
 		setName("Lizard");
