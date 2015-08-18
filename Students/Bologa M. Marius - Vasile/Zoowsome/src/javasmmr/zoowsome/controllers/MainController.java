@@ -2,12 +2,16 @@ package javasmmr.zoowsome.controllers;
 
 import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.models.employees.Caretaker;
+import javasmmr.zoowsome.models.employees.Employee;
+import javasmmr.zoowsome.repositories.AnimalRepository;
+import javasmmr.zoowsome.repositories.EmployeeRepository;
 import javasmmr.zoowsome.services.factories.animal.AnimalFactory;
 import javasmmr.zoowsome.services.factories.animal.Constants;
 import javasmmr.zoowsome.services.factories.animal.SpeciesFactory;
 import javasmmr.zoowsome.services.factories.employee.CaretakerFactory;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -28,15 +32,17 @@ public final class MainController {
  * @return A random Caretaker[].
  * @throws Exception .
  */
-	private static Caretaker[] randomCaretaker() throws Exception {
-		int n=10;
-		int h=100;
+
+	private static ArrayList<Employee> randomEmployee() throws Exception {
+		int n = 15;
+		int h = 100;
 		CaretakerFactory caretakerFactory = new CaretakerFactory();
-		Caretaker[] c = new Caretaker[n];
+		ArrayList<Employee> c = new ArrayList<>();
 		for (int i = 0; i < n; i++) {
-		c[i] = caretakerFactory.getEmployee(
+		Caretaker caretaker = caretakerFactory.getEmployee(
 				Constants.Employees.Caretaker);
-		c[i].setWorkingHours(new Double(Math.random() * h));
+		caretaker.setWorkingHours(new Double(Math.random() * h));
+		c.add(caretaker);
 		}
 		return c;
 	}
@@ -45,8 +51,8 @@ public final class MainController {
 	 * @return A random Animal[];
 	 * @throws Exception .
 	 */
-	private static Animal[] randomAnimal() throws Exception {
-		int n = 15;
+	private static ArrayList<Animal> randomAnimals() throws Exception {
+		int n = 10;
 		int x = 3, y = 5;
 		String[] species = { Constants.Species.Aquatic, 
 				Constants.Species.Mammal, Constants.Species.Bird,
@@ -68,46 +74,66 @@ public final class MainController {
 							Constants.Animals.Reptiles.Boomslang,
 						Constants.Animals.Reptiles.Tuatara } };
 		AnimalFactory abstractFactory = new AnimalFactory();
-		Animal[] a = new Animal[n];
+		ArrayList<Animal> a = new ArrayList<>();
+		Animal animal;
 		 Random randomGenerator = new Random();
 		for (int j = 0; j < n; j++) {
 			 int randomIntAnimals = randomGenerator.nextInt(x);
 			 int randomIntSpecies = randomGenerator.nextInt(y);
 			SpeciesFactory sf = abstractFactory.getSpeciesFactory(
 					species[randomIntSpecies]);
-			a[j] = sf.getAnimal(animals[randomIntSpecies]
+			animal = sf.getAnimal(animals[randomIntSpecies]
 					[randomIntAnimals]);
+			a.add(animal);
 		}
 		return a;
 	}
 /**
  * 
- * @param a An array of animals.
+ * @param animal An array of animals.
  */
-	private static void printAnimals(final Animal[] a) {
-		for (int i = 0; i < a.length; i++) {
-			System.out.println("We have an animal with " + a[i].getNrOfLegs()
-				+ " legs, and his name is " + a[i].getName() + "!");
+	private static void printAnimals(final ArrayList<Animal> animal) {
+		for (int i = 0; i < animal.size(); i++) {
+			System.out.println(String.valueOf(animal.get(i).getName()));
+			System.out.println();
+		
 		}
 	}
 	/**
 	 * 
-	 * @param c An array of caretakers.
+	 * @param careTaker An array of caretakers.
 	 */
-	private static void printCaretakers(final Caretaker[] c) {
-		   Random r = new Random(); 
-		int x=8;
-		for (int i = 0; i < c.length; i++) {
+	private static void printCaretakers(final Caretaker[] careTaker) {
+		int x = 8;
+		for (int i = 0; i < careTaker.length; i++) {
 			System.out.printf("We have a caretaker."
-					+ " His/Her name is %s!\n", c[i].getName());
-			System.out.println(c[i].getName() + "'s salary is "
-					+ c[i].getSalary() + " $ and has ID:" + c[i].getId());
+					+ " His/Her name is %s!\n", careTaker[i].getName());
+			System.out.println(careTaker[i].getName() + "'s salary is "
+					+ careTaker[i].getSalary() 
+					+ " $ and has ID:" + careTaker[i].getId());
 			System.out.println("The number of hours " 
-					+ c[i].getName() + " is working: " 
- + (double) (Math.random() * 8));
+					+ careTaker[i].getName() + " is working: " 
+ + (double) (Math.random() * x));
 		}
 
 	}
+/**
+ * 
+ * @return An array of Caretakers.
+ * @throws Exception .
+ */
+	private static Caretaker[] randomCaretaker() throws Exception {
+		int n = 10;
+		int h = 100;
+				CaretakerFactory caretakerFactory = new CaretakerFactory();
+				Caretaker[] c = new Caretaker[n];
+				for (int i = 0; i < n; i++) {
+				c[i] = caretakerFactory.getEmployee(
+						Constants.Employees.Caretaker);
+				c[i].setWorkingHours(new Double(Math.random() * h));
+				}
+				return c;
+			}
 	/**
 	 * 
 	 * @param args
@@ -116,39 +142,54 @@ public final class MainController {
 	 *             .
 	 */
 	public static void main(final String[] args) throws Exception {
+		AnimalRepository abstractAnimalRepository = new AnimalRepository();
+		ArrayList<Animal> animals = new ArrayList<>();
+		animals = randomAnimals();
+		 abstractAnimalRepository.save(animals);
+			new ArrayList<>();
+			abstractAnimalRepository.load();
+	EmployeeRepository abstractEmployeeRepository = new EmployeeRepository();
+		ArrayList<Employee> employees = new ArrayList<>();
+		employees = randomEmployee();
+		abstractEmployeeRepository.save(employees);
+		new ArrayList<>();
+		abstractEmployeeRepository.load();
+	
 		Caretaker[] careTakerEmployee = randomCaretaker();
-		Animal[] animal = randomAnimal();
-		int animalsTakenCareOf=0;
-		printAnimals(animal);
-		printCaretakers(careTakerEmployee);
-		for (int i = 0; i < careTakerEmployee.length; i++) {
-			for (int j = 0; j < animal.length; j++) {
-				if (!(careTakerEmployee[i].isDead()) && (
-						!(animal[j].isTakenCareOf()))) {
-					String result = careTakerEmployee[i].takeCareOf(animal[j]);
-					if (result.equals(Constants.Employees.
-							Caretakers.TCO_KILLED)) {
-						careTakerEmployee[i].setDead(true);
-					} else if (result.equals(Constants.Employees.
-							Caretakers.TCO_NO_TIME)) {
-						break;
-					} else {
-						animal[j].setTakenCareOf(true);
-						animalsTakenCareOf++;
-						
+				ArrayList<Animal> animal = randomAnimals();
+				int animalsTakenCareOf = 0;
+				printAnimals(animal);
+				printCaretakers(careTakerEmployee);
+				for (int i = 0; i < careTakerEmployee.length; i++) {
+					for (int j = 0; j < animal.size(); j++) {
+						if (!(careTakerEmployee[i].isDead()) && (
+								!(animal.get(j).isTakenCareOf()))) {
+						String result = careTakerEmployee[i].takeCareOf(
+								animal.get(j));
+							if (result.equals(Constants.Employees.
+									Caretakers.TCO_KILLED)) {
+							careTakerEmployee[i].setDead(true);
+							} else if (result.equals(Constants.Employees.
+									Caretakers.TCO_NO_TIME)) {
+								break;
+						} else {
+							animal.get(j).setTakenCareOf(true);
+								animalsTakenCareOf++;
+								
+							}
+						}
 					}
 				}
-			}
-		}
-		if (animalsTakenCareOf == animal.length) {
-			System.out.println("Mission Accomplished!"
-					+ " All animals have been taken care of!");
-		} else {
-			System.out.println(
+				if (animalsTakenCareOf == animal.size()) {
+					System.out.println("Mission Accomplished!"
+							+ " All animals have been taken care of!");
+				} else {
+				System.out.println(
 					"We need more men!"
-					+ " Not all animals have been taken care of!");
-		}
-
+							+ " Not all animals have been taken care of!");
+			}
+		
+		 	}
 	}
 
-}
+

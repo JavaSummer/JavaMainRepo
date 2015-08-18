@@ -1,5 +1,11 @@
 package javasmmr.zoowsome.models.animals;
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.models.animals.WaterType.TypeOfWater;
+import javasmmr.zoowsome.services.factories.animal.Constants;
 /**
  * 
  * @author Marius Bologa
@@ -14,7 +20,6 @@ public class NorthernPike extends Aquatic {
 	* 
 	*/
 	private int swimDepth = 20;
-	WaterTypeTest water = new WaterTypeTest();
 
 	/**
 	 *
@@ -30,7 +35,7 @@ public class NorthernPike extends Aquatic {
 		setAvgSwimDepth(swimDepth);
 		setName(nameP);
 		setNrOfLegs(0);
-		water.setWater(WaterType.freshwater);
+		setWater(TypeOfWater.freshwater);
 	}
 
 	/**
@@ -51,6 +56,16 @@ public class NorthernPike extends Aquatic {
 		setAvgSwimDepth(depth);
 		setName(name);
 		setNrOfLegs(0);
-		water.setWater(WaterType.freshwater);
+		setWater(TypeOfWater.freshwater);
 	}
+	/**
+	 * @param eventWriter To encode to XML.
+	 * @throws XMLStreamException .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) 
+			throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+		Constants.Animals.Aquatic.NorthernPike);
+		}
 }

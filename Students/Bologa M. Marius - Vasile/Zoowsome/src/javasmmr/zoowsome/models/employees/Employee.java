@@ -3,15 +3,19 @@ package javasmmr.zoowsome.models.employees;
 import java.math.BigDecimal;
 import java.util.UUID;
 
-import javasmmr.zoowsome.models.animals.Animal;
-import javasmmr.zoowsome.services.factories.animal.Constants;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
 
+import org.w3c.dom.Element;
+
+import javasmmr.zoowsome.models.interfaces.XML_Parsable;
+import static javasmmr.zoowsome.repositories.EmployeeRepository.createNode;
 /**
  * 
  * @author Marius Bologa
  *
  */
-public abstract class Employee {
+public abstract class Employee implements XML_Parsable {
 	/**
 	 * 
 	 * @param name
@@ -115,5 +119,31 @@ public abstract class Employee {
 	 * 
 	 */
 	private BigDecimal salary;
-
+	/**
+	 * @param eventWriter Text to encode.
+	 * @throws XMLStreamException .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) 
+			throws XMLStreamException {
+		createNode(eventWriter, "name", String.valueOf(this.name));
+		createNode(eventWriter, "isDead", String.valueOf(this.isDead));
+		createNode(eventWriter, "ID", String.valueOf(this.id));
+		createNode(eventWriter, "Salary", String.valueOf(this.salary));
+		}
+	/**
+	 * @param element Element to decode.
+	 */
+	public void decodeFromXml(final Element element) {
+				setName(element.getElementsByTagName("name").
+						item(0).getTextContent());
+				setDead(Boolean.valueOf(element.
+						getElementsByTagName("isDead").item(0).
+						getTextContent()));
+				setId(UUID.fromString(element.
+						getElementsByTagName("id").
+						item(0).getTextContent()));
+				setSalary(BigDecimal.valueOf(Double.
+						valueOf(element.getElementsByTagName("salary").
+								item(0).getTextContent())));
+			}
 }

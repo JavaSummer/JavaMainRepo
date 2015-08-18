@@ -1,5 +1,11 @@
 package javasmmr.zoowsome.models.animals;
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.models.animals.WaterType.TypeOfWater;
+import javasmmr.zoowsome.services.factories.animal.Constants;
 /**
  * 
  * @author Marius Bologa
@@ -14,10 +20,6 @@ public class Tuna extends Aquatic {
 	* 
 	*/
 	private int swimDepth = 464;
-	/**
-	 * 
-	 */
-	WaterTypeTest water = new WaterTypeTest();
 
 	/**
 	 *
@@ -33,7 +35,7 @@ public class Tuna extends Aquatic {
 		setAvgSwimDepth(swimDepth);
 		setName(nameF);
 		setNrOfLegs(0);
-		water.setWater(WaterType.saltwater);
+		setWater(TypeOfWater.saltwater);
 	}
 
 	/**
@@ -54,7 +56,17 @@ public class Tuna extends Aquatic {
 		setAvgSwimDepth(depth);
 		setName(name);
 		setNrOfLegs(0);
-		water.setWater(WaterType.saltwater);
+		setWater(TypeOfWater.saltwater);
 
 	}
+	/**
+	 * @param eventWriter To encode to XML.
+	 * @throws XMLStreamException .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) 
+			throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+		Constants.Animals.Aquatic.Tuna);
+		}
 }

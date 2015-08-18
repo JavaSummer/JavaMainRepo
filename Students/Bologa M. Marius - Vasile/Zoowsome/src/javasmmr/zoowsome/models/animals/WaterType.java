@@ -4,7 +4,13 @@ package javasmmr.zoowsome.models.animals;
  * @author Marius Bologa
  *
  */
-public enum WaterType {
+public class WaterType {
+	/**
+	 * 
+	 * @author Marius Bologa
+	 *
+	 */
+	public enum TypeOfWater {
 	/**
 	 * 
 	 */
@@ -13,4 +19,5 @@ public enum WaterType {
 	 * 
 	 */
 	saltwater
+}
 }

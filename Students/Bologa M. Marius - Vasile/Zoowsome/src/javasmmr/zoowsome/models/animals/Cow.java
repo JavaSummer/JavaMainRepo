@@ -1,5 +1,10 @@
 package javasmmr.zoowsome.models.animals;
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.services.factories.animal.Constants;
 /**
  * 
  * @author Marius Bologa
@@ -59,5 +64,15 @@ public class Cow extends Mammal {
 		setName(name);
 		setPercBodyHair(perc);
 	}
+	/**
+	 * @param eventWriter To encode to XML.
+	 * @throws XMLStreamException .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) 
+			throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+		Constants.Animals.Mammals.Cow);
+		}
 
 }
