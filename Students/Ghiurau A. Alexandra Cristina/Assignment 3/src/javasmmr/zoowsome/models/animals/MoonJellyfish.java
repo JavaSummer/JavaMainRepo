@@ -1,6 +1,5 @@
 package javasmmr.zoowsome.models.animals;
 
-
 public class MoonJellyfish extends Aquatic {
 
 	public enum colourType {
@@ -10,14 +9,17 @@ public class MoonJellyfish extends Aquatic {
 	colourType colour;
 
 	public MoonJellyfish() {
-		setNrOfLegs(16); 
+		super(7.5, 0.5);
+		setNrOfLegs(16);
 		setName("Nigel");
 		setAvgSwimDepth(20);
 		setWt(waterType.FRESHWATER);
 		setColour(colourType.BLUE);
 	}
 
-	public MoonJellyfish(String name, int swimDepth, waterType waterType, colourType colourT) {
+	public MoonJellyfish(String name, int swimDepth, waterType waterType, colourType colourT, double maintenanceCost,
+			double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setNrOfLegs(4);
 		setName(name);
 		setAvgSwimDepth(swimDepth);

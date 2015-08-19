@@ -1,6 +1,11 @@
 package javasmmr.zoowsome.models.animals;
 
 public abstract class Aquatic extends Animal {
+	public Aquatic(double maintenanceCost, double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
+		// TODO Auto-generated constructor stub
+	}
+
 	int avgSwimDepth;
 
 	public enum waterType {
