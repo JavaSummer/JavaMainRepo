@@ -1,0 +1,52 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Cow</name>
+	<maintenanceCost>1.0</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<normalBodyTemp>38.0</normalBodyTemp>
+	<percBodyHair>95.0</percBodyHair>
+	<DISCRIMINANT>Cow</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>2</nrOfLegs>
+	<name>Monkey</name>
+	<maintenanceCost>3.0</maintenanceCost>
+	<dangerPerc>0.4</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<normalBodyTemp>30.0</normalBodyTemp>
+	<percBodyHair>90.0</percBodyHair>
+	<DISCRIMINANT>Monkey</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Tiger</name>
+	<maintenanceCost>5.0</maintenanceCost>
+	<dangerPerc>1.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>36.0</normalBodyTemp>
+	<percBodyHair>100.0</percBodyHair>
+	<DISCRIMINANT>Tiger</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Butterfly</name>
+	<maintenanceCost>4.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Butterfly</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>8</nrOfLegs>
+	<name>Spider</name>
+	<maintenanceCost>3.0</maintenanceCost>
+	<dangerPerc>0.6</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>false</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>Spider</DISCRIMINANT>
+</ANIMAL>
+</content>
