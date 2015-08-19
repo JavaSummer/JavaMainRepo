@@ -1,4 +1,12 @@
 package javasmmr.zoowsome.models.animals;
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.services.factories.animal.Constants;
 
 /**
  * 
@@ -59,4 +67,29 @@ public class Tiger extends Mammal {
 		setName(name);
 		setPercBodyHair(perc);
 	}
+	/**
+	 * @return Predisposition to kill.
+	 * 
+	 */
+	public double getPredisposition() {
+		Calendar calendar = new GregorianCalendar();
+		int month = calendar.get(Calendar.MONTH);
+		int am = calendar.get(Calendar.HOUR);
+		if ((month >= 6) && ((am > 20) && (am < 9))) {
+			return 0.8;
+		} // Time of the reproduction and time tigers are most active.
+		return 0;
+
+		}
+	/**
+		 * @param eventWriter To encode to XML.
+		 * @throws XMLStreamException .
+		 */
+		public void encodeToXml(final XMLEventWriter eventWriter) 
+				throws XMLStreamException {
+			super.encodeToXml(eventWriter);
+			createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+			Constants.Animals.Mammals.Tiger);
+			}
+		
 }

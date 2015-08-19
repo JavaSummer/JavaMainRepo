@@ -1,0 +1,122 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<name>Mia</name>
+	<isDead>false</isDead>
+	<ID>8bf76a09-a1c7-48f5-ad5c-ba72ce24e749</ID>
+	<Salary>384.776</Salary>
+	<workingHours>89.95953673870983</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Arthur</name>
+	<isDead>false</isDead>
+	<ID>13eff9b8-2f4c-4b95-862e-c1c78dedee64</ID>
+	<Salary>473.279</Salary>
+	<workingHours>36.89141939015318</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Jack</name>
+	<isDead>false</isDead>
+	<ID>9358010a-81f0-48ff-ba32-62e7876ae0c0</ID>
+	<Salary>336.541</Salary>
+	<workingHours>68.96215771500886</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Arthur</name>
+	<isDead>false</isDead>
+	<ID>bbe058c6-0565-4060-aaf9-33e6feeb0a89</ID>
+	<Salary>612.251</Salary>
+	<workingHours>20.31857843771343</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Tom</name>
+	<isDead>false</isDead>
+	<ID>8f2e8e11-dc57-4142-b243-642197799737</ID>
+	<Salary>854.224</Salary>
+	<workingHours>23.37294355273938</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Jacob</name>
+	<isDead>false</isDead>
+	<ID>725f6d68-288c-4624-b206-14b51a8bda81</ID>
+	<Salary>5.207</Salary>
+	<workingHours>42.063151869364454</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Aria</name>
+	<isDead>false</isDead>
+	<ID>459306ec-910f-48e9-bd95-333609bd704f</ID>
+	<Salary>547.262</Salary>
+	<workingHours>45.40142718919672</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Daniel</name>
+	<isDead>false</isDead>
+	<ID>7fd71ab8-091a-41c8-87eb-9d79d306df96</ID>
+	<Salary>888.985</Salary>
+	<workingHours>47.151486738024865</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Emma</name>
+	<isDead>false</isDead>
+	<ID>b07891fb-a2ba-489a-a271-f6bf0123fc6d</ID>
+	<Salary>705.258</Salary>
+	<workingHours>27.700480936437355</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Jacob</name>
+	<isDead>false</isDead>
+	<ID>b47d34d3-f497-4549-9cb6-9234c9dcd3d9</ID>
+	<Salary>48.966</Salary>
+	<workingHours>90.00604193498947</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Tom</name>
+	<isDead>false</isDead>
+	<ID>c3cfb6c5-bf8e-4083-9bd7-1b2ab99f9b52</ID>
+	<Salary>997.006</Salary>
+	<workingHours>35.26413847135561</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Mike</name>
+	<isDead>false</isDead>
+	<ID>c5de3a1a-f728-423e-afe3-1e34d09b6855</ID>
+	<Salary>874.455</Salary>
+	<workingHours>22.59107841340391</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Samantha</name>
+	<isDead>false</isDead>
+	<ID>4aee6546-7b69-430e-94b6-0a9ef9fc75dc</ID>
+	<Salary>17.141</Salary>
+	<workingHours>77.69131749784245</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Samantha</name>
+	<isDead>false</isDead>
+	<ID>c2652398-d6e5-4468-91d2-b0f9ff8273f3</ID>
+	<Salary>972.559</Salary>
+	<workingHours>58.50359069999609</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<name>Daniel</name>
+	<isDead>false</isDead>
+	<ID>a3770eb6-0f48-4374-81de-b63642299c31</ID>
+	<Salary>42.788</Salary>
+	<workingHours>6.537597406050832</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</ANIMAL>
+</content>

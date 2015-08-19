@@ -1,5 +1,19 @@
 package javasmmr.zoowsome.models.animals;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+import java.text.SimpleDateFormat;
+import java.time.Month;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import javasmmr.zoowsome.services.factories.animal.Constants;
+
 /**
  * 
  * @author Marius Bologa
@@ -13,7 +27,7 @@ public class Boomslang extends Reptile {
 	/**
 	 * 
 	 */
-	private String nameS = " Kaa";
+	private String nameS = "Kaa";
 
 	/**
 	 *
@@ -48,4 +62,30 @@ public class Boomslang extends Reptile {
 		setName(name);
 		setNrOfLegs(legs);
 	}
+
+	/**
+	 * @return Predisposition to kill.
+	 * 
+	 */
+	public double getPredisposition() {
+		Calendar calendar = new GregorianCalendar();
+		int year = calendar.get(Calendar.YEAR);
+		int month = calendar.get(Calendar.MONTH);
+		if ((month > 3) && (month < 5) && (year % 2 == 0)) {
+			return 0.8;
+		} // Time of the reproduction.
+		return 0;
+
+	}
+/**
+ * @param eventWriter To encode to XML.
+ * @throws XMLStreamException .
+ */
+	public void encodeToXml(final XMLEventWriter eventWriter)
+			throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.
+				XML_TAGS.DISCRIMINANT, Constants.Animals.Reptiles.Boomslang);
+	}
+
 }

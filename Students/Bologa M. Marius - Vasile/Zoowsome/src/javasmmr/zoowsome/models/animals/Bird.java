@@ -1,5 +1,12 @@
 package javasmmr.zoowsome.models.animals;
 
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
 /**
  * 
  * @author Marius Bologa
@@ -58,5 +65,29 @@ public abstract class Bird extends Animal {
 	 */
 	public final void setAvgFlightAltitude(final int avgFlightAltitude) {
 		this.avgFlightAltitude = avgFlightAltitude;
+	}
+	/**
+	 * 
+	 * @param eventWriter Animal to encode  to XML.
+	 * @throws XMLStreamException .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) 
+			throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, "migrates", 
+				String.valueOf(this.migrates));
+		createNode(eventWriter, "avgFlightAltitude", 
+				String.valueOf(this.avgFlightAltitude));
+	}
+	/**
+	 * @param element Element to decode.
+	 */
+	public void decodeFromXml(final Element element) {
+		setMigrates(Boolean.valueOf(element.
+				getElementsByTagName("migrates").
+				item(0).getTextContent()));
+		setAvgFlightAltitude(Integer.valueOf(element.
+				getElementsByTagName("avgFlightAltitude").item(0).
+				getTextContent()));
 	}
 }

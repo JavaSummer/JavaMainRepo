@@ -1,5 +1,4 @@
 package javasmmr.zoowsome.services.factories.animal;
-
 /**
  * 
  * @author Marius Bologa
@@ -171,4 +170,19 @@ public final class Constants {
 			public static final String Butterfly = "Monarch";
 		}
 	}
+	 public static final class XML_TAGS {
+		 /**
+			 * 
+			 */
+			public static final String DISCRIMINANT  = "DISCRIMINANT";
+			/**
+			 * 
+			 */
+			public static final String ANIMAL = "ANIMAL";
+			/**
+			 * 
+			 */
+			public static final String EMPLOYEE ="EMPLLOYEE";
+	 }
+
 }

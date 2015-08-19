@@ -1,4 +1,12 @@
 package javasmmr.zoowsome.models.animals;
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.services.factories.animal.Constants;
 
 /**
  * 
@@ -13,7 +21,7 @@ public class Spider extends Insect {
 	/**
 	 * 
 	 */
-	private String nameS = " Regal Jumper";
+	private String nameS = "Regal Jumper";
 
 	/**
 	 *
@@ -50,5 +58,32 @@ public class Spider extends Insect {
 		setNrOfLegs(legs);
 		setName(name);
 		setDangerous(bites);
+	}
+
+	/**
+	 * @return Predisposition to kill.
+	 * 
+	 */
+	public double getPredisposition() {
+		Calendar calendar = new GregorianCalendar();
+		int month = calendar.get(Calendar.MONTH);
+		if ((month >= 3) && (month <= 9)) {
+			return 0.24;
+		} // Time of the reproduction.
+		return 0;
+
+	}
+
+	/**
+	 * @param eventWriter
+	 *            To encode to XML.
+	 * @throws XMLStreamException
+	 *             .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) 
+			throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.
+				XML_TAGS.DISCRIMINANT, Constants.Animals.Insects.Spider);
 	}
 }

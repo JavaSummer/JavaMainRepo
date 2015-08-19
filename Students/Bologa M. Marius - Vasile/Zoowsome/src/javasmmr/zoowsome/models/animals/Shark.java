@@ -1,4 +1,13 @@
 package javasmmr.zoowsome.models.animals;
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.models.animals.WaterType.TypeOfWater;
+import javasmmr.zoowsome.services.factories.animal.Constants;
 
 /**
  * 
@@ -14,7 +23,6 @@ public class Shark extends Aquatic {
 	* 
 	*/
 	private int swimDepth = 2000;
-	WaterTypeTest water = new WaterTypeTest();
 
 	/**
 	 *
@@ -30,7 +38,7 @@ public class Shark extends Aquatic {
 		setAvgSwimDepth(swimDepth);
 		setName(nameS);
 		setNrOfLegs(0);
-		water.setWater(WaterType.saltwater);
+		setWater(TypeOfWater.saltwater);
 	}
 
 	/**
@@ -47,12 +55,36 @@ public class Shark extends Aquatic {
 	 * @param dangerPerc
 	 *            How dangerous an animal is.
 	 */
-	public Shark(final String name, final int depth, final WaterType typeW, final double maintenanceCost,
+	public Shark(final String name, final int depth, final TypeOfWater typeW, final double maintenanceCost,
 			final double dangerPerc) {
 		super(maintenanceCost, dangerPerc);
 		setAvgSwimDepth(depth);
 		setName(name);
 		setNrOfLegs(0);
-		water.setWater(typeW);
+		setWater(typeW);
 	}
+	/**
+	 * @return Predisposition to kill.
+	 * 
+	 */
+		public double getPredisposition() {	
+			Calendar calendar = new GregorianCalendar();
+		int am = calendar.get(Calendar.AM);
+		int pm = calendar.get(Calendar.PM);
+		if ((am > 5) && (am < 9) && ((pm > 6) && (pm < 10))) {
+			return 0.5232;
+		} // Time they are most active.
+		return 0;
+
+	}
+		/**
+		 * @param eventWriter To encode to XML.
+		 * @throws XMLStreamException .
+		 */
+		public void encodeToXml(final XMLEventWriter eventWriter) 
+				throws XMLStreamException {
+			super.encodeToXml(eventWriter);
+			createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
+			Constants.Animals.Aquatic.Shark);
+			}
 }
