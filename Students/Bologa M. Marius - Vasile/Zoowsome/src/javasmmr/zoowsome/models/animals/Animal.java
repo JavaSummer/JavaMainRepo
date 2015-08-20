@@ -11,7 +11,7 @@ import javasmmr.zoowsome.models.interfaces.XML_Parsable;
  * @author Marius Bologa
  *
  */
-public abstract class Animal implements Killer,XML_Parsable {
+public abstract class Animal implements Killer, XML_Parsable {
 	/**
 	 * 
 	 * @return If the animal is dangerous.
