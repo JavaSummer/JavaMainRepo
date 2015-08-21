@@ -11,6 +11,7 @@ import javasmmr.zoowsome.services.factories.animal.SpeciesFactory;
 import javasmmr.zoowsome.services.factories.employee.CaretakerFactory;
 
 import java.math.BigDecimal;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -111,9 +112,12 @@ public final class MainController {
 			System.out.println(careTaker[i].getName() + "'s salary is "
 					+ careTaker[i].getSalary() 
 					+ " $ and has ID:" + careTaker[i].getId());
-			System.out.println("The number of hours " 
-					+ careTaker[i].getName() + " is working: " 
- + (double) (Math.random() * x));
+			DecimalFormat df = new DecimalFormat("0.00");
+			double hours=(double) (Math.random() * x);
+			df.format(hours);
+			System.out.printf("The number of hours " 
+					+ careTaker[i].getName() + " is working: %1$.2f",hours);
+			System.out.println();
 		}
 
 	}
