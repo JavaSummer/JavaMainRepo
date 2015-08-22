@@ -1,0 +1,145 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Coccinellidae</name>
+	<maintenanceCost>1.0</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Coccinellidae</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Milka</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>MILKA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Milka</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>MILKA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Dory</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>20</avgSwimDepth>
+	<DISCRIMINANT>Dory</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Hesperiidae</name>
+	<maintenanceCost>4.5</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Dory</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>20</avgSwimDepth>
+	<DISCRIMINANT>Dory</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Lizard / Curt Connors</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>1.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Lizard / Curt Connors</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>Nigel</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>Nigel</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Rafiki</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Rafiki</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Viserion</name>
+	<maintenanceCost>8.0</maintenanceCost>
+	<dangerPerc>1.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Viserion</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Dory</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>20</avgSwimDepth>
+	<DISCRIMINANT>Dory</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Hesperiidae</name>
+	<maintenanceCost>4.5</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>Nigel</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>Nigel</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Rafiki</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Rafiki</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Crookshanks</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Crookshanks</DISCRIMINANT>
+</ANIMAL>
+</content>

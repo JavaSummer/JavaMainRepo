@@ -41,15 +41,23 @@ public final class Constants {
 		}
 	}
 
-	public static final class TypesOfEmployees {
+	/*public static final class TypesOfEmployees {
 		public static final String CareTaker = "CareTaker";
-	}
+	}*/
 
 	public static final class Employees {
+		public static final String Caretaker = "Caretakers";
+		
 		public static final class Caretakers {
 			public static final String TCO_SUCCESS = "SUCCESS";
 			public static final String TCO_KILLED = "KILLED";
 			public static final String TCO_NO_TIME = "NO_TIME";
 		}
+	}
+
+	public static final class XML_TAGS {
+		public static final String EMPLOYEE = "EMPLOYEE";
+		public static final String DISCRIMINANT = "DISCRIMINANT";
+		public static final String ANIMAL = "ANIMAL";
 	}
 }

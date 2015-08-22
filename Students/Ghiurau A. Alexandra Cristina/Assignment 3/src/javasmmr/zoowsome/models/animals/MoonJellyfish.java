@@ -1,5 +1,12 @@
 package javasmmr.zoowsome.models.animals;
 
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.services.factories.Constants;
+
 public class MoonJellyfish extends Aquatic {
 
 	public enum colourType {
@@ -9,10 +16,10 @@ public class MoonJellyfish extends Aquatic {
 	colourType colour;
 
 	public MoonJellyfish() {
-		super(7.5, 0.5);
-		setNrOfLegs(16);
+		super(7, 0.3);
+		setNrOfLegs(9);
 		setName("Nigel");
-		setAvgSwimDepth(20);
+		setAvgSwimDepth(21);
 		setWt(waterType.FRESHWATER);
 		setColour(colourType.BLUE);
 	}
@@ -27,12 +34,13 @@ public class MoonJellyfish extends Aquatic {
 		setColour(colourT); // or simply setColour(getCoulur()) ?
 	}
 
-	private colourType getCoulur() {
-		return colour;
-	}
-
 	private void setColour(colourType colour) {
 		this.colour = colour;
+	}
+
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Aquatics.MoonJellyfish);
 	}
 
 }
