@@ -1,30 +1,7 @@
 package javasmmr.zoowsome.repositories;
 
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.soap.Node;
-import javax.xml.stream.XMLEventFactory;
-import javax.xml.stream.XMLEventWriter;
-import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.events.Characters;
-import javax.xml.stream.events.EndElement;
-
-import javax.xml.stream.events.StartElement;
-import javax.xml.stream.events.XMLEvent;
-
-import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NodeList;
-import org.xml.sax.SAXException;
-
 import javasmmr.zoowsome.models.animals.*;
-//import javasmmr.zoowsome.models.interfaces.XML_Parsable;
-
 import javasmmr.zoowsome.services.factories.Constants;
 
 public class AnimalRepository extends EntityRepository<Animal> {
@@ -50,14 +27,14 @@ public class AnimalRepository extends EntityRepository<Animal> {
 			Animal spider = new Spider();
 			spider.decodeFromXml(element);
 			return spider;
-		/*
-		 * case Constants.Animals.Aquatics.SeaTurtle: Animal seaturtle = new
-		 * SeaTurtle(); seaturtle.decodeFromXml(element);
-		 * animals.add(seaturtle); break; case
-		 * Constants.Animals.Aquatics.MoonJellyfish: Animal jellyfish = new
-		 * MoonJellyfish(); jellyfish.decodeFromXml(element);
-		 * animals.add(jellyfish); break;
-		 */
+		case Constants.Animals.Aquatics.SeaTurtle:
+			Animal seaturtle = new SeaTurtle();
+			seaturtle.decodeFromXml(element);
+			return seaturtle;
+		/*case Constants.Animals.Aquatics.MoonJellyfish:
+			Animal jellyfish = new MoonJellyfish();
+			jellyfish.decodeFromXml(element);
+			return jellyfish;*/
 		case Constants.Animals.Aquatics.SeaHorse:
 			Animal seahorse = new SeaHorse();
 			seahorse.decodeFromXml(element);
@@ -70,11 +47,10 @@ public class AnimalRepository extends EntityRepository<Animal> {
 			Animal nightingale = new Nightingale();
 			nightingale.decodeFromXml(element);
 			return nightingale;
-		/*
-		 * case Constants.Animals.Birds.Woodpecker: Animal woodpecker = new
-		 * Woodpecker(); woodpecker.decodeFromXml(element);
-		 * animals.add(woodpecker); break;
-		 */
+		case Constants.Animals.Birds.Woodpecker:
+			Animal woodpecker = new Woodpecker();
+			woodpecker.decodeFromXml(element);
+			return woodpecker;
 		case Constants.Animals.Mammals.Cow:
 			Animal cow = new Cow();
 			cow.decodeFromXml(element);
@@ -95,10 +71,10 @@ public class AnimalRepository extends EntityRepository<Animal> {
 			Animal turtle = new Turtule();
 			turtle.decodeFromXml(element);
 			return turtle;
-		/*
-		 * case Constants.Animals.Reptiles.Crocodile: Animal croco = new
-		 * Crocodile(); croco.decodeFromXml(element); animals.add(croco); break;
-		 */
+		/*case Constants.Animals.Reptiles.Crocodile:
+			Animal croco = new Crocodile();
+			croco.decodeFromXml(element);
+			return croco;*/
 
 		default:
 			break;

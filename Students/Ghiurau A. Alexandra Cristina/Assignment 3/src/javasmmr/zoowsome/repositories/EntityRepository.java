@@ -25,20 +25,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-import javasmmr.zoowsome.models.animals.Animal;
-import javasmmr.zoowsome.models.animals.Butterfly;
-import javasmmr.zoowsome.models.animals.Cow;
-import javasmmr.zoowsome.models.animals.Dove;
-import javasmmr.zoowsome.models.animals.Dragon;
-import javasmmr.zoowsome.models.animals.LadyBug;
-import javasmmr.zoowsome.models.animals.Monkey;
-import javasmmr.zoowsome.models.animals.Nightingale;
-import javasmmr.zoowsome.models.animals.SeaHorse;
-import javasmmr.zoowsome.models.animals.Spider;
-import javasmmr.zoowsome.models.animals.Tiger;
-import javasmmr.zoowsome.models.animals.Turtule;
 import javasmmr.zoowsome.models.interfaces.XML_Parsable;
-import javasmmr.zoowsome.services.factories.Constants;
+
 
 public abstract class EntityRepository<T extends XML_Parsable> {
 	private final String xmlFilename;

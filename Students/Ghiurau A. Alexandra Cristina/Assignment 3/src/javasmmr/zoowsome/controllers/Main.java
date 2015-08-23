@@ -2,19 +2,14 @@ package javasmmr.zoowsome.controllers;
 
 import javasmmr.zoowsome.services.factories.AnimalFactory;
 import javasmmr.zoowsome.services.factories.Constants;
-import javasmmr.zoowsome.services.factories.Constants.Animals.Insects;
 import javasmmr.zoowsome.services.factories.SpeciesFactory;
 import javasmmr.zoowsome.services.factories.employees.CareTakerFactory;
-//import javasmmr.zoowsome.services.factories.employees.EmployeeAbstractFactory;
-import javasmmr.zoowsome.services.factories.employees.EmployeeAbstractFactory;
 
+import java.io.PrintWriter;
 import java.util.ArrayList;
-//import java.math.BigDecimal;
-//import java.util.ArrayList;
 import java.util.Random;
 
 import javasmmr.zoowsome.models.animals.Animal;
-import javasmmr.zoowsome.models.animals.Reptile;
 import javasmmr.zoowsome.repositories.AnimalRepository;
 import javasmmr.zoowsome.repositories.EmployeeRepository;
 import javasmmr.zoowsome.models.employees.*;
@@ -111,15 +106,20 @@ public class Main {
 			}
 		}
 
+		PrintWriter writer = new PrintWriter("output.txt", "UTF-8");
+
 		if (isTakenCareOf) {
 			System.out.println("All animals have been taken care of!");
+			writer.println("All animals have been taken care of!");
 		} else {
 			System.out.println("There are animals that still need to be cared of!");
+			writer.println("There are animals that still need to be cared of!");
 		}
 
 		for (int l = 0; l < allAnimals.length; l++) {
 			if (!isTakenCareOf) {
 				System.out.println(allAnimals[l].getName() + " still needs to be taken care of!");
+				writer.println(allAnimals[l].getName() + " still needs to be taken care of!");
 			}
 		}
 
@@ -128,15 +128,14 @@ public class Main {
 
 		AnimalFactory abstractFactory3 = new AnimalFactory();
 
+		AnimalRepository ar = new AnimalRepository();
 		ArrayList<Animal> animalsList = new ArrayList<>();
 		ArrayList<Animal> animalsListToDisplay = new ArrayList<>();
 
-		AnimalRepository ar = new AnimalRepository();
-
 		for (int k = 0; k < 15; k++) {
 			Random rand = new Random();
-			int chooseSpecies = rand.nextInt(5); // (int)( Math.random() * 5); 
-			int chooseAnimal =  rand.nextInt(3); //(int)( Math.random() * 3);
+			int chooseSpecies = rand.nextInt(5); // (int)( Math.random() * 5);
+			int chooseAnimal = rand.nextInt(3); // (int)( Math.random() * 3);
 			SpeciesFactory speciesFactory3 = abstractFactory3.getSpeciesFactory(species[chooseSpecies]);
 			Animal allAnimalsAsAList = speciesFactory3.getAnimal(animals[chooseSpecies][chooseAnimal]);
 			animalsList.add(allAnimalsAsAList);
@@ -145,11 +144,26 @@ public class Main {
 		ar.save(animalsList);
 		animalsListToDisplay = ar.load();
 
-		for (int k = 0; k < 5; k++) {
-			/*System.out.println("test");
-			System.out.println(animalsListToDisplay.size());
-			System.out.println(animalsList.size());*/
-			System.out.println(animalsListToDisplay.get(k).getName());
+		System.out.println();
+		System.out.println("saved list:");
+		writer.println();
+		writer.println("saved list:");
+		for (Animal ani2 : animalsList) {
+			System.out.println(ani2.getName());
+			writer.println(ani2.getName());
+		}
+
+		System.out.println();
+		System.out.println("loaded list:");
+		writer.println();
+		writer.println("loaded list:");
+		try {
+			for (Animal ani : animalsListToDisplay) {
+				System.out.println(ani.getName());
+				writer.println(ani.getName());
+			}
+		} catch (NullPointerException e) {
+			System.err.println("Something went wrong");
 		}
 
 		ArrayList<Employee> employeesList = new ArrayList<>();
@@ -171,5 +185,6 @@ public class Main {
 			System.out.println(String.valueOf(employeesListToDisplay.get(k).getName()));
 
 		}
+		writer.close();
 	}
 }

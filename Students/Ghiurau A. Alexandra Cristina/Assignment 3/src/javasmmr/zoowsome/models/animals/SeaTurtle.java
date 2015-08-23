@@ -12,7 +12,7 @@ public class SeaTurtle extends Aquatic {
 	public SeaTurtle() {
 		super(7.5, 0.5);
 		setNrOfLegs(4);
-		setName("SeaNigel");
+		setName("Nemo");
 		setAvgSwimDepth(20);
 		setWt(waterType.FRESHWATER);
 	}

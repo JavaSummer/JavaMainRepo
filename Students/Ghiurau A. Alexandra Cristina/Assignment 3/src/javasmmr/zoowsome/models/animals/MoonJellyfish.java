@@ -18,7 +18,7 @@ public class MoonJellyfish extends Aquatic {
 	public MoonJellyfish() {
 		super(7, 0.3);
 		setNrOfLegs(9);
-		setName("Nigel");
+		setName("MoonJellyfishX");
 		setAvgSwimDepth(21);
 		setWt(waterType.FRESHWATER);
 		setColour(colourType.BLUE);
