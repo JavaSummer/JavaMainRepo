@@ -109,7 +109,7 @@ public class MatrixOperations {
 		} else {
 			for (int i = 0; i < mA; i++) {
 				for (int j = 0; j < nA; j++) {
-					if (a[i][j] != b[i][j]) {
+					if (!(a[i][j].equals(b[i][j]))) {
 						return false;
 					}
 				}
@@ -123,7 +123,7 @@ public class MatrixOperations {
 		int n = a[0].length;
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				if (a[i][j] != BigDecimal.ZERO) {
+				if (!(a[i][j].equals(BigDecimal.ZERO))) {
 					return false;
 				}
 			}
@@ -136,7 +136,8 @@ public class MatrixOperations {
 		int n = a[0].length;
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				if (((i == j) && (a[i][j] != BigDecimal.ONE)) || ((i != j) && (a[i][j] != BigDecimal.ZERO))) {
+				if (((i == j) && (!(a[i][j].equals(BigDecimal.ONE))))
+						|| ((i != j) && (!(a[i][j].equals(BigDecimal.ZERO))))) {
 					return false;
 				}
 			}
