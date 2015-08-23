@@ -1,5 +1,11 @@
 package javasmmr.zoowsome.models.animals;
 
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoowsome.services.factories.Constants;
 
 public class MoonJellyfish extends Aquatic {
 
@@ -10,14 +16,17 @@ public class MoonJellyfish extends Aquatic {
 	colourType colour;
 
 	public MoonJellyfish() {
-		setNrOfLegs(16); 
+		super(7, 0.3);
+		setNrOfLegs(9);
 		setName("Nigel");
-		setAvgSwimDepth(20);
+		setAvgSwimDepth(21);
 		setWt(waterType.FRESHWATER);
 		setColour(colourType.BLUE);
 	}
 
-	public MoonJellyfish(String name, int swimDepth, waterType waterType, colourType colourT) {
+	public MoonJellyfish(String name, int swimDepth, waterType waterType, colourType colourT, double maintenanceCost,
+			double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
 		setNrOfLegs(4);
 		setName(name);
 		setAvgSwimDepth(swimDepth);
@@ -25,12 +34,13 @@ public class MoonJellyfish extends Aquatic {
 		setColour(colourT); // or simply setColour(getCoulur()) ?
 	}
 
-	private colourType getCoulur() {
-		return colour;
-	}
-
 	private void setColour(colourType colour) {
 		this.colour = colour;
+	}
+
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Aquatics.MoonJellyfish);
 	}
 
 }
