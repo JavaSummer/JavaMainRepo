@@ -20,3 +20,7 @@ We recommend you to finish the reading list and the given assignments in 2 weeks
 ## Play around with...
 1. [A visual guide to layouts](https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html)
 2. Once you've mastered manually creating a GUI, check out [this](https://www.youtube.com/watch?v=oeswfZz4IW0) plugin and play around with it. 
+
+
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%207%20-%20GUI/Assignments)
+- 7.1 - [Zoo (part 5)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%207%20-%20GUI/Assignments/Zoo%20(part%205).pdf)
