@@ -15,7 +15,7 @@ We recommend you to finish the reading list and the given assignments in 2 weeks
 
 
 ## Reading list
-1. [Head First Java - chapter 16  (pdf pages 546-596)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/Head%20First%20Java.pdf)
+1. [Head First Java - chapter 16  (pdf pages 546-596)](http://it-ebooks.info/book/3214/)
 4. [Data Structures and Algorithms in Java](http://www.it-ebooks.info/book/4478/) (optional reading)
 
 ## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%206%20-%20Collections%20and%20Generics/Assignments)

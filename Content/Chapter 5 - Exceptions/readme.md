@@ -14,7 +14,7 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 
 ## Reading list
 1. [Exceptions](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/08-Exceptions.pdf) (Books + Material/OOP Lab/08-Exceptions.pdf)
-2. [Head First Java - chapter 11  (pdf pages 335-367)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/Head%20First%20Java.pdf)
+2. [Head First Java - chapter 11  (pdf pages 335-367)](http://it-ebooks.info/book/3214/)
 
 ## Play around with...
 1. [Oracle documentation Q&A](https://docs.oracle.com/javase/tutorial/essential/exceptions/QandE/questions.html)

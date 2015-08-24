@@ -14,7 +14,7 @@ We recommend you to finish the reading list and the given assignments in 2 weeks
 ## Reading list
 1. [Mouse](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/09-Mouse.pdf) (a bit difficult at first, don't start with this)
 2. [Event Handling](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/OOP%20Lab/10-EventHandling.pdf) (again, rather difficult, don't start from here)
-3. [Head First Java - chapter 12,13  (pdf pages 373-446)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Books%20%2B%20Material/Head%20First%20Java.pdf)
+3. [Head First Java - chapter 12,13  (pdf pages 373-446)](http://it-ebooks.info/book/3214/)
 4. [Up to Speed with Swing](http://www.manning.com/gutz2/)  (Find a way to download the book + check out the source code which you can find [here](http://www.manning-source.com/books/gutz2/gutz2_src.zip). The whole book is great)
 
 ## Play around with...
