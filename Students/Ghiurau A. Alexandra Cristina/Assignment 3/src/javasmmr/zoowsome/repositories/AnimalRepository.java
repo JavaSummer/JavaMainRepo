@@ -31,10 +31,10 @@ public class AnimalRepository extends EntityRepository<Animal> {
 			Animal seaturtle = new SeaTurtle();
 			seaturtle.decodeFromXml(element);
 			return seaturtle;
-		/*case Constants.Animals.Aquatics.MoonJellyfish:
+		case Constants.Animals.Aquatics.MoonJellyfish:
 			Animal jellyfish = new MoonJellyfish();
 			jellyfish.decodeFromXml(element);
-			return jellyfish;*/
+			return jellyfish;
 		case Constants.Animals.Aquatics.SeaHorse:
 			Animal seahorse = new SeaHorse();
 			seahorse.decodeFromXml(element);
@@ -71,10 +71,10 @@ public class AnimalRepository extends EntityRepository<Animal> {
 			Animal turtle = new Turtule();
 			turtle.decodeFromXml(element);
 			return turtle;
-		/*case Constants.Animals.Reptiles.Crocodile:
+		case Constants.Animals.Reptiles.Crocodile:
 			Animal croco = new Crocodile();
 			croco.decodeFromXml(element);
-			return croco;*/
+			return croco;
 
 		default:
 			break;

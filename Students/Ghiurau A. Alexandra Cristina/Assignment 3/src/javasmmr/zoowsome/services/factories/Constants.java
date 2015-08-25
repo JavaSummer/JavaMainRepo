@@ -23,13 +23,13 @@ public final class Constants {
 		}
 
 		public static final class Birds {
-			public static final String Woodpecker = "Lizard / Curt Connors";
+			public static final String Woodpecker = "Woodie";
 			public static final String Dove = "Sansa";
 			public static final String Nightingale = "Zazu";
 		}
 
 		public static final class Aquatics {
-			public static final String MoonJellyfish = "Nigel";
+			public static final String MoonJellyfish = "MoonJellyfishX";
 			public static final String SeaHorse = "Dory";
 			public static final String SeaTurtle = "Nigel";
 		}
