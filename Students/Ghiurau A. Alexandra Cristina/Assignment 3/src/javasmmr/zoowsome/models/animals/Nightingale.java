@@ -10,10 +10,10 @@ import javasmmr.zoowsome.services.factories.Constants;
 public class Nightingale extends Bird {
 
 	public Nightingale() {
-		super(7.5, 0.5);
+		super(7, 0.6);
 		setName("Zazu"); // ..from Lion King
 		setNrOfLegs(2);
-		setAvgFlightAltitude(100);
+		setAvgFlightAltitude(85);
 		setMigrates(true);
 	}
 

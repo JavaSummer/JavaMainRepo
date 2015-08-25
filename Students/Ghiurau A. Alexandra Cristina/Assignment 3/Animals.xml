@@ -1,35 +1,5 @@
 <?xml version="1.0"?><content>
 <ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Rafiki</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>Rafiki</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Coccinellidae</name>
-	<maintenanceCost>1.0</maintenanceCost>
-	<dangerPerc>0.01</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<canFly>true</canFly>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Coccinellidae</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Milka</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>MILKA</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
 	<nrOfLegs>12</nrOfLegs>
 	<name>Black Widow</name>
 	<maintenanceCost>7.5</maintenanceCost>
@@ -41,17 +11,16 @@
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>4</nrOfLegs>
-	<name>Milka</name>
+	<name>Donatello</name>
 	<maintenanceCost>7.5</maintenanceCost>
 	<dangerPerc>0.5</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>MILKA</DISCRIMINANT>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Donatello</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>9</nrOfLegs>
-	<name>Nigel</name>
+	<name>MoonJellyfishX</name>
 	<maintenanceCost>7.0</maintenanceCost>
 	<dangerPerc>0.3</dangerPerc>
 	<takenCareOf>false</takenCareOf>
@@ -59,91 +28,117 @@
 	<DISCRIMINANT>Nigel</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Hesperiidae</name>
-	<maintenanceCost>4.5</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<canFly>true</canFly>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Sansa</name>
-	<maintenanceCost>6.0</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>false</migrates>
-	<avgFlightAltitude>100</avgFlightAltitude>
-	<DISCRIMINANT>Sansa</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Hesperiidae</name>
-	<maintenanceCost>4.5</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<canFly>true</canFly>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Sansa</name>
-	<maintenanceCost>6.0</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>false</migrates>
-	<avgFlightAltitude>100</avgFlightAltitude>
-	<DISCRIMINANT>Sansa</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Dory</name>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Donatello</name>
 	<maintenanceCost>7.5</maintenanceCost>
 	<dangerPerc>0.5</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>20</avgSwimDepth>
-	<DISCRIMINANT>Dory</DISCRIMINANT>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Donatello</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Coccinellidae</name>
-	<maintenanceCost>1.0</maintenanceCost>
-	<dangerPerc>0.01</dangerPerc>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Viserion</name>
+	<maintenanceCost>8.0</maintenanceCost>
+	<dangerPerc>1.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<canFly>true</canFly>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Coccinellidae</DISCRIMINANT>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Viserion</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Rafiki</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Rafiki</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>MoonJellyfishX</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>Nigel</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>MoonJellyfishX</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>Nigel</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Rafiki</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Rafiki</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>2</nrOfLegs>
 	<name>Zazu</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.6</dangerPerc>
 	<takenCareOf>false</takenCareOf>
 	<migrates>true</migrates>
-	<avgFlightAltitude>100</avgFlightAltitude>
+	<avgFlightAltitude>85</avgFlightAltitude>
 	<DISCRIMINANT>Zazu</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>4</nrOfLegs>
-	<name>Milka</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
+	<name>Viserion</name>
+	<maintenanceCost>8.0</maintenanceCost>
+	<dangerPerc>1.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>MILKA</DISCRIMINANT>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Viserion</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Hesperiidae</name>
+	<maintenanceCost>4.5</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>9</nrOfLegs>
-	<name>Nigel</name>
+	<name>MoonJellyfishX</name>
 	<maintenanceCost>7.0</maintenanceCost>
 	<dangerPerc>0.3</dangerPerc>
 	<takenCareOf>false</takenCareOf>
 	<avgSwimDepth>21</avgSwimDepth>
 	<DISCRIMINANT>Nigel</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Rafiki</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Rafiki</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Crookshanks</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Crookshanks</DISCRIMINANT>
 </ANIMAL>
 </content>

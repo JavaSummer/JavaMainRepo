@@ -11,7 +11,6 @@ public abstract class Reptile extends Animal {
 
 	public Reptile(double maintenanceCost, double dangerPerc) {
 		super(maintenanceCost, dangerPerc);
-		// TODO Auto-generated constructor stub
 	}
 
 	boolean laysEggs;
@@ -30,7 +29,7 @@ public abstract class Reptile extends Animal {
 	}
 
 	public void decodeFromXml(Element element) {
-		//super.decodeFromXml(element);
+	//	super.decodeFromXml(element);
 		setLaysEggs(Boolean.valueOf(element.getElementsByTagName("laysEggs").item(0).getTextContent()));
 	}
 }

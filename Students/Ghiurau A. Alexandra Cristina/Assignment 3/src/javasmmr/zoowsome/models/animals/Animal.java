@@ -8,6 +8,7 @@ import javasmmr.zoowsome.models.interfaces.XML_Parsable;
 import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
 
 public abstract class Animal implements Killer, XML_Parsable {
+
 	private int nrOfLegs;
 	String name;
 
@@ -31,10 +32,12 @@ public abstract class Animal implements Killer, XML_Parsable {
 		this.takenCareOf = takenCareOf;
 	}
 
-	public void setMaintenanceCost(double maintenanceCost) {
+	public void setMaintenanceCost(double cost) {
+		//maintenanceCost = cost;
 	}
 
-	public void setDangerPerc(double dangerPerc) {
+	public void setDangerPerc(double dangerPer) {
+		//dangerPerc = dangerPer;
 	}
 
 	public Animal(double maintenanceCost, double dangerPerc) {
