@@ -1,6 +1,7 @@
 package javasmmr.zoowsome.services.factories;
 
 public final class Constants {
+
 	public static final class Species {
 		public static final String Mammals = "Mammals";
 		public static final String Reptiles = "Reptiles";
@@ -41,13 +42,14 @@ public final class Constants {
 		}
 	}
 
-	/*public static final class TypesOfEmployees {
-		public static final String CareTaker = "CareTaker";
-	}*/
+	/*
+	 * public static final class TypesOfEmployees { public static final String
+	 * CareTaker = "CareTaker"; }
+	 */
 
 	public static final class Employees {
 		public static final String Caretaker = "Caretakers";
-		
+
 		public static final class Caretakers {
 			public static final String TCO_SUCCESS = "SUCCESS";
 			public static final String TCO_KILLED = "KILLED";
@@ -60,4 +62,10 @@ public final class Constants {
 		public static final String DISCRIMINANT = "DISCRIMINANT";
 		public static final String ANIMAL = "ANIMAL";
 	}
+
+	public class Frames {
+		public static final int HEIGHT = 500;
+		public static final int WIDTH = 700;
+	}
+
 }

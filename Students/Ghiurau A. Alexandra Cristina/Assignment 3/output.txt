@@ -1,50 +1,50 @@
 There are animals that still need to be cared of!
-Black Widow still needs to be taken care of!
-Woody still needs to be taken care of!
+Lizard / Curt Connors still needs to be taken care of!
+Hesperiidae still needs to be taken care of!
+Coccinellidae still needs to be taken care of!
+Zazu still needs to be taken care of!
+Hesperiidae still needs to be taken care of!
 MoonJellyfishX still needs to be taken care of!
-Woody still needs to be taken care of!
-Woody still needs to be taken care of!
-Nemo still needs to be taken care of!
+Coccinellidae still needs to be taken care of!
+Viserion still needs to be taken care of!
 MoonJellyfishX still needs to be taken care of!
+Lizard / Curt Connors still needs to be taken care of!
+Viserion still needs to be taken care of!
 Black Widow still needs to be taken care of!
+Sansa still needs to be taken care of!
+Rafiki still needs to be taken care of!
 Woody still needs to be taken care of!
-Dory still needs to be taken care of!
-Black Widow still needs to be taken care of!
-Crookshanks still needs to be taken care of!
-Crookshanks still needs to be taken care of!
-Nemo still needs to be taken care of!
-Nemo still needs to be taken care of!
 
 saved list:
-Lizard / Curt Connors
+Dory
+Viserion
+MoonJellyfishX
+Hesperiidae
+Rafiki
+Hesperiidae
 Donatello
-Crookshanks
-Nemo
+Sansa
+MoonJellyfishX
 Hesperiidae
+Coccinellidae
 Woody
-Crookshanks
-Dory
+MoonJellyfishX
 Woody
-Dory
-Hesperiidae
-Zazu
-Zazu
-Woody
-Milka
+Donatello
 
 loaded list:
-Lizard / Curt Connors
+Dory
+Viserion
+MoonJellyfishX
+Hesperiidae
+Rafiki
+Hesperiidae
 Donatello
-Crookshanks
-Nemo
+Sansa
+MoonJellyfishX
 Hesperiidae
+Coccinellidae
 Woody
-Crookshanks
-Dory
+MoonJellyfishX
 Woody
-Dory
-Hesperiidae
-Zazu
-Zazu
-Woody
-Milka
+Donatello

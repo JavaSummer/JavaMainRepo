@@ -1,12 +1,60 @@
 <?xml version="1.0"?><content>
 <ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Dory</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>20</avgSwimDepth>
+	<DISCRIMINANT>Dory</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
 	<nrOfLegs>4</nrOfLegs>
-	<name>Lizard / Curt Connors</name>
-	<maintenanceCost>7.0</maintenanceCost>
+	<name>Viserion</name>
+	<maintenanceCost>8.0</maintenanceCost>
 	<dangerPerc>1.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
 	<laysEggs>true</laysEggs>
-	<DISCRIMINANT>Lizard / Curt Connors</DISCRIMINANT>
+	<DISCRIMINANT>Viserion</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>MoonJellyfishX</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>MoonJellyfishX</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Hesperiidae</name>
+	<maintenanceCost>4.5</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Rafiki</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percbodyHair>1.0</percbodyHair>
+	<DISCRIMINANT>Rafiki</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>12</nrOfLegs>
+	<name>Hesperiidae</name>
+	<maintenanceCost>4.5</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>4</nrOfLegs>
@@ -18,23 +66,23 @@
 	<DISCRIMINANT>Donatello</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Crookshanks</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
+	<nrOfLegs>2</nrOfLegs>
+	<name>Sansa</name>
+	<maintenanceCost>6.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>Crookshanks</DISCRIMINANT>
+	<migrates>false</migrates>
+	<avgFlightAltitude>100</avgFlightAltitude>
+	<DISCRIMINANT>Sansa</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Nemo</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
+	<nrOfLegs>9</nrOfLegs>
+	<name>MoonJellyfishX</name>
+	<maintenanceCost>7.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>20</avgSwimDepth>
-	<DISCRIMINANT>Nigel</DISCRIMINANT>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>MoonJellyfishX</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>12</nrOfLegs>
@@ -47,82 +95,33 @@
 	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Woody</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>95</avgFlightAltitude>
-	<DISCRIMINANT>Woodie</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Crookshanks</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>Crookshanks</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
 	<nrOfLegs>12</nrOfLegs>
-	<name>Dory</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>20</avgSwimDepth>
-	<DISCRIMINANT>Dory</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Woody</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>95</avgFlightAltitude>
-	<DISCRIMINANT>Woodie</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Dory</name>
-	<maintenanceCost>7.5</maintenanceCost>
-	<dangerPerc>0.5</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>20</avgSwimDepth>
-	<DISCRIMINANT>Dory</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>12</nrOfLegs>
-	<name>Hesperiidae</name>
-	<maintenanceCost>4.5</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
+	<name>Coccinellidae</name>
+	<maintenanceCost>1.0</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
 	<takenCareOf>false</takenCareOf>
 	<canFly>true</canFly>
 	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Hesperiidae</DISCRIMINANT>
+	<DISCRIMINANT>Coccinellidae</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>2</nrOfLegs>
-	<name>Zazu</name>
-	<maintenanceCost>7.0</maintenanceCost>
-	<dangerPerc>0.6</dangerPerc>
+	<name>Woody</name>
+	<maintenanceCost>7.5</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
 	<takenCareOf>false</takenCareOf>
 	<migrates>true</migrates>
-	<avgFlightAltitude>85</avgFlightAltitude>
-	<DISCRIMINANT>Zazu</DISCRIMINANT>
+	<avgFlightAltitude>95</avgFlightAltitude>
+	<DISCRIMINANT>Woodie</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Zazu</name>
+	<nrOfLegs>9</nrOfLegs>
+	<name>MoonJellyfishX</name>
 	<maintenanceCost>7.0</maintenanceCost>
-	<dangerPerc>0.6</dangerPerc>
+	<dangerPerc>0.3</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>85</avgFlightAltitude>
-	<DISCRIMINANT>Zazu</DISCRIMINANT>
+	<avgSwimDepth>21</avgSwimDepth>
+	<DISCRIMINANT>MoonJellyfishX</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>2</nrOfLegs>
@@ -136,12 +135,11 @@
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>4</nrOfLegs>
-	<name>Milka</name>
+	<name>Donatello</name>
 	<maintenanceCost>7.5</maintenanceCost>
 	<dangerPerc>0.5</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.0</normalBodyTemp>
-	<percbodyHair>1.0</percbodyHair>
-	<DISCRIMINANT>MILKA</DISCRIMINANT>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Donatello</DISCRIMINANT>
 </ANIMAL>
 </content>
