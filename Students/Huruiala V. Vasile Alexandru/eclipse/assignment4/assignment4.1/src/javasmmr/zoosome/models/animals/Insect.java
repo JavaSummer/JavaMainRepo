@@ -1,5 +1,12 @@
 package javasmmr.zoosome.models.animals;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
 public abstract class Insect extends Animal {
 	private static final boolean DEFAULT_CAN_FLY = false;
 	private static final boolean DEFAULT_IS_DANGEROUS = false;
@@ -33,5 +40,17 @@ public abstract class Insect extends Animal {
 	
 	public void setIsDangerous(final boolean dangerous) {
 		this.isDangerous = dangerous;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, "canFly", String.valueOf(this.getCanFly()));
+		createNode(eventWriter, "isDangerous", String.valueOf(this.getIsDangerous()));
+	}
+	
+	public void decodeFromXML(Element element) {
+		super.decodeFromXML(element);
+		setCanFly(Boolean.valueOf(element.getElementsByTagName("canFly").item(0).getTextContent()));
+		setIsDangerous(Boolean.valueOf(element.getElementsByTagName("isDangerous").item(0).getTextContent()));
 	}
 }

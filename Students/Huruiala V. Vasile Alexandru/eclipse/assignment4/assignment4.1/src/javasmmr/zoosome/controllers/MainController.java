@@ -1,12 +1,20 @@
 package javasmmr.zoosome.controllers;
 
-import java.time.LocalDate;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.ArrayList;
+
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.stream.XMLStreamException;
+
+import org.xml.sax.SAXException;
 
 import javasmmr.zoosome.models.animals.Animal;
 import javasmmr.zoosome.models.employees.Caretaker;
 import javasmmr.zoosome.models.employees.Employee;
+import javasmmr.zoosome.repositories.AnimalRepository;
+import javasmmr.zoosome.repositories.EmployeeRepository;
 import javasmmr.zoosome.services.factories.Constants;
 import javasmmr.zoosome.services.factories.animals.BigFactory;
 
@@ -19,14 +27,18 @@ public class MainController {
 		
 		BigFactory big = new BigFactory();
 		
-		System.out.println("\n### One random zoo element ###\n");
+		
+		
+		BigFactory.nicePrint("One random zoo element");
 		
 		Animal a = big.generateRandomAnimal();
 		BigFactory.printDetails(a);
 
-		System.out.println("\n### An entire random zoo with equal an equal amount of individuals in each species ###\n");
 		
-		Animal zoo[][] = big.generateZooEvenAmount(populationPerSpeciesZoo);
+		
+		BigFactory.nicePrint("An entire random zoo with equal an equal amount of individuals in each species");
+		
+		Animal[][] zoo = big.generateZooEvenAmount(populationPerSpeciesZoo);
 		for (int i = 0; i < zoo.length; i++) {
 			for(int j = 0; j < zoo[i].length; j++) {
 				BigFactory.printDetails(zoo[i][j]);
@@ -34,26 +46,34 @@ public class MainController {
 			System.out.println();
 		}
 		
-		System.out.println("\n### An entire random zoo ###\n");
 		
-		Animal zooLine[] = big.generateRandomAnimalAmount(populationZooLine);
+		
+		BigFactory.nicePrint("An entire random zoo");
+		
+		Animal[] zooLine = big.generateRandomAnimalAmount(populationZooLine);
 		for (int i = 0; i < zooLine.length; i++) {
 			BigFactory.printDetails(zooLine[i]);
 		}
 		
-		System.out.println("\n### One caretaker ###\n");
 		
-		Employee e = big.generateRandomEmployee(Constants.Jobs.CARETAKER);
-		big.printDetails(e);
 		
-		System.out.println("\n### The caretakers ###\n");
+		BigFactory.nicePrint("One caretaker");
 		
-		Employee[] staff = big.generateRandomeEmployeeTeam(staffSize, Constants.Jobs.CARETAKER);
+		Employee e = big.generateRandomEmployeeOfJob(Constants.Jobs.CARETAKER);
+		BigFactory.printDetails(e);
+		
+		
+		
+		BigFactory.nicePrint("The caretakers");
+		
+		Employee[] staff = big.generateRandomeEmployeeTeamOfJob(staffSize, Constants.Jobs.CARETAKER);
 		for (int i = 0; i < staffSize; i++) {
-			big.printDetails(staff[i]);
+			BigFactory.printDetails(staff[i]);
 		}
 		
-		System.out.println("\n### The Feast ###\n");
+		
+		
+		BigFactory.nicePrint("The Feast");
 		
 		for (int i = 0; i < staffSize; i++) {
 			Caretaker c = (Caretaker) staff[i];
@@ -71,19 +91,80 @@ public class MainController {
 			}
 		}
 		
-		System.out.println("\n### Zoo status ###\n");
+		
+		
+		BigFactory.nicePrint("Zoo status");
 		
 		for (int i = 0; i < zooLine.length; i++) {
 			BigFactory.printDetails(zooLine[i]);
 		}
 		
-		System.out.println("\n### Staff status ###\n");
+		
+		
+		BigFactory.nicePrint("Staff status");
 		
 		for (int i = 0; i < staffSize; i++) {
-			big.printDetails(staff[i]);
+			BigFactory.printDetails(staff[i]);
 		}
 		
-		System.out.println("\n### The End ###\n");
+		
+		
+		BigFactory.nicePrint("The End");
+		
+		
+		
+		BigFactory.nicePrint("Zoo form file");
+		
+		AnimalRepository anRes = new AnimalRepository();
+		ArrayList<Animal> animalList = BigFactory.convertAnimalArrayToArrayList(zooLine);
+		try {
+			anRes.save(animalList);
+		} catch (FileNotFoundException fnf) {
+			System.out.println(fnf.getMessage());
+		} catch (XMLStreamException xmls) {
+			System.out.println(xmls.getMessage());
+		}
+		
+		ArrayList<Animal> listFromFile = null;
+		try {
+			listFromFile = anRes.load();
+		} catch (ParserConfigurationException pc) {
+			System.out.println(pc.getMessage());
+		} catch (SAXException sax) {
+			System.out.println(sax.getMessage());
+		} catch (IOException io) {
+			System.out.println(io.getMessage());
+		}
+		
+		BigFactory.printArrayListAnimalDetails(listFromFile);
+		
+		
+		
+		BigFactory.nicePrint("Staff from file");
+		
+		EmployeeRepository emRes = new EmployeeRepository();
+		ArrayList<Employee> employeeList = BigFactory.convertEmployeeArrayToArrayList(staff);
+		
+		try {
+			emRes.save(employeeList);
+		} catch (FileNotFoundException fnf) {
+			System.out.println(fnf.getMessage());
+		} catch (XMLStreamException xmls) {
+			System.out.println(xmls.getMessage());
+		}
+		
+		ArrayList<Employee> employeesFromFile = null;
+		try {
+			employeesFromFile = emRes.load();
+		} catch (ParserConfigurationException pc) {
+			System.out.println(pc.getMessage());
+		} catch (SAXException sax) {
+			System.out.println(sax.getMessage());
+		} catch (IOException io) {
+			System.out.println(io.getMessage());
+		}
+		
+		BigFactory.printArrayListEmployeeDetails(employeeList);
 		
 		LocalDateTime dt = LocalDateTime.now();
 		System.out.println(dt);

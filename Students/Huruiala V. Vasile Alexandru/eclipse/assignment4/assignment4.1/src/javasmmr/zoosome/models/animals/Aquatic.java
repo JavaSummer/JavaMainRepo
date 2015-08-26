@@ -1,5 +1,12 @@
 package javasmmr.zoosome.models.animals;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
 public abstract class Aquatic extends Animal {
 	private static final int DEFAULT_AVG_SWIM_DEPTH = 0;
 	private static final WaterType DEFAULT_WATER_TYPE = WaterType.getWater(0);
@@ -37,5 +44,17 @@ public abstract class Aquatic extends Animal {
 	
 	public void setWaterType(final WaterType wType) {
 		this.waterType = wType;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, "avgSwimDepth", String.valueOf(this.getAvgSwimDepth()));
+		createNode(eventWriter, "waterType", String.valueOf(this.getWaterType()));
+	}
+	
+	public void decodeFromXML(Element element) {
+		super.decodeFromXML(element);
+		setAvgSwimDepth(Integer.valueOf(element.getElementsByTagName("avgSwimDepth").item(0).getTextContent()));
+		setWaterType(WaterType.getWater(element.getElementsByTagName("waterType").item(0).getTextContent()));
 	}
 }

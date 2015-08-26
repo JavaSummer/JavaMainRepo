@@ -16,7 +16,7 @@ public class CaretakerFactory extends EmployeeFactory {
 		if (Constants.Jobs.CARETAKER.equals(type)) {
 			return new Caretaker();
 		} else {
-			throw new Exception("Exception at CaretakerFactory");
+			throw new Exception("Employee exception!");
 		}
 	}
 	
@@ -34,7 +34,7 @@ public class CaretakerFactory extends EmployeeFactory {
 			
 			return new Caretaker(name, id, salary, workingHours);
 		} else {
-			throw new Exception("Exception at CaretakerFactory");
+			throw new Exception("Employee exception!");
 		}
 	}
 }

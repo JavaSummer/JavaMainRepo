@@ -1,5 +1,12 @@
 package javasmmr.zoosome.models.animals;
 
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
 public abstract class Bird extends Animal {
 	private static final boolean DEFAULT_MIGRATES = false;
 	private static final int DEFAULT_AVG_FLIGHT_ALTITUDE = 0;
@@ -23,15 +30,27 @@ public abstract class Bird extends Animal {
 		return this.migrates;
 	}
 	
-	public void setMigrated(final boolean doesMigrate) {
+	public void setMigrates(final boolean doesMigrate) {
 		this.migrates = doesMigrate;
 	}
 	
-	public int getFlightAltitude() {
+	public int getAvgFlightAltitude() {
 		return this.avgFlightAlitude;
 	}
 	
-	public void setFlightAltitude(final int flightAlt) {
+	public void setAvgFlightAltitude(final int flightAlt) {
 		this.avgFlightAlitude = flightAlt;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, "migrates", String.valueOf(this.getMigrates()));
+		createNode(eventWriter, "avgFlightAltitude", String.valueOf(this.getAvgFlightAltitude()));
+	}
+	
+	public void decodeFromXML(Element element) {
+		super.decodeFromXML(element);
+		setMigrates(Boolean.valueOf(element.getElementsByTagName("migrates").item(0).getTextContent()));
+		setAvgFlightAltitude(Integer.valueOf(element.getElementsByTagName("avgFlightAltitude").item(0).getTextContent()));
 	}
 }

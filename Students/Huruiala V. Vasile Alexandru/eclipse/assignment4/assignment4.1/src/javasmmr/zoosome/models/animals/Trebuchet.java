@@ -1,6 +1,13 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
 import java.time.LocalDateTime;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoosome.services.factories.Constants;
 
 public class Trebuchet extends Siege {
 	private static final String DEFAULT_NAME = "Counterweight trebuchet";
@@ -25,5 +32,10 @@ public class Trebuchet extends Siege {
 			return 0.25;
 		}
 		return 0.0;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, String.valueOf(Constants.Animals.Siege.TREBUCHET));
 	}
 }

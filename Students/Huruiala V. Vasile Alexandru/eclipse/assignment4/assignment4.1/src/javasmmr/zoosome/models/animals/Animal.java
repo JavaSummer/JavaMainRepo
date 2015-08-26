@@ -1,6 +1,15 @@
 package javasmmr.zoosome.models.animals;
 
-public abstract class Animal implements Killer{
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import javasmmr.zoosome.models.interfaces.XML_Parsable;
+
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
+public abstract class Animal implements Killer, XML_Parsable{
 	private static final String DEFAULT_NAME = null;
 	private static final int DEFAULT_NUMBER_OF_LEGS = 0;
 	private static final double DEFAULT_MAINTENANCE_COST_MIN = 0.1D;
@@ -11,8 +20,8 @@ public abstract class Animal implements Killer{
 	
 	private String name;
 	private int noOfLegs;
-	private final double maintenanceCost;
-	private final double dangerPerc;
+	private double maintenanceCost;
+	private double dangerPerc;
 	private boolean takenCareOf;
 	
 	protected Animal() {
@@ -74,8 +83,16 @@ public abstract class Animal implements Killer{
 		return this.maintenanceCost;
 	}
 	
+	public void setMaintenenceCost(double newMaintenanceCost) {
+		this.maintenanceCost = newMaintenanceCost;
+	}
+	
 	public double getDangerPerc() {
 		return this.dangerPerc;
+	}
+	
+	public void setDangerPerc(double newDangerPerc) {
+		this.dangerPerc = newDangerPerc;
 	}
 	
 	public boolean getTakenCareOf() {
@@ -84,5 +101,21 @@ public abstract class Animal implements Killer{
 	
 	public void setTakenCareOf(boolean care) {
 		this.takenCareOf = care;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		createNode(eventWriter, "noOfLegs", String.valueOf(this.noOfLegs));
+		createNode(eventWriter, "name", String.valueOf(this.name));
+		createNode(eventWriter, "maintenanceCost", String.valueOf(this.maintenanceCost));
+		createNode(eventWriter, "dangerPerc", String.valueOf(this.dangerPerc));
+		createNode(eventWriter, "takenCareOf", String.valueOf(this.takenCareOf));
+	}
+	
+	public void decodeFromXML(Element element) {
+		setNoOfLegs(Integer.valueOf(element.getElementsByTagName("noOfLegs").item(0).getTextContent()));
+		setName(element.getElementsByTagName("name").item(0).getTextContent());
+		setMaintenenceCost(Double.valueOf(element.getElementsByTagName("maintenanceCost").item(0).getTextContent()));
+		setDangerPerc(Double.valueOf(element.getElementsByTagName("dangerPerc").item(0).getTextContent()));
+		setTakenCareOf(Boolean.valueOf(element.getElementsByTagName("takenCareOf").item(0).getTextContent()));
 	}
 }

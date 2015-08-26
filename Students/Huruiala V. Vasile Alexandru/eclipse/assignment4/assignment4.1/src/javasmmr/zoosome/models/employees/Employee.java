@@ -1,8 +1,17 @@
 package javasmmr.zoosome.models.employees;
 
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
 import java.math.BigDecimal;
 
-public abstract class Employee {
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
+import javasmmr.zoosome.models.interfaces.XML_Parsable;
+
+public abstract class Employee implements XML_Parsable{
 	private static final String DEFAULT_NAME = null;
 	private static final long DEFAULT_ID = 0;
 	private static final BigDecimal DEFAULT_SALARY = null;
@@ -61,5 +70,19 @@ public abstract class Employee {
 	
 	public void setIsDead(boolean newIsDead) {
 		this.isDead = newIsDead;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		createNode(eventWriter, "name", String.valueOf(this.getName()));
+		createNode(eventWriter, "id", String.valueOf(this.getId()));
+		createNode(eventWriter, "salary", String.valueOf(this.getSalary()));
+		createNode(eventWriter, "isDead", String.valueOf(this.getIsDead()));
+	}
+
+	public void decodeFromXML(Element element) {
+		setName(element.getElementsByTagName("name").item(0).getTextContent());
+		setId(Long.valueOf(element.getElementsByTagName("id").item(0).getTextContent()));
+		setSalary(new BigDecimal(element.getElementsByTagName("salary").item(0).getTextContent()));
+		setIsDead(Boolean.valueOf(element.getElementsByTagName("isDead").item(0).getTextContent()));
 	}
 }

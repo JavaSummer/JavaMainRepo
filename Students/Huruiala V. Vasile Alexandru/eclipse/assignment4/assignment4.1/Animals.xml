@@ -1,0 +1,197 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Carl John the bass</name>
+	<maintenanceCost>0.1304815606153357</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<avgSwimDepth>49</avgSwimDepth>
+	<waterType>Saltwater</waterType>
+	<DISCRIMINANT>BASS</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Aaron Vincent the crocodile</name>
+	<maintenanceCost>1.6173786740235814</maintenanceCost>
+	<dangerPerc>0.1904633871897773</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>0</noOfLegs>
+	<name>Alan-Stephen the trebuchet</name>
+	<maintenanceCost>6.382056208227344</maintenanceCost>
+	<dangerPerc>0.3670176705278247</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>351</range>
+	<isMobile>false</isMobile>
+	<DISCRIMINANT>TREBUCHET</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Kyle the hummingbird</name>
+	<maintenanceCost>0.19235010046214718</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>34</avgFlightAltitude>
+	<DISCRIMINANT>HUMMINGBIRD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Dylan the dove</name>
+	<maintenanceCost>0.3209884269009319</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>45</avgFlightAltitude>
+	<DISCRIMINANT>DOVE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>8</noOfLegs>
+	<name>Raymond-Gary the scorpion</name>
+	<maintenanceCost>0.845430692428423</maintenanceCost>
+	<dangerPerc>0.38907008656743125</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>false</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>SCORPION</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Richard the turtle</name>
+	<maintenanceCost>0.5912941232670176</maintenanceCost>
+	<dangerPerc>9.35949483601987E-4</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Brian the crocodile</name>
+	<maintenanceCost>1.8124483909674916</maintenanceCost>
+	<dangerPerc>0.15105853683705656</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>0</noOfLegs>
+	<name>Roy Joseph the trebuchet</name>
+	<maintenanceCost>6.459301103456832</maintenanceCost>
+	<dangerPerc>0.06104583574616016</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>381</range>
+	<isMobile>false</isMobile>
+	<DISCRIMINANT>TREBUCHET</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Steven the bear</name>
+	<maintenanceCost>2.634556216577836</maintenanceCost>
+	<dangerPerc>0.21700595553924037</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<normalBodyTemp>37.940937927039975</normalBodyTemp>
+	<percBodyHair>67.58001913412681</percBodyHair>
+	<DISCRIMINANT>BEAR</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Timothy Forrest the ballista</name>
+	<maintenanceCost>2.0059899662145253</maintenanceCost>
+	<dangerPerc>0.12954707494246182</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>298</range>
+	<isMobile>true</isMobile>
+	<DISCRIMINANT>BALLISTA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>0</noOfLegs>
+	<name>Vincent the trebuchet</name>
+	<maintenanceCost>6.76878911572397</maintenanceCost>
+	<dangerPerc>0.31934440981247875</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>365</range>
+	<isMobile>false</isMobile>
+	<DISCRIMINANT>TREBUCHET</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Raymond Nicholas the lionfish</name>
+	<maintenanceCost>0.2511267337211596</maintenanceCost>
+	<dangerPerc>0.11248409444187181</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<avgSwimDepth>33</avgSwimDepth>
+	<waterType>Freshwater</waterType>
+	<DISCRIMINANT>LIONFISH</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Jonathan the hummingbird</name>
+	<maintenanceCost>0.11744548567001938</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>32</avgFlightAltitude>
+	<DISCRIMINANT>HUMMINGBIRD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Ralph the eagle</name>
+	<maintenanceCost>1.9604285851207683</maintenanceCost>
+	<dangerPerc>0.09969210797345739</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>124</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Roger-John the awesome kangaroo</name>
+	<maintenanceCost>1.3802101695539588</maintenanceCost>
+	<dangerPerc>0.010124503710261239</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<normalBodyTemp>38.64632114604672</normalBodyTemp>
+	<percBodyHair>45.5657753311715</percBodyHair>
+	<DISCRIMINANT>KANGAROO</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Ethan the lizard</name>
+	<maintenanceCost>0.5777211306048038</maintenanceCost>
+	<dangerPerc>0.006177230126870917</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Jose George the ballista</name>
+	<maintenanceCost>2.108466152607022</maintenanceCost>
+	<dangerPerc>0.12023477542112843</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>230</range>
+	<isMobile>true</isMobile>
+	<DISCRIMINANT>BALLISTA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Michael the dragon</name>
+	<maintenanceCost>5.723835546115251</maintenanceCost>
+	<dangerPerc>0.18441139026933628</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>DRAGON</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Carl the ballista</name>
+	<maintenanceCost>2.278638897507656</maintenanceCost>
+	<dangerPerc>0.1900417056070573</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<range>223</range>
+	<isMobile>false</isMobile>
+	<DISCRIMINANT>BALLISTA</DISCRIMINANT>
+</ANIMAL>
+</content>

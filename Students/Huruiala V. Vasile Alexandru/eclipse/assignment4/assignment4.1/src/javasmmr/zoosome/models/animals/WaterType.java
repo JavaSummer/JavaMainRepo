@@ -3,6 +3,9 @@ package javasmmr.zoosome.models.animals;
 public enum WaterType {
 	Saltwater, Freshwater;
 	
+	private static final String SALTWATER = "Saltwater";
+	private static final String FRESHWATER = "Freshwater";
+	
 	private int code;
 	
 	static {
@@ -19,6 +22,16 @@ public enum WaterType {
 		case 0: return Saltwater;
 		case 1: return Freshwater;
 		default: return null;
+		}
+	}
+	
+	public static WaterType getWater(final String waterString) {
+		if (waterString.equals(SALTWATER)) {
+			return Saltwater; 
+		} else if (waterString.equals(FRESHWATER)) {
+			return Freshwater;
+		} else {
+			return null;
 		}
 	}
 }

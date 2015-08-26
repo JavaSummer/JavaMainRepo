@@ -1,6 +1,13 @@
 package javasmmr.zoosome.models.employees;
 
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
 import java.math.BigDecimal;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
 
 import javasmmr.zoosome.models.animals.Animal;
 import javasmmr.zoosome.services.factories.Constants;
@@ -47,5 +54,15 @@ public class Caretaker extends Employee implements Caretaker_I{
 	
 	public void setWorkingHours(double newWorkingHours) {
 		this.workingHours = newWorkingHours;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, "workingHours", String.valueOf(this.getWorkingHours()));
+	}
+
+	public void decodeFromXML(Element element) {
+		super.decodeFromXML(element);
+		setWorkingHours(Double.valueOf(element.getElementsByTagName("workingHours").item(0).getTextContent()));
 	}
 }

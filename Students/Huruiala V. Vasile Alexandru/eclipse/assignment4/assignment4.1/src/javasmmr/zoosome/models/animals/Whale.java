@@ -1,5 +1,12 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoosome.services.factories.Constants;
+
 public class Whale extends Mammal {
 	private static final String DEFAULT_NAME = "Blue whale";
 	private static final int DEFAULT_NUMBER_OF_LEGS = 2;
@@ -14,5 +21,10 @@ public class Whale extends Mammal {
 	
 	public Whale(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final double normalTemp, final double muchHair) {
 		super(animalName, numberOfLegs, maintenanceCost, dangerPerc, normalTemp, muchHair);
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, String.valueOf(Constants.Animals.Mammal.WHALE));
 	}
 }
