@@ -1,0 +1,50 @@
+There are animals that still need to be cared of!
+Lizard / Curt Connors still needs to be taken care of!
+Hesperiidae still needs to be taken care of!
+Coccinellidae still needs to be taken care of!
+Zazu still needs to be taken care of!
+Hesperiidae still needs to be taken care of!
+MoonJellyfishX still needs to be taken care of!
+Coccinellidae still needs to be taken care of!
+Viserion still needs to be taken care of!
+MoonJellyfishX still needs to be taken care of!
+Lizard / Curt Connors still needs to be taken care of!
+Viserion still needs to be taken care of!
+Black Widow still needs to be taken care of!
+Sansa still needs to be taken care of!
+Rafiki still needs to be taken care of!
+Woody still needs to be taken care of!
+
+saved list:
+Dory
+Viserion
+MoonJellyfishX
+Hesperiidae
+Rafiki
+Hesperiidae
+Donatello
+Sansa
+MoonJellyfishX
+Hesperiidae
+Coccinellidae
+Woody
+MoonJellyfishX
+Woody
+Donatello
+
+loaded list:
+Dory
+Viserion
+MoonJellyfishX
+Hesperiidae
+Rafiki
+Hesperiidae
+Donatello
+Sansa
+MoonJellyfishX
+Hesperiidae
+Coccinellidae
+Woody
+MoonJellyfishX
+Woody
+Donatello

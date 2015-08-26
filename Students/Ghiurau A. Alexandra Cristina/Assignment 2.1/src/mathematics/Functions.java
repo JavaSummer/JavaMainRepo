@@ -77,6 +77,7 @@ public class Functions {
 		return c;
 	}
 
+
 	/**
 	 * Polynomial long division algorithm:
 	 * 
@@ -93,7 +94,7 @@ public class Functions {
 	 *         divisor from answer1 => repeat until the degree of the newly
 	 *         divisor is less than the degree of the newly numerator
 	 * 
-	 * 
+	 *
 	 */
 	public static Polynomial[] divison(Polynomial a, Polynomial b) {
 
@@ -129,14 +130,35 @@ public class Functions {
 
 		} else {
 
-			Polynomial auxAp = new Polynomial();			
-			auxAp = a;
+			Polynomial auxAp = new Polynomial();
 			
-			while (auxAp.getDegree() >= b.getDegree()) {
-				quotient.addCoefficient(auxAp.getDegree() - b.getDegree(),
-						auxAp.returnCoefAtDegree(auxAp.getCoef().size()-1) / b.returnCoefAtDegree(b.getDegree()-1));
-				auxAp = multiply(quotient, b);
-				auxAp = subtraction(a, auxAp);
+
+			auxAp = a;
+			//cam aici crapa, desi acuma am while infinit 
+			// din cauza functiei multiply care imi creste mereu gradul de auxAp mai mult decat ar trebui
+			//si deci nu mai iese din loop niciodata
+			//iti trebuie o metoda ce sterge toate 0-urile de pe gradele maxime
+			//gen 1 2 0 3 4 e ok - doar coef
+			//daca e asa getDegree va da 6? sau 5-> 0 0 2 5 0 7  tb sa fie 2 5 0 7 
+			//hm, stau sa ma gandesc daca ajunge sa arate asa
+			while (auxAp.countNonZero() >= b.countNonZero()) {
+				quotient.addCoefficient(auxAp.countNonZero() - b.countNonZero(),
+						auxAp.returnCoefAtDegree(auxAp.getCoef().size()-1) / b.returnCoefAtDegree(b.countNonZero()-1));
+				
+				Polynomial temp = new Polynomial();//practic pui coeficientul ^ ala de sus pe gradul tot de acolo
+				
+				for (int i = auxAp.countNonZero() - b.countNonZero() - 1; i >= 0; i--) {
+					temp.getCoef().add(0D);
+				}
+				temp.getCoef().add(auxAp.returnCoefAtDegree(auxAp.getCoef().size()-1) / b.returnCoefAtDegree(b.countNonZero()-1));
+				//cred ca asa ca toate dupa elementul ala sa fie 0 dar sa nu fie nimic de grad mai mare, aha. doar ca trebuia sa pun 
+				//cred " returnCoefAtDegree "
+				auxAp = subtraction(auxAp, multiply(b, temp));
+				System.out.println("The degree of Auxap: "+ auxAp.countNonZero());
+				auxAp.decreaseDeg();//ca nu era salvat :))
+				System.out.println("The degree of Auxap: "+ auxAp.countNonZero());
+				//auxAp = multiply(quotient, b); 
+				//auxAp = subtraction(a, auxAp);//aici de ce scazi din a, parca a nu se modifica
 			}
 
 			remainder = auxAp;

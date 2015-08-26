@@ -38,7 +38,7 @@ public abstract class Insect extends Animal {
 	}
 
 	public void decodeFromXml(Element element) {
-		super.decodeFromXml(element);
+		//super.decodeFromXml(element);
 		setCanFly(Boolean.valueOf(element.getElementsByTagName("canFly").item(0).getTextContent()));
 		setDangerous(Boolean.valueOf(element.getElementsByTagName("isDangerous").item(0).getTextContent()));
 	}

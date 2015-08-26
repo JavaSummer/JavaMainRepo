@@ -14,6 +14,11 @@ public abstract class Bird extends Animal {
 		// TODO Auto-generated constructor stub
 	}
 
+	/*public Bird(double maintenanceCost, double dangerPerc) {
+		super(maintenanceCost, dangerPerc);
+		// TODO Auto-generated constructor stub
+	}*/
+
 	boolean migrates;
 	int avgFlightAltitude;
 
@@ -40,7 +45,7 @@ public abstract class Bird extends Animal {
 	}
 
 	public void decodeFromXml(Element element) {
-		super.decodeFromXml(element);
+		//super.decodeFromXml(element);
 		setMigrates(Boolean.valueOf(element.getElementsByTagName("migrates").item(0).getTextContent()));
 		setAvgFlightAltitude(
 				Integer.valueOf(element.getElementsByTagName("avgFlightAltitude").item(0).getTextContent()));

@@ -12,7 +12,7 @@ public class Woodpecker extends Bird {
 		super(7.5, 0.5);
 		setName("Woody");
 		setNrOfLegs(2);
-		setAvgFlightAltitude(100);
+		setAvgFlightAltitude(95);
 		setMigrates(true);
 	}
 

@@ -39,7 +39,7 @@ public abstract class Mammal extends Animal {
 	}
 
 	public void decodeFromXml(Element element) {
-		super.decodeFromXml(element);
+		//super.decodeFromXml(element);
 		setNormalBodyTemp(Float.valueOf(element.getElementsByTagName("normalBodyTemp").item(0).getTextContent()));
 		setPercBodyTemp(Float.valueOf(element.getElementsByTagName("percbodyHair").item(0).getTextContent()));
 	}
