@@ -5,4 +5,4 @@
  * @author Adina
  *
  */
-package javasmmr.zoowsome.models;
+package javasmmr.zoowsome.repositories;

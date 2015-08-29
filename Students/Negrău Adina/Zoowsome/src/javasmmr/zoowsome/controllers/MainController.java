@@ -1,13 +1,16 @@
 package javasmmr.zoowsome.controllers;
 import javasmmr.zoowsome.models.employees.*;
+
+import java.io.FileNotFoundException;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+
+import javax.xml.stream.XMLStreamException;
+
 import javasmmr.zoowsome.models.animals.*;
 import javasmmr.zoowsome.services.animalfactories.*;
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import javasmmr.zoowsome.repositories.*;
+
 public class MainController {
 
 	public static void main(String[] args) {
@@ -34,7 +37,7 @@ public class MainController {
 		aList.add(a3);
  		for(Caretaker c : cList ){
 			for(Animal a : aList){
-				if(c.getIsDead() == false && a.getTakenCareOf() != true){
+				if(!(c.getIsDead()) && !(a.getTakenCareOf())){
 					String result = c.takeCareOf(a);
 					if(result.equals(Constants.Employees.Caretakers.TCO_KILLED)){
 						c.setIsDead(true);
@@ -53,5 +56,18 @@ public class MainController {
  		}
  		
 
+ 		AnimalRepository aR = new AnimalRepository();
+ 		try{
+ 			aR.save(aList);
+ 		}
+ 		catch(FileNotFoundException e){
+ 			System.out.println("File was not found");
+ 		}
+ 		catch(XMLStreamException xe){
+ 			System.out.println("XMLStream exception!");
+ 		}
+ 		
+ 		
+ 		
  	}
 }

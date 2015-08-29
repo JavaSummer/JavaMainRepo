@@ -1,4 +1,5 @@
 package javasmmr.zoowsome.models.animals;
+import org.w3c.dom.Element;
 
 public abstract class Mammal extends Animal {
 
@@ -17,11 +18,17 @@ public abstract class Mammal extends Animal {
 		return percBodyHair;
 	}
 	
-	public void setTemperature(float t){
-		normalBodyTemperature = t;
+	public void setTemperature(float normalBodyTemperature){
+		this.normalBodyTemperature = normalBodyTemperature;
 	}
 	
-	public void setBodyHair(float h){
-		percBodyHair = h;
+	public void setBodyHair(float percBodyHair){
+		this.percBodyHair = percBodyHair;
 	}
+	
+	public void decodeFromXml(Element element){
+		setTemperature(Float.valueOf(element.getElementsByTagName("normalBodyTemperature").item(0).getTextContent()));
+		setBodyHair(Float.valueOf(element.getElementsByTagName("percBodyHair").item(0).getTextContent()));
+	}
+	
 }

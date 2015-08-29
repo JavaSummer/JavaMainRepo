@@ -1,5 +1,11 @@
 package javasmmr.zoowsome.models.animals;
 import java.util.Date;
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+import javasmmr.zoowsome.services.animalfactories.*;
+import javasmmr.zoowsome.services.animalfactories.Constants;
+
+import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -35,4 +41,9 @@ public class Boa extends Reptile{
 	     return 0;
 	}
 	*/
+	public void encodeToXml(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Reptile.Boa);
+	}
+	
 }

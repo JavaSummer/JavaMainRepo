@@ -1,11 +1,7 @@
 package javasmmr.zoowsome.services.animalfactories;
 import javasmmr.zoowsome.models.animals.*;
 
-
-
 public class MammalFactory extends SpeciesFactory {
-
-
 	public Animal getAnimal(String type){
 		if(Constants.Animals.Mammal.Monkey.equals(type)){
 			return new Monkey();
