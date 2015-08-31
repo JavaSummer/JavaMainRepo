@@ -164,7 +164,7 @@ public class MainController {
 			System.out.println(io.getMessage());
 		}
 		
-		BigFactory.printArrayListEmployeeDetails(employeeList);
+		BigFactory.printArrayListEmployeeDetails(employeesFromFile);
 		
 		LocalDateTime dt = LocalDateTime.now();
 		System.out.println(dt);

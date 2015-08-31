@@ -1,11 +1,11 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
-
-import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
 
 public abstract class Aquatic extends Animal {
 	private static final int DEFAULT_AVG_SWIM_DEPTH = 0;

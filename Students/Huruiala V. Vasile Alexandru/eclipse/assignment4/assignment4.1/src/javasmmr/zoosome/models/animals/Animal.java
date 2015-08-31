@@ -1,13 +1,13 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
 
 import javasmmr.zoosome.models.interfaces.XML_Parsable;
-
-import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
 
 public abstract class Animal implements Killer, XML_Parsable{
 	private static final String DEFAULT_NAME = null;

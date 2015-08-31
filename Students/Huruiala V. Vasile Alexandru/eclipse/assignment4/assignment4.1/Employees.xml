@@ -1,44 +1,50 @@
 <?xml version="1.0"?><content>
-<ANIMAL>
-	<name>Jason(caretaker)</name>
-	<id>3471089261253</id>
-	<salary>1000</salary>
-	<isDead>false</isDead>
-	<workingHours>0.11506584572936641</workingHours>
-</ANIMAL>
-<ANIMAL>
-	<name>Billy-Juan Alan(caretaker)</name>
-	<id>8012146806332</id>
-	<salary>1000</salary>
-	<isDead>false</isDead>
-	<workingHours>0.23773362221869698</workingHours>
-</ANIMAL>
-<ANIMAL>
-	<name>Howard Bobby(caretaker)</name>
-	<id>7044221614424</id>
-	<salary>1000</salary>
-	<isDead>false</isDead>
-	<workingHours>0.9629777659383638</workingHours>
-</ANIMAL>
-<ANIMAL>
-	<name>Austin(caretaker)</name>
-	<id>8956479285575</id>
+<EMPLOYEE>
+	<name>Anthony Henry(caretaker)</name>
+	<id>6873607180052</id>
 	<salary>1000</salary>
 	<isDead>true</isDead>
-	<workingHours>3.4050151983013954</workingHours>
-</ANIMAL>
-<ANIMAL>
-	<name>Jordan(caretaker)</name>
-	<id>7963974145122</id>
+	<workingHours>2.2905328144110677</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Richard Noah(caretaker)</name>
+	<id>635888831997</id>
 	<salary>1000</salary>
 	<isDead>false</isDead>
-	<workingHours>1.23121088427603</workingHours>
-</ANIMAL>
-<ANIMAL>
-	<name>Billy(caretaker)</name>
-	<id>1847936983430</id>
+	<workingHours>0.010386412555392494</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Kenneth Benjamin Scott(caretaker)</name>
+	<id>419133231444</id>
 	<salary>1000</salary>
 	<isDead>true</isDead>
-	<workingHours>5.891533847392978</workingHours>
-</ANIMAL>
+	<workingHours>5.368896821770626</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Eric(caretaker)</name>
+	<id>6695538431207</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>8.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Stephen(caretaker)</name>
+	<id>8913519806823</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>8.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Kevin William(caretaker)</name>
+	<id>6150334445925</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>8.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
 </content>

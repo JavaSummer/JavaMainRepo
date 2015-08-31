@@ -7,5 +7,6 @@ import org.w3c.dom.Element;
 
 public interface XML_Parsable {
 	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException;
+
 	public void decodeFromXML(Element element);
 }

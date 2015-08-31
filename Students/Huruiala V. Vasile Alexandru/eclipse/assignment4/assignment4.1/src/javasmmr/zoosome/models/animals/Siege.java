@@ -1,11 +1,11 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
-
-import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
 
 //The secret 6th class the pdf doesn't tell you about
 public abstract class Siege extends Animal {

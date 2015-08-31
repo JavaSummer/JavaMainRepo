@@ -1,6 +1,6 @@
 package javasmmr.zoosome.models.animals;
 
-import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
 
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;

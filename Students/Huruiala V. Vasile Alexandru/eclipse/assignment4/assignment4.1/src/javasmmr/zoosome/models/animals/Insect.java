@@ -1,11 +1,11 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
-
-import static javasmmr.zoosome.repositories.AnimalRepository.createNode;
 
 public abstract class Insect extends Animal {
 	private static final boolean DEFAULT_CAN_FLY = false;
