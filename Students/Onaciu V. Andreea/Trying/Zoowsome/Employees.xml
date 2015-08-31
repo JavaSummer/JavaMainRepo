@@ -1,0 +1,162 @@
+<?xml version="1.0"?><content>
+<EMPLLOYEE>
+	<id>1000399532657</id>
+	<name>Jack</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000245470135</id>
+	<name>Kevin</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>35.599999999999994</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000717877746</id>
+	<name>Lucas</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000846873585</id>
+	<name>Jack</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000368886163</id>
+	<name>Bill</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000696090475</id>
+	<name>Jack</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000995877332</id>
+	<name>Mary</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000307367650</id>
+	<name>William</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000701974001</id>
+	<name>William</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000534531174</id>
+	<name>Ethan</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>34.6</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000137886933</id>
+	<name>Jacob</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000067224747</id>
+	<name>Cristal</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000518938615</id>
+	<name>Logan</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000139642799</id>
+	<name>Alexander</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000340836567</id>
+	<name>Luke</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000547674631</id>
+	<name>Daniel</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>35.3</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000168372537</id>
+	<name>Noah</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000874799445</id>
+	<name>Michael</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000023719851</id>
+	<name>Jon</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<id>1000791483481</id>
+	<name>Ethan</name>
+	<salary>1500</salary>
+	<isDead>true</isDead>
+	<workingHours>40.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+</content>
