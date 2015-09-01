@@ -84,16 +84,22 @@ public class MatrixOperations{
 		int q = second[1].length;
 		BigDecimal[][] multiply = new BigDecimal[m][q];
 		BigDecimal sum = new BigDecimal(0);
-		for (int i=0; i<m; i++){
-			for(int j=0; j<q; j++){
-				for(int k=0; k<p; k++){
-					sum = sum.add(first[i][k].multiply(second[k][j]));
+		if(n == p){
+			for (int i=0; i<m; i++){
+				for(int j=0; j<q; j++){
+					for(int k=0; k<p; k++){
+						sum = sum.add(first[i][k].multiply(second[k][j]));
+					}
+					multiply[i][j] = sum;
+					sum=new BigDecimal(0);
 				}
-				multiply[i][j] = sum;
-				sum=new BigDecimal(0);
 			}
-		}
 		return multiply;
+		}
+		else{
+			System.out.println("Could not multiply the given two matrices");
+			return new BigDecimal[0][0];
+		}
 	}
 	
 	/*
@@ -232,6 +238,7 @@ public class MatrixOperations{
 	 * return nr - BigDecimal
 	 */
 	public BigDecimal fillDegree(BigDecimal[][] matrix){
+		BigDecimal nrRows = new BigDecimal(matrix[0].length);
 		BigDecimal nr = new BigDecimal(0);
 		BigDecimal zero = new BigDecimal(0);
 		BigDecimal one = new BigDecimal(1);
@@ -242,6 +249,8 @@ public class MatrixOperations{
 				}
 			}
 		}
-		return nr;
+		BigDecimal nr1 = nrRows.multiply(nrRows);
+		return nr.divide(nr1);
+
 	}
 }
