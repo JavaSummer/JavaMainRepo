@@ -1,7 +1,23 @@
 package javasmmr.zoowsome.repositories;
 
 import org.w3c.dom.Element;
-import javasmmr.zoowsome.models.animals.*;
+
+import javasmmr.zoowsome.models.animals.Animal;
+import javasmmr.zoowsome.models.animals.Boomslang;
+import javasmmr.zoowsome.models.animals.Butterfly;
+import javasmmr.zoowsome.models.animals.Cockroach;
+import javasmmr.zoowsome.models.animals.Cow;
+import javasmmr.zoowsome.models.animals.Eagle;
+import javasmmr.zoowsome.models.animals.Monkey;
+import javasmmr.zoowsome.models.animals.NorthernPike;
+import javasmmr.zoowsome.models.animals.Pelican;
+import javasmmr.zoowsome.models.animals.Shark;
+import javasmmr.zoowsome.models.animals.Spider;
+import javasmmr.zoowsome.models.animals.Tiger;
+import javasmmr.zoowsome.models.animals.Tuatara;
+import javasmmr.zoowsome.models.animals.Tuna;
+import javasmmr.zoowsome.models.animals.Turtle;
+import javasmmr.zoowsome.models.animals.WhiteStork;
 import javasmmr.zoowsome.services.factories.animal.Constants;
 
 /**
@@ -28,8 +44,7 @@ public class AnimalRepository extends EntityRepository<Animal> {
 	 * @return The animals to be created.
 	 */
 	protected final Animal getEntityFromXmlElement(final Element element) {
-		String discriminant = element.getElementsByTagName(
-				Constants.XML_TAGS.DISCRIMINANT).item(0).getTextContent();
+		String discriminant = element.getElementsByTagName(Constants.XML_TAGS.DISCRIMINANT).item(0).getTextContent();
 		switch (discriminant) {
 		case Constants.Animals.Insects.Butterfly:
 			Animal butterfly = new Butterfly(4.0, 0.0);

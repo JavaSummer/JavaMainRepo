@@ -1,13 +1,9 @@
 package javasmmr.zoowsome.services.factories.animal;
 
 import javasmmr.zoowsome.models.animals.Animal;
-
 import javasmmr.zoowsome.models.animals.NorthernPike;
-
 import javasmmr.zoowsome.models.animals.Shark;
 import javasmmr.zoowsome.models.animals.Tuna;
-import javasmmr.zoowsome.services.factories.animal.Constants.Animals;
-import javasmmr.zoowsome.services.factories.animal.Constants.Animals.Aquatic;
 
 /**
  * 

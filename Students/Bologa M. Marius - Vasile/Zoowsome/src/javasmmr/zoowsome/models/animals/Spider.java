@@ -1,5 +1,7 @@
 package javasmmr.zoowsome.models.animals;
-import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -80,10 +82,8 @@ public class Spider extends Insect {
 	 * @throws XMLStreamException
 	 *             .
 	 */
-	public void encodeToXml(final XMLEventWriter eventWriter) 
-			throws XMLStreamException {
+	public void encodeToXml(final XMLEventWriter eventWriter) throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.
-				XML_TAGS.DISCRIMINANT, Constants.Animals.Insects.Spider);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Insects.Spider);
 	}
 }

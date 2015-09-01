@@ -16,8 +16,7 @@ public class CaretakerFactory extends EmployeeAbstractFactory {
 	/**
 	 * 
 	 */
-	String[] name = { "Tom", "Arthur", "Mike", "Emma",
-			"Jacob", "Mia", "Sophia", "Olivia", "William", "Emily", "Daniel",
+	String[] name = { "Tom", "Arthur", "Mike", "Emma", "Jacob", "Mia", "Sophia", "Olivia", "William", "Emily", "Daniel",
 			"Aria", "John", "Caleb", "Jack", "Samantha", "Zoe" };
 
 	/**
@@ -30,9 +29,8 @@ public class CaretakerFactory extends EmployeeAbstractFactory {
 	 */
 	public final Caretaker getEmployee(final String type) throws Exception {
 		if (Constants.Employees.Caretaker.equals(type)) {
-			return new Caretaker(name[(int) (
-					Math.random() * name.length)], UUID.randomUUID(),
-new BigDecimal((Math.random())*1000).setScale(3, BigDecimal.ROUND_CEILING));
+			return new Caretaker(name[(int) (Math.random() * name.length)], UUID.randomUUID(),
+					new BigDecimal((Math.random()) * 1000).setScale(3, BigDecimal.ROUND_CEILING));
 
 		} else {
 			throw new Exception("No  worker!");

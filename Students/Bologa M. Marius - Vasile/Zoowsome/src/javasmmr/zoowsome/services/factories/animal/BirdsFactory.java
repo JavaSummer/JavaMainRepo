@@ -1,11 +1,8 @@
 package javasmmr.zoowsome.services.factories.animal;
 
 import javasmmr.zoowsome.models.animals.Animal;
-
 import javasmmr.zoowsome.models.animals.Eagle;
-
 import javasmmr.zoowsome.models.animals.Pelican;
-
 import javasmmr.zoowsome.models.animals.WhiteStork;
 
 /**

@@ -12,9 +12,9 @@ public abstract class EmployeeAbstractFactory {
 	 * 
 	 * @param type
 	 *            Type of employee
-	 * @return  The employee.
-	 * @throws Exception .
-	 *             .
+	 * @return The employee.
+	 * @throws Exception
+	 *             . .
 	 */
 	public abstract Employee getEmployee(String type) throws Exception;
 }

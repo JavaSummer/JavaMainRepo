@@ -1,5 +1,7 @@
 package javasmmr.zoowsome.models.animals;
-import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
@@ -63,12 +65,13 @@ public class Shark extends Aquatic {
 		setNrOfLegs(0);
 		setWater(typeW);
 	}
+
 	/**
 	 * @return Predisposition to kill.
 	 * 
 	 */
-		public double getPredisposition() {	
-			Calendar calendar = new GregorianCalendar();
+	public double getPredisposition() {
+		Calendar calendar = new GregorianCalendar();
 		int am = calendar.get(Calendar.AM);
 		int pm = calendar.get(Calendar.PM);
 		if ((am > 5) && (am < 9) && ((pm > 6) && (pm < 10))) {
@@ -77,14 +80,15 @@ public class Shark extends Aquatic {
 		return 0;
 
 	}
-		/**
-		 * @param eventWriter To encode to XML.
-		 * @throws XMLStreamException .
-		 */
-		public void encodeToXml(final XMLEventWriter eventWriter) 
-				throws XMLStreamException {
-			super.encodeToXml(eventWriter);
-			createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
-			Constants.Animals.Aquatic.Shark);
-			}
+
+	/**
+	 * @param eventWriter
+	 *            To encode to XML.
+	 * @throws XMLStreamException
+	 *             .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Aquatic.Shark);
+	}
 }

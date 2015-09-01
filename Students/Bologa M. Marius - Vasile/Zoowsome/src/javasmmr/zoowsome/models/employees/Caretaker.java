@@ -1,5 +1,7 @@
 package javasmmr.zoowsome.models.employees;
 
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
 import java.math.BigDecimal;
 import java.util.UUID;
 
@@ -7,7 +9,7 @@ import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
 
 import org.w3c.dom.Element;
-import static javasmmr.zoowsome.repositories.EmployeeRepository.createNode;
+
 import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.services.factories.animal.Constants;
 
@@ -30,8 +32,7 @@ public class Caretaker extends Employee implements Caretaker_I {
 	 * @param salary
 	 *            Salary.
 	 */
-	public Caretaker(final String name, final UUID id, 
-			final BigDecimal salary) {
+	public Caretaker(final String name, final UUID id, final BigDecimal salary) {
 		super(name, id, salary);
 	}
 
@@ -78,24 +79,24 @@ public class Caretaker extends Employee implements Caretaker_I {
 	public final void setWorkingHours(final double workingHours) {
 		this.workingHours = workingHours;
 	}
+
 	/**
-	 * @param eventWriter Caretaker to encode.
-	 * @throws XMLStreamException .
+	 * @param eventWriter
+	 *            Caretaker to encode.
+	 * @throws XMLStreamException
+	 *             .
 	 */
-	public void encodeToXml(final XMLEventWriter eventWriter) 
-     throws XMLStreamException {
-				super.encodeToXml(eventWriter);
-				createNode(eventWriter, "workingHours",
-						String.valueOf(this.workingHours));
-				createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT,
-						Constants.Employees.Caretaker);
-			}
+	public void encodeToXml(final XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+		createNode(eventWriter, "workingHours", String.valueOf(this.workingHours));
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Employees.Caretaker);
+	}
+
 	/**
-	 * @param element Element to decode.
+	 * @param element
+	 *            Element to decode.
 	 */
-			public void decodeFromXml(final Element element) {
-				setWorkingHours(Double.valueOf(element.
-						getElementsByTagName("workingHours").
-						item(0).getTextContent()));
-			}
+	public void decodeFromXml(final Element element) {
+		setWorkingHours(Double.valueOf(element.getElementsByTagName("workingHours").item(0).getTextContent()));
+	}
 }

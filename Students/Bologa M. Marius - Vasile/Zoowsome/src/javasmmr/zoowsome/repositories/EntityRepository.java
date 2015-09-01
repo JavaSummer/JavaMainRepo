@@ -66,33 +66,31 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 
 	/**
 	 * 
-	 * @param entities Animals or employees.
-	 * @throws FileNotFoundException .
-	 * @throws XMLStreamException .
+	 * @param entities
+	 *            Animals or employees.
+	 * @throws FileNotFoundException
+	 *             .
+	 * @throws XMLStreamException
+	 *             .
 	 */
-	public void save(final ArrayList<T> entities)
-			throws FileNotFoundException, XMLStreamException {
+	public void save(final ArrayList<T> entities) throws FileNotFoundException, XMLStreamException {
 		XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
-		XMLEventWriter eventWriter = outputFactory.
-				createXMLEventWriter(new FileOutputStream(this.xmlFilename));
+		XMLEventWriter eventWriter = outputFactory.createXMLEventWriter(new FileOutputStream(this.xmlFilename));
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
 		StartDocument startDocument = eventFactory.createStartDocument();
 		eventWriter.add(startDocument);
-		StartElement configStartElement = eventFactory.
-				createStartElement("", "", "content");
+		StartElement configStartElement = eventFactory.createStartElement("", "", "content");
 		eventWriter.add(configStartElement);
 		eventWriter.add(end);
 
 		for (XML_Parsable entity : entities) {
-			StartElement sElement = eventFactory.
-					createStartElement("", "", this.entityTag);
+			StartElement sElement = eventFactory.createStartElement("", "", this.entityTag);
 			eventWriter.add(sElement);
 			eventWriter.add(end);
 			entity.encodeToXml(eventWriter);
 
-			EndElement eElement = eventFactory.
-					createEndElement("", "", this.entityTag);
+			EndElement eElement = eventFactory.createEndElement("", "", this.entityTag);
 			eventWriter.add(eElement);
 			eventWriter.add(end);
 		}
@@ -101,15 +99,18 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 		eventWriter.add(eventFactory.createEndDocument());
 		eventWriter.close();
 	}
-/**
- * 
- * @return  
- * @throws ParserConfigurationException .
- * @throws SAXException .
- * @throws IOException .
- */
-	public ArrayList<T> load() throws ParserConfigurationException, 
-	SAXException, IOException {
+
+	/**
+	 * 
+	 * @return
+	 * @throws ParserConfigurationException
+	 *             .
+	 * @throws SAXException
+	 *             .
+	 * @throws IOException
+	 *             .
+	 */
+	public ArrayList<T> load() throws ParserConfigurationException, SAXException, IOException {
 		ArrayList<T> entities = new ArrayList<T>();
 
 		File fXmlFile = new File(this.xmlFilename);
@@ -130,15 +131,19 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 		}
 		return entities;
 	}
-/**
- * 
- * @param eventWriter 
- * @param name The name.
- * @param value The value.
- * @throws XMLStreamException .
- */
-	public static void createNode(final XMLEventWriter eventWriter,
-			final String name, final String value) throws XMLStreamException {
+
+	/**
+	 * 
+	 * @param eventWriter
+	 * @param name
+	 *            The name.
+	 * @param value
+	 *            The value.
+	 * @throws XMLStreamException
+	 *             .
+	 */
+	public static void createNode(final XMLEventWriter eventWriter, final String name, final String value)
+			throws XMLStreamException {
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
 		XMLEvent tab = eventFactory.createDTD("\t");

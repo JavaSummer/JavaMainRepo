@@ -16,8 +16,7 @@ public class EmployeeFactory {
 	 * @throws Exception
 	 *             .
 	 */
-	public final EmployeeAbstractFactory getEmployeeAbstractFactory(
-			final String type) throws Exception {
+	public final EmployeeAbstractFactory getEmployeeAbstractFactory(final String type) throws Exception {
 		if (Constants.Employees.Caretaker.equals(type)) {
 			return new CaretakerFactory();
 		} else {

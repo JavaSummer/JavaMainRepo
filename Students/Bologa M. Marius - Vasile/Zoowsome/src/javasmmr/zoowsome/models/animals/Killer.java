@@ -6,14 +6,15 @@ package javasmmr.zoowsome.models.animals;
  *
  */
 public interface Killer {
-/**
- * 
- * @return .
- */
+	/**
+	 * 
+	 * @return .
+	 */
 	public boolean kill();
-/**
- * 
- * @return .
- */
+
+	/**
+	 * 
+	 * @return .
+	 */
 	public double getPredisposition();
 }

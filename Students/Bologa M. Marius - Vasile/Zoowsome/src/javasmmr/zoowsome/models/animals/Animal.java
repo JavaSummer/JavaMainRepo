@@ -1,9 +1,12 @@
 package javasmmr.zoowsome.models.animals;
 
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
+
 import org.w3c.dom.Element;
-import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+
 import javasmmr.zoowsome.models.interfaces.XML_Parsable;
 
 /**
@@ -134,53 +137,52 @@ public abstract class Animal implements Killer, XML_Parsable {
 	}
 
 	/**
-	 * @param eventWriter Element to encode to XML.
-	 * @throws XMLStreamException .
+	 * @param eventWriter
+	 *            Element to encode to XML.
+	 * @throws XMLStreamException
+	 *             .
 	 */
-	public void encodeToXml(final XMLEventWriter eventWriter) throws 
-	XMLStreamException {
+	public void encodeToXml(final XMLEventWriter eventWriter) throws XMLStreamException {
 		createNode(eventWriter, "nrOfLegs", String.valueOf(this.nrOfLegs));
 		createNode(eventWriter, "name", String.valueOf(this.name));
-		createNode(eventWriter, "maintenanceCost", 
-				String.valueOf(this.maintenanceCost));
+		createNode(eventWriter, "maintenanceCost", String.valueOf(this.maintenanceCost));
 		createNode(eventWriter, "dangerPerc", String.valueOf(this.dangerPerc));
-		createNode(eventWriter, "takenCareOf",
-				String.valueOf(this.takenCareOf));
+		createNode(eventWriter, "takenCareOf", String.valueOf(this.takenCareOf));
 	}
 
 	/**
 	 * 
-	 * @param element Element taht is decoded from XML.
+	 * @param element
+	 *            Element taht is decoded from XML.
 	 */
 	public void decodeFromXml(final Element element) {
-		setNrOfLegs(Integer.valueOf(element.
-				getElementsByTagName("nrOfLegs").item(0).getTextContent()));
+		setNrOfLegs(Integer.valueOf(element.getElementsByTagName("nrOfLegs").item(0).getTextContent()));
 		setName(element.getElementsByTagName("name").item(0).getTextContent());
-		setMaintenanceCost(Double.valueOf(
-				element.getElementsByTagName(
-						"maintenanceCost").item(0).getTextContent()));
-		setDangerPerc(Double.valueOf(element.
-				getElementsByTagName("dangerPerc").item(0).getTextContent()));
-		setTakenCareOf(Boolean.valueOf(element.
-				getElementsByTagName("takenCareOf").item(0).getTextContent()));
+		setMaintenanceCost(Double.valueOf(element.getElementsByTagName("maintenanceCost").item(0).getTextContent()));
+		setDangerPerc(Double.valueOf(element.getElementsByTagName("dangerPerc").item(0).getTextContent()));
+		setTakenCareOf(Boolean.valueOf(element.getElementsByTagName("takenCareOf").item(0).getTextContent()));
 	}
-/**
- * 
- * @param valueOf Value of danger percent.
- */
+
+	/**
+	 * 
+	 * @param valueOf
+	 *            Value of danger percent.
+	 */
 	private void setDangerPerc(final Double valueOf) {
 		// TODO Auto-generated method stub
-		
+
 	}
-/**
- * 
- * @param valueOf  Value of maintenance costs.
- */
+
+	/**
+	 * 
+	 * @param valueOf
+	 *            Value of maintenance costs.
+	 */
 	private void setMaintenanceCost(final Double valueOf) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	// I'm not sure if this 2 methods should or not be here 
-	// but without them I get an error-"The method setDangerPerc(Double) 
-	//is undefined for the type Animal".
+	// I'm not sure if this 2 methods should or not be here
+	// but without them I get an error-"The method setDangerPerc(Double)
+	// is undefined for the type Animal".
 }
