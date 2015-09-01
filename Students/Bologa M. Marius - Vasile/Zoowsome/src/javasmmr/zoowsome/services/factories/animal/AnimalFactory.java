@@ -8,9 +8,11 @@ package javasmmr.zoowsome.services.factories.animal;
 public class AnimalFactory {
 	/**
 	 * 
-	 * @param type .
-	 * @return  .
-	 * @throws Exception .
+	 * @param type
+	 *            .
+	 * @return .
+	 * @throws Exception
+	 *             .
 	 */
 	public SpeciesFactory getSpeciesFactory(String type) throws Exception {
 		if (Constants.Species.Mammal.equals(type)) {

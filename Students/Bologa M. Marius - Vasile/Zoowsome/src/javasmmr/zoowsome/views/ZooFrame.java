@@ -1,17 +1,18 @@
 package javasmmr.zoowsome.views;
 
-import javax.swing.JFrame;
-
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 
-import javasmmr.zoowsome.services.factories.animal.Constants.Frames;
-import javasmmr.zoowsome.views.utilities.FrameStack;
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import javasmmr.zoowsome.services.factories.animal.Constants.Frames;
+import javasmmr.zoowsome.views.utilities.FrameStack;
+
 /**
  * 
  * @author Marius Bologa
@@ -22,10 +23,12 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I {
 	 * 
 	 */
 	protected JPanel contentPanel;
-/**
- * 
- * @param title Title of the frame.
- */
+
+	/**
+	 * 
+	 * @param title
+	 *            Title of the frame.
+	 */
 	public ZooFrame(final String title) {
 		FrameStack.getInstance().push(this);
 		setTitle(title);
@@ -38,10 +41,11 @@ public abstract class ZooFrame extends JFrame implements ZooFrame_I {
 		contentPanel.setBackground(Color.green);
 		add(contentPanel, BorderLayout.CENTER);
 	}
-/**
- * 
- * @param a 
- */
+
+	/**
+	 * 
+	 * @param a
+	 */
 	public void setBackButtonActionListener(final ActionListener a) {
 		JPanel buttonPanel = new JPanel();
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.LEFT));

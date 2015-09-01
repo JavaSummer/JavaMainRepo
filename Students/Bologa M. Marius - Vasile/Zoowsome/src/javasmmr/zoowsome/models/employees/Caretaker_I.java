@@ -13,5 +13,5 @@ public interface Caretaker_I {
 	 * @param animal
 	 *            An animal.
 	 */
-	public  String takeCareOf(Animal animal);
+	public String takeCareOf(Animal animal);
 }

@@ -1,6 +1,7 @@
 package javasmmr.zoowsome.services.factories.animal;
 
 import javasmmr.zoowsome.models.animals.Animal;
+
 /**
  * 
  * @author Marius Bologa

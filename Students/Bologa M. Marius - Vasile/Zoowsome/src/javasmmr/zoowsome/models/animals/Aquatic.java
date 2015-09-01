@@ -1,6 +1,6 @@
 package javasmmr.zoowsome.models.animals;
 
-import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
 
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
@@ -47,10 +47,12 @@ public abstract class Aquatic extends Animal {
 	public final void setAvgSwimDepth(final int avgSwimDepth) {
 		this.avgSwimDepth = avgSwimDepth;
 	};
+
 	/**
 	 * 
 	 */
 	private TypeOfWater water;
+
 	/**
 	 * 
 	 * @return Type of water.
@@ -58,38 +60,38 @@ public abstract class Aquatic extends Animal {
 	public final TypeOfWater getWater() {
 		return water;
 	}
-/**
- * 
- * @param water Freshwater or saltwater.
- */
+
+	/**
+	 * 
+	 * @param water
+	 *            Freshwater or saltwater.
+	 */
 	public final void setWater(final TypeOfWater water) {
 		this.water = water;
 	}
 
 	/**
 	 * 
-	 * @param eventWriter Animal to encode  to XML.
-	 * @throws XMLStreamException .
+	 * @param eventWriter
+	 *            Animal to encode to XML.
+	 * @throws XMLStreamException
+	 *             .
 	 */
-		public void encodeToXml(final XMLEventWriter eventWriter) 
-				throws XMLStreamException {
-			super.encodeToXml(eventWriter);
-		
-			createNode(eventWriter, "avgSwimDepth",
-					String.valueOf(this.avgSwimDepth));
-			createNode(eventWriter, "water",
-					String.valueOf(this.water));
-		}
-		/**
-		 * @param element Element to decode.
-		 */
-		public void decodeFromXml(final Element element) { 
-			super.decodeFromXml(element);
-			setAvgSwimDepth(Integer.valueOf(
-							element.getElementsByTagName("avgSwimDepth").
-							item(0).getTextContent()));
-			setWater(TypeOfWater.valueOf(element.getElementsByTagName("water").
-					item(0).getTextContent()));
-				}
-		
+	public void encodeToXml(final XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXml(eventWriter);
+
+		createNode(eventWriter, "avgSwimDepth", String.valueOf(this.avgSwimDepth));
+		createNode(eventWriter, "water", String.valueOf(this.water));
+	}
+
+	/**
+	 * @param element
+	 *            Element to decode.
+	 */
+	public void decodeFromXml(final Element element) {
+		super.decodeFromXml(element);
+		setAvgSwimDepth(Integer.valueOf(element.getElementsByTagName("avgSwimDepth").item(0).getTextContent()));
+		setWater(TypeOfWater.valueOf(element.getElementsByTagName("water").item(0).getTextContent()));
+	}
+
 }

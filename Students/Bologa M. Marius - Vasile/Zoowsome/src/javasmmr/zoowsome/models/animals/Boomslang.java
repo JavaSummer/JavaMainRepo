@@ -1,16 +1,12 @@
 package javasmmr.zoowsome.models.animals;
 
-import static javasmmr.zoowsome.repositories.AnimalRepository.createNode;
-import java.text.SimpleDateFormat;
-import java.time.Month;
+import static javasmmr.zoowsome.repositories.EntityRepository.createNode;
+
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 
 import javax.xml.stream.XMLEventWriter;
 import javax.xml.stream.XMLStreamException;
-
-import org.w3c.dom.Element;
 
 import javasmmr.zoowsome.services.factories.animal.Constants;
 
@@ -77,15 +73,16 @@ public class Boomslang extends Reptile {
 		return 0;
 
 	}
-/**
- * @param eventWriter To encode to XML.
- * @throws XMLStreamException .
- */
-	public void encodeToXml(final XMLEventWriter eventWriter)
-			throws XMLStreamException {
+
+	/**
+	 * @param eventWriter
+	 *            To encode to XML.
+	 * @throws XMLStreamException
+	 *             .
+	 */
+	public void encodeToXml(final XMLEventWriter eventWriter) throws XMLStreamException {
 		super.encodeToXml(eventWriter);
-		createNode(eventWriter, Constants.
-				XML_TAGS.DISCRIMINANT, Constants.Animals.Reptiles.Boomslang);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, Constants.Animals.Reptiles.Boomslang);
 	}
 
 }

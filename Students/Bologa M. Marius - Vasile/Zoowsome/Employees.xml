@@ -1,122 +1,122 @@
 <?xml version="1.0"?><content>
 <EMPLLOYEE>
-	<name>Emily</name>
+	<name>Zoe</name>
 	<isDead>false</isDead>
-	<ID>4284df23-f65f-4a1e-a070-8620e8aaa589</ID>
-	<Salary>561.881</Salary>
-	<workingHours>65.48219839920112</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Daniel</name>
-	<isDead>false</isDead>
-	<ID>fad82769-7b2b-4ac4-a3e6-f97ca309324f</ID>
-	<Salary>323.708</Salary>
-	<workingHours>1.8970332284226732</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Mike</name>
-	<isDead>false</isDead>
-	<ID>1890d961-0a8a-46fa-b79a-f375c56a187f</ID>
-	<Salary>889.868</Salary>
-	<workingHours>7.784888550761582</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Jack</name>
-	<isDead>false</isDead>
-	<ID>f8b560d2-c933-4b7f-b06e-70f1e878bd54</ID>
-	<Salary>381.634</Salary>
-	<workingHours>31.25897833886908</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Tom</name>
-	<isDead>false</isDead>
-	<ID>fc40ef0c-32ee-4a65-959b-65fa2bf4f279</ID>
-	<Salary>366.022</Salary>
-	<workingHours>60.54569115346684</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Aria</name>
-	<isDead>false</isDead>
-	<ID>ddf32595-6b8a-4014-9303-7f39aa975c1d</ID>
-	<Salary>182.359</Salary>
-	<workingHours>16.47936775685381</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Mia</name>
-	<isDead>false</isDead>
-	<ID>957978ff-e473-4e21-98bf-1f50b230fb5d</ID>
-	<Salary>737.218</Salary>
-	<workingHours>84.34997376695613</workingHours>
-	<DISCRIMINANT>Caretaker</DISCRIMINANT>
-</EMPLLOYEE>
-<EMPLLOYEE>
-	<name>Sophia</name>
-	<isDead>false</isDead>
-	<ID>e7089e57-e1a1-4bc4-9af7-8f65eb6c9efb</ID>
-	<Salary>761.954</Salary>
-	<workingHours>84.31492682032042</workingHours>
+	<ID>06839653-f713-4bc4-b863-f4676a696416</ID>
+	<Salary>806.081</Salary>
+	<workingHours>29.25197337868338</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
 	<name>William</name>
 	<isDead>false</isDead>
-	<ID>b5657234-1e16-4165-8f5c-5fb6c5d1238c</ID>
-	<Salary>285.619</Salary>
-	<workingHours>60.43671998084221</workingHours>
+	<ID>d8ada9e8-3e4d-4761-a6a5-6e96dd6fa827</ID>
+	<Salary>424.323</Salary>
+	<workingHours>0.29133071222304796</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
-	<name>John</name>
+	<name>Jacob</name>
 	<isDead>false</isDead>
-	<ID>84379a61-2150-4abb-9466-dadcaf71a6c3</ID>
-	<Salary>933.737</Salary>
-	<workingHours>11.601236475049802</workingHours>
+	<ID>dfa785b1-927d-457e-8b44-01d447c43868</ID>
+	<Salary>330.540</Salary>
+	<workingHours>15.030964238196898</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
-	<name>John</name>
+	<name>Caleb</name>
 	<isDead>false</isDead>
-	<ID>f92e6a6b-131a-463e-b99f-8ee9b918fe61</ID>
-	<Salary>550.145</Salary>
-	<workingHours>77.44616037832377</workingHours>
+	<ID>11a54a39-72b4-49e3-80e3-1080b4c7a23d</ID>
+	<Salary>566.122</Salary>
+	<workingHours>68.76608076017628</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
-	<name>Aria</name>
+	<name>Emma</name>
 	<isDead>false</isDead>
-	<ID>f674f20b-bd39-4b70-8f73-da9273736da3</ID>
-	<Salary>759.232</Salary>
-	<workingHours>23.96698535006294</workingHours>
+	<ID>efa43a16-f993-4d7c-8825-96e47263137c</ID>
+	<Salary>712.351</Salary>
+	<workingHours>65.54458626054837</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>Emma</name>
+	<isDead>false</isDead>
+	<ID>68241def-63a4-4215-a374-b097ae9bc390</ID>
+	<Salary>4.069</Salary>
+	<workingHours>6.851288451830806</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>William</name>
+	<isDead>false</isDead>
+	<ID>10a3dd09-d43a-4859-8180-8d6247d3d9cd</ID>
+	<Salary>173.328</Salary>
+	<workingHours>20.44223366806649</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
 	<name>Zoe</name>
 	<isDead>false</isDead>
-	<ID>2c71567e-bad3-402b-963e-88c27cd6bfd6</ID>
-	<Salary>17.946</Salary>
-	<workingHours>84.33307646049049</workingHours>
+	<ID>b6be6f0a-6ade-4aa4-a679-01a936825e26</ID>
+	<Salary>785.588</Salary>
+	<workingHours>35.10092098041254</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
-	<name>Mike</name>
+	<name>Caleb</name>
 	<isDead>false</isDead>
-	<ID>9f80e3b3-f7a6-4f6f-aa78-5d276ff18c85</ID>
-	<Salary>333.716</Salary>
-	<workingHours>19.221135717875914</workingHours>
+	<ID>35ab95b2-ddb4-4aac-9ffb-8eda94ac13bb</ID>
+	<Salary>924.227</Salary>
+	<workingHours>28.431325557521525</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 <EMPLLOYEE>
-	<name>Jack</name>
+	<name>Mia</name>
 	<isDead>false</isDead>
-	<ID>a2ed3009-da12-4250-bd6a-72c5839a3190</ID>
-	<Salary>443.678</Salary>
-	<workingHours>61.99121860030638</workingHours>
+	<ID>89305152-2b32-41bf-872c-f1e9561d4462</ID>
+	<Salary>774.476</Salary>
+	<workingHours>18.859582169125922</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>Olivia</name>
+	<isDead>false</isDead>
+	<ID>85f45fd5-8640-4691-8cf7-5af9cb07b80e</ID>
+	<Salary>170.580</Salary>
+	<workingHours>41.64779518792437</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>Sophia</name>
+	<isDead>false</isDead>
+	<ID>8eaf0469-26ef-4221-ba20-2834e32e3d95</ID>
+	<Salary>231.090</Salary>
+	<workingHours>10.346087940699011</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>Daniel</name>
+	<isDead>false</isDead>
+	<ID>15cff99b-4b6e-4f48-9f73-836634e1dfb0</ID>
+	<Salary>43.997</Salary>
+	<workingHours>70.69159052945649</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>Tom</name>
+	<isDead>false</isDead>
+	<ID>d60153f7-0177-4f9f-b9ae-eee43256390a</ID>
+	<Salary>965.536</Salary>
+	<workingHours>37.54495079406023</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLLOYEE>
+<EMPLLOYEE>
+	<name>Olivia</name>
+	<isDead>false</isDead>
+	<ID>c513283c-ac09-400e-9f10-ba1e76708222</ID>
+	<Salary>475.997</Salary>
+	<workingHours>93.01591861695967</workingHours>
 	<DISCRIMINANT>Caretaker</DISCRIMINANT>
 </EMPLLOYEE>
 </content>
