@@ -101,7 +101,6 @@ public class CreationOfModels {
 			System.out.println("Problem occurs in the creation of animals.");
 		}
 		}
-
 		}
 		return a;
 		}

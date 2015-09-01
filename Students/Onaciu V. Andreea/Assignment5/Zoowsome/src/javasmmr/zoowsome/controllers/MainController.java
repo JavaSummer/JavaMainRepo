@@ -18,7 +18,7 @@ public class MainController {
 		Caretaker[] employees=zoo.createCaretakers(nrOfEmployees);
 
 /// Assignment 4
-	for (int i=0;i<nrOfEmployees;i++){
+	/*for (int i=0;i<nrOfEmployees;i++){
 		for (int j=0;j<nrOfAnimals;j++)
 		{
 		if(!employees[i].getIsDead() && !a[j].getTakeCareOf()){
@@ -38,29 +38,30 @@ public class MainController {
 		}
 	boolean allTakenCare=true;
 	for (int j=0;j<nrOfAnimals;j++){
+		System.out.println(a[j].getName());
 		if (!a[j].getTakeCareOf()) 
 			System.out.println(j+" The caretakers haven't take care of the "+ a[j].getName()+" yet.");
 			allTakenCare=false;
 		}
 	
 	if (allTakenCare) System.out.println("All the animals are fine.");
-
+*/
 
 	/// Assignment 5
-	// animals
+	
 	AnimalRepository animalRepo = new AnimalRepository();
 			ArrayList<Animal> animals = new ArrayList<>();
 		    for (int i=0;i<nrOfAnimals;i++)
 			   animals.add(a[i]);
 			 animalRepo.save(animals);
-			 //animalRepo.load();
+			 animalRepo.load();
 
     EmployeeRepository employeeRepo=new EmployeeRepository();
     ArrayList<Employee> employeesXML=new ArrayList<>();
     for (int i=0;i<nrOfEmployees;i++)
     	employeesXML.add(employees[i]);
        employeeRepo.save(employeesXML);
-       // employeeRepo.load();
+       employeeRepo.load();
           
 	
 }

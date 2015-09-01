@@ -71,7 +71,7 @@ public class EmployeeRepository {
 		doc.getDocumentElement().normalize();
 		NodeList nodeList = doc.getElementsByTagName(Constants.XML_TAGS.EMPLOYEE);
 		for (int i = 0; i < nodeList.getLength(); i++) {
-			Node node = (Node) nodeList.item(i);
+			org.w3c.dom.Node node =  nodeList.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
 				String discriminant = element.getElementsByTagName(Constants.XML_TAGS.DISCRIMINANT).item(0)

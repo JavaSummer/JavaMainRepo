@@ -40,7 +40,7 @@ public class Caretaker extends Employee implements Caretaker_I{
 			 Constants.Employees.Employee.Caretaker);
 	 }  
  public void decodeFromXml(Element element) {
-	 setWorkingHours(Integer.valueOf(element.getElementsByTagName("workingHours").item(0).getTextContent()));
+	 setWorkingHours(Double.valueOf(element.getElementsByTagName("workingHours").item(0).getTextContent()));
 	 }
  }
  
