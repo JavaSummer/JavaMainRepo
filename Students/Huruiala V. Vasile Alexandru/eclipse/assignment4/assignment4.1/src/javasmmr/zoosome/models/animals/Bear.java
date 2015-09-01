@@ -1,6 +1,13 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
 import java.time.LocalDateTime;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoosome.services.factories.Constants;
 
 public class Bear extends Mammal {
 	private static final String DEFAULT_NAME = "Grizzly bear";
@@ -25,5 +32,10 @@ public class Bear extends Mammal {
 			return 0.5;
 		}
 		return 0.0;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, String.valueOf(Constants.Animals.Mammal.BEAR));
 	}
 }

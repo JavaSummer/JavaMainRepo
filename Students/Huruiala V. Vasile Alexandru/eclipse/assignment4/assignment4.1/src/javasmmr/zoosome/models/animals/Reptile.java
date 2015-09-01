@@ -1,5 +1,12 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import org.w3c.dom.Element;
+
 public abstract class Reptile extends Animal {
 	private static final boolean DEFAULT_LAYS_EGGS = false;
 	
@@ -21,5 +28,16 @@ public abstract class Reptile extends Animal {
 	
 	public void setLaysEggs(final boolean hasEggs) {
 		this.laysEggs = hasEggs;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, "laysEggs", String.valueOf(this.getLaysEggs()));
+	}
+	
+
+	public void decodeFromXML(Element element) {
+		super.decodeFromXML(element);
+		setLaysEggs(Boolean.valueOf(element.getElementsByTagName("laysEggs").item(0).getTextContent()));
 	}
 }

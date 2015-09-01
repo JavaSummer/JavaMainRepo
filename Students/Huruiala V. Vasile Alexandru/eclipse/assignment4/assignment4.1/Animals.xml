@@ -1,0 +1,196 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Jordan Adam the legend turtle</name>
+	<maintenanceCost>0.6622369066633897</maintenanceCost>
+	<dangerPerc>8.31927560402971E-4</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Louis-Stephen the mangonel</name>
+	<maintenanceCost>3.246334663144486</maintenanceCost>
+	<dangerPerc>0.21401243761315453</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>121</range>
+	<isMobile>true</isMobile>
+	<DISCRIMINANT>MANGONEL</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>6</noOfLegs>
+	<name>George the mantis</name>
+	<maintenanceCost>0.8430968373340375</maintenanceCost>
+	<dangerPerc>2.7222514209900185E-4</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>MANTIS</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Walter David the clownfish</name>
+	<maintenanceCost>0.20380641953128387</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<avgSwimDepth>0</avgSwimDepth>
+	<waterType>Saltwater</waterType>
+	<DISCRIMINANT>CLOWNFISH</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Albert the ferocious turtle</name>
+	<maintenanceCost>0.7539923589157351</maintenanceCost>
+	<dangerPerc>1.8469195678794004E-4</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>8</noOfLegs>
+	<name>Ronald Bryan the scorpion</name>
+	<maintenanceCost>0.9801700111492213</maintenanceCost>
+	<dangerPerc>0.44940389705644557</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>false</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>SCORPION</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>0</noOfLegs>
+	<name>Charles the trebuchet</name>
+	<maintenanceCost>6.003264560352301</maintenanceCost>
+	<dangerPerc>0.34717009691956113</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>394</range>
+	<isMobile>false</isMobile>
+	<DISCRIMINANT>TREBUCHET</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Charles Christian the turtle</name>
+	<maintenanceCost>0.906179015943085</maintenanceCost>
+	<dangerPerc>4.041473009439207E-4</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>6</noOfLegs>
+	<name>Jose Bruce Christopher the ram</name>
+	<maintenanceCost>2.631103178229374</maintenanceCost>
+	<dangerPerc>0.1441905462701771</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<range>0</range>
+	<isMobile>true</isMobile>
+	<DISCRIMINANT>RAM</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>6</noOfLegs>
+	<name>Douglas the beetle</name>
+	<maintenanceCost>0.1</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BEETLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Joshua the dove</name>
+	<maintenanceCost>0.26242633541013394</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>52</avgFlightAltitude>
+	<DISCRIMINANT>DOVE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Frank the lizard</name>
+	<maintenanceCost>0.6401079773590955</maintenanceCost>
+	<dangerPerc>0.011999967093123143</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>George the clownfish</name>
+	<maintenanceCost>0.4685660962717998</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>0</avgSwimDepth>
+	<waterType>Saltwater</waterType>
+	<DISCRIMINANT>CLOWNFISH</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>6</noOfLegs>
+	<name>Edward the mantis</name>
+	<maintenanceCost>0.7206867396820037</maintenanceCost>
+	<dangerPerc>0.004905333398239105</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>MANTIS</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Andrew the dragon</name>
+	<maintenanceCost>5.4199517294359705</maintenanceCost>
+	<dangerPerc>0.3319976995765646</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>DRAGON</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Jason the lionfish</name>
+	<maintenanceCost>0.3321690544198789</maintenanceCost>
+	<dangerPerc>0.12684188412685624</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>35</avgSwimDepth>
+	<waterType>Saltwater</waterType>
+	<DISCRIMINANT>LIONFISH</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Bobby Nathan the eagle</name>
+	<maintenanceCost>1.5292048453179024</maintenanceCost>
+	<dangerPerc>0.06714786395802055</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>125</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Jonathan the kangaroo</name>
+	<maintenanceCost>1.3694717545656268</maintenanceCost>
+	<dangerPerc>0.017292846411474258</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.05423299064863</normalBodyTemp>
+	<percBodyHair>47.82702821305223</percBodyHair>
+	<DISCRIMINANT>KANGAROO</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>2</noOfLegs>
+	<name>Lawrence Stephen the eagle</name>
+	<maintenanceCost>1.4563804878177735</maintenanceCost>
+	<dangerPerc>0.06495924431641448</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>139</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<noOfLegs>4</noOfLegs>
+	<name>Aaron Russel the dragon</name>
+	<maintenanceCost>6.891106138749925</maintenanceCost>
+	<dangerPerc>0.3558407345276647</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>DRAGON</DISCRIMINANT>
+</ANIMAL>
+</content>
