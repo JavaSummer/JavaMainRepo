@@ -1,0 +1,26 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<name>Walton</name>
+	<id>1087559797077</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>32.471821596897044</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Jonas</name>
+	<id>4034435563334</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>39.17489861892376</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Minda</name>
+	<id>5038209187064</id>
+	<salary>10</salary>
+	<isDead>false</isDead>
+	<workingHours>7.921248949855673</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+</content>
