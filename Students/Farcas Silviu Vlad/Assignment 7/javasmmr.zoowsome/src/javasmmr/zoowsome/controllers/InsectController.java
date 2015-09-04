@@ -11,12 +11,14 @@ import javasmmr.zoowsome.views.*;
 public class InsectController extends AbstractController{
 	
 	public SpeciesFactory speciesFactory;
+	public InsectFrame insectFrame;
 	
 	public InsectController(InsectFrame insectFrame, boolean hasBackButton) {
 		super(insectFrame, hasBackButton);
 		insectFrame.setButterflyButtonActionListener(new ButterflyButtonActionListener());
 		insectFrame.setCockroachButtonActionListener(new CockroachButtonActionListener());
 		insectFrame.setSpiderButtonActionListener(new SpiderButtonActionListener());
+		this.insectFrame=insectFrame;
 		try {
 			speciesFactory = abstractFactory.getSpeciesFactory(Constants.Species.Insect);
 		} catch (Exception e) {
@@ -29,6 +31,7 @@ public class InsectController extends AbstractController{
 			Animal a;
 			try {
 				a = speciesFactory.getAnimal(Constants.Animal.Insect.Butterfly);
+				a.setName(insectFrame.getNameEntered());
 				animal = aniRep.load();
 				animal.add(a);
 				aniRep.save(animal);
@@ -43,6 +46,7 @@ public class InsectController extends AbstractController{
 			Animal a;
 			try {
 				a = speciesFactory.getAnimal(Constants.Animal.Insect.Cockroach);
+				a.setName(insectFrame.getNameEntered());
 				animal = aniRep.load();
 				animal.add(a);
 				aniRep.save(animal);
@@ -57,6 +61,7 @@ public class InsectController extends AbstractController{
 			Animal a;
 			try {
 				a = speciesFactory.getAnimal(Constants.Animal.Insect.Spider);
+				a.setName(insectFrame.getNameEntered());
 				animal = aniRep.load();
 				animal.add(a);
 				aniRep.save(animal);

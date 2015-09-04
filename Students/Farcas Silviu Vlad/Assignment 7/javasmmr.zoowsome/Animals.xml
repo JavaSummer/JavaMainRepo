@@ -1,89 +1,41 @@
 <?xml version="1.0"?><content>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Truman</name>
-	<maintenanceCost>1.0</maintenanceCost>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Enter name</name>
+	<maintenanceCost>0.2</maintenanceCost>
 	<dangerPerc>0.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>false</migrates>
-	<avgFlightAltitude>0</avgFlightAltitude>
-	<DISCRIMINANT>CHICKEN</DISCRIMINANT>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BUTTERFLY</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Todd</name>
-	<maintenanceCost>1.0</maintenanceCost>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Enter name</name>
+	<maintenanceCost>0.1</maintenanceCost>
 	<dangerPerc>0.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>35</avgFlightAltitude>
-	<DISCRIMINANT>STORK</DISCRIMINANT>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>COCKROACH</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Cyndi</name>
-	<maintenanceCost>1.0</maintenanceCost>
-	<dangerPerc>0.0</dangerPerc>
+	<nrOfLegs>8</nrOfLegs>
+	<name>Enter name</name>
+	<maintenanceCost>0.2</maintenanceCost>
+	<dangerPerc>0.8</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>40</avgFlightAltitude>
-	<DISCRIMINANT>SWALLOW</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Maryln</name>
-	<maintenanceCost>5.0</maintenanceCost>
-	<dangerPerc>0.1</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>39.5</normalBodyTemp>
-	<percBodyHair>0.9</percBodyHair>
-	<DISCRIMINANT>MONKEY</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Lawrence</name>
-	<maintenanceCost>7.0</maintenanceCost>
-	<dangerPerc>0.9</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<normalBodyTemp>37.5</normalBodyTemp>
-	<percBodyHair>0.98</percBodyHair>
-	<DISCRIMINANT>TIGER</DISCRIMINANT>
+	<canFly>false</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>SPIDER</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>0</nrOfLegs>
-	<name>Lawrence</name>
+	<name>Enter name</name>
 	<maintenanceCost>1.0</maintenanceCost>
 	<dangerPerc>0.95</dangerPerc>
 	<takenCareOf>false</takenCareOf>
 	<laysEggs>true</laysEggs>
 	<DISCRIMINANT>COBRA</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Minda</name>
-	<maintenanceCost>4.0</maintenanceCost>
-	<dangerPerc>0.9</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<laysEggs>true</laysEggs>
-	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>4</nrOfLegs>
-	<name>Dante</name>
-	<maintenanceCost>2.0</maintenanceCost>
-	<dangerPerc>0.0</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<laysEggs>true</laysEggs>
-	<DISCRIMINANT>CHAMELEON</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Beatris</name>
-	<maintenanceCost>1.0</maintenanceCost>
-	<dangerPerc>0.0</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>false</migrates>
-	<avgFlightAltitude>0</avgFlightAltitude>
-	<DISCRIMINANT>CHICKEN</DISCRIMINANT>
 </ANIMAL>
 </content>

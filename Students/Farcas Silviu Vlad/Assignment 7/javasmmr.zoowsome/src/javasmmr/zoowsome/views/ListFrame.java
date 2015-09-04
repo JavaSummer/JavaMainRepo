@@ -39,7 +39,8 @@ public class ListFrame extends ZooFrame {
 				for (Employee em : emp) {
 					contentPanel.add(new JLabel("[" + em.getClass().getSimpleName() + "; Name: "));
 					contentPanel.add(new JLabel(em.getName() + "; ID: "));
-					contentPanel.add(new JLabel(String.valueOf(em.getId()) + "]"));
+					contentPanel.add(new JLabel(String.valueOf(em.getId()) + "; Salary: "));
+					contentPanel.add(new JLabel(String.valueOf(em.getSalary()) + "]"));
 				}
 			}
 		} catch (Exception e) {

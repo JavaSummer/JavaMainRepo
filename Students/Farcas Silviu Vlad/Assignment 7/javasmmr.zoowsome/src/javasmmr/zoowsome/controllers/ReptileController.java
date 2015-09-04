@@ -8,27 +8,30 @@ import javasmmr.zoowsome.services.factories.Constants;
 import javasmmr.zoowsome.services.factories.SpeciesFactory;
 import javasmmr.zoowsome.views.*;
 
-public class ReptileController extends AbstractController{
-	
+public class ReptileController extends AbstractController {
+
 	public SpeciesFactory speciesFactory;
-	
+	public ReptileFrame reptileFrame;
+
 	public ReptileController(ReptileFrame reptileFrame, boolean hasBackButton) {
 		super(reptileFrame, hasBackButton);
 		reptileFrame.setChameleonButtonActionListener(new ChameleonButtonActionListener());
 		reptileFrame.setCobraButtonActionListener(new CobraButtonActionListener());
 		reptileFrame.setCrocodileButtonActionListener(new CrocodileButtonActionListener());
+		this.reptileFrame = reptileFrame;
 		try {
 			speciesFactory = abstractFactory.getSpeciesFactory(Constants.Species.Reptile);
 		} catch (Exception e) {
 
 		}
 	}
-	
+
 	private class ChameleonButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			Animal a;
 			try {
 				a = speciesFactory.getAnimal(Constants.Animal.Reptile.Chameleon);
+				a.setName(reptileFrame.getNameEntered());
 				animal = aniRep.load();
 				animal.add(a);
 				aniRep.save(animal);
@@ -37,12 +40,13 @@ public class ReptileController extends AbstractController{
 			}
 		}
 	}
-	
-	private class CobraButtonActionListener implements ActionListener{
-		public void actionPerformed(ActionEvent e){
+
+	private class CobraButtonActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
 			Animal a;
 			try {
 				a = speciesFactory.getAnimal(Constants.Animal.Reptile.Cobra);
+				a.setName(reptileFrame.getNameEntered());
 				animal = aniRep.load();
 				animal.add(a);
 				aniRep.save(animal);
@@ -51,12 +55,13 @@ public class ReptileController extends AbstractController{
 			}
 		}
 	}
-	
-	private class CrocodileButtonActionListener implements ActionListener{
-		public void actionPerformed(ActionEvent e){
+
+	private class CrocodileButtonActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
 			Animal a;
 			try {
 				a = speciesFactory.getAnimal(Constants.Animal.Reptile.Crocodile);
+				a.setName(reptileFrame.getNameEntered());
 				animal = aniRep.load();
 				animal.add(a);
 				aniRep.save(animal);

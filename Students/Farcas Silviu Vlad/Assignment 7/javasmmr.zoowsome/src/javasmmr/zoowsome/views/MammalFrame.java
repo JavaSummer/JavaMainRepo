@@ -3,15 +3,20 @@ package javasmmr.zoowsome.views;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 public class MammalFrame extends ZooFrame{
 	
 	JButton btnCow;
 	JButton btnMonkey;
 	JButton btnTiger;
+	JTextField text;
 	
 	public MammalFrame(String title) {
 		super(title);
+		
+		text = new JTextField("Enter name");
+		contentPanel.add(text);
 		
 		btnCow = new JButton("Cow");
 		contentPanel.add(btnCow);
@@ -22,6 +27,11 @@ public class MammalFrame extends ZooFrame{
 		btnTiger = new JButton("Tiger");
 		contentPanel.add(btnTiger);
 		
+	}
+	
+	
+	public String getNameEntered() {
+			return text.getText();
 	}
 	
 	public void setCowButtonActionListener(ActionListener a) {
