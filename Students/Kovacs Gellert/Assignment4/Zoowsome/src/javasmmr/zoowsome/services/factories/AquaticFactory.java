@@ -5,14 +5,14 @@ import javasmmr.zoowsome.models.animals.Dolphin;
 import javasmmr.zoowsome.models.animals.Piranha;
 import javasmmr.zoowsome.models.animals.Sardine;
 import javasmmr.zoowsome.models.animals.WaterType;
-import javasmmr.zoowsome.services.factories.RandomPropertyGenerator;
+import javasmmr.zoowsome.services.factories.RandomAnimalPropGen;
 
 
 public class AquaticFactory extends SpeciesFactory{
 	@Override
 	public Animal getAnimal(String type) throws Exception {
 		
-		RandomPropertyGenerator rpg = new RandomPropertyGenerator();
+		RandomAnimalPropGen rpg = new RandomAnimalPropGen();
 		String name = rpg.getRandomName();
 		int nrOfLegs = rpg.getRandomNrOfLegs(1, 10);
 		int avgSwimDepth = rpg.getRandomAvgSwimDepth(1, 100);

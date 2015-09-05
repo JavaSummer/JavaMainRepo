@@ -8,7 +8,7 @@ public class MammalFactory extends SpeciesFactory{
 	@Override
 	public Animal getAnimal(String type) throws Exception {
 		
-		RandomPropertyGenerator rpg = new RandomPropertyGenerator();
+		RandomAnimalPropGen rpg = new RandomAnimalPropGen();
 		String name = rpg.getRandomName();
 		int nrOfLegs = rpg.getRandomNrOfLegs(1, 10);
 		float normalBodyTemp = rpg.getRandomNormalBodyTemp();
