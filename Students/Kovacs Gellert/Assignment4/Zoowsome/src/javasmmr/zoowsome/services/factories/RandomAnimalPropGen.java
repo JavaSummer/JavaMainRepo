@@ -4,7 +4,7 @@ import java.util.Random;
 
 import javasmmr.zoowsome.models.animals.WaterType;
 
-public class RandomPropertyGenerator {
+public class RandomAnimalPropGen {
 	
 	final static int MAX_NAME_LENGTH = 20;
 	final static float MIN_ALLOWED_BODY_TEMP = 10.0f;

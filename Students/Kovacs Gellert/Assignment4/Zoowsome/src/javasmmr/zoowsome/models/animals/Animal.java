@@ -9,7 +9,7 @@ public abstract class Animal implements Killer {
 	private String name;
 	private final double maintenanceCost;
 	private final double dangerPerc;
-	private boolean takenCareOf;
+	private boolean takenCareOf = false;
 	
 	public Animal() {
 		this.maintenanceCost = DEFAULT_MAINTENANCE_COST;
