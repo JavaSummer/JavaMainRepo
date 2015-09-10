@@ -9,8 +9,6 @@ import javasmmr.zoowsome.views.MainMenuFrame;
 
 public class Main {
 	public static void main(String[] args) throws Exception{
-		new AnimalRepository().save(new ArrayList<Animal>());
-		new EmployeeRepository().save(new ArrayList<Employee>());
 		new MainMenuController(new MainMenuFrame("Main Menu"), false);
 	}
 }

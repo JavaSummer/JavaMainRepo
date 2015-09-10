@@ -10,6 +10,7 @@ public class MainMenuController extends AbstractController {
 		super(frame, hasBackButton);
 		frame.setAddButtonActionListener(new AddButtonActionListener());
 		frame.setListButtonActionListener(new ListButtonActionListener());
+		frame.setSaveAndExitButtonActionListener(new SaveAndExitButtonActionListener());
 	}
 
 	private class AddButtonActionListener implements ActionListener {
@@ -21,6 +22,12 @@ public class MainMenuController extends AbstractController {
 	private class ListButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			new ListController(new ListFrame("List"), true);
+		}
+	}
+	
+	private class SaveAndExitButtonActionListener implements ActionListener {
+		public void actionPerformed (ActionEvent e){
+			System.exit(0);
 		}
 	}
 	

@@ -1,10 +1,2 @@
 <?xml version="1.0"?><content>
-<EMPLOYEE>
-	<name>Enter name</name>
-	<id>9</id>
-	<salary>9</salary>
-	<isDead>false</isDead>
-	<workingHours>5.132274880279999</workingHours>
-	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
-</EMPLOYEE>
 </content>

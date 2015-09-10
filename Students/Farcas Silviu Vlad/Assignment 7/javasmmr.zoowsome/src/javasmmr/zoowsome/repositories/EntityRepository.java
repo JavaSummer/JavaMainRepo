@@ -25,7 +25,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
-
+import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.models.interfaces.XML_Parsable;
 
 public abstract class EntityRepository<T extends XML_Parsable> {
@@ -85,7 +85,7 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 		}
 		return entities;
 	}
-	
+
 	public static void createNode(XMLEventWriter eventWriter, String name, String value) throws XMLStreamException {
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
@@ -99,6 +99,7 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 		eventWriter.add(eElement);
 		eventWriter.add(end);
 	}
-	
+
 	protected abstract T getEntityFromXmlElement(Element element);
+	
 }

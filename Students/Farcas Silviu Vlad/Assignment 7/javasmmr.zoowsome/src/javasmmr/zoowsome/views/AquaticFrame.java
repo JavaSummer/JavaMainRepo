@@ -3,6 +3,7 @@ package javasmmr.zoowsome.views;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class AquaticFrame extends ZooFrame {
@@ -30,7 +31,7 @@ public class AquaticFrame extends ZooFrame {
 	}
 
 	public String getNameEntered() {
-			return text.getText();
+		return text.getText();
 	}
 
 	public void setDolphinButtonActionListener(ActionListener a) {
