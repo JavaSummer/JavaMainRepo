@@ -145,14 +145,13 @@ public final class MainController {
 		ArrayList<Animal> animals = new ArrayList<>();
 		animals = randomAnimals();
 		abstractAnimalRepository.save(animals);
-		new ArrayList<>();
 		abstractAnimalRepository.load();
 		EmployeeRepository abstractEmployeeRepository = new EmployeeRepository();
 		ArrayList<Employee> employees = new ArrayList<>();
 		employees = randomEmployee();
 		abstractEmployeeRepository.save(employees);
-		new ArrayList<>();
 		abstractEmployeeRepository.load();
+	
 
 		Caretaker[] careTakerEmployee = randomCaretaker();
 		ArrayList<Animal> animal = randomAnimals();

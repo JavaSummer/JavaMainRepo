@@ -1,5 +1,15 @@
 <?xml version="1.0"?><content>
 <ANIMAL>
+	<nrOfLegs>8</nrOfLegs>
+	<name>Regal Jumper</name>
+	<maintenanceCost>1.9</maintenanceCost>
+	<dangerPerc>0.65</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>false</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Regal Jumper</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
 	<nrOfLegs>0</nrOfLegs>
 	<name>Apex Predator</name>
 	<maintenanceCost>7.1</maintenanceCost>
@@ -10,6 +20,16 @@
 	<DISCRIMINANT>Apex Predator</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
+	<nrOfLegs>0</nrOfLegs>
+	<name>Esox</name>
+	<maintenanceCost>2.3</maintenanceCost>
+	<dangerPerc>0.15</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>20</avgSwimDepth>
+	<water>freshwater</water>
+	<DISCRIMINANT>Esox</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
 	<nrOfLegs>6</nrOfLegs>
 	<name>Monarch</name>
 	<maintenanceCost>0.4</maintenanceCost>
@@ -18,25 +38,6 @@
 	<canFly>true</canFly>
 	<isDangerous>false</isDangerous>
 	<DISCRIMINANT>Monarch</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Kaa</name>
-	<maintenanceCost>6.4</maintenanceCost>
-	<dangerPerc>0.999</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<laysEggs>true</laysEggs>
-	<DISCRIMINANT>Kaa</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>2</nrOfLegs>
-	<name>Dalmatian Pelican</name>
-	<maintenanceCost>2.3</maintenanceCost>
-	<dangerPerc>0.103</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<migrates>true</migrates>
-	<avgFlightAltitude>1200</avgFlightAltitude>
-	<DISCRIMINANT>Dalmatian Pelican</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>4</nrOfLegs>
@@ -50,52 +51,51 @@
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>2</nrOfLegs>
-	<name>Aquila</name>
-	<maintenanceCost>2.3</maintenanceCost>
-	<dangerPerc>0.42</dangerPerc>
+	<name>Ciconia</name>
+	<maintenanceCost>4.0</maintenanceCost>
+	<dangerPerc>0.205</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<migrates>false</migrates>
-	<avgFlightAltitude>2000</avgFlightAltitude>
-	<DISCRIMINANT>Aquila</DISCRIMINANT>
+	<migrates>true</migrates>
+	<avgFlightAltitude>1500</avgFlightAltitude>
+	<DISCRIMINANT>Ciconia</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Esox</name>
-	<maintenanceCost>2.3</maintenanceCost>
-	<dangerPerc>0.15</dangerPerc>
+	<nrOfLegs>8</nrOfLegs>
+	<name>Regal Jumper</name>
+	<maintenanceCost>1.9</maintenanceCost>
+	<dangerPerc>0.65</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>20</avgSwimDepth>
-	<water>freshwater</water>
-	<DISCRIMINANT>Esox</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Apex Predator</name>
-	<maintenanceCost>7.1</maintenanceCost>
-	<dangerPerc>0.97</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>2000</avgSwimDepth>
-	<water>saltwater</water>
-	<DISCRIMINANT>Apex Predator</DISCRIMINANT>
+	<canFly>false</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Regal Jumper</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
 	<nrOfLegs>6</nrOfLegs>
-	<name>Monarch</name>
-	<maintenanceCost>0.4</maintenanceCost>
-	<dangerPerc>0.0</dangerPerc>
+	<name>American Cockroach</name>
+	<maintenanceCost>0.2</maintenanceCost>
+	<dangerPerc>0.43</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<canFly>true</canFly>
+	<canFly>false</canFly>
 	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Monarch</DISCRIMINANT>
+	<DISCRIMINANT>American Cockroach</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>6</nrOfLegs>
-	<name>Monarch</name>
-	<maintenanceCost>0.4</maintenanceCost>
-	<dangerPerc>0.0</dangerPerc>
+	<nrOfLegs>4</nrOfLegs>
+	<name>Cecil</name>
+	<maintenanceCost>4.5</maintenanceCost>
+	<dangerPerc>0.957</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<canFly>true</canFly>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>Monarch</DISCRIMINANT>
+	<normalBodyTemp>37.5</normalBodyTemp>
+	<percBodyHair>92.8</percBodyHair>
+	<DISCRIMINANT>Cecil</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>0</nrOfLegs>
+	<name>Kaa</name>
+	<maintenanceCost>6.4</maintenanceCost>
+	<dangerPerc>0.999</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Kaa</DISCRIMINANT>
 </ANIMAL>
 </content>
