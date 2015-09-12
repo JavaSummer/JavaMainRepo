@@ -20,8 +20,7 @@ public class MainMenuController extends AbstractController {
 	 * @param hasBackButton
 	 *            If the back button was pushed or not.
 	 */
-	public MainMenuController(final MainMenuFrame frame,
-			final boolean hasBackButton) {
+	public MainMenuController(final MainMenuFrame frame, final boolean hasBackButton) {
 		super(frame, hasBackButton);
 		frame.setAddButtonActionListener(new AddButtonActionListener());
 		frame.setListButtonActionListener(new ListButtonActionListener());
@@ -38,6 +37,7 @@ public class MainMenuController extends AbstractController {
 			new AddController(new AddFrame("Add"), true);
 		}
 	}
+
 	/**
 	 * 
 	 * @author Marius Bologa

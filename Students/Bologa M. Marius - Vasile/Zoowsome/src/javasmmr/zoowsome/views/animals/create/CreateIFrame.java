@@ -199,10 +199,9 @@ public class CreateIFrame extends ZooFrame {
 
 	/**
 	 * @return The name.
-	 * 
 	 */
-	public final String getName() {
-		return name.toString();
+	public final String getTheName() {
+		return name.getText();
 	}
 
 	/**
@@ -244,13 +243,15 @@ public class CreateIFrame extends ZooFrame {
 	public final double getMaintenanceCost() {
 		return Double.parseDouble(maintenanceCost.getText());
 	}
-/**
- * 
- * @return A radio button.
- */
+
+	/**
+	 * 
+	 * @return A radio button.
+	 */
 	public final JRadioButton getCanFlyT() {
 		return canFlyT;
 	}
+
 	/**
 	 * 
 	 * @return A radio button.
@@ -258,6 +259,7 @@ public class CreateIFrame extends ZooFrame {
 	public final JRadioButton getCanFlyF() {
 		return canFlyF;
 	}
+
 	/**
 	 * 
 	 * @return A radio button.
@@ -265,6 +267,7 @@ public class CreateIFrame extends ZooFrame {
 	public final JRadioButton getDangerousF() {
 		return dangerousF;
 	}
+
 	/**
 	 * 
 	 * @return A radio button.

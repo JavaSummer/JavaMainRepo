@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import javasmmr.zoowsome.models.animals.Butterfly;
-import javasmmr.zoowsome.models.animals.Cockroach;
-import javasmmr.zoowsome.models.animals.Spider;
+import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.views.animals.create.CreateIFrame;
 
 /**
@@ -28,11 +26,16 @@ public class CreateIController extends AbstractController {
 	 * @param hasBackButton
 	 *            If the back button was pushed or not.
 	 */
-	public CreateIController(final CreateIFrame frame,
-			final boolean hasBackButton) {
+	public CreateIController(final CreateIFrame frame, final boolean hasBackButton) {
 		super(frame, hasBackButton);
-		frame.setCreateButtonActionListener(new CreateButtonActionListener());
+		frame.setCreateButtonActionListener(new CreateInsectButtonActionListener());
 		this.frame1 = frame;
+		try {
+			sf = abstractFactory.getSpeciesFactory(species[2]);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -40,22 +43,51 @@ public class CreateIController extends AbstractController {
 	 * @author Marius Bologa
 	 *
 	 */
-	public class CreateButtonActionListener implements ActionListener {
+	public class CreateInsectButtonActionListener implements ActionListener {
 		@Override
 		public void actionPerformed(final ActionEvent e) {
 			if (frame1.getButterfly().isSelected()) {
-				new Butterfly(frame1.getName(), frame1.
-						getMaintenanceCost(), frame1.getDangerPerc());
-				System.out.println("1");
+				try {
+					Animal animal = sf.getAnimal(animalsF[2][2]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
 			} else if (frame1.getCockroach().isSelected()) {
-				new Cockroach(frame1.getName(), frame1.
-						getMaintenanceCost(), frame1.getDangerPerc());
-				System.out.println("2");
+				try {
+					Animal animal = sf.getAnimal(animalsF[2][0]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
 			} else {
-				new Spider(frame1.getName(), frame1.
-						getDangerous(), frame1.getMaintenanceCost(),
-						frame1.getDangerPerc());
-				System.out.println("3");
+				try {
+					Animal animal = sf.getAnimal(animalsF[2][1]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
 			}
 			JOptionPane.showMessageDialog(frame, "Successfully created!");
 		}

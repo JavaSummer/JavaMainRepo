@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
 import javasmmr.zoowsome.views.ZooFrame;
+
 /**
  * 
  * @author Marius Bologa
@@ -173,13 +174,14 @@ public class CreateRFrame extends ZooFrame {
 		group.add(turtle);
 
 	}
-/**
- * @return The name.
- * 
- */
-	public final String getName() {
-		return name.toString();
+
+	/**
+	 * @return The name.
+	 */
+	public final String getTheName() {
+		return name.getText();
 	}
+
 	/**
 	 * @return Number of legs.
 	 * 
@@ -187,6 +189,7 @@ public class CreateRFrame extends ZooFrame {
 	public final int getNrOfLegs() {
 		return Integer.parseInt(nrOfLegs.getText());
 	}
+
 	/**
 	 * @return Lay eggs button.
 	 * 
@@ -194,6 +197,7 @@ public class CreateRFrame extends ZooFrame {
 	public final JRadioButton getlayEggsT() {
 		return (layEggsT);
 	}
+
 	/**
 	 * @return Does not lay eggs button.
 	 * 
@@ -201,6 +205,7 @@ public class CreateRFrame extends ZooFrame {
 	public final JRadioButton getlayEggsF() {
 		return (layEggsF);
 	}
+
 	/**
 	 * @return If lays eggs or not..
 	 * 
@@ -208,6 +213,7 @@ public class CreateRFrame extends ZooFrame {
 	public final Boolean getlayEggs() {
 		return layEggsT.isSelected();
 	}
+
 	/**
 	 * @return Danger percentage.
 	 * 
@@ -215,6 +221,7 @@ public class CreateRFrame extends ZooFrame {
 	public final double getDangerPerc() {
 		return Double.parseDouble(dangerPerc.getText());
 	}
+
 	/**
 	 * @return Maintenance cost.
 	 * 
@@ -225,10 +232,11 @@ public class CreateRFrame extends ZooFrame {
 
 	// If the calculateButton is clicked execute a method
 	// in the Controller named actionPerformed
-/**
- * 
- * @param listenForCalcButton A button.
- */
+	/**
+	 * 
+	 * @param listenForCalcButton
+	 *            A button.
+	 */
 	public final void setCreateButtonActionListener(final ActionListener listenForCalcButton) {
 
 		createButton.addActionListener(listenForCalcButton);

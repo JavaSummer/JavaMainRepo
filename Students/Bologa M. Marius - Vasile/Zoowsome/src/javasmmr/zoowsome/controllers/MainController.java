@@ -56,16 +56,16 @@ public final class MainController {
 	private static ArrayList<Animal> randomAnimals() throws Exception {
 		int n = 10;
 		int x = 3, y = 5;
-		String[] species = { Constants.Species.Aquatic, Constants.Species.Mammal, Constants.Species.Bird,
-				Constants.Species.Insect, Constants.Species.Reptile };
+		String[] species = { Constants.Species.Aquatic, Constants.Species.Bird, Constants.Species.Insect,
+				Constants.Species.Mammal, Constants.Species.Reptile };
 
 		String[][] animals = {
 				{ Constants.Animals.Aquatic.Tuna, Constants.Animals.Aquatic.Shark,
 						Constants.Animals.Aquatic.NorthernPike },
-				{ Constants.Animals.Mammals.Cow, Constants.Animals.Mammals.Tiger, Constants.Animals.Mammals.Monkey },
 				{ Constants.Animals.Birds.Eagle, Constants.Animals.Birds.WhiteStork, Constants.Animals.Birds.Pelican },
 				{ Constants.Animals.Insects.Cockroach, Constants.Animals.Insects.Spider,
 						Constants.Animals.Insects.Butterfly },
+				{ Constants.Animals.Mammals.Cow, Constants.Animals.Mammals.Tiger, Constants.Animals.Mammals.Monkey },
 				{ Constants.Animals.Reptiles.Turtle, Constants.Animals.Reptiles.Boomslang,
 						Constants.Animals.Reptiles.Tuatara } };
 		AnimalFactory abstractFactory = new AnimalFactory();
@@ -151,7 +151,6 @@ public final class MainController {
 		employees = randomEmployee();
 		abstractEmployeeRepository.save(employees);
 		abstractEmployeeRepository.load();
-	
 
 		Caretaker[] careTakerEmployee = randomCaretaker();
 		ArrayList<Animal> animal = randomAnimals();

@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 
 import javasmmr.zoowsome.views.ZooFrame;
+
 /**
  * 
  * @author Marius Bologa
@@ -86,10 +87,12 @@ public class CreateMFrame extends ZooFrame {
 	public final JRadioButton getTiger() {
 		return tiger;
 	}
-/**
- * 
- * @param title Title of the frame.
- */
+
+	/**
+	 * 
+	 * @param title
+	 *            Title of the frame.
+	 */
 	public CreateMFrame(final String title) {
 		super(title);
 
@@ -171,20 +174,22 @@ public class CreateMFrame extends ZooFrame {
 		group.add(tiger);
 
 	}
-/**
- * @return The name.
- * 
- */
-	public final String getName() {
-		return name.toString();
-	}
+
 	/**
-	 * @return 	Number of legs..
+	 * @return The name.
+	 */
+	public final String getTheName() {
+		return name.getText();
+	}
+
+	/**
+	 * @return Number of legs..
 	 * 
 	 */
 	public final int getNrOfLegs() {
 		return Integer.parseInt(nrOfLegs.getText());
 	}
+
 	/**
 	 * @return The percentage body hair.
 	 * 
@@ -192,6 +197,7 @@ public class CreateMFrame extends ZooFrame {
 	public final float getPercBodyHair() {
 		return Float.parseFloat(percBodyHair.getText());
 	}
+
 	/**
 	 * @return The normal body temperature.
 	 * 
@@ -199,6 +205,7 @@ public class CreateMFrame extends ZooFrame {
 	public final float getnormalBodyTemp() {
 		return Float.parseFloat(normalBodyTemp.getText());
 	}
+
 	/**
 	 * @return Danger percentage.
 	 * 
@@ -206,6 +213,7 @@ public class CreateMFrame extends ZooFrame {
 	public final double getDangerPerc() {
 		return Double.parseDouble(dangerPerc.getText());
 	}
+
 	/**
 	 * @return The maintenance cost.
 	 * 
@@ -216,10 +224,11 @@ public class CreateMFrame extends ZooFrame {
 
 	// If the calculateButton is clicked execute a method
 	// in the Controller named actionPerformed
-/**
- * 
- * @param listenForCalcButton A button.
- */
+	/**
+	 * 
+	 * @param listenForCalcButton
+	 *            A button.
+	 */
 	public final void setCreateButtonActionListener(final ActionListener listenForCalcButton) {
 
 		createButton.addActionListener(listenForCalcButton);

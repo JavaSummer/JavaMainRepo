@@ -43,6 +43,7 @@ public class AnimalController extends AbstractController {
 			new CreateAController(new CreateAFrame("Add Aquatic"), true);
 		}
 	}
+
 	/**
 	 * 
 	 * @author Marius Bologa
@@ -56,6 +57,7 @@ public class AnimalController extends AbstractController {
 
 		}
 	}
+
 	/**
 	 * 
 	 * @author Marius Bologa
@@ -68,6 +70,7 @@ public class AnimalController extends AbstractController {
 
 		}
 	}
+
 	/**
 	 * 
 	 * @author Marius Bologa
@@ -80,6 +83,7 @@ public class AnimalController extends AbstractController {
 			new CreateMController(new CreateMFrame("Add Mammal"), true);
 		}
 	}
+
 	/**
 	 * 
 	 * @author Marius Bologa

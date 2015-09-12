@@ -110,8 +110,7 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 	 * @throws IOException
 	 *             .
 	 */
-	public final ArrayList<T> load() throws ParserConfigurationException,
-	SAXException, IOException {
+	public final ArrayList<T> load() throws ParserConfigurationException, SAXException, IOException {
 		ArrayList<T> entities = new ArrayList<T>();
 
 		File fXmlFile = new File(this.xmlFilename);
@@ -135,7 +134,8 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 
 	/**
 	 * 
-	 * @param eventWriter .
+	 * @param eventWriter
+	 *            .
 	 * @param name
 	 *            The name.
 	 * @param value
@@ -143,8 +143,7 @@ public abstract class EntityRepository<T extends XML_Parsable> {
 	 * @throws XMLStreamException
 	 *             .
 	 */
-	public static void createNode(final XMLEventWriter eventWriter,
-			final String name, final String value)
+	public static void createNode(final XMLEventWriter eventWriter, final String name, final String value)
 			throws XMLStreamException {
 		XMLEventFactory eventFactory = XMLEventFactory.newInstance();
 		XMLEvent end = eventFactory.createDTD("\n");
