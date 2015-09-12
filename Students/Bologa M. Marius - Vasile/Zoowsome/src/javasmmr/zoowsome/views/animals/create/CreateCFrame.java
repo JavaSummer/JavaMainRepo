@@ -115,11 +115,10 @@ public class CreateCFrame extends ZooFrame {
 	}
 
 	/**
-	 * 
 	 * @return The name.
 	 */
 	public final String getTheName() {
-		return name.toString();
+		return name.getText();
 	}
 
 	/**

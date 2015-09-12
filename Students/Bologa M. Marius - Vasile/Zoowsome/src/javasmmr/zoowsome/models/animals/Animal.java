@@ -27,7 +27,7 @@ public abstract class Animal implements Killer, XML_Parsable {
 	/**
 	 * 
 	 */
-	final double maintenanceCost;
+	double maintenanceCost;
 
 	/**
 	 * 
@@ -48,7 +48,7 @@ public abstract class Animal implements Killer, XML_Parsable {
 	/**
 	 * 
 	 */
-	final double dangerPerc;
+	double dangerPerc;
 
 	/**
 	 * 
@@ -168,8 +168,8 @@ public abstract class Animal implements Killer, XML_Parsable {
 	 * @param valueOf
 	 *            Value of danger percent.
 	 */
-	private void setDangerPerc(final Double valueOf) {
-		// TODO Auto-generated method stub
+	public final void setDangerPerc(final Double valueOf) {
+		this.dangerPerc = valueOf;
 
 	}
 
@@ -178,11 +178,8 @@ public abstract class Animal implements Killer, XML_Parsable {
 	 * @param valueOf
 	 *            Value of maintenance costs.
 	 */
-	private void setMaintenanceCost(final Double valueOf) {
-		// TODO Auto-generated method stub
+	public final void setMaintenanceCost(final Double valueOf) {
+		this.maintenanceCost = valueOf;
 
 	}
-	// I'm not sure if this 2 methods should or not be here
-	// but without them I get an error-"The method setDangerPerc(Double)
-	// is undefined for the type Animal".
 }

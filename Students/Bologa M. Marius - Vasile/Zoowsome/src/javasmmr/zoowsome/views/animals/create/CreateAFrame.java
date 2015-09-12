@@ -189,8 +189,8 @@ public class CreateAFrame extends ZooFrame {
 	/**
 	 * @return The name.
 	 */
-	public final String getName() {
-		return name.toString();
+	public final String getTheName() {
+		return name.getText();
 	}
 
 	/**
@@ -229,7 +229,8 @@ public class CreateAFrame extends ZooFrame {
 	// in the Controller named actionPerformed
 	/**
 	 * 
-	 * @param listenForCalcButton A button.
+	 * @param listenForCalcButton
+	 *            A button.
 	 */
 	public final void setCreateButtonActionListener(final ActionListener listenForCalcButton) {
 

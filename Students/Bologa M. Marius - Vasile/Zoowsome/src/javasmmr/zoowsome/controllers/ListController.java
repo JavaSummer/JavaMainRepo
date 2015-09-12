@@ -42,6 +42,7 @@ public class ListController extends AbstractController {
 			}
 		}
 	}
+
 	/**
 	 * 
 	 * @author Marius Bologa
@@ -51,8 +52,7 @@ public class ListController extends AbstractController {
 		@Override
 		public void actionPerformed(final ActionEvent e) {
 			try {
-				new EmployeeListController(new EmployeeListFrame(
-						"Employee"), true);
+				new EmployeeListController(new EmployeeListFrame("Employee"), true);
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

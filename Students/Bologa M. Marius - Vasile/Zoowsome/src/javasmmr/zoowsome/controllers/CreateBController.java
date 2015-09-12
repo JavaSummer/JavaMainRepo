@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import javasmmr.zoowsome.models.animals.Eagle;
-import javasmmr.zoowsome.models.animals.Pelican;
-import javasmmr.zoowsome.models.animals.WhiteStork;
+import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.views.animals.create.CreateBFrame;
 
 /**
@@ -28,11 +26,16 @@ public class CreateBController extends AbstractController {
 	 * @param hasBackButton
 	 *            If the back button was pushed or not.
 	 */
-	public CreateBController(final CreateBFrame frame,
-			final boolean hasBackButton) {
+	public CreateBController(final CreateBFrame frame, final boolean hasBackButton) {
 		super(frame, hasBackButton);
-		frame.setCreateButtonActionListener(new CreateButtonActionListener());
+		frame.setCreateButtonActionListener(new CreateBirdButtonActionListener());
 		this.frame1 = frame;
+		try {
+			sf = abstractFactory.getSpeciesFactory(species[1]);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -40,22 +43,52 @@ public class CreateBController extends AbstractController {
 	 * @author Marius Bologa
 	 *
 	 */
-	public class CreateButtonActionListener implements ActionListener {
+	public class CreateBirdButtonActionListener implements ActionListener {
 		@Override
-		public void actionPerformed(final ActionEvent e) {
+		public final void actionPerformed(final ActionEvent e) {
 			if (frame1.getPelican().isSelected()) {
-				new Pelican(frame1.getName(), frame1.
-						getAvgFlightAltitude(), frame1.getMaintenanceCost(),
-						frame1.getDangerPerc());
-			} else if (frame1.getWhitestork().isSelected()) {
-				new WhiteStork(frame1.getName(), frame1.
-						getAvgFlightAltitude(), frame1.getMaintenanceCost(),
-						frame1.getDangerPerc());
-			} else {
-				new Eagle(frame1.getName(), frame1.getMigrates(), 
-						frame1.getAvgFlightAltitude(),
-						frame1.getMaintenanceCost(), frame1.getDangerPerc());
+				try {
+					Animal animal = sf.getAnimal(animalsF[1][2]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
 
+				}
+			} else if (frame1.getWhitestork().isSelected()) {
+				try {
+					Animal animal = sf.getAnimal(animalsF[1][1]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
+			} else {
+				try {
+					Animal animal = sf.getAnimal(animalsF[1][0]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
 			}
 			JOptionPane.showMessageDialog(frame, "Successfully created!");
 		}

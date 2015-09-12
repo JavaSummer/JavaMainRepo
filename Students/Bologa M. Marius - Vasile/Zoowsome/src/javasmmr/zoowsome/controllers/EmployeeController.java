@@ -20,8 +20,7 @@ public class EmployeeController extends AbstractController {
 	 * @param hasBackButton
 	 *            If the back button was pushed or not.
 	 */
-	public EmployeeController(final EmployeeFrame frame, 
-			final boolean hasBackButton) {
+	public EmployeeController(final EmployeeFrame frame, final boolean hasBackButton) {
 		super(frame, hasBackButton);
 		frame.setCaretaker(new CaretakerButtonActionListener());
 	}

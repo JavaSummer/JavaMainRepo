@@ -5,9 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JOptionPane;
 
-import javasmmr.zoowsome.models.animals.Cow;
-import javasmmr.zoowsome.models.animals.Monkey;
-import javasmmr.zoowsome.models.animals.Tiger;
+import javasmmr.zoowsome.models.animals.Animal;
 import javasmmr.zoowsome.views.animals.create.CreateMFrame;
 
 /**
@@ -28,11 +26,16 @@ public class CreateMController extends AbstractController {
 	 * @param hasBackButton
 	 *            If the back button was pushed or not.
 	 */
-	public CreateMController(final CreateMFrame frame,
-			final boolean hasBackButton) {
+	public CreateMController(final CreateMFrame frame, final boolean hasBackButton) {
 		super(frame, hasBackButton);
-		frame.setCreateButtonActionListener(new CreateButtonActionListener());
+		frame.setCreateButtonActionListener(new CreateMammalButtonActionListener());
 		this.frame1 = frame;
+		try {
+			sf = abstractFactory.getSpeciesFactory(species[3]);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -40,21 +43,52 @@ public class CreateMController extends AbstractController {
 	 * @author Marius Bologa
 	 *
 	 */
-	public class CreateButtonActionListener implements ActionListener {
+	public class CreateMammalButtonActionListener implements ActionListener {
 		@Override
 		public void actionPerformed(final ActionEvent e) {
 			if (frame1.getCow().isSelected()) {
-				new Cow(frame1.getName(), frame1.
-						getPercBodyHair(), frame1.getMaintenanceCost(),
-						frame1.getDangerPerc());
+				try {
+					Animal animal = sf.getAnimal(animalsF[3][0]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
 			} else if (frame1.getMonkey().isSelected()) {
-				new Monkey(frame1.getName(), frame1.
-						getPercBodyHair(), frame1.getMaintenanceCost(),
-						frame1.getDangerPerc());
+				try {
+					Animal animal = sf.getAnimal(animalsF[3][2]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+				}
 			} else {
-				new Tiger(frame1.getName(), frame1
-						.getPercBodyHair(), frame1.getMaintenanceCost(),
-						frame1.getDangerPerc());
+				try {
+					Animal animal = sf.getAnimal(animalsF[3][1]);
+					animal.setName(frame1.getTheName());
+					animal.setNrOfLegs(frame1.getNrOfLegs());
+					animal.setMaintenanceCost(frame1.getMaintenanceCost());
+					animal.setDangerPerc(frame1.getDangerPerc());
+					animals = animalRepository.load();
+					animals.add(animal);
+					animalRepository.save(animals);
+				} catch (Exception e3) {
+					// TODO Auto-generated catch block
+					e3.printStackTrace();
+
+				}
 			}
 			JOptionPane.showMessageDialog(frame, "Successfully created!");
 		}

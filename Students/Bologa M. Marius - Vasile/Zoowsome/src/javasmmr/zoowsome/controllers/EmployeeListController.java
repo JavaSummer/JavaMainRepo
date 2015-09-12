@@ -18,8 +18,7 @@ public class EmployeeListController extends AbstractController {
 	 * @param hasBackButton
 	 *            If the back button was pushed or not.
 	 */
-	public EmployeeListController(final EmployeeListFrame frame, 
-			final boolean hasBackButton) {
+	public EmployeeListController(final EmployeeListFrame frame, final boolean hasBackButton) {
 		super(frame, hasBackButton);
 
 	}
