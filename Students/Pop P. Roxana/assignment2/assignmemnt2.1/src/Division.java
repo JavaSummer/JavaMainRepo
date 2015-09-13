@@ -1,106 +1,61 @@
 
-public class Division {///have to work with float :(
-
-	//helper functions
+public class Division {
 	
-	int degree(float [] polynomial){//returns the degree of a polynomial
+	//method that returns the polynomial shifted to the right with positionsNr
+	Polynomial shiftRightPoly(int positionsNr, Polynomial poly){
+
+		int deg = poly.getDegree();
+		double[] result = new double[positionsNr + deg+1];
+		for (int i = 0; i <= deg; i++) {
+			result[i + positionsNr] =  poly.getCoefficient(i);
+		}
+		return new Polynomial(result, deg+positionsNr);
 		
-		int size = polynomial.length;
-		for (int i = size-1;i>=0;i--){
-			
-			if (polynomial[i]!=0){
-				return i;
-			}	
-		}	
-		return -1;
-	}
-	
-	float [] shiftRightPoly(int positionsNr, float [] poly){//returns the polynomial shifted to the right with positionsNr
 		
-		float shiftedPoly [] = new float[50];//hope it self initializes :o3
-		int degree = degree(poly);
-		for (int i=0;i<=degree;i++){
-			shiftedPoly[i + positionsNr] = poly [i];
-		}
-		return shiftedPoly;	
 	}
 	
-
-	public float[] mulScalar(float[] poly, float nr) {//returns the polynomial poly multiplied with nr
-
-		float[] result = new float[50];
-		for (int i = 0; i <= degree(poly); i++) {
-			result[i] = nr * poly[i];
-		}
-		return result;
-	}
-	
-	float[] subtract(float a[],float b[]) {
-
-		int sizeA = degree(a);
-		int sizeB = degree(b);
+      Polynomial [] polyDivision(Polynomial a, Polynomial b ) {
+    	   //the return type will be an array of size two
+    	   //on the first position: the remainder
+    	   //on the second position: the quotient
 		
-		float[] result = new float[50];
-		int i = 0;
-		while (i <= sizeA && i <= sizeB) {
-			result[i] = a[i] - b[i];
-			i++;
-		}
-		while (i <= sizeA) {
-			result[i] = a[i];
-			i++;
-		}
-		while (i <= sizeB) {
-			result[i] = -b[i];
-			i++;
-		}
-		return result;
-
-	}
-	
-	float [] getCopy(float [] poly){
-
-		float [] copy = new float [50];
-		for(int i=0;i<=degree(poly);i++){
-			copy [i] = poly [i];
-		}
-		return copy;
-	}
-	
-	public void polyDivision(float [] a, float [] b, float [] q, float [] r) {
+    	int aDegree = a.getDegree();
+   		int bDegree = b.getDegree();
+    	double [] q = new double[aDegree+1];
+    	double [] r = new double[aDegree+1];
+    	Polynomial [] result = new Polynomial [2];
 		
-		if (degree(a)<0){
+		if (aDegree<0){
 			System.out.println("The divider is zero everywhere");
 		}
 		
-		if (degree(a) >= degree(b)){
-			
-			while (degree(a)>=degree(b)){
+		if (aDegree >= bDegree){
+
+			while (aDegree>=bDegree){
 				
-				int pos = degree(a)-degree(b);
-				float [] shiftedB = shiftRightPoly(pos, b);
-				q[pos] = a[degree(a)]/shiftedB[degree(shiftedB)];
-				shiftedB = mulScalar(shiftedB, q[pos]);
-				a = subtract(a, shiftedB);
-				System.out.println("a is:");
-				for (int i = 0;i<=degree(a);i++){
-					System.out.print(a[i]+ " ");
-				}
-				System.out.println();
+				int pos = aDegree-bDegree;
+				Polynomial shiftedB = shiftRightPoly(pos, b);
+				q[pos] = a.getCoefficient(aDegree)/shiftedB.getCoefficient(shiftedB.getDegree());
+				shiftedB = Functions.mulScalar(shiftedB, q[pos]);
+				a = Functions.subtract(a, shiftedB);
+				a.updateDegree();
+				aDegree = a.getDegree();
 		    }
 			
-			for(int i=0;i<=degree(a);i++){
-				r [i] = a[i];
+			for(int i=0;i<=a.getDegree();i++){
+				r [i] = a.getCoefficient(i);
 			}
 		}
 		else{
 			
-			for(int i=0;i<=degree(a);i++){
-				r [i] = a[i];
+			for(int i=0;i<=a.getDegree();i++){
+				r [i] = a.getCoefficient(i);
 			}
 		}
 		
-
+		result[0] = new Polynomial(r, HelpfulFunctions.degree(r));
+		result[1] = new Polynomial(q, HelpfulFunctions.degree(q));
+		return result;
 	}
 }
 

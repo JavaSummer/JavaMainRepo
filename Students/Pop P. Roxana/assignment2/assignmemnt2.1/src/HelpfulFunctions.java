@@ -1,45 +1,41 @@
-import java.util.StringTokenizer;
 
 public class HelpfulFunctions {
-
-	private int m, n;
-	private int[] firstPoly = new int[50], secPoly = new int[50];
-
-	public void initialize(int m1, int[] a, int n1, int[] b) {
-
-		m = m1;
-		n = n1;
-
-		for (int i = 0; i < m; i++) {
-			firstPoly[i] = a[i];
-		}
-		for (int i = 0; i < m; i++) {
-			secPoly[i] = b[i];
-		}
+	
+	//I will need these attributes for a method called executeCommand
+	Polynomial firstPolynomial, secondPolynomial;
+	
+    public void setFirstPolynomial(Polynomial firstPolynomial) {
+		this.firstPolynomial = firstPolynomial;
 	}
 
-	public int extractPolyMethod1(int poly[], String line) {
-
-		int i = 0;
-		// put the line into an integer array
-		StringTokenizer Tok = new StringTokenizer(line);
-		while (Tok.hasMoreElements()) {
-			poly[i] = Integer.parseInt(Tok.nextToken());
-			i++;
-		}
-		return i;
+	public void setSecondPolynomial(Polynomial secondPolynomial) {
+		this.secondPolynomial = secondPolynomial;
 	}
 
-	public int extractPolyMethod2(int poly[], String line) {
+	//method that returns the degree of a polynomial (has the coefficients array as input)
+	static int degree(double [] polynomial){
+		
+		int size = polynomial.length;
+		for (int i = size-1;i>=0;i--){
+			
+			if (polynomial[i]!=0){
+				return i;
+			}	
+		}	
+		return -1;
+	}
+	
+
+	public void extractPolyMethod(double poly[], String line) {
 
 		String[] parts = line.split(" ");
 		int n = parts.length;
 
 		for (int i = 0; i < n; i++) {
-			poly[n - i - 1] = Integer.parseInt(parts[i].trim());
+			poly[n - i - 1] = (double)Integer.parseInt(parts[i].trim());
 		}
-		return n;
 	}
+
 
 	public int separateNumber(String originalString) {
 
@@ -50,149 +46,50 @@ public class HelpfulFunctions {
 		int nr = Integer.parseInt(part2.trim());
 		return nr;
 	}
-
-	public int eval(int[] a, int size, int nr) {
-
-		int result = 0;
-		int i, x = 1;
-		for (i =0;i<size;i++) {
-			result += a[i]*x;
-			x *= nr;
-		}
-		return result;
-	}
-
-	public int[] mulScalar(int[] a, int size, int nr) {
-
-		int[] result = new int[50];
-		for (int i = 0; i < size; i++) {
-			result[i] = nr * a[i];
-		}
-		return result;
-	}
-
-	int[] add(int a[], int sizeA, int b[], int sizeB) {
-
-		int[] result = new int[50];
-		int i = 0;
-		while (i < sizeA && i < sizeB) {
-			result[i] = a[i] + b[i];
-			i++;
-		}
-		while (i < sizeA) {
-			result[i] = a[i];
-			i++;
-		}
-		while (i < sizeB) {
-			result[i] = b[i];
-			i++;
-		}
-		return result;
-
-	}
-
-	int[] subtract(int a[], int sizeA, int b[], int sizeB) {
-
-		int[] result = new int[50];
-		int i = 0;
-		while (i < sizeA && i < sizeB) {
-			result[i] = a[i] - b[i];
-			i++;
-		}
-		while (i < sizeA) {
-			result[i] = a[i];
-			i++;
-		}
-		while (i < sizeB) {
-			result[i] = -b[i];
-			i++;
-		}
-		return result;
-
-	}
-
-	int[] multiply(int a[], int sizeA, int b[], int sizeB) {
-		
-		int[] result = new int[50];
-		int l = sizeA + sizeB - 1;//size of the array containing the el of the resulted polynomial
-
-		for (int i = 0; i < l; i++) {
-			result[i] = 0;
-		}
-		
-		for (int i = 0; i < sizeA; i++) {
-			for (int j = 0; j < sizeB; j++) {
-				result[i+j]+=a[i]*b[j];
-			}
-		}
-		return result;
-
-	}
-
-	public String transfPolyToString(int[] a, int size) {
-
-		String s = "";
-		for (int i = size - 1; i >= 0; i--) {
-			s = s + ((i != size - 1 && a[i] >= 0) ? "+" : "") + a[i] + "x^" + i;
-		}
-		return s;
-	}
-	public String transfPolyToString(float[] a, int size) {
-
-		String s = "";
-		for (int i = size - 1; i >= 0; i--) {
-			s = s + ((i != size - 1 && a[i] >= 0) ? "+" : "") + a[i] + "x^" + i;
-		}
-		return s;
-	}
-
+	
 	public String executeCommand(String line) {
 
 		String s = "";
 
 		if (line.equals("ADD")) {
 
-			int[] result = new int[20];
-			result = add(firstPoly, m, secPoly, n);
-			int size = Math.max(m, n);
-			s = transfPolyToString(result, size);
+			Polynomial result;
+			result = Functions.add(firstPolynomial, secondPolynomial);
+			s = result.toString();
 
 		}
 
 		if (line.equals("SUBTRACT")) {
 
-			int[] result = new int[50];
-			result = subtract(firstPoly, m, secPoly, n);
-
-			int size = Math.max(m, n);
-			s = transfPolyToString(result, size);
+			Polynomial result;
+			result = Functions.subtract(firstPolynomial, secondPolynomial);
+			s = result.toString();
 		}
 
 		if (line.equals("MULTIPLY")) {
 
-			int[] result = new int[50];
-			result = multiply(firstPoly, m, secPoly, n);
-
-			int size = m + n - 1;
-			s = transfPolyToString(result, size);
+			Polynomial result;
+			result = Functions.multiply(firstPolynomial, secondPolynomial);
+			s = result.toString();
 		}
 
 		if (line.contains("MUL_SCAL")) {
 
 			int nr = separateNumber(line);
-			int[] result1, result2 = new int[50];
-			result1 = mulScalar(firstPoly, m, nr);
-			result2 = mulScalar(secPoly, n, nr);
-			s = transfPolyToString(result1, m) + " and " + transfPolyToString(result2, n);
+			Polynomial result1, result2;
+			result1 = Functions.mulScalar(firstPolynomial, nr);
+			result2 = Functions.mulScalar(secondPolynomial, nr);
+			s = result1.toString() + " and " + result2.toString();
 		}
 
 		if (line.contains("EVAL")) {
 
 			int nr = separateNumber(line);
-			int result1, result2;
-			result1 = eval(firstPoly, m, nr);
-			result2 = eval(secPoly, n, nr);
-			s = new String(String.format("%d and %d", result1, result2));
+			double result1, result2;
+			result1 = Functions.eval(firstPolynomial, nr);
+			result2 = Functions.eval(secondPolynomial, nr);
+
+			s = s+String.valueOf(result1)+" and "+String.valueOf(result2);
 		}
 		return s;
 	}
