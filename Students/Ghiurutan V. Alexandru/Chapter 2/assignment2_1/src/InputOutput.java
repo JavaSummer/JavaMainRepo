@@ -48,19 +48,13 @@ public class InputOutput {
 		return s;
 	}
 
-	private void swap(int a, int b, double arr[]) {
+	private void swap(int a, int b, double[] arr) {
 		double t = arr[a];
 		arr[a] = arr[b];
 		arr[b] = t;
 	}
 
-	public double[] getP1() {
-		String[] v = p1.split(" ");
-		double[] a = new double[v.length];
-		for (int i = 0; i < v.length; i++) {
-			a[i] = Double.parseDouble(v[i]);
-		}
-		// reverse the array
+	private double[] reverseArray(double[] a) {
 		int left = 0, right = a.length - 1;
 		while (left < right) {
 			swap(left, right, a);
@@ -70,6 +64,16 @@ public class InputOutput {
 		return a;
 	}
 
+	public double[] getP1() {
+		String[] v = p1.split(" ");
+		double[] a = new double[v.length];
+		for (int i = 0; i < v.length; i++) {
+			a[i] = Double.parseDouble(v[i]);
+		}
+		// reverse the array
+		return reverseArray(a);
+	}
+
 	public double[] getP2() {
 		String v[] = p2.split(" ");
 		double[] a = new double[v.length];
@@ -77,10 +81,7 @@ public class InputOutput {
 			a[i] = Double.parseDouble(v[i]);
 		}
 		// reverse the array
-		for (int left = 0, right = a.length - 1; left < right; left++, right--) {
-			swap(left, right, a);
-		}
-		return a;
+		return reverseArray(a);
 	}
 
 	public void print(String p) {
