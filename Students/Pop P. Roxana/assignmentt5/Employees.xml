@@ -1,0 +1,122 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<name>caretaker0</name>
+	<id>2787560522031</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker0</name>
+	<id>2787560522031</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker1</name>
+	<id>2576731676279</id>
+	<salary>69</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker1</name>
+	<id>2576731676279</id>
+	<salary>69</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker2</name>
+	<id>1185473020728</id>
+	<salary>68</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker2</name>
+	<id>1185473020728</id>
+	<salary>68</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker3</name>
+	<id>2510856466606</id>
+	<salary>67</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker3</name>
+	<id>2510856466606</id>
+	<salary>67</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker4</name>
+	<id>2155492993787</id>
+	<salary>66</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker4</name>
+	<id>2155492993787</id>
+	<salary>66</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker5</name>
+	<id>2340570058999</id>
+	<salary>65</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker5</name>
+	<id>2340570058999</id>
+	<salary>65</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker6</name>
+	<id>2350928115008</id>
+	<salary>64</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker6</name>
+	<id>2350928115008</id>
+	<salary>64</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker7</name>
+	<id>1251750156439</id>
+	<salary>63</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker7</name>
+	<id>1251750156439</id>
+	<salary>63</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker8</name>
+	<id>1732631165282</id>
+	<salary>62</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker8</name>
+	<id>1732631165282</id>
+	<salary>62</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker9</name>
+	<id>2827091203920</id>
+	<salary>61</salary>
+	<isDead>false</isDead>
+	<workingHours>100.0</workingHours>
+	<name>caretaker9</name>
+	<id>2827091203920</id>
+	<salary>61</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+</content>
