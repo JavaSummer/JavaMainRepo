@@ -1,0 +1,22 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>oo</name>
+	<maintenanceCost>25.0</maintenanceCost>
+	<dangerPerc>25.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgFlightAltitude>6</avgFlightAltitude>
+	<migrates>true</migrates>
+	<DISCRIMINANT>Owl</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>2</nrOfLegs>
+	<name>owl</name>
+	<maintenanceCost>2.3</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgFlightAltitude>6</avgFlightAltitude>
+	<migrates>true</migrates>
+	<DISCRIMINANT>Owl</DISCRIMINANT>
+</ANIMAL>
+</content>
