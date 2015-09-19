@@ -3,8 +3,17 @@ package assignment2_2;
 import java.math.BigDecimal;
 
 public class MatrixOperations {
-	public MatrixOperations() {
+	private static MatrixOperations instance = null;
 
+	private MatrixOperations() {
+
+	}
+
+	public static MatrixOperations getInstance() {
+		if (instance == null) {
+			instance = new MatrixOperations();
+		}
+		return instance;
 	}
 
 	public static BigDecimal[][] add(BigDecimal[][] a, BigDecimal[][] b) {
