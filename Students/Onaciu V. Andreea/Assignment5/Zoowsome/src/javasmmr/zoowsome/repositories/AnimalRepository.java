@@ -31,6 +31,7 @@ import org.xml.sax.SAXException;
 
 public class AnimalRepository {
 	private static final String XML_FILENAME = "Animals.xml";
+
 	public void save(ArrayList<Animal> animals) throws FileNotFoundException, XMLStreamException {
 		XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
 		// Create XMLEventWriter
@@ -61,14 +62,17 @@ public class AnimalRepository {
 
 	public ArrayList<Animal> load() throws ParserConfigurationException, SAXException, IOException {
 		ArrayList<Animal> animals = new ArrayList<Animal>();
+
 		File fXmlFile = new File(XML_FILENAME);
 		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 		Document doc = dBuilder.parse(fXmlFile);
 		doc.getDocumentElement().normalize();
+
 		NodeList nodeList = doc.getElementsByTagName(Constants.XML_TAGS.ANIMAL);
+
 		for (int i = 0; i < nodeList.getLength(); i++) {
-			Node node = (Node) nodeList.item(i);
+			org.w3c.dom.Node node = nodeList.item(i);
 			if (node.getNodeType() == Node.ELEMENT_NODE) {
 				Element element = (Element) node;
 				String discriminant = element.getElementsByTagName(Constants.XML_TAGS.DISCRIMINANT).item(0)
@@ -78,66 +82,82 @@ public class AnimalRepository {
 					Animal butterfly = new Butterfly();
 					butterfly.decodeFromXml(element);
 					animals.add(butterfly);
+					break;
 				case Constants.Animals.Insects.Cockroach:
 					Animal cockroach = new Cockroach();
 					cockroach.decodeFromXml(element);
 					animals.add(cockroach);
+					break;
 				case Constants.Animals.Insects.Spider:
 					Animal spider = new Spider();
 					spider.decodeFromXml(element);
 					animals.add(spider);
+					break;
 				case Constants.Animals.Aquatics.Salmon:
 					Animal salmon = new Salmon();
 					salmon.decodeFromXml(element);
 					animals.add(salmon);
+					break;
 				case Constants.Animals.Aquatics.SeaHorse:
 					Animal seaHorse = new SeaHorse();
 					seaHorse.decodeFromXml(element);
 					animals.add(seaHorse);
+					break;
 				case Constants.Animals.Aquatics.Shark:
 					Animal shark = new Shark();
 					shark.decodeFromXml(element);
 					animals.add(shark);
+					break;
 				case Constants.Animals.Mammals.Cow:
 					Animal cow = new Cow();
 					cow.decodeFromXml(element);
 					animals.add(cow);
+					break;
 				case Constants.Animals.Mammals.Monkey:
 					Animal monkey = new Monkey();
 					monkey.decodeFromXml(element);
 					animals.add(monkey);
+					break;
 				case Constants.Animals.Mammals.Tiger:
 					Animal tiger = new Tiger();
 					tiger.decodeFromXml(element);
 					animals.add(tiger);
+					break;
 				case Constants.Animals.Birds.Albatross:
 					Animal albatross = new Albatross();
 					albatross.decodeFromXml(element);
 					animals.add(albatross);
+					break;
 				case Constants.Animals.Birds.Flamingo:
 					Animal flamingo = new Flamingo();
 					flamingo.decodeFromXml(element);
 					animals.add(flamingo);
+					break;
 				case Constants.Animals.Birds.Owl:
 					Animal owl = new Owl();
 					owl.decodeFromXml(element);
 					animals.add(owl);
+					break;
 				case Constants.Animals.Birds.Penguin:
 					Animal penguin = new Penguin();
 					penguin.decodeFromXml(element);
 					animals.add(penguin);
+					break;
 				case Constants.Animals.Reptiles.Amphisbaenian:
 					Animal amphisbaenian = new Amphisbaenian();
 					amphisbaenian.decodeFromXml(element);
 					animals.add(amphisbaenian);
+					break;
 				case Constants.Animals.Reptiles.Chameleon:
 					Animal chameleon = new Chameleon();
 					chameleon.decodeFromXml(element);
 					animals.add(chameleon);
+					break;
 				case Constants.Animals.Reptiles.Tuataras:
 					Animal tuataras = new Tuataras();
 					tuataras.decodeFromXml(element);
 					animals.add(tuataras);
+					break;
 				default:
 					break;
 				}
