@@ -12,3 +12,8 @@ We recommend you to finish the reading list and the given assignments in 1 week 
 
 
 ## Reading list
+1. [Effective Java - chapter 10 (pdf pages 259-288)](http://it-ebooks.info/book/4285/)
+
+
+## [Assignments](https://github.com/JavaSummer/JavaMainRepo/tree/master/Content/Chapter%208%20-%20Multithreading/Assignments)
+- 8.1 - [Zoo (part 6)](https://github.com/JavaSummer/JavaMainRepo/blob/master/Content/Chapter%208%20-%20Multithreading/Assignments/Zoo%20(part%206).pdf)
