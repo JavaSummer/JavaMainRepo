@@ -31,10 +31,10 @@ public class Polynomial {
 
 	/**
 	 * constructor - method with no param used for initializing the resulting
-	 * polynomials
+	 * polynomials 
 	 */
 	public Polynomial() {
-		coef = new ArrayList<>();
+		coef = new ArrayList<Double>();
 	}
 
 	/**
@@ -79,6 +79,8 @@ public class Polynomial {
 	public void addCoefficient(int degree, Double value) {
 		coef.add(degree, value);
 	}
+	
+	
 
 	/**
 	 * 
@@ -106,5 +108,33 @@ public class Polynomial {
 		return p;
 	}
 	
+	public void decreaseDeg() {
+
+		boolean nonZeroFound = false;
+		//int counter = countNonZero();
+		for (int i = this.coef.size() - 1; i >= 0 && (!nonZeroFound); i--) {
+			if (this.coef.get(i) == 0) {
+				System.out.println("before " + this.getDegree());
+				coef.remove(i);
+				System.out.println("after  " + this.getDegree());
+			} else {
+				nonZeroFound = true;
+			}
+		}
+	}
+
+	public int countNonZero() {
+
+		int counter = 0;
+		boolean nonZeroFound = false;
+		for (int i = this.coef.size() - 1; i >= 0 && (!nonZeroFound); i--) {
+			if (this.coef.get(i) != 0) {
+				counter++;
+			} else {
+				nonZeroFound = true;
+			}
+		}
+		return counter;
+	}
 
 }

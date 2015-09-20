@@ -1,7 +1,14 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
 import java.time.DayOfWeek;
 import java.time.LocalDateTime;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoosome.services.factories.Constants;
 
 public class Dove extends Bird {
 	private static final String DEFAULT_NAME = "Mourning dove";
@@ -27,5 +34,10 @@ public class Dove extends Bird {
 			return 1.0;
 		}
 		return 0.0;
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, String.valueOf(Constants.Animals.Bird.DOVE));
 	}
 }

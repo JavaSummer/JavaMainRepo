@@ -1,5 +1,12 @@
 package javasmmr.zoosome.models.animals;
 
+import static javasmmr.zoosome.repositories.EntityRepository.createNode;
+
+import javax.xml.stream.XMLEventWriter;
+import javax.xml.stream.XMLStreamException;
+
+import javasmmr.zoosome.services.factories.Constants;
+
 public class Mantis extends Insect {
 	private static final String DEFAULT_NAME = "Malaysian orchid mantis";
 	private static final int DEFAULT_NUMBER_OF_LEGS = 6;
@@ -14,5 +21,10 @@ public class Mantis extends Insect {
 	
 	public Mantis(final String animalName, final int numberOfLegs, final double maintenanceCost, final double dangerPerc, final boolean flyer, final boolean dangerous) {
 		super(animalName, numberOfLegs, maintenanceCost, dangerPerc, flyer, dangerous);
+	}
+	
+	public void encodeToXML(XMLEventWriter eventWriter) throws XMLStreamException {
+		super.encodeToXML(eventWriter);
+		createNode(eventWriter, Constants.XML_TAGS.DISCRIMINANT, String.valueOf(Constants.Animals.Insect.MANTIS));
 	}
 }

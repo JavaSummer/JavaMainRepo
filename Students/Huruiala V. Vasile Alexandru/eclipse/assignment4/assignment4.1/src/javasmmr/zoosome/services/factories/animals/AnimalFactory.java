@@ -12,14 +12,14 @@ public class AnimalFactory {
 			return new BirdFactory();
 		} else if (Constants.Species.AQUATIC.equals(type)) {
 			return new AquaticFactory();
-		}  else if (Constants.Species.INSECT.equals(type)) {
+		} else if (Constants.Species.INSECT.equals(type)) {
 			return new InsectFactory();
-		}  else if (Constants.Species.SIEGE.equals(type)) {
+		} else if (Constants.Species.SIEGE.equals(type)) {
 			return new SiegeWorkshop();
 		} else {
 			System.out.println("af");
 			throw new Exception("Invalid species exceprion!");
 		}
-		
+
 	}
 }

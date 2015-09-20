@@ -157,13 +157,9 @@ public class Main {
 		System.out.println("loaded list:");
 		writer.println();
 		writer.println("loaded list:");
-		try {
-			for (Animal ani : animalsListToDisplay) {
-				System.out.println(ani.getName());
-				writer.println(ani.getName());
-			}
-		} catch (NullPointerException e) {
-			System.err.println("Something went wrong");
+		for (Animal ani : animalsListToDisplay) {
+			System.out.println(ani.getName());
+			writer.println(ani.getName());
 		}
 
 		ArrayList<Employee> employeesList = new ArrayList<>();

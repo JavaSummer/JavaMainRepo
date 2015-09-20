@@ -1,0 +1,50 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<name>Anthony Henry(caretaker)</name>
+	<id>6873607180052</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>2.2905328144110677</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Richard Noah(caretaker)</name>
+	<id>635888831997</id>
+	<salary>1000</salary>
+	<isDead>false</isDead>
+	<workingHours>0.010386412555392494</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Kenneth Benjamin Scott(caretaker)</name>
+	<id>419133231444</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>5.368896821770626</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Eric(caretaker)</name>
+	<id>6695538431207</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>8.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Stephen(caretaker)</name>
+	<id>8913519806823</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>8.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>Kevin William(caretaker)</name>
+	<id>6150334445925</id>
+	<salary>1000</salary>
+	<isDead>true</isDead>
+	<workingHours>8.0</workingHours>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+</content>

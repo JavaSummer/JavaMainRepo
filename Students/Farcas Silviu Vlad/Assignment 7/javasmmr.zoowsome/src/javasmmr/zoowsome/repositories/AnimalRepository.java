@@ -1,5 +1,7 @@
 package javasmmr.zoowsome.repositories;
 
+import java.util.ArrayList;
+
 import org.w3c.dom.Element;
 
 import javasmmr.zoowsome.models.animals.Animal;
@@ -12,8 +14,8 @@ public class AnimalRepository extends EntityRepository<Animal> {
 	public AnimalRepository() {
 		super(XML_FILENAME, Constants.XML_TAGS.ANIMAL);
 	}
-	
-	protected Animal getEntityFromXmlElement(Element element){
+
+	protected Animal getEntityFromXmlElement(Element element) {
 		String discriminant = element.getElementsByTagName(Constants.XML_TAGS.DISCRIMINANT).item(0).getTextContent();
 		switch (discriminant) {
 		case Constants.Animal.Bird.Chicken:
@@ -108,8 +110,18 @@ public class AnimalRepository extends EntityRepository<Animal> {
 			return crocodile;
 		default:
 			break;
-			
+
 		}
 		return null;
+	}
+
+	public static void addAnimal(Animal a, AnimalRepository aniRep, ArrayList<Animal> animal) {
+		try {
+			animal = aniRep.load();
+			animal.add(a);
+			aniRep.save(animal);
+		} catch (Exception e) {
+
+		}
 	}
 }

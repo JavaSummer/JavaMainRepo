@@ -3,6 +3,7 @@ package javasmmr.zoowsome.views;
 import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
+import javax.swing.JTextField;
 
 public class BirdFrame extends ZooFrame {
 	
@@ -10,9 +11,13 @@ public class BirdFrame extends ZooFrame {
 	JButton btnChicken;
 	JButton btnStork;
 	JButton btnSwallow;
+	JTextField text;
 	
 	public BirdFrame(String title) {
 		super(title);
+		
+		text = new JTextField("Enter name");
+		contentPanel.add(text);
 		
 		btnChicken = new JButton("Chicken");
 		contentPanel.add(btnChicken);
@@ -31,6 +36,10 @@ public class BirdFrame extends ZooFrame {
 	
 	public void setStorkButtonActionListener(ActionListener a) {
 		btnStork.addActionListener(a);
+	}
+	
+	public String getNameEntered() {
+			return text.getText();
 	}
 	
 	public void setSwallowButtonActionListener(ActionListener a) {
