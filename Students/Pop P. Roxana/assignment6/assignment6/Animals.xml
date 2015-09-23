@@ -1,0 +1,51 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<nrOfLegs>0</nrOfLegs>
+	<name>shark</name>
+	<maintenanceCost>5.0</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>100</avgSwimDepth>
+	<waterType>SALTWATER</waterType>
+	<DISCRIMINANT>Shark</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>16</nrOfLegs>
+	<name>duck</name>
+	<maintenanceCost>3.5</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>100</avgFlightAltitude>
+	<DISCRIMINANT>Duck</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>16</nrOfLegs>
+	<name>butterfly</name>
+	<maintenanceCost>2.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>Butterfly</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>2</nrOfLegs>
+	<name>monkey</name>
+	<maintenanceCost>5.0</maintenanceCost>
+	<dangerPerc>0.15</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>37.0</normalBodyTemp>
+	<percBodyHair>0.75</percBodyHair>
+	<DISCRIMINANT>Monkey</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>lizard</name>
+	<maintenanceCost>4.0</maintenanceCost>
+	<dangerPerc>0.3</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>Lizard</DISCRIMINANT>
+</ANIMAL>
+</content>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<name>caretaker</name>
+	<id>1164425049313</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<name>caretaker</name>
+	<id>1164425049313</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker</name>
+	<id>2107102379283</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<name>caretaker</name>
+	<id>2107102379283</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<name>caretaker</name>
+	<id>2214613941352</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<workingHours>0.0</workingHours>
+	<name>caretaker</name>
+	<id>2214613941352</id>
+	<salary>70</salary>
+	<isDead>false</isDead>
+	<DISCRIMINANT>Caretaker</DISCRIMINANT>
+</EMPLOYEE>
+</content>
