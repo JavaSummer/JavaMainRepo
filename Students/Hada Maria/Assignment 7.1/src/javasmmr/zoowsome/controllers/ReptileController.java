@@ -17,7 +17,7 @@ import javasmmr.zoowsome.views.ReptileFrame;
 public class ReptileController extends AbstractController {
 
 	ReptileFactory reptileFactory = new ReptileFactory();
-	
+
 	public ReptileController(ReptileFrame reptileFrame, boolean hasBackButton) throws Exception {
 		super(reptileFrame, hasBackButton);
 		reptileFrame.setIguanaButtonActionListener(new IguanaButtonActionListener());
@@ -27,7 +27,7 @@ public class ReptileController extends AbstractController {
 
 	private class IguanaButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			
+
 			String choice = JOptionPane.showInputDialog("Load predefined animal or enter new info? (load/enter)");
 
 			if (choice.equals("load")) {
@@ -44,23 +44,32 @@ public class ReptileController extends AbstractController {
 					e1.printStackTrace();
 				}
 			} else if (choice.equals("enter")) {
-				
+
 				ReptileFormFrame reptileForm = new ReptileFormFrame("Iguana");
 				new ReptileFormController(reptileForm, true);
-				
+
 				try {
 					Reptile reptile;
 					reptile = (Reptile) reptileFactory.getAnimal(Constants.Animals.Reptiles.Iguana);
 
 					reptileForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							reptile.setName(reptileForm.theName());
-							reptile.setDangerPerc(reptileForm.theDangerPercent());
-							reptile.setNrOfLegs(reptileForm.theNumberOfLegs());
-							reptile.setMaintenanceCost(reptileForm.theMaintenanceCost());
-							reptile.setTakenCareOf(reptileForm.takenCareOf());
-							reptile.setLaysEggs(reptileForm.laysEggs());
-							animalList.add(reptile);
+							if ((reptileForm.theName().equals("")) || (reptileForm.theDangerPercent() == -1)
+									|| (reptileForm.theNumberOfLegs() == -1)
+									|| (reptileForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								reptile.setName(reptileForm.theName());
+								reptile.setDangerPerc(reptileForm.theDangerPercent());
+								reptile.setNrOfLegs(reptileForm.theNumberOfLegs());
+								reptile.setMaintenanceCost(reptileForm.theMaintenanceCost());
+								reptile.setTakenCareOf(reptileForm.takenCareOf());
+								reptile.setLaysEggs(reptileForm.laysEggs());
+								animalList.add(reptile);
+								JOptionPane.showMessageDialog(frame, "Iguana created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -97,23 +106,32 @@ public class ReptileController extends AbstractController {
 					e1.printStackTrace();
 				}
 			} else if (choice.equals("enter")) {
-				
+
 				ReptileFormFrame reptileForm = new ReptileFormFrame("Turtle");
 				new ReptileFormController(reptileForm, true);
-				
+
 				try {
 					Reptile reptile;
 					reptile = (Reptile) reptileFactory.getAnimal(Constants.Animals.Reptiles.Turtle);
 
 					reptileForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							reptile.setName(reptileForm.theName());
-							reptile.setDangerPerc(reptileForm.theDangerPercent());
-							reptile.setNrOfLegs(reptileForm.theNumberOfLegs());
-							reptile.setMaintenanceCost(reptileForm.theMaintenanceCost());
-							reptile.setTakenCareOf(reptileForm.takenCareOf());
-							reptile.setLaysEggs(reptileForm.laysEggs());
-							animalList.add(reptile);
+							if ((reptileForm.theName().equals("")) || (reptileForm.theDangerPercent() == -1)
+									|| (reptileForm.theNumberOfLegs() == -1)
+									|| (reptileForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								reptile.setName(reptileForm.theName());
+								reptile.setDangerPerc(reptileForm.theDangerPercent());
+								reptile.setNrOfLegs(reptileForm.theNumberOfLegs());
+								reptile.setMaintenanceCost(reptileForm.theMaintenanceCost());
+								reptile.setTakenCareOf(reptileForm.takenCareOf());
+								reptile.setLaysEggs(reptileForm.laysEggs());
+								animalList.add(reptile);
+								JOptionPane.showMessageDialog(frame, "Turtle created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -133,7 +151,7 @@ public class ReptileController extends AbstractController {
 
 	private class ViperButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			
+
 			String choice = JOptionPane.showInputDialog("Load predefined animal or enter new info? (load/enter)");
 
 			if (choice.equals("load")) {
@@ -150,23 +168,32 @@ public class ReptileController extends AbstractController {
 					e1.printStackTrace();
 				}
 			} else if (choice.equals("enter")) {
-				
+
 				ReptileFormFrame reptileForm = new ReptileFormFrame("Viper");
 				new ReptileFormController(reptileForm, true);
-				
+
 				try {
 					Reptile reptile;
 					reptile = (Reptile) reptileFactory.getAnimal(Constants.Animals.Reptiles.Viper);
 
 					reptileForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							reptile.setName(reptileForm.theName());
-							reptile.setDangerPerc(reptileForm.theDangerPercent());
-							reptile.setNrOfLegs(reptileForm.theNumberOfLegs());
-							reptile.setMaintenanceCost(reptileForm.theMaintenanceCost());
-							reptile.setTakenCareOf(reptileForm.takenCareOf());
-							reptile.setLaysEggs(reptileForm.laysEggs());
-							animalList.add(reptile);
+							if ((reptileForm.theName().equals("")) || (reptileForm.theDangerPercent() == -1)
+									|| (reptileForm.theNumberOfLegs() == -1)
+									|| (reptileForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								reptile.setName(reptileForm.theName());
+								reptile.setDangerPerc(reptileForm.theDangerPercent());
+								reptile.setNrOfLegs(reptileForm.theNumberOfLegs());
+								reptile.setMaintenanceCost(reptileForm.theMaintenanceCost());
+								reptile.setTakenCareOf(reptileForm.takenCareOf());
+								reptile.setLaysEggs(reptileForm.laysEggs());
+								animalList.add(reptile);
+								JOptionPane.showMessageDialog(frame, "Viper created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {

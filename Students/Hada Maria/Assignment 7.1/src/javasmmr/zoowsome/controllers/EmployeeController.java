@@ -3,6 +3,7 @@ package javasmmr.zoowsome.controllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
+import java.math.BigDecimal;
 
 import javax.swing.JOptionPane;
 import javax.xml.stream.XMLStreamException;
@@ -14,9 +15,9 @@ import javasmmr.zoowsome.views.EmployeeFormFrame;
 import javasmmr.zoowsome.views.EmployeeFrame;
 
 public class EmployeeController extends AbstractController {
-	
+
 	CaretakerFactory caretakerFactory = new CaretakerFactory();
-	
+
 	public EmployeeController(EmployeeFrame employeeFrame, boolean hasBackButton) throws Exception {
 		super(employeeFrame, hasBackButton);
 		employeeFrame.setEmployeeButtonActionListener(new CaretakerButtonActionListener());
@@ -51,12 +52,21 @@ public class EmployeeController extends AbstractController {
 
 					employeeForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							caretaker.setName(employeeForm.theName());
-							caretaker.setId(employeeForm.theId());
-							caretaker.setSalary(employeeForm.theSalary());
-							caretaker.setIsDead(employeeForm.isDead());
-							caretaker.setWorkingHours(employeeForm.theWorkingHours());
-							employeeList.add(caretaker);
+							if ((employeeForm.theName().equals("")) || (employeeForm.theId() == -1)
+									|| (employeeForm.theSalary().compareTo(BigDecimal.valueOf(-1)) == 0)
+									|| (employeeForm.theWorkingHours() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								caretaker.setName(employeeForm.theName());
+								caretaker.setId(employeeForm.theId());
+								caretaker.setSalary(employeeForm.theSalary());
+								caretaker.setIsDead(employeeForm.isDead());
+								caretaker.setWorkingHours(employeeForm.theWorkingHours());
+								employeeList.add(caretaker);
+								JOptionPane.showMessageDialog(frame, "Caretaker created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								employeeRepo.save(employeeList);
 							} catch (FileNotFoundException | XMLStreamException e1) {

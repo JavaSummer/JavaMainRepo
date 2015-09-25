@@ -17,7 +17,7 @@ import javasmmr.zoowsome.views.MammalFrame;
 public class MammalController extends AbstractController {
 
 	MammalFactory mammalFactory = new MammalFactory();
-	
+
 	public MammalController(MammalFrame mammalFrame, boolean hasBackButton) throws Exception {
 		super(mammalFrame, hasBackButton);
 		mammalFrame.setCowButtonActionListener(new CowButtonActionListener());
@@ -44,7 +44,7 @@ public class MammalController extends AbstractController {
 					e1.printStackTrace();
 				}
 			} else if (choice.equals("enter")) {
-				
+
 				MammalFormFrame mammalForm = new MammalFormFrame("Cow");
 				new MammalFormController(mammalForm, true);
 				try {
@@ -53,14 +53,23 @@ public class MammalController extends AbstractController {
 
 					mammalForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							mammal.setName(mammalForm.theName());
-							mammal.setDangerPerc(mammalForm.theDangerPercent());
-							mammal.setNrOfLegs(mammalForm.theNumberOfLegs());
-							mammal.setMaintenanceCost(mammalForm.theMaintenanceCost());
-							mammal.setTakenCareOf(mammalForm.takenCareOf());
-							mammal.setNormalBodyTemperature(mammalForm.bodyTemperature());
-							mammal.setPercBodyHair(mammalForm.bodyHair());
-							animalList.add(mammal);
+							if ((mammalForm.theName().equals("")) || (mammalForm.theDangerPercent() == -1)
+									|| (mammalForm.theNumberOfLegs() == -1) || (mammalForm.theMaintenanceCost() == -1)
+									|| (mammalForm.bodyTemperature() == -1) || (mammalForm.bodyHair() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								mammal.setName(mammalForm.theName());
+								mammal.setDangerPerc(mammalForm.theDangerPercent());
+								mammal.setNrOfLegs(mammalForm.theNumberOfLegs());
+								mammal.setMaintenanceCost(mammalForm.theMaintenanceCost());
+								mammal.setTakenCareOf(mammalForm.takenCareOf());
+								mammal.setNormalBodyTemperature(mammalForm.bodyTemperature());
+								mammal.setPercBodyHair(mammalForm.bodyHair());
+								animalList.add(mammal);
+								JOptionPane.showMessageDialog(frame, "Cow created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -98,21 +107,30 @@ public class MammalController extends AbstractController {
 			} else if (choice.equals("enter")) {
 				MammalFormFrame mammalForm = new MammalFormFrame("Tiger");
 				new MammalFormController(mammalForm, true);
-				
+
 				try {
 					Mammal mammal;
 					mammal = (Mammal) mammalFactory.getAnimal(Constants.Animals.Mammals.Tiger);
 
 					mammalForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							mammal.setName(mammalForm.theName());
-							mammal.setDangerPerc(mammalForm.theDangerPercent());
-							mammal.setNrOfLegs(mammalForm.theNumberOfLegs());
-							mammal.setMaintenanceCost(mammalForm.theMaintenanceCost());
-							mammal.setTakenCareOf(mammalForm.takenCareOf());
-							mammal.setNormalBodyTemperature(mammalForm.bodyTemperature());
-							mammal.setPercBodyHair(mammalForm.bodyHair());
-							animalList.add(mammal);
+							if ((mammalForm.theName().equals("")) || (mammalForm.theDangerPercent() == -1)
+									|| (mammalForm.theNumberOfLegs() == -1) || (mammalForm.theMaintenanceCost() == -1)
+									|| (mammalForm.bodyTemperature() == -1) || (mammalForm.bodyHair() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								mammal.setName(mammalForm.theName());
+								mammal.setDangerPerc(mammalForm.theDangerPercent());
+								mammal.setNrOfLegs(mammalForm.theNumberOfLegs());
+								mammal.setMaintenanceCost(mammalForm.theMaintenanceCost());
+								mammal.setTakenCareOf(mammalForm.takenCareOf());
+								mammal.setNormalBodyTemperature(mammalForm.bodyTemperature());
+								mammal.setPercBodyHair(mammalForm.bodyHair());
+								animalList.add(mammal);
+								JOptionPane.showMessageDialog(frame, "Tiger created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -132,7 +150,7 @@ public class MammalController extends AbstractController {
 
 	private class MonkeyButtonActionListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			
+
 			String choice = JOptionPane.showInputDialog("Load predefined animal or enter new info? (load/enter)");
 
 			if (choice.equals("load")) {
@@ -151,21 +169,30 @@ public class MammalController extends AbstractController {
 			} else if (choice.equals("enter")) {
 				MammalFormFrame mammalForm = new MammalFormFrame("Monkey");
 				new MammalFormController(mammalForm, true);
-				
+
 				try {
 					Mammal mammal;
 					mammal = (Mammal) mammalFactory.getAnimal(Constants.Animals.Mammals.Monkey);
 
 					mammalForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							mammal.setName(mammalForm.theName());
-							mammal.setDangerPerc(mammalForm.theDangerPercent());
-							mammal.setNrOfLegs(mammalForm.theNumberOfLegs());
-							mammal.setMaintenanceCost(mammalForm.theMaintenanceCost());
-							mammal.setTakenCareOf(mammalForm.takenCareOf());
-							mammal.setNormalBodyTemperature(mammalForm.bodyTemperature());
-							mammal.setPercBodyHair(mammalForm.bodyHair());
-							animalList.add(mammal);
+							if ((mammalForm.theName().equals("")) || (mammalForm.theDangerPercent() == -1)
+									|| (mammalForm.theNumberOfLegs() == -1) || (mammalForm.theMaintenanceCost() == -1)
+									|| (mammalForm.bodyTemperature() == -1) || (mammalForm.bodyHair() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								mammal.setName(mammalForm.theName());
+								mammal.setDangerPerc(mammalForm.theDangerPercent());
+								mammal.setNrOfLegs(mammalForm.theNumberOfLegs());
+								mammal.setMaintenanceCost(mammalForm.theMaintenanceCost());
+								mammal.setTakenCareOf(mammalForm.takenCareOf());
+								mammal.setNormalBodyTemperature(mammalForm.bodyTemperature());
+								mammal.setPercBodyHair(mammalForm.bodyHair());
+								animalList.add(mammal);
+								JOptionPane.showMessageDialog(frame, "Monkey created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {

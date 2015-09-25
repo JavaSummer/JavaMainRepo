@@ -69,7 +69,6 @@ public class MainMenuController extends AbstractController {
 
 		public void actionPerformed(ActionEvent e) {
 			frame.dispose();
-			// System.exit(1);
 		}
 	}
 }

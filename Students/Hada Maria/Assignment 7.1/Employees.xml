@@ -1,34 +1,26 @@
 <?xml version="1.0"?><content>
 <EMPLOYEE>
-	<name>Alana</name>
-	<id>8693950019925</id>
+	<name>Jack</name>
+	<id>8622299860507</id>
 	<salary>2000</salary>
 	<isDead>false</isDead>
 	<workingHours>0.0</workingHours>
 	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
 </EMPLOYEE>
 <EMPLOYEE>
-	<name>Donald D</name>
-	<id>7564162</id>
-	<salary>7589</salary>
-	<isDead>true</isDead>
-	<workingHours>5.0</workingHours>
+	<name>Peter</name>
+	<id>121212</id>
+	<salary>3201</salary>
+	<isDead>false</isDead>
+	<workingHours>2.0</workingHours>
 	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
 </EMPLOYEE>
 <EMPLOYEE>
-	<name>Francis</name>
-	<id>3503637226152</id>
+	<name>Jay</name>
+	<id>3658597607403</id>
 	<salary>2000</salary>
 	<isDead>false</isDead>
 	<workingHours>0.0</workingHours>
-	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
-</EMPLOYEE>
-<EMPLOYEE>
-	<name>Martha J</name>
-	<id>123466</id>
-	<salary>10000</salary>
-	<isDead>false</isDead>
-	<workingHours>5.0</workingHours>
 	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
 </EMPLOYEE>
 </content>

@@ -17,7 +17,7 @@ public class MammalFormFrame extends ZooFrame {
 	private JTextField nameField, dangerPercField;
 	private JTextField legsField, maintCostField;
 	private JTextField bodyTempField, bodyHairField;
-	
+
 	private JRadioButton takenCareOfRadio;
 
 	public JButton submitButton = new JButton();
@@ -125,14 +125,29 @@ public class MammalFormFrame extends ZooFrame {
 	}
 
 	public double theDangerPercent() {
+		try {
+			Double.parseDouble(dangerPercField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(dangerPercField.getText());
 	}
 
 	public int theNumberOfLegs() {
+		try {
+			Integer.parseInt(legsField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Integer.parseInt(legsField.getText());
 	}
 
 	public double theMaintenanceCost() {
+		try {
+			Double.parseDouble(maintCostField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(maintCostField.getText());
 	}
 
@@ -144,10 +159,20 @@ public class MammalFormFrame extends ZooFrame {
 	}
 
 	public float bodyTemperature() {
+		try {
+			Float.parseFloat(bodyTempField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Float.parseFloat(bodyTempField.getText());
 	}
 
 	public float bodyHair() {
+		try {
+			Float.parseFloat(bodyHairField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Float.parseFloat(bodyHairField.getText());
 	}
 }

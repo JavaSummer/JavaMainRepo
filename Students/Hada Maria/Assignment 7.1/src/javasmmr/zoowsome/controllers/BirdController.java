@@ -17,7 +17,7 @@ import javasmmr.zoowsome.views.BirdFrame;
 public class BirdController extends AbstractController {
 
 	BirdFactory birdFactory = new BirdFactory();
-	
+
 	public BirdController(BirdFrame birdFrame, boolean hasBackButton) throws Exception {
 		super(birdFrame, hasBackButton);
 		birdFrame.setFlamingoButtonActionListener(new FlamingoButtonActionListener());
@@ -54,14 +54,23 @@ public class BirdController extends AbstractController {
 
 					birdForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							bird.setName(birdForm.theName());
-							bird.setAvgFlightAltitude(birdForm.theFlightAltitude());
-							bird.setDangerPerc(birdForm.theDangerPercent());
-							bird.setNrOfLegs(birdForm.theNumberOfLegs());
-							bird.setMaintenanceCost(birdForm.theMaintenanceCost());
-							bird.setTakenCareOf(birdForm.takenCareOf());
-							bird.setMigrates(birdForm.migrates());
-							animalList.add(bird);
+							if ((birdForm.theName().equals("")) || (birdForm.theFlightAltitude() == -1)
+									|| (birdForm.theDangerPercent() == -1) || (birdForm.theNumberOfLegs() == -1)
+									|| (birdForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								bird.setName(birdForm.theName());
+								bird.setAvgFlightAltitude(birdForm.theFlightAltitude());
+								bird.setDangerPerc(birdForm.theDangerPercent());
+								bird.setNrOfLegs(birdForm.theNumberOfLegs());
+								bird.setMaintenanceCost(birdForm.theMaintenanceCost());
+								bird.setTakenCareOf(birdForm.takenCareOf());
+								bird.setMigrates(birdForm.migrates());
+								animalList.add(bird);
+								JOptionPane.showMessageDialog(frame, "Flamingo created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -107,14 +116,23 @@ public class BirdController extends AbstractController {
 
 					birdForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							bird.setName(birdForm.theName());
-							bird.setAvgFlightAltitude(birdForm.theFlightAltitude());
-							bird.setDangerPerc(birdForm.theDangerPercent());
-							bird.setNrOfLegs(birdForm.theNumberOfLegs());
-							bird.setMaintenanceCost(birdForm.theMaintenanceCost());
-							bird.setTakenCareOf(birdForm.takenCareOf());
-							bird.setMigrates(birdForm.migrates());
-							animalList.add(bird);
+							if ((birdForm.theName().equals("")) || (birdForm.theFlightAltitude() == -1)
+									|| (birdForm.theDangerPercent() == -1) || (birdForm.theNumberOfLegs() == -1)
+									|| (birdForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								bird.setName(birdForm.theName());
+								bird.setAvgFlightAltitude(birdForm.theFlightAltitude());
+								bird.setDangerPerc(birdForm.theDangerPercent());
+								bird.setNrOfLegs(birdForm.theNumberOfLegs());
+								bird.setMaintenanceCost(birdForm.theMaintenanceCost());
+								bird.setTakenCareOf(birdForm.takenCareOf());
+								bird.setMigrates(birdForm.migrates());
+								animalList.add(bird);
+								JOptionPane.showMessageDialog(frame, "Hummingbird created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -160,14 +178,23 @@ public class BirdController extends AbstractController {
 
 					birdForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							bird.setName(birdForm.theName());
-							bird.setAvgFlightAltitude(birdForm.theFlightAltitude());
-							bird.setDangerPerc(birdForm.theDangerPercent());
-							bird.setNrOfLegs(birdForm.theNumberOfLegs());
-							bird.setMaintenanceCost(birdForm.theMaintenanceCost());
-							bird.setTakenCareOf(birdForm.takenCareOf());
-							bird.setMigrates(birdForm.migrates());
-							animalList.add(bird);
+							if ((birdForm.theName().equals("")) || (birdForm.theFlightAltitude() == -1)
+									|| (birdForm.theDangerPercent() == -1) || (birdForm.theNumberOfLegs() == -1)
+									|| (birdForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								bird.setName(birdForm.theName());
+								bird.setAvgFlightAltitude(birdForm.theFlightAltitude());
+								bird.setDangerPerc(birdForm.theDangerPercent());
+								bird.setNrOfLegs(birdForm.theNumberOfLegs());
+								bird.setMaintenanceCost(birdForm.theMaintenanceCost());
+								bird.setTakenCareOf(birdForm.takenCareOf());
+								bird.setMigrates(birdForm.migrates());
+								animalList.add(bird);
+								JOptionPane.showMessageDialog(frame, "Owl created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {

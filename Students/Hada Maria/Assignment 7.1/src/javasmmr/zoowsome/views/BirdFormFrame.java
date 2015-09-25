@@ -13,15 +13,15 @@ import javax.swing.SpringLayout;
 public class BirdFormFrame extends ZooFrame {
 
 	private JLabel uniLabel;
-	
+
 	private JTextField nameField, dangerPercField;
 	private JTextField flightField, legsField;
 	private JTextField maintCostField;
-	
+
 	private JRadioButton migratesRadio, takenCareOfRadio;
-	
+
 	public JButton submitButton = new JButton();
-	
+
 	public BirdFormFrame(String title) {
 		super(title);
 
@@ -113,7 +113,7 @@ public class BirdFormFrame extends ZooFrame {
 		slPanel.putConstraint(SpringLayout.WEST, migratesRadio, 45, SpringLayout.WEST, rightPanel);
 		migratesRadio.setToolTipText("Check if the animal migrates.");
 		rightPanel.add(migratesRadio);
-		
+
 		submitButton = new JButton("SUBMIT");
 		slPanel.putConstraint(SpringLayout.NORTH, submitButton, 310, SpringLayout.NORTH, rightPanel);
 		slPanel.putConstraint(SpringLayout.WEST, submitButton, 100, SpringLayout.WEST, rightPanel);
@@ -125,30 +125,50 @@ public class BirdFormFrame extends ZooFrame {
 	public String theName() {
 		return nameField.getText();
 	}
-	
+
 	public int theFlightAltitude() {
+		try {
+			Integer.parseInt(flightField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Integer.parseInt(flightField.getText());
 	}
-	
+
 	public double theDangerPercent() {
+		try {
+			Double.parseDouble(dangerPercField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(dangerPercField.getText());
 	}
-	
+
 	public int theNumberOfLegs() {
+		try {
+			Integer.parseInt(legsField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Integer.parseInt(legsField.getText());
 	}
-	
+
 	public double theMaintenanceCost() {
+		try {
+			Double.parseDouble(maintCostField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(maintCostField.getText());
 	}
-	
+
 	public boolean takenCareOf() {
 		if (takenCareOfRadio.isSelected())
 			return true;
 		else
 			return false;
 	}
-	
+
 	public boolean migrates() {
 		if (migratesRadio.isSelected())
 			return true;

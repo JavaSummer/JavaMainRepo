@@ -13,15 +13,15 @@ import javax.swing.SpringLayout;
 public class AquaticFormFrame extends ZooFrame {
 
 	private JLabel uniLabel;
-	
+
 	private JTextField nameField, dangerPercField;
 	private JTextField swimField, legsField;
 	private JTextField maintCostField;
-	
+
 	private JRadioButton takenCareOfRadio, isDangerousRadio;
-	
+
 	public JButton submitButton = new JButton();
-	
+
 	public AquaticFormFrame(String title) {
 		super(title);
 
@@ -113,7 +113,7 @@ public class AquaticFormFrame extends ZooFrame {
 		slPanel.putConstraint(SpringLayout.WEST, isDangerousRadio, 45, SpringLayout.WEST, rightPanel);
 		isDangerousRadio.setToolTipText("Check if the animal is dangerous.");
 		rightPanel.add(isDangerousRadio);
-		
+
 		submitButton = new JButton("SUBMIT");
 		slPanel.putConstraint(SpringLayout.NORTH, submitButton, 310, SpringLayout.NORTH, rightPanel);
 		slPanel.putConstraint(SpringLayout.WEST, submitButton, 100, SpringLayout.WEST, rightPanel);
@@ -125,30 +125,50 @@ public class AquaticFormFrame extends ZooFrame {
 	public String theName() {
 		return nameField.getText();
 	}
-	
+
 	public int theSwimDepth() {
+		try {
+			Integer.parseInt(swimField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Integer.parseInt(swimField.getText());
 	}
-	
+
 	public double theDangerPercent() {
+		try {
+			Double.parseDouble(dangerPercField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(dangerPercField.getText());
 	}
-	
+
 	public int theNumberOfLegs() {
+		try {
+			Integer.parseInt(legsField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Integer.parseInt(legsField.getText());
 	}
-	
+
 	public double theMaintenanceCost() {
+		try {
+			Double.parseDouble(maintCostField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(maintCostField.getText());
 	}
-	
+
 	public boolean takenCareOf() {
 		if (takenCareOfRadio.isSelected())
 			return true;
 		else
 			return false;
 	}
-	
+
 	public boolean isDangerous() {
 		if (isDangerousRadio.isSelected())
 			return true;

@@ -16,9 +16,9 @@ import javasmmr.zoowsome.views.AquaticFormFrame;
 import javasmmr.zoowsome.views.AquaticFrame;
 
 public class AquaticController extends AbstractController {
-	
+
 	AquaticFactory aquaticFactory = new AquaticFactory();
-	
+
 	public AquaticController(AquaticFrame aquaticFrame, boolean hasBackButton) throws Exception {
 		super(aquaticFrame, hasBackButton);
 
@@ -34,7 +34,7 @@ public class AquaticController extends AbstractController {
 			String choice = JOptionPane.showInputDialog("Load predefined animal or enter new info? (load/enter)");
 			if (choice.equals("load")) {
 				Dolphin dolphin = null;
-				
+
 				try {
 					dolphin = (Dolphin) aquaticFactory.getAnimal(Constants.Animals.Aquatics.Dolphin);
 
@@ -53,16 +53,26 @@ public class AquaticController extends AbstractController {
 				Dolphin dolphin;
 				try {
 					dolphin = (Dolphin) aquaticFactory.getAnimal(Constants.Animals.Aquatics.Dolphin);
+
 					aquaticForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							dolphin.setName(aquaticForm.theName());
-							dolphin.setAvgSwimDepth(aquaticForm.theSwimDepth());
-							dolphin.setDangerPerc(aquaticForm.theDangerPercent());
-							dolphin.setNrOfLegs(aquaticForm.theNumberOfLegs());
-							dolphin.setMaintenanceCost(aquaticForm.theMaintenanceCost());
-							dolphin.setTakenCareOf(aquaticForm.takenCareOf());
-							dolphin.setIsDangerous(aquaticForm.isDangerous());
-							animalList.add(dolphin);
+							if ((aquaticForm.theName().equals("")) || (aquaticForm.theSwimDepth() == -1)
+									|| (aquaticForm.theDangerPercent() == -1) || (aquaticForm.theNumberOfLegs() == -1)
+									|| (aquaticForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								dolphin.setName(aquaticForm.theName());
+								dolphin.setAvgSwimDepth(aquaticForm.theSwimDepth());
+								dolphin.setDangerPerc(aquaticForm.theDangerPercent());
+								dolphin.setNrOfLegs(aquaticForm.theNumberOfLegs());
+								dolphin.setMaintenanceCost(aquaticForm.theMaintenanceCost());
+								dolphin.setTakenCareOf(aquaticForm.takenCareOf());
+								dolphin.setIsDangerous(aquaticForm.isDangerous());
+								animalList.add(dolphin);
+								JOptionPane.showMessageDialog(frame, "Dolphin created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -73,7 +83,9 @@ public class AquaticController extends AbstractController {
 				} catch (Exception e2) {
 					e2.printStackTrace();
 				}
-			} else {
+			} else
+
+			{
 				JOptionPane.showMessageDialog(frame, "Invalid choice.", "Warning", JOptionPane.WARNING_MESSAGE);
 			}
 		}
@@ -102,16 +114,27 @@ public class AquaticController extends AbstractController {
 				Jellyfish jellyfish;
 				try {
 					jellyfish = (Jellyfish) aquaticFactory.getAnimal(Constants.Animals.Aquatics.Jellyfish);
+
 					aquaticForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							jellyfish.setName(aquaticForm.theName());
-							jellyfish.setAvgSwimDepth(aquaticForm.theSwimDepth());
-							jellyfish.setDangerPerc(aquaticForm.theDangerPercent());
-							jellyfish.setNrOfLegs(aquaticForm.theNumberOfLegs());
-							jellyfish.setMaintenanceCost(aquaticForm.theMaintenanceCost());
-							jellyfish.setTakenCareOf(aquaticForm.takenCareOf());
-							jellyfish.setIsDangerous(aquaticForm.isDangerous());
-							animalList.add(jellyfish);
+							if ((aquaticForm.theName().equals("")) || (aquaticForm.theSwimDepth() == -1)
+									|| (aquaticForm.theDangerPercent() == -1) || (aquaticForm.theNumberOfLegs() == -1)
+									|| (aquaticForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								jellyfish.setName(aquaticForm.theName());
+								jellyfish.setAvgSwimDepth(aquaticForm.theSwimDepth());
+								jellyfish.setDangerPerc(aquaticForm.theDangerPercent());
+								jellyfish.setNrOfLegs(aquaticForm.theNumberOfLegs());
+								jellyfish.setMaintenanceCost(aquaticForm.theMaintenanceCost());
+								jellyfish.setTakenCareOf(aquaticForm.takenCareOf());
+								jellyfish.setIsDangerous(aquaticForm.isDangerous());
+								animalList.add(jellyfish);
+								JOptionPane.showMessageDialog(frame, "Jellyfish created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
+
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {
@@ -154,14 +177,23 @@ public class AquaticController extends AbstractController {
 					swordfish = (Swordfish) aquaticFactory.getAnimal(Constants.Animals.Aquatics.Swordfish);
 					aquaticForm.submitButton.addActionListener(new ActionListener() {
 						public void actionPerformed(ActionEvent e) {
-							swordfish.setName(aquaticForm.theName());
-							swordfish.setAvgSwimDepth(aquaticForm.theSwimDepth());
-							swordfish.setDangerPerc(aquaticForm.theDangerPercent());
-							swordfish.setNrOfLegs(aquaticForm.theNumberOfLegs());
-							swordfish.setMaintenanceCost(aquaticForm.theMaintenanceCost());
-							swordfish.setTakenCareOf(aquaticForm.takenCareOf());
-							swordfish.setIsDangerous(aquaticForm.isDangerous());
-							animalList.add(swordfish);
+							if ((aquaticForm.theName().equals("")) || (aquaticForm.theSwimDepth() == -1)
+									|| (aquaticForm.theDangerPercent() == -1) || (aquaticForm.theNumberOfLegs() == -1)
+									|| (aquaticForm.theMaintenanceCost() == -1)) {
+								JOptionPane.showMessageDialog(frame, "Please enter valid data.", "Warning",
+										JOptionPane.WARNING_MESSAGE);
+							} else {
+								swordfish.setName(aquaticForm.theName());
+								swordfish.setAvgSwimDepth(aquaticForm.theSwimDepth());
+								swordfish.setDangerPerc(aquaticForm.theDangerPercent());
+								swordfish.setNrOfLegs(aquaticForm.theNumberOfLegs());
+								swordfish.setMaintenanceCost(aquaticForm.theMaintenanceCost());
+								swordfish.setTakenCareOf(aquaticForm.takenCareOf());
+								swordfish.setIsDangerous(aquaticForm.isDangerous());
+								animalList.add(swordfish);
+								JOptionPane.showMessageDialog(frame, "Swordfish created.", "Well done",
+										JOptionPane.INFORMATION_MESSAGE);
+							}
 							try {
 								animalRepo.save(animalList);
 							} catch (FileNotFoundException | XMLStreamException e1) {

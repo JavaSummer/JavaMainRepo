@@ -1,62 +1,42 @@
 <?xml version="1.0"?><content>
 <ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Flipper</name>
-	<maintenanceCost>6.0</maintenanceCost>
-	<dangerPerc>0.25</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>90</avgSwimDepth>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>DOLPHIN</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Sting</name>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Beedrill</name>
 	<maintenanceCost>3.0</maintenanceCost>
-	<dangerPerc>1.0</dangerPerc>
+	<dangerPerc>0.6</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>150</avgSwimDepth>
-	<isDangerous>true</isDangerous>
-	<DISCRIMINANT>JELLYFISH</DISCRIMINANT>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BEE</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Needle</name>
-	<maintenanceCost>4.0</maintenanceCost>
-	<dangerPerc>0.75</dangerPerc>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Heracross</name>
+	<maintenanceCost>2.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
 	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>600</avgSwimDepth>
-	<isDangerous>true</isDangerous>
-	<DISCRIMINANT>SWORDFISH</DISCRIMINANT>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BEETLE</DISCRIMINANT>
 </ANIMAL>
 <ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Django</name>
-	<maintenanceCost>200.0</maintenanceCost>
-	<dangerPerc>0.1</dangerPerc>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Butterfree</name>
+	<maintenanceCost>2.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BUTTERFLY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Mario</name>
+	<maintenanceCost>20.0</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
 	<takenCareOf>true</takenCareOf>
-	<avgSwimDepth>100</avgSwimDepth>
+	<canFly>true</canFly>
 	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>DOLPHIN</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Jelly-O</name>
-	<maintenanceCost>300.0</maintenanceCost>
-	<dangerPerc>0.2</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>200</avgSwimDepth>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>JELLYFISH</DISCRIMINANT>
-</ANIMAL>
-<ANIMAL>
-	<nrOfLegs>0</nrOfLegs>
-	<name>Swift</name>
-	<maintenanceCost>400.0</maintenanceCost>
-	<dangerPerc>0.3</dangerPerc>
-	<takenCareOf>false</takenCareOf>
-	<avgSwimDepth>300</avgSwimDepth>
-	<isDangerous>false</isDangerous>
-	<DISCRIMINANT>SWORDFISH</DISCRIMINANT>
+	<DISCRIMINANT>BEETLE</DISCRIMINANT>
 </ANIMAL>
 </content>

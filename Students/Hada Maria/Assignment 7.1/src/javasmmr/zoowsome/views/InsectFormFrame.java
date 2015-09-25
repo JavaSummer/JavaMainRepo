@@ -127,14 +127,29 @@ public class InsectFormFrame extends ZooFrame {
 	}
 
 	public double theDangerPercent() {
+		try {
+			Double.parseDouble(dangerPercField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(dangerPercField.getText());
 	}
 
 	public int theNumberOfLegs() {
+		try {
+			Integer.parseInt(legsField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Integer.parseInt(legsField.getText());
 	}
 
 	public double theMaintenanceCost() {
+		try {
+			Double.parseDouble(maintCostField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(maintCostField.getText());
 	}
 

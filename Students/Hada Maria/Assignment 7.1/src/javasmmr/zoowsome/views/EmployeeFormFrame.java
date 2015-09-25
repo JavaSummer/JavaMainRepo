@@ -106,15 +106,32 @@ public class EmployeeFormFrame extends ZooFrame {
 	}
 
 	public long theId() {
+		try {
+			Long.parseLong(idField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Long.parseLong(idField.getText());
 	}
 
 	public BigDecimal theSalary() {
-		BigDecimal salary = new BigDecimal(salaryField.getText());
-		return salary;
+		@SuppressWarnings("unused")
+		BigDecimal salary;
+		try {
+			salary = new BigDecimal(salaryField.getText());
+		} catch (NumberFormatException ex) {
+			return BigDecimal.valueOf(-1);
+
+		}
+		return salary = new BigDecimal(salaryField.getText());
 	}
 
 	public double theWorkingHours() {
+		try {
+			Double.parseDouble(workingHoursField.getText());
+		} catch (NumberFormatException ex) {
+			return -1;
+		}
 		return Double.parseDouble(workingHoursField.getText());
 	}
 
