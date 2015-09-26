@@ -3,6 +3,22 @@ import javasmmr.zoowsome.models.animals.*;
 import javasmmr.zoowsome.services.factories.*;
 public class InsectFactory extends SpeciesFactory {
 	
+	public Animal getAnimal(String type, String name, String nrOfLegs, String maintananceCost, String dangerPerc,
+			String canFly, String isDangerous) throws Exception {
+		
+		if  (Constants.Animals.Insects.Butterfly.equals(type)) {
+			return new Butterfly(Integer.parseInt(nrOfLegs), name, Boolean.parseBoolean(canFly), Boolean.parseBoolean(isDangerous),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if (Constants.Animals.Insects.Cockroach.equals(type)){
+			return new Cockroach(Integer.parseInt(nrOfLegs), name,Boolean.parseBoolean(canFly), Boolean.parseBoolean(isDangerous),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if(Constants.Animals.Insects.Spider.equals(type)){
+			return new Spider(Integer.parseInt(nrOfLegs), name, Boolean.parseBoolean(canFly), Boolean.parseBoolean(isDangerous),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else {
+			throw new Exception("Invalid animal exception!");
+		}
+	}
 	
 	public Animal getAnimal(String type) throws Exception{
 		

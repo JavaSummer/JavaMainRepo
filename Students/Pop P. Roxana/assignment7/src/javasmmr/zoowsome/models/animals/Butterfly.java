@@ -8,7 +8,7 @@ import javasmmr.zoowsome.services.factories.Constants;
 public class Butterfly extends Insect {
 
 	
-	public Butterfly(Integer nrOfLegs, String name, boolean canFly, boolean isDangerous,double maintenanceCost, double dangerPerc) {
+	public Butterfly(Integer nrOfLegs, String name, boolean canFly, boolean isDangerous, double maintenanceCost, double dangerPerc) {
 
 		super( maintenanceCost, dangerPerc);
 		setNrOfLegs(nrOfLegs);

@@ -5,6 +5,24 @@ import javasmmr.zoowsome.services.factories.*;
 public class ReptileFactory extends SpeciesFactory {
 	
 	
+	public Animal getAnimal(String type, String name, String nrOfLegs, String maintananceCost, String dangerPerc,
+			String migrates) throws Exception {
+		
+		if  (Constants.Animals.Reptiles.Crocodiles.equals(type)){
+			return new Crocodiles(Integer.parseInt(nrOfLegs), name, Boolean.parseBoolean(migrates),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if (Constants.Animals.Reptiles.Lizard.equals(type)){
+			return new Lizard(Integer.parseInt(nrOfLegs), name,Boolean.parseBoolean(migrates),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if (Constants.Animals.Reptiles.Turtle.equals(type)){
+			return new Turtle(Integer.parseInt(nrOfLegs), name, Boolean.parseBoolean(migrates),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else {
+			throw new Exception("Invalid animal exception!");
+		}
+	}
+	
+	
 	public Animal getAnimal(String type) throws Exception{
 		
 		if (Constants.Animals.Reptiles.Crocodiles.equals(type)){

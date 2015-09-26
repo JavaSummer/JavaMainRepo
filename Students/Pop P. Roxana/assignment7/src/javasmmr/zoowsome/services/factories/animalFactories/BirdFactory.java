@@ -4,6 +4,23 @@ import javasmmr.zoowsome.models.animals.*;
 
 public class BirdFactory extends SpeciesFactory {
 
+	public Animal getAnimal(String type, String name, String nrOfLegs, String maintananceCost, String dangerPerc,
+			String avgFlightAltitude, String migrates) throws Exception {
+
+		if (Constants.Animals.Birds.Duck.equals(type)) {
+			return new Duck(Integer.parseInt(nrOfLegs), name, Boolean.getBoolean(migrates),Integer.parseInt(avgFlightAltitude),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if (Constants.Animals.Birds.Pigeon.equals(type)) {
+			return new Pigeon(Integer.parseInt(nrOfLegs), name, Boolean.getBoolean(migrates),Integer.parseInt(avgFlightAltitude),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if (Constants.Animals.Birds.Sparrow.equals(type)) {
+			return new Sparrow(Integer.parseInt(nrOfLegs), name, Boolean.getBoolean(migrates),Integer.parseInt(avgFlightAltitude),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else {
+			throw new Exception("Invalid animal exception!");
+		}
+	}
+	
 	public Animal getAnimal(String type) throws Exception {
 
 		if (Constants.Animals.Birds.Duck.equals(type)) {

@@ -20,6 +20,23 @@ public class MammalFactory extends SpeciesFactory {
 		}
 	}
 	
+	public Animal getAnimal(String type, String name, String nrOfLegs, String maintananceCost, String dangerPerc,
+			String normalBodytemp, String percBodyHair) throws Exception {
+		
+		if (Constants.Animals.Mammals.Cow.equals(type)) {
+			return new Cow(Integer.parseInt(nrOfLegs), name, Float.parseFloat(normalBodytemp),Float.parseFloat(percBodyHair),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else if (Constants.Animals.Mammals.Monkey.equals(type)){
+			return new Monkey(Integer.parseInt(nrOfLegs), name,Float.parseFloat(normalBodytemp), Float.parseFloat(percBodyHair),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+	    } else if (Constants.Animals.Mammals.Tiger.equals(type)) {
+			return new Tiger(Integer.parseInt(nrOfLegs), name, Float.parseFloat(normalBodytemp), Float.parseFloat(percBodyHair),
+					Double.parseDouble(maintananceCost), Double.parseDouble(dangerPerc));
+		} else {
+			throw new Exception("Invalid animal exception!");
+		}
+	}
+	
 	public Animal getAnimalWithRandomAttributes(String type) throws Exception {
 
 		RandomAttributesGeneration ranGenerator = new RandomAttributesGeneration();

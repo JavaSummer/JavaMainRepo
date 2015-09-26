@@ -11,6 +11,7 @@ import javasmmr.zoowsome.services.factories.employeeFactories.EmployeeFactory;
 import javasmmr.zoowsome.views.AddFrame;
 import javasmmr.zoowsome.views.AquaticFrame;
 import javasmmr.zoowsome.views.BirdFrame;
+import javasmmr.zoowsome.views.CaretakerFrame;
 import javasmmr.zoowsome.views.InsectFrame;
 import javasmmr.zoowsome.views.MammalFrame;
 import javasmmr.zoowsome.views.ReptileFrame;
@@ -18,73 +19,60 @@ import javasmmr.zoowsome.views.ReptileFrame;
 public class AddController extends AbstractController {
 	public AddController(AddFrame addFrame, boolean hasBackButton) {
 		super(addFrame, hasBackButton);
-		((AddFrame)frame).setAquaticButtonActionListener(new AquaticButtonActionListener());
-		((AddFrame)frame).setBirdButtonActionListener(new BirdButtonActionListener());
-		((AddFrame)frame).setInsectButtonActionListener(new InsectButtonActionListener());
-		((AddFrame)frame).setMammalButtonActionListener(new MammalButtonActionListener());
-		((AddFrame)frame).setReptileButtonActionListener(new ReptileButtonActionListener());
-		((AddFrame)frame).setCaretakerButtonActionListener(new CaretakerButtonActionListener());
+		((AddFrame) frame).setAquaticButtonActionListener(new AquaticButtonActionListener());
+		((AddFrame) frame).setBirdButtonActionListener(new BirdButtonActionListener());
+		((AddFrame) frame).setInsectButtonActionListener(new InsectButtonActionListener());
+		((AddFrame) frame).setMammalButtonActionListener(new MammalButtonActionListener());
+		((AddFrame) frame).setReptileButtonActionListener(new ReptileButtonActionListener());
+		((AddFrame) frame).setCaretakerButtonActionListener(new CaretakerButtonActionListener());
 	}
-	
 
-	private class AquaticButtonActionListener implements ActionListener{
+	private class AquaticButtonActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new AquaticController(new AquaticFrame("Aquatic"),true);
+			new AquaticController(new AquaticFrame("Aquatic"), true);
 		}
 	}
-	
-	private class BirdButtonActionListener implements ActionListener{
+
+	private class BirdButtonActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new BirdController(new BirdFrame("Bird"),true);
+			new BirdController(new BirdFrame("Bird"), true);
 		}
 	}
-	
-	private class InsectButtonActionListener implements ActionListener{
+
+	private class InsectButtonActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new InsectController(new InsectFrame("Insect"),true);
+			new InsectController(new InsectFrame("Insect"), true);
 		}
 	}
-	
-	private class MammalButtonActionListener implements ActionListener{
+
+	private class MammalButtonActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new MammalController(new MammalFrame("Mammal"),true);
+			new MammalController(new MammalFrame("Mammal"), true);
 		}
 	}
-	
-	private class ReptileButtonActionListener implements ActionListener{
+
+	private class ReptileButtonActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			new ReptileController(new ReptileFrame("Reptile"),true);
+			new ReptileController(new ReptileFrame("Reptile"), true);
 		}
 	}
-	
-	private class CaretakerButtonActionListener implements ActionListener{
+
+	private class CaretakerButtonActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			
-			//creates a new caretaker
+			new CaretakerController(new CaretakerFrame("Caretaker"), true);
 
-			EmployeeFactory abstractFactory = new EmployeeFactory();
-			try {
-				EmployeeAbstractFactory caretakersFactory = abstractFactory
-						.getEmployeeFactory(Constants.EmployeesType.Caretakers);
-
-				Employee employee = caretakersFactory.getEmployee();
-				EmployeeRepository.addEmployeeToBeListed(employee);
-			} catch (Exception e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
 		}
 	}
 }

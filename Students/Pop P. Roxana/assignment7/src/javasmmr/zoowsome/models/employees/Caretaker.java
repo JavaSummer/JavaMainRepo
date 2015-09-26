@@ -26,6 +26,14 @@ public class Caretaker extends Employee implements Caretaker_I {
 		this.setIsDead(false);
 
 	}
+	
+     public Caretaker(String name, Long id, BigDecimal salary, boolean isDead, double workingHours) {
+		
+    	super(name,salary,isDead);
+		this.setId(id);
+		this.setWorkingHours(workingHours);
+
+	}
 
 	public void setWorkingHours(double workingH) {
 		workingHours = workingH;
@@ -71,7 +79,7 @@ public class Caretaker extends Employee implements Caretaker_I {
 
 		System.out.println("Name: " + getName());
 		System.out.println("Id: " + getId());
-		System.out.println("Salry " + getSalary());
+		System.out.println("Salary " + getSalary());
 		System.out.println((getIsDead()) ? "The employee is dead" : "The employee is still alive");
 		System.out.println("Working hours: " + getWorkingHours());
 
