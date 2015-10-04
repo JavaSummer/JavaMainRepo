@@ -5,6 +5,7 @@ import java.util.Iterator;
 
 import javasmmr.zoosome.models.animals.Animal;
 import javasmmr.zoosome.models.animals.Aquatic;
+import javasmmr.zoosome.models.animals.Bear;
 import javasmmr.zoosome.models.animals.Bird;
 import javasmmr.zoosome.models.animals.Insect;
 import javasmmr.zoosome.models.animals.Mammal;
@@ -25,7 +26,7 @@ public class BigFactory {
 
 	public BigFactory() {
 		this.animalFactory = new AnimalFactory();
-
+		Animal a = new Bear();
 		this.factories = new SpeciesFactory[Constants.Species.SPECIES.length];
 
 		try {
@@ -175,7 +176,7 @@ public class BigFactory {
 			System.out.println("Animalic exception.");
 		}
 
-		System.out.printf("Maintanance: %f, Danger: %f%%, ", a.getMaintenanceCost(), a.getDangerPerc());
+		System.out.printf("Maintanance: %f, Danger: %f, ", a.getMaintenanceCost(), a.getDangerPerc());
 		System.out.println("fed: " + a.getTakenCareOf() + ".");
 	}
 
