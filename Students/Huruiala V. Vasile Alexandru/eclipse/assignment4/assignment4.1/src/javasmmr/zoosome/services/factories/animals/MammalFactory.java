@@ -23,6 +23,7 @@ public class MammalFactory extends SpeciesFactory {
 	@Override
 	public Animal getAnimal(String type) throws Exception {
 		if (Constants.Animals.Mammal.BEAR.equals(type)) {
+			Animal a = new Bear();
 			return new Bear();
 		} else if (Constants.Animals.Mammal.KANGAROO.equals(type)) {
 			return new Kangaroo();
