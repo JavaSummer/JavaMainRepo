@@ -1,0 +1,488 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>EaI31CNdP3bORFEdm7u</name>
+	<maintenanceCost>0.9663210083811176</maintenanceCost>
+	<dangerPerc>0.002</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>99</avgFlightAltitude>
+	<DISCRIMINANT>PIGEON</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>10</nrOfLegs>
+	<name>FuR5WWWNl0R3Vhp</name>
+	<maintenanceCost>0.8520282271355304</maintenanceCost>
+	<dangerPerc>0.001</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>3</nrOfLegs>
+	<name>vG1cJARPCqi6fr4o</name>
+	<maintenanceCost>1.795049551515469</maintenanceCost>
+	<dangerPerc>0.09</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>75</avgFlightAltitude>
+	<DISCRIMINANT>MOCKINGJAY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>26</nrOfLegs>
+	<name>rah</name>
+	<maintenanceCost>1.302245202234258</maintenanceCost>
+	<dangerPerc>1.0E-6</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>false</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BUTTERFLY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>3</nrOfLegs>
+	<name>pO3vldp3YDMvsbIW</name>
+	<maintenanceCost>2.39054445513752</maintenanceCost>
+	<dangerPerc>0.8</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<normalBodyTemp>69.25597</normalBodyTemp>
+	<percBodyHair>0.58344114</percBodyHair>
+	<DISCRIMINANT>WOLF</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>7</nrOfLegs>
+	<name>bg9ddY4QMBPJJo</name>
+	<maintenanceCost>5.183987427117398</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>2</nrOfLegs>
+	<name>1kQmJviSZ5mSW3</name>
+	<maintenanceCost>1.2313108396625305</maintenanceCost>
+	<dangerPerc>0.001</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<avgSwimDepth>10</avgSwimDepth>
+	<waterType>SALTWATER</waterType>
+	<DISCRIMINANT>SARDINE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>2</nrOfLegs>
+	<name>II</name>
+	<maintenanceCost>0.26037453246900255</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>46</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>e8vaQtAQwH</name>
+	<maintenanceCost>3.978754811573077</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>32</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>81</nrOfLegs>
+	<name>5HYFOaz2S4zqcjo</name>
+	<maintenanceCost>3.5100073867798756</maintenanceCost>
+	<dangerPerc>1.0E-6</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>BUTTERFLY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>10</nrOfLegs>
+	<name>Ztm6BRXb5RBhBngWtV</name>
+	<maintenanceCost>3.3663569031881537</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>5</nrOfLegs>
+	<name>G5jHyoP5IojSsHd4AsNP</name>
+	<maintenanceCost>2.5413152869223605</maintenanceCost>
+	<dangerPerc>0.99</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>66.26389</normalBodyTemp>
+	<percBodyHair>0.46618438</percBodyHair>
+	<DISCRIMINANT>TIGER</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>3</nrOfLegs>
+	<name>oJmY0YImo7d</name>
+	<maintenanceCost>5.375917786130609</maintenanceCost>
+	<dangerPerc>0.002</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>44</avgFlightAltitude>
+	<DISCRIMINANT>PIGEON</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>62</nrOfLegs>
+	<name>b</name>
+	<maintenanceCost>5.263433716262812</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>SCARABEUS</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>8</nrOfLegs>
+	<name>04URlvdVnkC</name>
+	<maintenanceCost>2.907796677498898</maintenanceCost>
+	<dangerPerc>0.09</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>31</avgFlightAltitude>
+	<DISCRIMINANT>MOCKINGJAY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>3</nrOfLegs>
+	<name>M</name>
+	<maintenanceCost>1.487220340315101</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>66</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>8</nrOfLegs>
+	<name>QF5gnohgWbAobfyvFL3</name>
+	<maintenanceCost>0.862614158925098</maintenanceCost>
+	<dangerPerc>0.99</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>27.121426</normalBodyTemp>
+	<percBodyHair>0.10309225</percBodyHair>
+	<DISCRIMINANT>TIGER</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>36</nrOfLegs>
+	<name>RWxABwe6snyLdYB7h</name>
+	<maintenanceCost>2.592889122872167</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>SCARABEUS</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>cCn1jloTciipAIpsOjM9</name>
+	<maintenanceCost>1.910345476379818</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>1</nrOfLegs>
+	<name>tkD</name>
+	<maintenanceCost>5.921573215127132</maintenanceCost>
+	<dangerPerc>0.8</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>26.831818</normalBodyTemp>
+	<percBodyHair>0.8291836</percBodyHair>
+	<DISCRIMINANT>WOLF</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>5</nrOfLegs>
+	<name>4cisKdLCqtY499pF</name>
+	<maintenanceCost>5.274920425540975</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>47</avgSwimDepth>
+	<waterType>SALTWATER</waterType>
+	<DISCRIMINANT>PIRANHA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>1</nrOfLegs>
+	<name>rQnR96xzxhuSL xSq</name>
+	<maintenanceCost>2.0204034855929263</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>14</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>47</nrOfLegs>
+	<name>yXxMEgdiZAIo3l9QsRu</name>
+	<maintenanceCost>4.126518241509135</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>SCARABEUS</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>6 GtE7bopltzh2tg</name>
+	<maintenanceCost>2.6695716785249193</maintenanceCost>
+	<dangerPerc>0.15</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>16.322374</normalBodyTemp>
+	<percBodyHair>0.38640904</percBodyHair>
+	<DISCRIMINANT>COW</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>5</nrOfLegs>
+	<name>6ENREjeoLqz</name>
+	<maintenanceCost>4.963336637230672</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>91</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>1</nrOfLegs>
+	<name>HknACUWPHUqgAfb87Zr</name>
+	<maintenanceCost>5.527470153551629</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>2</nrOfLegs>
+	<name>FWkz0kN</name>
+	<maintenanceCost>1.6124311122363388</maintenanceCost>
+	<dangerPerc>0.1</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>16</avgSwimDepth>
+	<waterType>FRESHWATER</waterType>
+	<DISCRIMINANT>DOLPHIN</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>8</nrOfLegs>
+	<name>8R</name>
+	<maintenanceCost>2.287864707920308</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>qu9 i</name>
+	<maintenanceCost>5.900864241127427</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>5</nrOfLegs>
+	<name>evYb</name>
+	<maintenanceCost>2.9473129644038174</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>x2</name>
+	<maintenanceCost>4.620180052357157</maintenanceCost>
+	<dangerPerc>0.001</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>36</nrOfLegs>
+	<name>x3Va</name>
+	<maintenanceCost>3.2012524843758436</maintenanceCost>
+	<dangerPerc>1.0E-6</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>BUTTERFLY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>7</nrOfLegs>
+	<name>hULdSEAutq</name>
+	<maintenanceCost>1.3712351555888043</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>49</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>0FJxy5bIWVCzVgkXCDxo</name>
+	<maintenanceCost>1.0922937252667826</maintenanceCost>
+	<dangerPerc>0.15</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>59.81691</normalBodyTemp>
+	<percBodyHair>0.97788805</percBodyHair>
+	<DISCRIMINANT>COW</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>10</nrOfLegs>
+	<name>ysusvD1FifG</name>
+	<maintenanceCost>5.755196162998244</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>8</nrOfLegs>
+	<name>aO7ukEfe</name>
+	<maintenanceCost>5.601098159990886</maintenanceCost>
+	<dangerPerc>0.5</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>true</migrates>
+	<avgFlightAltitude>22</avgFlightAltitude>
+	<DISCRIMINANT>EAGLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>7</nrOfLegs>
+	<name>I</name>
+	<maintenanceCost>4.586934502216391</maintenanceCost>
+	<dangerPerc>0.15</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>92.72773</normalBodyTemp>
+	<percBodyHair>0.5482309</percBodyHair>
+	<DISCRIMINANT>COW</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>HqMQUeOyw9I5SHYht2</name>
+	<maintenanceCost>3.2753133907834346</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>81</avgSwimDepth>
+	<waterType>FRESHWATER</waterType>
+	<DISCRIMINANT>PIRANHA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>3</nrOfLegs>
+	<name>OcG</name>
+	<maintenanceCost>1.8407938662554382</maintenanceCost>
+	<dangerPerc>0.1</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>57</avgSwimDepth>
+	<waterType>SALTWATER</waterType>
+	<DISCRIMINANT>DOLPHIN</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>10</nrOfLegs>
+	<name>eOviblrrWciJqZ92uk9Z</name>
+	<maintenanceCost>4.581442749664525</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>68</avgSwimDepth>
+	<waterType>FRESHWATER</waterType>
+	<DISCRIMINANT>PIRANHA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>vgpEgECt6wk0tC</name>
+	<maintenanceCost>1.7271900411696233</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>CROCODILE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>7</nrOfLegs>
+	<name>DhY3L82vsJ</name>
+	<maintenanceCost>2.3712942904050838</maintenanceCost>
+	<dangerPerc>0.15</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>87.404236</normalBodyTemp>
+	<percBodyHair>0.6752672</percBodyHair>
+	<DISCRIMINANT>COW</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>10</nrOfLegs>
+	<name>qIcSMidD</name>
+	<maintenanceCost>3.9041047636449004</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>K9croNf0n9</name>
+	<maintenanceCost>0.8977946034649995</maintenanceCost>
+	<dangerPerc>0.95</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<avgSwimDepth>51</avgSwimDepth>
+	<waterType>SALTWATER</waterType>
+	<DISCRIMINANT>PIRANHA</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>1</nrOfLegs>
+	<name>m</name>
+	<maintenanceCost>4.887658956361122</maintenanceCost>
+	<dangerPerc>0.99</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<normalBodyTemp>53.55404</normalBodyTemp>
+	<percBodyHair>0.30277008</percBodyHair>
+	<DISCRIMINANT>TIGER</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>41</nrOfLegs>
+	<name>C3u4mPEa</name>
+	<maintenanceCost>0.9585319159371308</maintenanceCost>
+	<dangerPerc>0.1995</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>COCKROACH</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>4</nrOfLegs>
+	<name>VkLdcoNb1</name>
+	<maintenanceCost>2.1834834790762203</maintenanceCost>
+	<dangerPerc>0.002</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<migrates>false</migrates>
+	<avgFlightAltitude>95</avgFlightAltitude>
+	<DISCRIMINANT>PIGEON</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>10</nrOfLegs>
+	<name>fM9SDiqil6ol</name>
+	<maintenanceCost>5.814872983225792</maintenanceCost>
+	<dangerPerc>0.1995</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>true</isDangerous>
+	<DISCRIMINANT>COCKROACH</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>9</nrOfLegs>
+	<name>68TZLmdxzxg6tLf5QBA</name>
+	<maintenanceCost>3.589049330080598</maintenanceCost>
+	<dangerPerc>0.001</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>false</laysEggs>
+	<DISCRIMINANT>TURTLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>7</nrOfLegs>
+	<name>cpJP4RaOOjwxbrMOxBg</name>
+	<maintenanceCost>0.36836421427684596</maintenanceCost>
+	<dangerPerc>0.2</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<laysEggs>true</laysEggs>
+	<DISCRIMINANT>LIZARD</DISCRIMINANT>
+</ANIMAL>
+</content>

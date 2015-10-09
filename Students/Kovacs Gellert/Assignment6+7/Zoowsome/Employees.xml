@@ -1,0 +1,82 @@
+<?xml version="1.0"?><content>
+<EMPLOYEE>
+	<id>7568381254916</id>
+	<name>IdyhPpJ</name>
+	<salary>1660</salary>
+	<isDead>true</isDead>
+	<workingHours>26.555486513398932</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>3979069857943</id>
+	<name>cm45mUMZ3Ycq4q</name>
+	<salary>6250</salary>
+	<isDead>true</isDead>
+	<workingHours>9.3560253197778</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>7143168109803</id>
+	<name>854t7dK</name>
+	<salary>4437</salary>
+	<isDead>true</isDead>
+	<workingHours>20.295085866256237</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>1861315566312</id>
+	<name>LSWfSFeXuJq039QQsDSD</name>
+	<salary>5759</salary>
+	<isDead>true</isDead>
+	<workingHours>43.730485692457606</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>8511278677469</id>
+	<name>43</name>
+	<salary>1180</salary>
+	<isDead>true</isDead>
+	<workingHours>45.159569955906434</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>3316809536670</id>
+	<name>iEKyfBciUSLi4P</name>
+	<salary>6693</salary>
+	<isDead>true</isDead>
+	<workingHours>42.823365051494385</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>8878145169736</id>
+	<name>JTB</name>
+	<salary>6914</salary>
+	<isDead>true</isDead>
+	<workingHours>9.877556944734879</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>1609776736136</id>
+	<name>1qE2nPzN4</name>
+	<salary>3787</salary>
+	<isDead>true</isDead>
+	<workingHours>79.17500280568757</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>1667749243425</id>
+	<name>IhOh2</name>
+	<salary>984</salary>
+	<isDead>true</isDead>
+	<workingHours>37.07925300151623</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+<EMPLOYEE>
+	<id>7697736836774</id>
+	<name>EArLveS5P1 fEeARhp</name>
+	<salary>9912</salary>
+	<isDead>true</isDead>
+	<workingHours>49.37803483326648</workingHours>
+	<DISCRIMINANT>CARETAKER</DISCRIMINANT>
+</EMPLOYEE>
+</content>
