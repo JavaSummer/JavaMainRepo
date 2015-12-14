@@ -1,0 +1,42 @@
+<?xml version="1.0"?><content>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Beedrill</name>
+	<maintenanceCost>3.0</maintenanceCost>
+	<dangerPerc>0.6</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BEE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Heracross</name>
+	<maintenanceCost>2.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BEETLE</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Butterfree</name>
+	<maintenanceCost>2.0</maintenanceCost>
+	<dangerPerc>0.0</dangerPerc>
+	<takenCareOf>false</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BUTTERFLY</DISCRIMINANT>
+</ANIMAL>
+<ANIMAL>
+	<nrOfLegs>6</nrOfLegs>
+	<name>Mario</name>
+	<maintenanceCost>20.0</maintenanceCost>
+	<dangerPerc>0.01</dangerPerc>
+	<takenCareOf>true</takenCareOf>
+	<canFly>true</canFly>
+	<isDangerous>false</isDangerous>
+	<DISCRIMINANT>BEETLE</DISCRIMINANT>
+</ANIMAL>
+</content>
