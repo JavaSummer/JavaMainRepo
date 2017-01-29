@@ -1,0 +1,24 @@
+package Assignements;
+
+import java.util.Scanner;
+
+public class FirstAssignment {
+	public static void main(String[] args)
+	{
+		System.out.print("Enter up to where we go: ");
+		Scanner scan = new Scanner(System.in);
+		int i, j, sum = 0;
+		
+		i = scan.nextInt();
+		
+		for ( j = 0; j < i; j++ )
+		{
+			if( ( j % 3 ==0 ) || ( j % 5 == 0 ) )
+			{
+				sum = sum + j;
+			}
+		}
+		System.out.print("You number is: ");
+		System.out.print(sum);
+	}
+}
